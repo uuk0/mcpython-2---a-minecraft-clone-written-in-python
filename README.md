@@ -88,16 +88,15 @@ See the [wiki](https://github.com/fogleman/Minecraft/wiki) for this project to i
 - S: back
 - A: strafe left
 - D: strafe right
+- E: opening inventory
+- T: opening chat
 - Mouse: look around
 - Space: jump
 - Tab: toggle flying mode
 
 ### Building
 
-- Selecting type of block to create:
-    - 1: brick
-    - 2: grass
-    - 3: sand
+- Selecting type of block to create
 - Mouse left-click: remove block
 - Mouse right-click: create block
 
