@@ -1,0 +1,6 @@
+Thank you to fogleman for making the base for these code.
+check out his github-repo at https://github.com/fogleman/Minecraft
+
+Thank you to all testers
+
+texturhandler cobinator: https://stackoverflow.com/questions/30227466/combine-several-images-horizontally-with-python

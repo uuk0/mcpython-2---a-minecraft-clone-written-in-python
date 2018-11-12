@@ -1,0 +1,188 @@
+version 18w40a:
+  started writing these clone
+  added config.py file that contains config data
+  added log.py file for logging
+  added Blocks-folder with block.py storing at the moment all informations about the blocks
+  added own threading lib
+  added model.py
+  added glfunctions.py for gl render functions
+  added globals.py with local-dir
+  added texturhandler.py for handling texturs
+  added Block-class representing an single block
+  added IBlockInstant-class storing informations about a block
+  added BlockHandler-class which instance is stored to globals
+  added TexturHandler-class which stores textures. stored into globals
+  moved every block to block-classes
+  fixed a lot of bugs with the new system
+
+version 18w40b:
+  added player-class holding all informations about the player
+  added inventory-class which is holding inventory-classes
+  added IItemStack-class representing an ItemStack
+  added player-inventory
+  added Item-class
+  added Amount-lable to IItemStack
+  added Hotbar & Basic Inventory
+  added the reset of items
+  added function to player to add items to inventory
+  added function to Item which contains max stack size
+  added chat as Inventory
+  added ability to add raw item classes to IItemStack
+  moved item select to playerinventory
+  added first command: /give <item>
+  added some code for supporting names with out the prefix "minecraft:"
+
+version 18w40c:
+  added more inventory slots
+  added slot moving system
+  added dirt-block
+  added blockupdates
+  added TickHandler
+  improved world generation with temperatur and high-data and real-like world
+  added smooth-function and option how much it should smoothed
+  added option for worldsize
+  added all ores
+  added cobbelstone
+  added attribute to IBlockInstants that is holding the block to which it is setted
+  added acacia wood log
+  added option for generating range
+  added biome-class
+  added model.add_block("air")
+  added biomes with temperatur (basebiome, basebiomehillst, basebiomehot)
+
+version 18w42a:
+  added obsidian
+  fixed bug: when entering an key like W, S, A, D you move in chat
+  added getActiveInventorys-function to InventoryCollection
+  fixed bug: when in inventory, you can move yourself by using WASD
+  added eventhandler
+  added part to eventhandler for blockupdates
+  added multiblockstructur-class
+  added entity-class
+  added oregenerator
+  added item.hasBlock()
+  configurated pyglet for using OpenAL
+  added soundhandler
+  added block-brake sounds
+  added globals.BlockGenerateTasks for tasks in world gen that are executed after world-gen (at the moment everything)
+  fixed bug: blocks generated after main-generation are not shown
+  fixed some bugs with auto-gen
+
+version 18w42b:
+  added docstrings
+  renamed Biome to BiomeClass
+  moved biome classes to extra files
+  renamed Block to BlockClass
+  renamed Log1 to AcaciaLog (Block and Item)
+  renamed Item to ItemClass
+  added remove_on_block_update-function to eventhandler
+  added an msg when the player is killed
+  added Structurs
+  added function to biome to add structurs
+  fixed bug: log.printMSG("[BLOCKHANDLER][ERROR] can't access block named "+str(name)) in block.py raises an error
+  added acacia leaves
+  added acacia tree structur
+  added ability to use an external draw system for blocks
+  added data-attribute for blocks
+  added cactus
+  speeded worldgen a lot up by updating visable state by only the 'top' blocks
+
+version 18w43a:
+  fixed bug: can't move items in inventory
+  added inventory attribute to Slot-object
+  fixed bug: trees are generating 1 block depere than wanted
+  cleaned up and structured config.py
+  added options for keys
+  added functions for Inventoryhandling to Block
+  added functions to Inventory for showing / hiding
+  added option to slot for disabeling item moving into it by player
+  added recipi handler
+  added function to slot & IItemStack on update
+  added function for checking if a recipi is correct in the grid
+  added option for adanced vanila functions (every single thing configurateable)
+  added data-folder from minecraft 1.13.1
+  added recipi loader for .json-recipis
+  added an option for printing during crafting recipi loading stuff out
+  added event for /reload-command
+
+version 18w43b:
+  added the new minecraft textures (from the minecraft snapshot 18w43a). If you want to have the old textures, copy the old assets/textures/block folder from 1.13.2 into the assets/textures/block folder of these game
+  added tmp-dir
+  added rotated log side to textures for acacia log
+  textures will be on every startup re-compressed (so you can change single textures in the assets/textures/block/... folder)
+  added crafting table block
+  updated some item textures
+  added acacia planks
+  added recipi for acacia planks and crafting table
+  updated textures to 18w43b
+  fixed bug: when closing inventory with ESC, key system gets overwrited
+  added stone brick, mossy stone brick, cracked stone brick, chiseled stone brick, mossy cobbel stone
+  added /setblock-command
+  added gravel, coal, charcoal, diamond, emerald, gold ingot, iron ingot, lapis, nether quartz
+  added coal block, diamond block, ermerald block, gold block, iron block, lapis block, quartz block, chiseled quartz block
+  added quartz pillar, redstone block
+  added redstone-functions to block-class
+
+version 18w43c:
+  added andesite, polished andesite, granite, polished granite, diorite, polished diorite
+  speeded up texture slitching
+  added endstone, endstone brick, birch wood log
+  added events for registration (they will be callen on game startup step by step)
+  added mods folder
+  added modloader which is loading single .py files in mod folder or folders with main.py file (zipfiles are at the moment not suported)
+  added option to G.BlockGenerateTasks for calling an function
+  speeded up sector showning / hiding by using G.BlockGenerateTasks
+  fixed bug: when pressing right mouse without showning at an block, an exception is printed out
+  changed some default options for WorldGen and added some more options
+  added notations.py for OreDict and DestroyGroup
+  added options for worldgencavegenerator
+  added /tp-command
+  added cave-generator
+
+version 18w44a:
+  added option for perlin noise
+  added shortcuts to chat: Strg+C, Strg+V and Strg+D (delet the whole message)
+  added sounds for placing blocks
+  added version & dependencie-string to Mod-class
+  made oregenerator of biomeclasses patchable
+  added CommandParser
+  added event game:registry:on_plugin_apply, game:registry:on_command_registrate_periode
+  added option for PRINT_MODLOADING_FORMAT_STUFF
+  added PlayerEntity (only cotainer for commands at the moment)
+  added selector-class and @s-selector
+  added tags to entity
+  removed /reload, /generate and /tp-command
+
+version 18w44b:
+  added textures from 18w44a
+  fixed bug: grass top texture has some lines on 2 sides
+  added event game:registry:on_prepare_plugin_registrate_periode for pre-registrate plugins
+  added ice, packed ice & blue ice
+  added State & Statehandler and event for it
+  fixed bug: can't close window
+  fixed bug: when moving and then opening the chat, you still move
+  added 'Game'-state and moved all event handling stuff to it
+  added 'Escape'-state
+  added barrel, birch planks, glowstone, glowstonedust, red sand, sandstone, chiseled sandstone, cut sandstone
+  added daytime
+  added /time-command
+  added red sandstone, red chiseled sandstone, red cut sandstone
+
+version 18w46a:
+  added tnt block
+  added language files from mc
+  added these to state "esc-menu"
+  added inventory-tags: "inventorys:crafting", "system:nothideable"
+  added isDisablyingGame() and shouldInteractWithPlayerInventoryMoving() to Inventory & InventoryCollection
+  fixed bug: CraftingInventory is not child of InventoryClass
+  fixed bug: CraftingInventory image is not correct drawn
+  added events game:registry:on_language_registered, game:registry:on_mod_registrated, game:registry:on_multiblockstructurs_registrated,
+               game:registry:on_sound_registrated, game:registry:on_state_registrated, game:registry:on_structur_registrated,
+               game:registry:on_biome_registrated, game:registry:on_block_registrated, game:registry:on_command_registrated,
+               game:registry:on_entity_registrated, game:registry:on_item_registrated
+  updated the textures to 18w45a
+  added redstone lamp
+  added function on_redstone_update and can_be_redstone_powered to block
+  added redstone-state-attribute to block
+  fixed bug: redstone-block has wrong texture
+  added redstone-binding to TNT

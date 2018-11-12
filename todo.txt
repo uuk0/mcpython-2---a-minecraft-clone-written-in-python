@@ -1,0 +1,151 @@
+from fogleman:
+"""
+Minecraft
+
+Simple Minecraft-inspired demo written in Python and Pyglet.
+
+http://www.youtube.com/watch?v=kC3lwK631X8
+
+Like this project?
+
+You might also like [his] other Minecraft clone written in C using modern OpenGL (GL shader language). It performs better, has better terrain generation and saves state to a sqlite database. See here:
+
+https://github.com/fogleman/Craft
+Goals and Vision
+
+I would like to see this project turn into an educational tool. Kids love Minecraft and Python is a great first language. This is a good opportunity to get children excited about programming.
+
+The code should become well commented and more easily configurable. It should be easy to make some simple changes and see the results quickly.
+
+I think it would be great to turn the project into more of a library / API... a Python package that you import and then use / configure to setup a world and run it. Something along these lines...
+
+import mc
+
+world = mc.World(...) DONE. use G.window = window.Window(...)
+world.set_block(x, y, z, mc.DIRT) DONE. use G.model.add_block(x, y, z, <name>)
+mc.run(world) DONE. use pyglet.app.run()
+
+The API could contain functionality for the following:
+
+    Easily configurable parameters like gravity, jump velocity, walking speed, etc. DONE
+    Hooks for terrain generation.
+"""
+
+update list:
+  before re-starting after every update, clean up every file
+
+  BUG FIXES
+  fix bug: cactus is not shown
+  fix bug: some errors in player.py in update_input in try-except system(???)
+
+  ITEM AND BLOCK UPDATE
+  add flint & steel and bind it to tnt
+  add inventory updates for blocks
+  add hardness and braketime
+  add states / functions to blocks:
+    redstonestate
+    on_redstone_update(side)
+    on_inventory_update
+  add tools
+  add Blastresistence
+  add chest, enderchests, shulkerboxes
+  add redstone, redstonerepeater, redstonecomperator, redstone torch
+  add torches
+  add hoppers, droppers and dispensers
+  add piston and sticky pistons
+  add observers
+  add map
+  add water and lava
+  add farmland, grass paths, coast dirt
+  add weat etc.
+  add item picture generator for blocks in startup
+  add ability to load Models from file
+  add enchantment table, anvil
+  add enchanted books
+  finish log orientation system
+  add spawneggs
+
+  TOOLTIP UPDATE
+  add tooltips with language binding
+
+  MODLOADER UPDATE
+  add mod injection by file to language data
+  add language collection (something that 'fills' every gap with something, may be configurateable)
+  modloader -> can we import .jar files without jython
+
+  CRAFTING UPDATE
+  add crafting table inventory
+  add furnes
+  add furnes recipis
+  add recipis for oredrops
+  add oredict notation posibility to recipis
+  add brakegroup notation for blocks
+  add shortcuts (1-9, SHIFT, MOUSE_MIDDLE) to item-inventory movement system
+  add recipi book (and also for mod-crafting systems?)
+
+  LOG UPDATE
+  add log - folder with active log, last logs and crashlog
+
+  INVENTORY UPDATE
+  add states / functions to inventorys:
+    getWeight()
+
+  USEFULL TOOLS
+  tool to upload every file to github by one command?
+
+  FUN UPDATE
+  add tnt explosion
+
+  SOME MORE TIMING UPDATE
+  add random updates
+
+  SOME MORE WOLRDS UPDATE
+  add dimension system
+  add saves
+  -> mc-worlds?
+  add the end and nether
+  add dungeons
+  add ship wracks
+  finish tree gen and cactus gen
+
+  STATE UPDATE
+  add game menü & options
+
+  SOME OTHER MODDING UPDATE
+  add data packs
+  -> mc-datapacks?
+  add scoreboards
+
+  ENTITY UPDATE
+  add mobspawning-system
+  add loot and xp to player when he kills to and mob
+  add AI to mobs
+
+  INVENTORY UPDATE
+  add harts, xp, hunger over hotbar
+  fix crafting table
+  add ability to change lang data during runtime
+
+  THE TIME & VIEW UPDATE
+  add weather
+  add light and shadows
+  ability to add shaders?
+
+  OPTION UPDATE
+  add option for worldgen
+  add configs for EVERYTHING
+  add an config for advanced vanilla functions
+  add options & bind it to escape-state
+
+  ARE WE ALOWN UPDATE
+  add client/server architekture
+  -> binding to mc-server/clients?
+  add opentolan binding to escape-state
+
+  THE COMMAND UPDATE
+  add real command complet and chat
+  add MORE commands
+
+  WHAT HAVE WE TO DO UPDATE
+  add advancements & bind it to escape-state
+  add statistics & bind it to escape-state
