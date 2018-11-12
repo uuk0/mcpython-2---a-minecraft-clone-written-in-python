@@ -186,3 +186,4 @@ version 18w46a:
   added redstone-state-attribute to block
   fixed bug: redstone-block has wrong texture
   added redstone-binding to TNT
+  changed the way how these files are stored on github
