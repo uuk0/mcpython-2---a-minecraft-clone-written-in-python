@@ -1,15 +1,14 @@
-import pyglet
-from pyglet.window import key, mouse
-import Block.block as Block
-import model
-import config
 import math
-import mathhelper
-import log
+
+import pyglet
+
+import config
 import globals as G
+import log
+import mathhelper
+import model
 import player
-import ticksystem
-import time
+
 
 class Window(pyglet.window.Window):
 
@@ -192,7 +191,7 @@ class Window(pyglet.window.Window):
                 G.model.remove_block(*task[1:], immediate=task[1][1] >= G.HighMAP[(task[1][0], task[1][2])])
             else:
                 log.printMSG("[MAINTHREAD][TASKS][ERROR] can't execute task named "+str(task))
-            if time.time() - dt > 4.0 / config.Physiks.TICKS_PER_SEC:
+            if time.time() - dt > 2.0 / config.Physiks.TICKS_PER_SEC:
                 return
 
     def _update(self, dt):

@@ -1,15 +1,16 @@
-import pyglet
-import pyglet.graphics
-import config
-from collections import deque
-import mathhelper
 import random
 import time
+from collections import deque
+
+import pyglet
 import pyglet.gl
-import log
-import globals as G
+import pyglet.graphics
+
 import WorldGenerator
-import cavegenerator
+import config
+import globals as G
+import log
+import mathhelper
 
 """class for model"""
 class Model(object):
@@ -75,10 +76,16 @@ class Model(object):
             WorldGenerator.SmoothMap(G.HighMAP, sx, sy, ex, ey, prior_1=config.WorldGenerator.PRIORITY_HIGHMAP_SELF)
 
         WorldGenerator.generateChunk(0, 0)
+        lenght = len(G.BlockGenerateTasks)
+
+        for x in range(-1, 2):
+            for z in range(-1, 2):
+                if (x, z) != (0, 0):
+                    WorldGenerator.generateChunk(x, z)
         dt = time.time()
         i = 0
-        l = len(G.BlockGenerateTasks)
-        while len(G.BlockGenerateTasks) > 0:
+        l = lenght
+        for _ in range(lenght):
             task = G.BlockGenerateTasks.pop(0)
             if task[0] == 0:
                 G.model.add_block(*task[1:], immediate=False)
@@ -250,7 +257,7 @@ class Model(object):
             self.world[position].show()
             return
         x, y, z = position
-        vertex_data = mathhelper.cube_vertices(x, y, z, 0.5)
+        vertex_data = G.model.world[position].getCubeVerticens(x, y, z, 0.5)
         texture_data = list(texture.getTexturData())
         # create vertex list
         # FIXME Maybe `add_indexed()` should be used instead

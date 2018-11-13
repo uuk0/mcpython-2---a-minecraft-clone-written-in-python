@@ -1,7 +1,9 @@
-import globals as G
-import mathhelper
 import random
+
+import globals as G
 import log
+import mathhelper
+
 SURROUNDING = [(0, 0, -1, "N"), (0, 0, 1, "S"), (0, -1, 0, "U"), (0, 1, 0, "D"), (-1, 0, 0, "W"), (1, 0, 0, "O")]
 
 """class for tnt"""
@@ -18,10 +20,10 @@ class Tnt(G.blockclass):
     def getAllTexturFiles(self):
         return ["minecraft/tnt"]
 
-    def light(self):
-        G.tickhandler.tick(self.explose, tick=random.random(15, 25))
+    def light(self, inst=None):
+        G.tickhandler.tick(self.explose, args=[inst], tick=random.randint(15, 25))
 
-    def explose(self):
+    def explose(self, inst):
         log.printMSG("can't explose TNT. function is not definited.\n" + \
                      "to definit, add an block named minecraft:tnt with these functions")
 
@@ -33,9 +35,16 @@ class Tnt(G.blockclass):
             if (px, py, pz) in G.model.world and G.model.world[(px, py, pz)].getErmittedRedstoneSignal(face) > 0:
                 flag = True
         if flag:
-            self.explose()
+            self.light()
 
     def on_block_update(self, inst):
         self.on_redstone_update(inst)
+
+    def getInventorys(self, inst):
+        self.light()
+        return []
+
+    def isOpeningInventory(self, inst, item):
+        return item.item.getName() == "minecraft:flint_and_steel"
 
 G.blockhandler.register(Tnt)

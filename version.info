@@ -187,3 +187,23 @@ version 18w46a:
   fixed bug: redstone-block has wrong texture
   added redstone-binding to TNT
   changed the way how these files are stored on github
+
+version 18w46b:
+  fixed bug: modloader is not using Mod.getDependencies()
+  fixed bug: some registration events are not callen to Mod.on_event
+  added doc to eventhandler.py
+  fixed bug: G.eventhandler.removeEvent() do not work
+  cleaned up some files
+  added flint and steel (you could light tnt with it)
+  changed the isOpeningInventory(_, item) item attribute from item to stack
+  tnt.explose() gets now an blockinstance attribute
+  fixed bug: tnt.light() gives an exception
+  fixed bug: when giving the player an unknown item, an exception is raised
+  added wool
+  added function getCubeVerticens to Blockclass for giving his own cube verticens
+  added function mathhelper.cube_vertices_2(x, y, z, nx, ny, nz) for better cube vertices controll
+  made the spawn area 3 x 3 chunks
+  speeded up game during runtime-generations
+
+version 18w46c:
+

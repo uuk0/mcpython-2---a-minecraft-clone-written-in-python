@@ -1,11 +1,13 @@
+import math
+import random
+import time
+
+import cavegenerator
+import config
 import globals as G
 import log
-import time
-import config
-import random
-import math
 import mathhelper
-import cavegenerator
+
 
 def generateHighModel(sx, sy, ex, ey, thismap, min=10, max=255, rt=1, r=2):
     dt = time.time()
@@ -174,6 +176,7 @@ def generateArea(sx, sy, ex, ey, pregame=False):
             i += 1
 
 def generateChunk(cx, cz):
+    log.printMSG("[WORLDGENERATOR][INFO] generating chunk " + str(cx) + " " + str(cz))
     sx, sy, ex, ey = cx * 16, cz * 16, cx * 16 + 15, cz * 16 + 15
     ex += 1; ey += 1
     generateHighModel(sx, sy, ex, ey, G.TemperaturMAP, min=0, max=100, r=20, rt=2)

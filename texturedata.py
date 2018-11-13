@@ -1,8 +1,10 @@
-import globals as G
-import texturhandler
-import log
 import os
+
 import config
+import globals as G
+import log
+import texturhandler
+
 
 class TextureDataHandler:
     def __init__(self):
@@ -123,5 +125,23 @@ def loadTexturs(*args):
                                                        G.local+"assets/textures/block/tnt_top.png"])
     G.texturedatahandler.addForBlock("minecraft/redstone_lamp", [G.local+"assets/textures/block/redstone_lamp.png",
                                                                  G.local+"assets/textures/block/redstone_lamp_on.png"])
+    G.texturedatahandler.addForBlock("minecraft/white_wool", [G.local + "assets/textures/block/white_wool.png"])
+    G.texturedatahandler.addForBlock("minecraft/orange_wool", [G.local + "assets/textures/block/orange_wool.png"])
+    G.texturedatahandler.addForBlock("minecraft/magenta_wool", [G.local + "assets/textures/block/magenta_wool.png"])
+    G.texturedatahandler.addForBlock("minecraft/light_blue_wool",
+                                     [G.local + "assets/textures/block/light_blue_wool.png"])
+    G.texturedatahandler.addForBlock("minecraft/yellow_wool", [G.local + "assets/textures/block/yellow_wool.png"])
+    G.texturedatahandler.addForBlock("minecraft/lime_wool", [G.local + "assets/textures/block/lime_wool.png"])
+    G.texturedatahandler.addForBlock("minecraft/pink_wool", [G.local + "assets/textures/block/pink_wool.png"])
+    G.texturedatahandler.addForBlock("minecraft/gray_wool", [G.local + "assets/textures/block/gray_wool.png"])
+    G.texturedatahandler.addForBlock("minecraft/light_gray_wool",
+                                     [G.local + "assets/textures/block/light_gray_wool.png"])
+    G.texturedatahandler.addForBlock("minecraft/cyan_wool", [G.local + "assets/textures/block/cyan_wool.png"])
+    G.texturedatahandler.addForBlock("minecraft/purple_wool", [G.local + "assets/textures/block/purple_wool.png"])
+    G.texturedatahandler.addForBlock("minecraft/blue_wool", [G.local + "assets/textures/block/blue_wool.png"])
+    G.texturedatahandler.addForBlock("minecraft/brown_wool", [G.local + "assets/textures/block/brown_wool.png"])
+    G.texturedatahandler.addForBlock("minecraft/green_wool", [G.local + "assets/textures/block/green_wool.png"])
+    G.texturedatahandler.addForBlock("minecraft/red_wool", [G.local + "assets/textures/block/red_wool.png"])
+    G.texturedatahandler.addForBlock("minecraft/black_wool", [G.local + "assets/textures/block/black_wool.png"])
 
 G.eventhandler.on_event("game:registry:on_texture_registrate_periode", loadTexturs)

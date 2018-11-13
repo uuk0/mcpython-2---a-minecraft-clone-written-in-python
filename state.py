@@ -1,12 +1,12 @@
-import globals as G
-import log
 import pyglet
-import mathhelper
-import config
 from pyglet.window import key, mouse
-import ticksystem
-import texturhandler
+
+import config
+import globals as G
 import imagealphacreator
+import log
+import mathhelper
+
 
 class StateHandler:
     def __init__(self):
@@ -204,7 +204,7 @@ class Game(State):
                             G.player.inventory.inventorys[0].slots[
                                 G.player.selectedinventoryslot].stack.item.hasBlock() and \
                             not G.model.world[block].isOpeningInventory(
-                                G.player.inventory.inventorys[0].slots[G.player.selectedinventoryslot].stack.item):
+                                G.player.inventory.inventorys[0].slots[G.player.selectedinventoryslot].stack):
                         G.model.add_block(previous, G.player.inventory.inventorys[0].slots[
                             G.player.selectedinventoryslot].stack.item.getBlockName(), blocksettedto=block)
                         G.eventhandler.call("game:on_block_add_by_player", vector, block, previous,
@@ -215,7 +215,7 @@ class Game(State):
                         block = G.model.world[previous]
                         G.soundhandler.playSound(previous, block.getBrakeSoundFile())
                     elif block and G.model.world[block].isOpeningInventory(
-                            G.player.inventory.inventorys[0].slots[G.player.selectedinventoryslot].stack.item):
+                            G.player.inventory.inventorys[0].slots[G.player.selectedinventoryslot].stack):
                         print(G.model.world[block], G.model.world[block].blockclass, G.model.world[block].getInventorys())
                         for e in G.model.world[block].getInventorys():
                             G.inventoryhandler.show_inventory(e if type(e) == int else e.id)

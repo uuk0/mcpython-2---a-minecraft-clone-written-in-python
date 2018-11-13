@@ -55,8 +55,7 @@ class ItemClass:
 G.itemclass = ItemClass
 
 def loadItems(*args):
-    from . import stone, bedrock, brick, grass, sand, dirt, ores, log as _log, obsidian, leaves, cactus, crafting_table, plank
-    from . import gravel, oredrops, ore_blocks, endstone, ice, barrel, glowstone, sandstone, tnt, redstone_lamp
+    pass
 
 
 G.eventhandler.on_event("game:registry:on_item_registrate_preiode", loadItems)

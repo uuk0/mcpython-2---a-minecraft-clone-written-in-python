@@ -1,6 +1,7 @@
+import config
 import globals as G
 import log
-import config
+import mathhelper
 
 """
 block handler class
@@ -163,6 +164,11 @@ class BlockClass:
     def can_be_redstone_powered(self, inst):
         return True
 
+    """returns the cube verticens of the block"""
+
+    def getCubeVerticens(self, inst, x, y, z, n):
+        return mathhelper.cube_vertices(x, y, z, n)
+
 G.blockclass = BlockClass
 
 
@@ -258,10 +264,12 @@ class IBlockInstants(BlockClass):
     def can_be_redstone_powered(self):
         self.blockclass.can_be_redstone_powered(self)
 
+    def getCubeVerticens(self, x, y, z, n):
+        return self.blockclass.getCubeVerticens(self, x, y, z, n)
+
 G.blockinst = IBlockInstants
 
 def loadBlocks(*args):
-    from . import grass, sand, brick, stone, bedrock, dirt, ores, log as _log, obsidian, leaves, cactus, crafting_table, plank
-    from . import gravel, ore_blocks, endstone, ice, barrel, glowstone, sandstone, tnt, redstone_lamp
+    pass
 
 G.eventhandler.on_event("game:registry:on_block_registrate_periode", loadBlocks)

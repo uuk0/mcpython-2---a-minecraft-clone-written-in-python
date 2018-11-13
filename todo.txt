@@ -39,7 +39,6 @@ update list:
   fix bug: some errors in player.py in update_input in try-except system(???)
 
   ITEM AND BLOCK UPDATE
-  add flint & steel and bind it to tnt
   add inventory updates for blocks
   add hardness and braketime
   add states / functions to blocks:
@@ -149,3 +148,6 @@ update list:
   WHAT HAVE WE TO DO UPDATE
   add advancements & bind it to escape-state
   add statistics & bind it to escape-state
+
+  EVENTHANDLER
+  make blockupdate using ID's

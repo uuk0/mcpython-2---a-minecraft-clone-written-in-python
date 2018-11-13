@@ -1,14 +1,12 @@
-import globals as G
+import importlib
 import os
 import sys
-import importlib
-import zipfile
-import log
 import time
+import zipfile
+
 import config
-import Block.block, Item.item, biomes.biom, Inventory.inventory, entity.entity, crafting, texturedata, soundhandler, state
-import command.Command
-import pyglet
+import globals as G
+import log
 
 sys.path.append(G.local+"mods")
 
@@ -25,7 +23,9 @@ class ModLoader:
                   "game:registry:on_entity_registrate_periode", "game:registry:on_inventory:registrate_periode",
                   "game:registry:on_item_registrate_preiode", "game:registry:on_crafting_recipi_registrate_periode",
                   "game:registry:on_texture_registrate_periode", "game:registry:on_multiblockstructur_registrate_periode",
-                  "game:registry:on_sound_registrate_periode"]:
+                  "game:registry:on_sound_registrate_periode", "game:registry:on_state_registrate_periode",
+                  "game:registry:on_command_registrate_periode", "game:registry:on_plugin_apply",
+                  "game:registry:on_structur_registrate_periode"]:
             G.eventhandler.on_event(e, mod.on_event)
 
     """search for mods in 'mods'-folder"""
@@ -58,11 +58,13 @@ class ModLoader:
                             flag = False
                     else:
                         modd = self.mods[e[0]]
-                        depend_min = e[1][0]
-                        depend_max = e[1][1] if len(e[1]) > 1 else modd.getVersion()
+                        depend_min = e[1][0] if len(e) > 1 else (-1, -1, -1)
+                        depend_max = e[1][1] if len(e) > 1 and len(e[1]) > 1 else modd.getVersion()
+                        depend_func = e[2] if len(e) > 2 else None
                         version_modd = modd.getVersion()
                         if not (depend_min[0] <= version_modd[0] <= depend_max[0] and depend_min[1] <= version_modd[1] <= \
-                            depend_max[1] and depend_min[2] <= version_modd[2] <= depend_max[2]):
+                                depend_max[1] and depend_min[2] <= version_modd[2] <= depend_max[2]) and \
+                                ((depend_func and depend_func()) or not depend_func):
                             log.printMSG("[MODLOADER][ERROR] depenencie error: mod "+str(mod)+" needs mod "+str(e[0])+" in version range "+str([depend_min, depend_max])+", but "+str(version_modd)+" is loaded")
                             flag = False
                         if len(e) > 2:

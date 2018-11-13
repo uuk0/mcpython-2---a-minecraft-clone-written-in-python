@@ -1,16 +1,24 @@
-import globals as G
-import texturhandler
 import pyglet
-import Item.item
+
+import globals as G
 import log
+import texturhandler
 
 """class for ItemStack"""
 class IItemStack:
     def __init__(self, name, amount=1):
+        self.update_func = None
         self.slot = None
         if type(name) == str:
             self.name = name
-            self.item = G.itemhandler.getByName(name)()
+            item = G.itemhandler.getByName(name)
+            if item:
+                self.item = item()
+                self.amount = amount
+            else:
+                log.printMSG("[IItemStack][ERROR] item unknown (named " + str(name) + ")")
+                self.item = None
+                self.amount = 0
         elif type(name) == G.itemclass:
             self.name = name.getName()
             self.item = name
@@ -30,7 +38,6 @@ class IItemStack:
         self.texturfile = self.item.getTexturFile() if self.item else None
         self.lable = pyglet.text.Label('', font_name='Arial', font_size=10, anchor_x='left', anchor_y='top',
             color=(255, 255, 255, 255))
-        self.update_func = None
 
     def __getamount(self):
         return self.__amount

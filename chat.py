@@ -1,15 +1,10 @@
-import globals as G
+import clipboard
 import pyglet
 from pyglet.window import key
-import log
-import mathhelper
-import WorldGenerator
-import importlib
-import config
-import crafting
-import clipboard
 
-import command.Command
+import config
+import globals as G
+import log
 
 """
 list of keys
@@ -97,15 +92,5 @@ class chat(G.inventoryclass):
     color is not used at the moment"""
     def printLine(self, string, color=(0, 0, 0)):
         log.printMSG("[CHAT] "+str(string))
-
-    """function for the old execute"""
-    def old_execute(self, command):
-        splitted = command.split(" ")
-        if False: pass
-        elif splitted[0] == "/setblock":
-            x, y, z = int(splitted[1]), int(splitted[2]), int(splitted[3])
-            G.model.add_block((x, y, z), splitted[4])
-        elif splitted[0] == "/tp":
-            G.window.position = int(splitted[1]), int(splitted[2]), int(splitted[3])
 
 

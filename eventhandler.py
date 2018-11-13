@@ -31,7 +31,7 @@ class EventHandler:
         if not name in self.eventnames:
             log.printMSG("[EVENTHANDLER][ERROR] try to remove an unknown event: "+str(name))
             return
-        self.clearEvent()
+        self.clearEvent(name)
         del self.eventnames[name]
 
     """binds an function to an event"""
@@ -87,6 +87,8 @@ class EventHandler:
 
 
 G.eventhandler = EventHandler()
+
+# I/O EVENTS
 G.eventhandler.addEventName("core:tick")
 G.eventhandler.addEventName("core:window:on_exclusive_mouse_change")
 G.eventhandler.addEventName("core:update")
@@ -103,6 +105,7 @@ G.eventhandler.addEventName("opengl:draw3d")
 G.eventhandler.addEventName("game:on_block_add_by_player")
 G.eventhandler.addEventName("game:on_block_remove_by_player")
 
+#REGISTRATE PERIODES EVENTS
 G.eventhandler.addEventName("game:registry:on_prepare_plugin_registrate_periode")
 G.eventhandler.addEventName("game:registry:on_biome_registrate_periode")
 G.eventhandler.addEventName("game:registry:on_block_registrate_periode")
@@ -118,8 +121,11 @@ G.eventhandler.addEventName("game:registry:on_plugin_apply")
 G.eventhandler.addEventName("game:registry:on_command_registrate_periode")
 G.eventhandler.addEventName("game:registry:on_state_registrate_periode")
 G.eventhandler.addEventName("game:startup")
+
+#RUNTIME EVENTS FROM MCPYTHON
 G.eventhandler.addEventName("worldgen:newworld")
 
+#REGISTRATE EVENTS
 G.eventhandler.addEventName("game:registry:on_language_registered")
 G.eventhandler.addEventName("game:registry:on_mod_registrated")
 G.eventhandler.addEventName("game:registry:on_multiblockstructurs_registrated")
@@ -131,5 +137,3 @@ G.eventhandler.addEventName("game:registry:on_block_registrated")
 G.eventhandler.addEventName("game:registry:on_command_registrated")
 G.eventhandler.addEventName("game:registry:on_entity_registrated")
 G.eventhandler.addEventName("game:registry:on_item_registrated")
-
-#G.eventhandler.addEventName("game:command:on_reload")
