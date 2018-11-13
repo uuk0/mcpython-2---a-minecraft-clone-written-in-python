@@ -24,13 +24,16 @@ except:
     raise
 
 import eventhandler
-
 import biomes.biom
 import eventhandler
 import structur
 import crafting
 import texturedata
 import language
+import ticksystem
+import Block.block, Item.item, entity.entity, Inventory.inventory
+import state
+
 
 pyglet.options['audio'] = ('openal', 'pulse', 'directsound', 'silent')
 

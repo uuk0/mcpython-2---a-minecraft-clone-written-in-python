@@ -183,6 +183,6 @@ class Slot:
 G.inventoryslot = Slot
 
 def loadInventorys(*args):
-    from . import player
+    from . import player, crafting
 
 G.eventhandler.on_event("game:registry:on_inventory:registrate_periode", loadInventorys)

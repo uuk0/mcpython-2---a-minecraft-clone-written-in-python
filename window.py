@@ -8,6 +8,7 @@ import log
 import mathhelper
 import model
 import player
+import time
 
 
 class Window(pyglet.window.Window):

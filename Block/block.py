@@ -270,6 +270,8 @@ class IBlockInstants(BlockClass):
 G.blockinst = IBlockInstants
 
 def loadBlocks(*args):
-    pass
+    import importlib, os
+    for e in os.listdir(G.local + "Block"):
+        importlib.import_module("Block." + e.split(".")[0])
 
 G.eventhandler.on_event("game:registry:on_block_registrate_periode", loadBlocks)

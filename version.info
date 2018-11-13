@@ -205,5 +205,6 @@ version 18w46b:
   made the spawn area 3 x 3 chunks
   speeded up game during runtime-generations
 
-version 18w46c:
+version 18w46b fix:
+  fixed some bugs with imports that came from code optimazation
 

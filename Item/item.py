@@ -55,7 +55,9 @@ class ItemClass:
 G.itemclass = ItemClass
 
 def loadItems(*args):
-    pass
+    import importlib, os
+    for e in os.listdir(G.local+"Item"):
+        importlib.import_module("Item."+e.split(".")[0])
 
 
 G.eventhandler.on_event("game:registry:on_item_registrate_preiode", loadItems)

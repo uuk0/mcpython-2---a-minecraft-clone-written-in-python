@@ -6,7 +6,7 @@ import globals as G
 import imagealphacreator
 import log
 import mathhelper
-
+import Block.block
 
 class StateHandler:
     def __init__(self):
