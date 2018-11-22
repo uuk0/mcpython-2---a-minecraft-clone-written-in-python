@@ -37,6 +37,8 @@ update list:
   BUG FIXES
   fix bug: cactus is not shown
   fix bug: some errors in player.py in update_input in try-except system(???)
+  fix bug: sand is NOT falling the whole way down
+  fix bug: can't clos
 
   ITEM AND BLOCK UPDATE
   add inventory updates for blocks
@@ -147,7 +149,7 @@ update list:
 
   WHAT HAVE WE TO DO UPDATE
   add advancements & bind it to escape-state
-  add statistics & bind it to escape-state
+  add statistics   & bind it to escape-state
 
   EVENTHANDLER
-  make blockupdate using ID's
+  make blockupdate using EVENT ID's

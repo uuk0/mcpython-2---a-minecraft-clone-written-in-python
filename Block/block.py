@@ -165,9 +165,12 @@ class BlockClass:
         return True
 
     """returns the cube verticens of the block"""
-
     def getCubeVerticens(self, inst, x, y, z, n):
         return mathhelper.cube_vertices(x, y, z, n)
+
+    """convert the given base position to an renderable position"""
+    def convertPositionToRenderable(self, inst, position):
+        return position
 
 G.blockclass = BlockClass
 
@@ -266,6 +269,9 @@ class IBlockInstants(BlockClass):
 
     def getCubeVerticens(self, x, y, z, n):
         return self.blockclass.getCubeVerticens(self, x, y, z, n)
+
+    def convertPositionToRenderable(self, position):
+        return self.blockclass.convertPositionToRenderable(self, position)
 
 G.blockinst = IBlockInstants
 

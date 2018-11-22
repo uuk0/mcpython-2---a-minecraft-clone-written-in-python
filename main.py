@@ -31,6 +31,7 @@ import crafting
 import texturedata
 import language
 import ticksystem
+import command.Command
 import Block.block, Item.item, entity.entity, Inventory.inventory
 import state
 

@@ -8,6 +8,16 @@ import config
 import globals as G
 import log
 
+import ModSorter
+
+EVENT_DATA = ["game:registry:on_biome_registrate_periode", "game:registry:on_block_registrate_periode",
+                  "game:registry:on_entity_registrate_periode", "game:registry:on_inventory:registrate_periode",
+                  "game:registry:on_item_registrate_preiode", "game:registry:on_crafting_recipi_registrate_periode",
+                  "game:registry:on_texture_registrate_periode", "game:registry:on_multiblockstructur_registrate_periode",
+                  "game:registry:on_sound_registrate_periode", "game:registry:on_state_registrate_periode",
+                  "game:registry:on_command_registrate_periode", "game:registry:on_plugin_apply",
+                  "game:registry:on_structur_registrate_periode"]
+
 sys.path.append(G.local+"mods")
 
 """main class for modloading"""
@@ -19,14 +29,6 @@ class ModLoader:
     def register(self, mod):
         if not type(mod) == Mod: mod = mod()
         self.mods[mod.getName()] = mod
-        for e in ["game:registry:on_biome_registrate_periode", "game:registry:on_block_registrate_periode",
-                  "game:registry:on_entity_registrate_periode", "game:registry:on_inventory:registrate_periode",
-                  "game:registry:on_item_registrate_preiode", "game:registry:on_crafting_recipi_registrate_periode",
-                  "game:registry:on_texture_registrate_periode", "game:registry:on_multiblockstructur_registrate_periode",
-                  "game:registry:on_sound_registrate_periode", "game:registry:on_state_registrate_periode",
-                  "game:registry:on_command_registrate_periode", "game:registry:on_plugin_apply",
-                  "game:registry:on_structur_registrate_periode"]:
-            G.eventhandler.on_event(e, mod.on_event)
 
     """search for mods in 'mods'-folder"""
     def searchForMods(self):
@@ -44,6 +46,8 @@ class ModLoader:
                 G.MODS.append(importlib.import_module(e[2].split(".")[0]))
             elif e[0] == 1:
                 G.MODS.append(importlib.import_module(e[2].split(".")[0]+".main"))
+            else:
+                raise RuntimeError()
         flag = True
         for mod in self.mods.keys():
             mod = self.mods[mod]
@@ -74,6 +78,14 @@ class ModLoader:
         if not flag:
             log.printMSG("[MODLOADER][ERROR] there were errors in mod initialisation phase. NOT beginning loading phase")
             sys.exit(-1)
+
+        sorter = ModSorter.ModSorter(self.mods)
+        sorter.sort()
+
+        for mod in sorter.modlistsorted:
+            for e in EVENT_DATA:
+                G.eventhandler.on_event(e, mod.on_event)
+
 
         G.GAMESTAGE = 1
 
@@ -165,5 +177,10 @@ class Mod:
     """returns all dependencies (a list of [modname, [{MINVERSION}, {MAXVERSION}], [function to detect if it is correct]])"""
     def getDependencies(self):
         return []
+
+    """returns the version snapshot for which is it written (may be list. ends with None if upper is supported. may be None if all)
+    use N[VERSION_NAME] for deacte an given version"""
+    def getMcPythonVersions(self):
+        return [G.VERSION_NAME]
 
 G.mod = Mod

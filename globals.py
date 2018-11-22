@@ -68,3 +68,19 @@ GAMESTAGE = 0
 
 class LANG:
     active = None
+
+with open(local+"version.info") as f:
+    _data = f.read()
+_line = None
+for l in _data.split("\n"):
+    if not l.startswith(" ") and l != "" and not "fix" in l:
+        _line = l
+VERSION_NAME = _line.split(" ")[1][:-1]
+#format: [YEAR][WEEK][VERSION_PRE_FROM_LETTER]
+LETTER_DICT = {}
+for i, e in enumerate(list("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ")):
+    LETTER_DICT[e] = i
+
+def convertNameToId(name):
+    return int("20"+name[:2]+name[3:5]+str(LETTER_DICT[name[5]]))
+VERSION_ID = convertNameToId(VERSION_NAME)

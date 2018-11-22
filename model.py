@@ -162,6 +162,7 @@ class Model(object):
             block = G.blockhandler.getInst(texture, position, blocksettedto=blocksettedto)
         else:
             block = texture
+            block.position = position
         self.world[position] = block
         self.sectors.setdefault(mathhelper.sectorize(position), []).append(position)
         if immediate:
@@ -257,7 +258,8 @@ class Model(object):
             self.world[position].show()
             return
         x, y, z = position
-        vertex_data = G.model.world[position].getCubeVerticens(x, y, z, 0.5)
+        vertex_data = G.model.world[position].getCubeVerticens(
+            *list(G.model.world[position].convertPositionToRenderable(position))+[0.5])
         texture_data = list(texture.getTexturData())
         # create vertex list
         # FIXME Maybe `add_indexed()` should be used instead

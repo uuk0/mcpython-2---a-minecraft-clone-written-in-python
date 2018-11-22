@@ -208,3 +208,12 @@ version 18w46b:
 version 18w46b fix:
   fixed some bugs with imports that came from code optimazation
 
+version 18w46c:
+  added function convertPositionToRenderable() to Blockclass
+  added attribute to texturedatahandler for leaving the G.local+"assets/textures/block/..." ahead
+  fixed bug: add_block(position, IBlockInstance) is not updating it's position-attribute. This is the reason why sand is not falling correct
+  added super-class for all wood logs in this clone
+  added oak log, stripped oak log
+  added version-info-tag for Mod's
+  added VERSION_NAME and VERSION_ID attribute for globals from this version.info file
+  added ModSorter for sorting mods

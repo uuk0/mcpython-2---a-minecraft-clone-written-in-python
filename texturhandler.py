@@ -13,7 +13,7 @@ def storetexturs(file, texturfiles):
         resize(e, [64, 64])
     imgs = [PIL.Image.open(i) for i in texturfiles]
     min_shape = sorted([(np.sum(i.size), i.size) for i in imgs])[0][1]
-    imgs_comb = np.vstack((np.asarray(i.resize(min_shape)) for i in imgs))
+    imgs_comb = np.vstack(tuple([np.asarray(i) for i in imgs]))
     imgs_comb = PIL.Image.fromarray(imgs_comb)
     imgs_comb.save(file)
 
