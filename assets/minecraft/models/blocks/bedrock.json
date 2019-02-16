@@ -1,0 +1,9 @@
+{
+  "blockaddress": "minecraft:bedrock",
+  "default": {
+    "name": "cube:full",
+    "side_texture_files": ["assets/minecraft/textures/block/bedrock.png"],
+    "blockname": "minecraft/bedrock",
+    "side_indexes": [0, 0, 0, 0, 0, 0]
+  }
+}

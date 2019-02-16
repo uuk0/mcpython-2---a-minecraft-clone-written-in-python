@@ -1,5 +1,6 @@
 import globals as G
 import pyglet
+import Inventory.inventory
 
 """class for crafting in crafting table"""
 class Crafting(G.inventoryclass):
@@ -8,14 +9,14 @@ class Crafting(G.inventoryclass):
     size = (3, 3)
 
     def __init__(self):
-        self.position = self.getBasePosition()
         self.slots = self.creatSlots()
         for e in self.slots:
             e.inventory = self
         self.active = False
         G.inventoryhandler._register_inventory(self)
         self.image = pyglet.sprite.Sprite(
-            pyglet.image.load(G.local + "assets/textures/gui/container/crafting_table.png"))
+            pyglet.image.load(G.local + "/assets/minecraft/textures/gui/container/crafting_table.png"))
+        self.position = self.getBasePosition()
 
     def creatSlots(self):
         return []
@@ -29,3 +30,9 @@ class Crafting(G.inventoryclass):
         self.image.draw()
         for e in self.slots:
             e.draw(self.position)
+
+    def on_key_press(self, key, mod):
+        pass
+
+    def on_try_close(self):
+        log.printMSG("I AM NOT CLOSED")

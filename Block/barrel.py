@@ -1,18 +1,19 @@
 import globals as G
 import mathhelper
+import modsystem.ModLoader
 
-"""class for barrel"""
+
 class Barrel(G.blockclass):
+    """class for barrel"""
     def getName(self):
         return "minecraft:barrel"
 
-    def getTexturData(self, inst):
-        return mathhelper.tex_coords((0, 0), (0, 2), (0, 1), n2=4)
+    def getModelFile(self, inst):
+        return "minecraft:barrel"
 
-    def getTexturFile(self, inst):
-        return "minecraft/barrel"
 
-    def getAllTexturFiles(self):
-        return ["minecraft/barrel"]
+@modsystem.ModLoader.ModEventEntry("game:registry:on_block_registrate_periode", "minecraft",
+                                   info="registrating barrel")
+def register():
+    G.blockhandler.register(Barrel)
 
-G.blockhandler.register(Barrel)

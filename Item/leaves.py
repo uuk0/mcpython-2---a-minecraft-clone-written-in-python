@@ -9,6 +9,6 @@ class AcaciaLeave(G.itemclass):
         return True
 
     def getTexturFile(self):
-        return G.local+"/assets/textures/item/LEAVES.png"
+        return G.local+"/assets/minecraft/textures/item/LEAVES.png"
 
 G.itemhandler.register(AcaciaLeave)

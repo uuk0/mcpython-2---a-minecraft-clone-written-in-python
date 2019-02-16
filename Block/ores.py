@@ -1,19 +1,20 @@
 import globals as G
 import mathhelper
+import modsystem.ModLoader
 
-"""class for coalore"""
-class CoalOre(G.blockclass):
+
+class IOre(G.blockclass):
+    def getModelFile(self, inst):
+        return "minecraft:ores"
+
+    def getStateName(self, inst):
+        return self.getName().split(":")[1]
+
+
+class CoalOre(IOre):
+    """class for coalore"""
     def getName(self):
         return "minecraft:coal_ore"
-
-    def getTexturData(self, inst):
-        return mathhelper.tex_coords((0, 0), (0, 0), (0, 0), n2=1)
-
-    def getTexturFile(self, inst):
-        return "minecraft/coal_ore"
-
-    def getAllTexturFiles(self):
-        return ["minecraft/coal_ore"]
 
     def isBrakeAble(self, inst):
         return True
@@ -21,21 +22,11 @@ class CoalOre(G.blockclass):
     def getDrop(self, inst):
         return {"minecraft:coal":1}
 
-G.blockhandler.register(CoalOre)
 
-"""class for diamondore"""
-class DiamondOre(G.blockclass):
+class DiamondOre(IOre):
+    """class for diamondore"""
     def getName(self):
         return "minecraft:diamond_ore"
-
-    def getTexturData(self, inst):
-        return mathhelper.tex_coords((0, 0), (0, 0), (0, 0), n2=1)
-
-    def getTexturFile(self, inst):
-        return "minecraft/diamond_ore"
-
-    def getAllTexturFiles(self):
-        return ["minecraft/diamond_ore"]
 
     def isBrakeAble(self, inst):
         return True
@@ -43,21 +34,11 @@ class DiamondOre(G.blockclass):
     def getDrop(self, inst):
         return {"minecraft:diamond":1}
 
-G.blockhandler.register(DiamondOre)
 
-"""class for emeraldore"""
-class EmeraldOre(G.blockclass):
+class EmeraldOre(IOre):
+    """class for emeraldore"""
     def getName(self):
         return "minecraft:emerald_ore"
-
-    def getTexturData(self, inst):
-        return mathhelper.tex_coords((0, 0), (0, 0), (0, 0), n2=1)
-
-    def getTexturFile(self, inst):
-        return "minecraft/emerald_ore"
-
-    def getAllTexturFiles(self):
-        return ["minecraft/emerald_ore"]
 
     def isBrakeAble(self, inst):
         return True
@@ -65,65 +46,35 @@ class EmeraldOre(G.blockclass):
     def getDrop(self, inst):
         return {"minecraft:emerald":1}
 
-G.blockhandler.register(EmeraldOre)
 
-"""class for goldore"""
-class GoldOre(G.blockclass):
+class GoldOre(IOre):
+    """class for goldore"""
     def getName(self):
         return "minecraft:gold_ore"
 
-    def getTexturData(self, inst):
-        return mathhelper.tex_coords((0, 0), (0, 0), (0, 0), n2=1)
-
-    def getTexturFile(self, inst):
-        return "minecraft/gold_ore"
-
-    def getAllTexturFiles(self):
-        return ["minecraft/gold_ore"]
-
     def isBrakeAble(self, inst):
         return True
 
     def getDrop(self, inst):
         return {self.getItemName(inst): 1}
 
-G.blockhandler.register(GoldOre)
 
-"""class for ironore"""
-class IronOre(G.blockclass):
+class IronOre(IOre):
+    """class for ironore"""
     def getName(self):
         return "minecraft:iron_ore"
 
-    def getTexturData(self, inst):
-        return mathhelper.tex_coords((0, 0), (0, 0), (0, 0), n2=1)
-
-    def getTexturFile(self, inst):
-        return "minecraft/iron_ore"
-
-    def getAllTexturFiles(self):
-        return ["minecraft/iron_ore"]
-
     def isBrakeAble(self, inst):
         return True
 
     def getDrop(self, inst):
         return {self.getItemName(inst): 1}
 
-G.blockhandler.register(IronOre)
 
-"""class for lapisore"""
-class LapisOre(G.blockclass):
+class LapisOre(IOre):
+    """class for lapisore"""
     def getName(self):
         return "minecraft:lapis_ore"
-
-    def getTexturData(self, inst):
-        return mathhelper.tex_coords((0, 0), (0, 0), (0, 0), n2=1)
-
-    def getTexturFile(self, inst):
-        return "minecraft/lapis_ore"
-
-    def getAllTexturFiles(self):
-        return ["minecraft/lapis_ore"]
 
     def isBrakeAble(self, inst):
         return True
@@ -131,48 +82,40 @@ class LapisOre(G.blockclass):
     def getDrop(self, inst):
         return {"minecraft:lapis_lazuli":5}
 
-G.blockhandler.register(LapisOre)
 
-"""class for netherquartz"""
-class NetherQuartz(G.blockclass):
+class NetherQuartz(IOre):
+    """class for netherquartz"""
     def getName(self):
         return "minecraft:nether_quartz_ore"
 
-    def getTexturData(self, inst):
-        return mathhelper.tex_coords((0, 0), (0, 0), (0, 0), n2=1)
-
-    def getTexturFile(self, inst):
-        return "minecraft/nether_quartz_ore"
-
-    def getAllTexturFiles(self):
-        return ["minecraft/nether_quartz_ore"]
-
     def isBrakeAble(self, inst):
         return True
 
     def getDrop(self, inst):
         return {self.getItemName(inst): 1}
 
-G.blockhandler.register(NetherQuartz)
 
-"""class for redstoneore"""
-class RedstoneOre(G.blockclass):
+class RedstoneOre(IOre):
+    """class for redstoneore"""
     def getName(self):
         return "minecraft:redstone_ore"
 
-    def getTexturData(self, inst):
-        return mathhelper.tex_coords((0, 0), (0, 0), (0, 0), n2=1)
-
-    def getTexturFile(self, inst):
-        return "minecraft/redstone_ore"
-
-    def getAllTexturFiles(self):
-        return ["minecraft/redstone_ore"]
-
     def isBrakeAble(self, inst):
         return True
 
     def getDrop(self, inst):
         return {self.getItemName(inst): 1}
 
-G.blockhandler.register(RedstoneOre)
+
+@modsystem.ModLoader.ModEventEntry("game:registry:on_block_registrate_periode", "minecraft",
+                                   info="registrating ores")
+def register():
+    G.blockhandler.register(RedstoneOre)
+    G.blockhandler.register(NetherQuartz)
+    G.blockhandler.register(LapisOre)
+    G.blockhandler.register(IronOre)
+    G.blockhandler.register(GoldOre)
+    G.blockhandler.register(EmeraldOre)
+    G.blockhandler.register(DiamondOre)
+    G.blockhandler.register(CoalOre)
+

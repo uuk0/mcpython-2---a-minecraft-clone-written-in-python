@@ -217,3 +217,205 @@ version 18w46c:
   added version-info-tag for Mod's
   added VERSION_NAME and VERSION_ID attribute for globals from this version.info file
   added ModSorter for sorting mods
+
+version 18w49a:
+  remwriting worldgen from ground
+  added Dimension, WorldGenerator
+  added OverWorld, a new HighMapGenerator
+  biome.generatePositions() takes now an dimension
+  added /generate-command
+  added the old map smoother
+  added SmoothBiomeMap-function
+  biomehandler.getByTemperatur() takes now an dimension
+  updated config for this
+  added seeds (which are generated at beginning at the moment random)
+  changed some of the above material systems of biomes
+  added leaves to acacia trees & fixed bug that they are spawing direct next to each other
+
+version 18w49b:
+  updated the textures to 18w49a
+  added resourcetable for mods which are adding things (so EVERY mod should say what he is adding to these system)
+  added tooltip with an function to items to get the text
+  added getSlotFor(x, y)-function for player
+  added checkinventorysforslots to player for checking for slots for inventorymovementsystem
+  added function on_try_close & on_key_press to Inventory & InventoryCollection
+  inventory showing & hiding acceps now instances
+  fixed bug: inventory is not hideable
+  slot has now an controll_function for checking if an item can be setted to an slot
+  added new notationsystem. THE OLD WILL AUTOMATICLY CONVERTED. PLEASE ADD ONLY-ITEMS TO THE NEW SYSTEM
+        via G.notationhandler.notate(...)
+  added oredict-use for armorslots in playerinventory
+
+version 18w49c:
+  improvement: when adding an item WITHOUT an translation, it's blank LANG_INFO is used for tooltip
+  moved state.py to state/State.py & splitted up States into diffrent files
+  added TitleScreen State
+  added clear()-function to model
+  emptied sectors will now be deleted
+  fixed misspell in player.py by gamemode
+  added /gamemode-command
+  added mouse.MIDDLE block support
+  changed when blocks are shown: unfilled chunks are here "full" of blocks
+  fixed bug: inner blocks shown via show_sector are shown
+
+version 18w50a:
+  fixed bug: Mod.getMcPythonVersions() is NOT used by modloading
+  added version info header in log
+  added getUserFriendlyName for Mods
+  added spawnpoint which will be selected random on worldgen
+  fixed bug: can't set craftingtable
+  moved showning and hiding to BlockClass
+  changed the order of generationssssss
+  changed how G.BlockGenerateTasks works
+  changed how OreGenerator works
+  changed how biome generation is handled
+  fixed bug: world is not shown after generating
+  fixewd bug: BedrockLayer is always flat
+
+version 18w50b:
+  fixed bug: /gamemode with ints is not working
+  fixed bug: can add blocks under 0 and over 255
+  fixed bug: /generate-command has the same bug as the worldgen system (18w50a[10])
+  added ability to place ores by yourself
+  fixed bug: emerald is generated more than 1
+  OreGenerator's replace argument is now an list
+  added sandstone to worldgen
+  the terrain is now smoother
+  changed the way how caves are generated & removed option to disable
+  changed default world size to 3x3
+  fixed bug: gamemode 3 is not correct
+  added isVisableInWorld-function to Block
+  fixed bug: inner blocks are shown
+  REMOVED unneccesary call of world model preparing in Overworldprepare
+  added /reload-command for reloading world
+
+version 18w50c:
+  added language files for mods (LanguageExtentsion)
+  added decoder for the old language format of mc (before 1.13)
+  updated textures to 18w50a
+  added chain-armor
+  fixed bug: ONLY-items can't be translated
+  added Storage System with datafixer
+  added getStorageData & setStorageData - function to block
+  added /save & /load command
+  added harts
+  added /setharts command
+  added tnt-explosion via cavegenerator
+
+version 18w51a:
+  improved a lot of files
+  G.local is now WITHOUT the "/" at the end
+  sorted globals.py
+  renamed biomes/biom.py to biomes/biome.py
+  moved assets to assets/minecraft
+  updated readme.md
+  moved everything to sourceforge
+  changed some parts of log
+  changed the title of the window
+  REMOVED mods-folder from sys.path, use import mods.[...]
+
+version 18w52a:
+  added texturslitcher -> it will combinine ALL images into one big
+  changed what block.getTextureData returns
+  missingtexture file will now be loaded as block texture
+  fixed bug: can't set crafting table
+  fixed bug: blocks which were deleted by hand were not hidden
+  fixed bug: G.BlockGenTasks are not cleaned after worldgen
+  added ability to definit how texture files should be handled (via [file].info)
+  added MODTABLE to texturslitcher for definitions for diffrent texture file sizes filled up to 16x16
+  now every block has his own file
+  per default, the item file is now missingtexture
+
+version 18w52b:
+  fixed bug with ImageAtlas when size is to big
+  there will now be some more caves generated
+  added ModelHandler
+  arguments will be interpretted now if they are dirs as moddirs
+  mod will become now an 'path' attribute
+  fixed some bugs around LanguageExtension
+  added config option for mouse reaktion
+  fixed bug: can get in every gamemode blocks with mouse middle
+  fixed bug: /time add <a big int> take very long to be execute
+  fixed bug: "" in chat executed will give an exception
+
+version 19w03a:
+  added ArgumentHandler with event game:registry:on_argument_parser_type_registrate_periode
+  added --deactivateversionicompatibles argument for mods
+  fixed bug with craftingtable block texure data
+  added worldaccess class for storing all informations about an dimension-instance without using the dimension
+  FOR THAT, REMOVED batch, world, shown & sectors -attributes from model
+  done some stuff around things that should only be done in game but are done in game menus
+  window has now an __model attribute instead of an model attribute
+  added getStateName() and getModelFile() method to block
+  added IModelType-class for drawing model definitions from file
+  changed the whole way how things are rendered (to models)
+  IF YOU WANT TO HAVE YOUR OWN BLOCK RENDERS, REGISTER YOUR OWN IModelType TO IModelType.TYPES
+  added support for storing more than one block in one file by using local texture file indexes but one texture atlas
+  added "relative_index" to cube:full (cube:full is the basic IModelType)
+  rewritten texture system from ground: removed texture- & texturdatahandler, improved system for Models ("cube:full")
+  added config for startinventory
+  added WorldGenerator for DebugWorld
+  added "cube:log" (rotation will be added in future)
+  added more wood and the planks of it
+  added exception when adding blocks without items to gameregistry (only on startup)
+  updated textures to 19w02a
+  added all leaves
+  added IPlank class as basic for every plank, IOre as basic for all ores, ISandStone as basic for all Sandstones
+  added coarse_dirt
+  fixed bug: can't use redstone lamp
+
+version 19w03b:
+  fixed bug: when getting an undefinited ITEM from an BLOCK, an exception is raised
+  added Item constructor for missing items
+  fixed bug: item pictures are not resized correctly
+  every texture is now moved into ONE file by moving imageatlases into each other when the size is big enough
+  added getItemFile function to block to auto-construct an item class
+  added IImageType for images that must be for example splitted before using them
+  added some useful printed stuff around imgaeatlas generation
+  added ability to add own events to modloader
+  fixed bug: chainmail_leggins can't be accessed
+
+version 19w06a:
+  rewritten recipi-system from ground (may NOT work)
+  updated textures to 19w04b
+  removed collisions for the moment
+  if a chunk is not generated, blocks that are at the line to this chunk will ignore it's neightbor in these chunk
+
+  rewritten worldgenerator from ground and cleaned up everything a bit:
+    DELETED all biome-classes, main WorldGenerator, structure system (and multiblock system), cavegenerator
+    added new folders: gen, world, modsystem, gen.biomes
+    moved Dimension and model to world
+    moved ModLoader and ModSorter to modsystem
+    added WorldProvider & ChunkProvider
+    added WorldGenerator with a LOT of generation functions (which definits what to do when)
+    added my own Random generator
+    changed what info is shown
+    moved Dimension Overworld into its own file
+    added attribute to OverWorldGenerator: BIOMES
+    added biomes: BirchForest & Plains
+    re-added OreGenerator (rewritten)
+    re-added DebugWorldGenerator
+
+  modelloader supports now directory loading
+  added notdefinited.json to models
+  changed some code around ModLoader (how you bind to events, how you add your own events etc.)
+  added mcpython-mod in order to load our own things
+  if you bind to an unknown event, an RuntimeError will be raised now
+
+version 19w07a:
+  transformed storage system to the new intern storage system
+  updated textures to 19w07a
+  added imagecutter - it is used to creat some textures which were before pre-cutted (this may brake your texturepacks)
+  textures for inventorys are cutted now out (these brakes your texturepacks)
+  added an exceptionhandler to write to the exception.txt file which was unused for a long time
+  added log cash
+  draw function of entity will now be callen
+  added option for skin (at the moment two skins are registrated)
+  added entity.update(dt)-function
+  ModLoader will now inser EventCallBacks before the last two events
+  added ability to notate mods via @G.modloader
+  modloader will print now out in which order the game loads everything
+  modsorter will now use new code from https://stackoverflow.com/questions/11557241/python-sorting-a-dependency-list
+        for sorting mods
+  modloader will now print less debug stuff
+  fixed bug: blocks without items for which items were generated have not correct items

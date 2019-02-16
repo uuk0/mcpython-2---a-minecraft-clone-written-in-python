@@ -1,98 +1,59 @@
 import globals as G
 import mathhelper
+import modsystem.ModLoader
 
-"""class for sandstone"""
-class SandStone(G.blockclass):
+
+class ISandStone(G.blockclass):
+    def getModelFile(self, inst):
+        return "minecraft:sandstone"
+
+    def getStateName(self, inst):
+        return self.getName().split(":")[1]
+
+
+class SandStone(ISandStone):
+    """class for sandstone"""
     def getName(self):
         return "minecraft:sandstone"
 
-    def getTexturData(self, inst):
-        return mathhelper.tex_coords((0, 0), (0, 1), (0, 2), n2=4)
 
-    def getTexturFile(self, inst):
-        return "minecraft/sandstone"
-
-    def getAllTexturFiles(self):
-        return ["minecraft/sandstone"]
-
-G.blockhandler.register(SandStone)
-
-"""class for chiseled sandstone"""
-class ChiseledSandStone(G.blockclass):
+class ChiseledSandStone(ISandStone):
+    """class for chiseled sandstone"""
     def getName(self):
         return "minecraft:chiseled_sandstone"
 
-    def getTexturData(self, inst):
-        return mathhelper.tex_coords((0, 0), (0, 1), (0, 2), n2=4)
 
-    def getTexturFile(self, inst):
-        return "minecraft/chiseled_sandstone"
-
-    def getAllTexturFiles(self):
-        return ["minecraft/chiseled_sandstone"]
-
-G.blockhandler.register(ChiseledSandStone)
-
-"""class for cut sandstone"""
-class CutSandStone(G.blockclass):
+class CutSandStone(ISandStone):
+    """class for cut sandstone"""
     def getName(self):
         return "minecraft:cut_sandstone"
 
-    def getTexturData(self, inst):
-        return mathhelper.tex_coords((0, 0), (0, 1), (0, 2), n2=4)
 
-    def getTexturFile(self, inst):
-        return "minecraft/cut_sandstone"
-
-    def getAllTexturFiles(self):
-        return ["minecraft/cut_sandstone"]
-
-G.blockhandler.register(CutSandStone)
-
-"""class for red sandstone"""
-class RedSandStone(G.blockclass):
+class RedSandStone(ISandStone):
+    """class for red sandstone"""
     def getName(self):
         return "minecraft:red_sandstone"
 
-    def getTexturData(self, inst):
-        return mathhelper.tex_coords((0, 0), (0, 1), (0, 2), n2=4)
 
-    def getTexturFile(self, inst):
-        return "minecraft/red_sandstone"
-
-    def getAllTexturFiles(self):
-        return ["minecraft/red_sandstone"]
-
-G.blockhandler.register(RedSandStone)
-
-"""class for red chiseled sandstone"""
-class RedChiseledSandStone(G.blockclass):
+class RedChiseledSandStone(ISandStone):
+    """class for red chiseled sandstone"""
     def getName(self):
         return "minecraft:red_chiseled_sandstone"
 
-    def getTexturData(self, inst):
-        return mathhelper.tex_coords((0, 0), (0, 1), (0, 2), n2=4)
 
-    def getTexturFile(self, inst):
-        return "minecraft/red_chiseled_sandstone"
-
-    def getAllTexturFiles(self):
-        return ["minecraft/red_chiseled_sandstone"]
-
-G.blockhandler.register(RedChiseledSandStone)
-
-"""class for red cut sandstone"""
-class RedCutSandStone(G.blockclass):
+class RedCutSandStone(ISandStone):
+    """class for red cut sandstone"""
     def getName(self):
         return "minecraft:red_cut_sandstone"
 
-    def getTexturData(self, inst):
-        return mathhelper.tex_coords((0, 0), (0, 1), (0, 2), n2=4)
 
-    def getTexturFile(self, inst):
-        return "minecraft/red_cut_sandstone"
+@modsystem.ModLoader.ModEventEntry("game:registry:on_block_registrate_periode", "minecraft",
+                                   info="registrating sandstones")
+def register():
+    G.blockhandler.register(RedCutSandStone)
+    G.blockhandler.register(RedChiseledSandStone)
+    G.blockhandler.register(RedSandStone)
+    G.blockhandler.register(CutSandStone)
+    G.blockhandler.register(ChiseledSandStone)
+    G.blockhandler.register(SandStone)
 
-    def getAllTexturFiles(self):
-        return ["minecraft/red_cut_sandstone"]
-
-G.blockhandler.register(RedCutSandStone)

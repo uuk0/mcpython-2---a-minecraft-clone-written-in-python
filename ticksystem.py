@@ -12,7 +12,7 @@ class TickHandler:
         if self.activetick in self.totick:
             funcs = self.totick[self.activetick]
             del self.totick[self.activetick]
-            log.printMSG(funcs)
+            #log.printMSG(funcs)
             self.activetick += 1
             for e in funcs:
                 e[0](*e[1], **e[2])

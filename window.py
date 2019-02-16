@@ -6,7 +6,7 @@ import config
 import globals as G
 import log
 import mathhelper
-import model
+import world.model as model
 import player
 import time
 
@@ -66,13 +66,15 @@ class Window(pyglet.window.Window):
 
         log.printMSG("[MAINTHREAD][WINDOW][INFO] creating model...")
 
-        # Instance of the model that handles the world.
-        self.model = model.Model()
-
         self.size = (800, 600)
 
-        #player instance
+        self.worldname = None
+
+        # player instance
         self.player = player.player()
+
+        # Instance of the model that handles the world.
+        self.__model = model.Model()
 
         #minecraft time. value between 0 and 24000
         self.time = 0
@@ -164,35 +166,43 @@ class Window(pyglet.window.Window):
             The change in time since the last call.
 
         """
-        self.model.process_queue()
+        G.model.process_queue()
         sector = mathhelper.sectorize(self.position)
-        if sector != self.sector:
-            self.model.change_sectors(self.sector, sector)
+        if sector != self.sector and G.statehandler.active_state.getName() == "minecraft:game":
+            G.model.change_sectors(self.sector, sector)
             if self.sector is None:
-                self.model.process_entire_queue()
+                G.model.process_entire_queue()
             self.sector = sector
         m = 8
         dt = min(dt, 0.2)
         for _ in range(m):
             self._update(dt / m)
+        for entity in G.entityhandler.entitys:
+            entity.update(dt)
         G.eventhandler.call("core:update")
         if G.statehandler.active_state.getName() == "minecraft:game":
             self.time += dt * 20
-            while self.time > 24000:
-                self.time -= 24000
-                self.day += 1
-        dt = time.time()
-        while len(G.BlockGenerateTasks) > 0:
-            task = G.BlockGenerateTasks.pop(0)
-            if task[0] == 0:
-                G.model.add_block(*task[1:], immediate=task[1][1] >= G.HighMAP[(task[1][0], task[1][2])])
-            elif task[0] == 1:
-                task[1](*task[2], **task[3])
-            elif task[0] == 2:
-                G.model.remove_block(*task[1:], immediate=task[1][1] >= G.HighMAP[(task[1][0], task[1][2])])
-            else:
-                log.printMSG("[MAINTHREAD][TASKS][ERROR] can't execute task named "+str(task))
-            if time.time() - dt > 2.0 / config.Physiks.TICKS_PER_SEC:
+            self.day += round(self.time // 24000)
+            self.time = round(self.time % 24000)
+        if G.GAMESTAGE != 3: return
+        i = 0
+        max = len(G.BlockGenerateTasks)
+        l = list(G.BlockGenerateTasks.keys())
+        t = time.time()
+        for position in l:
+            G.model.add_block(position, G.BlockGenerateTasks[position][0],
+                              immediate=True)
+            task = G.BlockGenerateTasks[position]
+            if len(task) > 1:
+                task = task[1:]
+                while len(task) > 0:
+                    st = task.pop(0)
+                    if st == "sdata":
+                        chunkprovider.world[position].setStorageData(task.pop(0))
+                    else:
+                        log.printMSG("[TASKS][ERROR] unknown subtask "+str(st))
+            del G.BlockGenerateTasks[position]
+            if time.time() - t > 0.1:
                 return
 
     def _update(self, dt):
@@ -221,7 +231,10 @@ class Window(pyglet.window.Window):
             dy += self.dy * dt
         # collisions
         x, y, z = self.position
-        x, y, z = self.collide((x + dx, y + dy, z + dz), config.PLAYER_HEIGHT)
+        if G.player.gamemode != 3:
+            x, y, z = self.collide((x + dx, y + dy, z + dz), config.PLAYER_HEIGHT)
+        else:
+            x, y, z = x + dx, y + dy, z + dz
         self.position = (x, y, z)
 
     def collide(self, position, height):
@@ -241,34 +254,7 @@ class Window(pyglet.window.Window):
             The new position of the player taking into account collisions.
 
         """
-        # How much overlap with a dimension of a surrounding block you need to
-        # have to count as a collision. If 0, touching terrain at all counts as
-        # a collision. If .49, you sink into the ground, as if walking through
-        # tall grass. If >= .5, you'll fall through the ground.
-        pad = 0.25
-        p = list(position)
-        np = mathhelper.normalize(position)
-        for face in config.FACES:  # check all surrounding blocks
-            for i in range(3):  # check each dimension independently
-                if not face[i]:
-                    continue
-                # How much overlap you have with this dimension.
-                d = (p[i] - np[i]) * face[i]
-                if d < pad:
-                    continue
-                for dy in range(height):  # check each height
-                    op = list(np)
-                    op[1] -= dy
-                    op[i] += face[i]
-                    if tuple(op) not in self.model.world:
-                        continue
-                    p[i] -= (d - pad) * face[i]
-                    if face == (0, -1, 0) or face == (0, 1, 0):
-                        # You are colliding with the ground or ceiling, so stop
-                        # falling / rising.
-                        self.dy = 0
-                    break
-        return tuple(p)
+        return position
 
     def on_mouse_press(self, x, y, button, modifiers):
         """ Called when a mouse button is pressed. See pyglet docs for button

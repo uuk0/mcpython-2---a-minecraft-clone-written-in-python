@@ -1,0 +1,39 @@
+{
+  "blockaddress": "minecraft:plank",
+  "acacia_plank": {
+    "name": "cube:full",
+    "side_texture_files": ["assets/minecraft/textures/block/acacia_planks.png"],
+    "blockname": "minecraft/acacia_plank",
+    "side_indexes": [0, 0, 0, 0, 0, 0]
+  },
+  "birch_plank": {
+    "name": "cube:full",
+    "side_texture_files": ["assets/minecraft/textures/block/birch_planks.png"],
+    "blockname": "minecraft/birch_plank",
+    "side_indexes": [0, 0, 0, 0, 0, 0]
+  },
+  "dark_oak_plank": {
+    "name": "cube:full",
+    "side_texture_files": ["assets/minecraft/textures/block/dark_oak_planks.png"],
+    "blockname": "minecraft/dark_oak_plank",
+    "side_indexes": [0, 0, 0, 0, 0, 0]
+  },
+  "jungle_plank": {
+    "name": "cube:full",
+    "side_texture_files": ["assets/minecraft/textures/block/jungle_planks.png"],
+    "blockname": "minecraft/jungle_plank",
+    "side_indexes": [0, 0, 0, 0, 0, 0]
+  },
+  "oak_plank": {
+    "name": "cube:full",
+    "side_texture_files": ["assets/minecraft/textures/block/oak_planks.png"],
+    "blockname": "minecraft/oak_plank",
+    "side_indexes": [0, 0, 0, 0, 0, 0]
+  },
+  "spruce_plank": {
+    "name": "cube:full",
+    "side_texture_files": ["assets/minecraft/textures/block/spruce_planks.png"],
+    "blockname": "minecraft/spruce_plank",
+    "side_indexes": [0, 0, 0, 0, 0, 0]
+  }
+}

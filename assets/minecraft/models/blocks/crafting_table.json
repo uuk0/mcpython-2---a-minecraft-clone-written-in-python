@@ -1,0 +1,12 @@
+{
+  "blockaddress": "minecraft:crafting_table",
+  "crafting_table": {
+    "name": "cube:full",
+    "side_texture_files": ["assets/minecraft/textures/block/crafting_table_front.png",
+                           "assets/minecraft/textures/block/crafting_table_side.png",
+                           "assets/minecraft/textures/block/crafting_table_top.png",
+                           "assets/minecraft/textures/block/oak_planks.png"],
+    "blockname": "minecraft/crafting_table",
+    "side_indexes": [1, 0, 2, 3, 3, 3]
+  }
+}

@@ -9,6 +9,6 @@ class Gravel(G.itemclass):
         return True
 
     def getTexturFile(self):
-        return G.local+"/assets/textures/item/GRAVEL.png"
+        return G.local+"/assets/minecraft/textures/item/GRAVEL.png"
 
 G.itemhandler.register(Gravel)

@@ -9,6 +9,6 @@ class Obsidian(G.itemclass):
         return True
 
     def getTexturFile(self):
-        return G.local+"/assets/textures/item/OBSIDIAN.png"
+        return G.local+"/assets/minecraft/textures/item/OBSIDIAN.png"
 
 G.itemhandler.register(Obsidian)

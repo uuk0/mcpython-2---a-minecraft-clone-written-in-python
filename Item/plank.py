@@ -9,7 +9,7 @@ class AcaciaLog(G.itemclass):
         return True
 
     def getTexturFile(self):
-        return G.local+"/assets/textures/item/acacia_plank.png"
+        return G.local+"/assets/minecraft/textures/item/acacia_plank.png"
 
 G.itemhandler.register(AcaciaLog)
 
@@ -22,7 +22,7 @@ class AcaciaLog(G.itemclass):
         return True
 
     def getTexturFile(self):
-        return G.local+"/assets/textures/item/Birch_Planks.png"
+        return G.local+"/assets/minecraft/textures/item/Birch_Planks.png"
 
 G.itemhandler.register(AcaciaLog)
 

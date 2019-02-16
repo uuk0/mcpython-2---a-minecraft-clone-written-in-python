@@ -9,6 +9,6 @@ class Bedrock(G.itemclass):
         return True
 
     def getTexturFile(self):
-        return G.local+"/assets/textures/item/BEDROCK.png"
+        return G.local+"/assets/minecraft/textures/item/BEDROCK.png"
 
 G.itemhandler.register(Bedrock)

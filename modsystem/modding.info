@@ -1,0 +1,21 @@
+
+-------------------------------------------
+MCPYTHON MODDING
+-------------------------------------------
+
+You are free to mod mcpython, write mods for the modloader or rewrite script of the main part.
+Please make shoure that if you rewrite an mod of minecraft that everything is OK.
+Modding Interface:
+  1.: creat an folder in mods/ named how your mod should named
+  2.: creat an file main.py in these folder
+  3.: write: import globals as G\nclass <mymod>(G.mod): [stuff around your mod, see ModLoader.py, class Mod]\n
+             G.modloader.register(<mymod>)
+  4.: add block & item classes etc.
+  5.: have fun!
+
+adding an Block:
+  1.: creat an File
+  2.: creat the texture files
+  3.: creat another (an model file)
+  2.: write: import globals as G\nclass <myblockname>(G.blockclass): [stuff around your block, see block/Block.py]\n
+             G.blockhandler.register(<myblockname>)

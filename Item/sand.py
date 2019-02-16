@@ -9,7 +9,7 @@ class Sand(G.itemclass):
         return True
 
     def getTexturFile(self):
-        return G.local+"/assets/textures/item/SAND#0.png"
+        return G.local+"/assets/minecraft/textures/item/SAND#0.png"
 
 G.itemhandler.register(Sand)
 
@@ -22,6 +22,6 @@ class RedSand(G.itemclass):
         return True
 
     def getTexturFile(self):
-        return G.local+"/assets/textures/item/SAND#1.png"
+        return G.local+"/assets/minecraft/textures/item/SAND#1.png"
 
 G.itemhandler.register(RedSand)

@@ -1,0 +1,15 @@
+{
+  "blockaddress": "minecraft:sand",
+  "sand": {
+    "name": "cube:full",
+    "side_texture_files": ["assets/minecraft/textures/block/sand.png"],
+    "blockname": "minecraft/sand",
+    "side_indexes": [0, 0, 0, 0, 0, 0]
+  },
+  "red_sand": {
+    "name": "cube:full",
+    "side_texture_files": ["assets/minecraft/textures/block/red_sand.png"],
+    "blockname": "minecraft/red_sand",
+    "side_indexes": [0, 0, 0, 0, 0, 0]
+  }
+}

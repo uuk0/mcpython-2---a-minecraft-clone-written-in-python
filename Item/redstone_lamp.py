@@ -9,6 +9,6 @@ class RedstoneLamp(G.itemclass):
         return True
 
     def getTexturFile(self):
-        return G.local+"/assets/textures/item/REDSTONE_LAMP.png"
+        return G.local+"/assets/minecraft/textures/item/REDSTONE_LAMP.png"
 
 G.itemhandler.register(RedstoneLamp)

@@ -1,5 +1,6 @@
 import globals as G
 from . import selector
+import modsystem.ModLoader
 
 """command parser"""
 class CommandHandler:
@@ -36,7 +37,9 @@ class CommandClass:
 
 G.commandclass = CommandClass
 
-def loadCommands(*args):
-    from . import give, setblock, time
 
-G.eventhandler.on_event("game:registry:on_command_registrate_periode", loadCommands)
+@modsystem.ModLoader.ModEventEntry("game:registry:on_command_registrate_periode", "minecraft",
+                                   info="registrating commands")
+def register():
+    from . import give, setblock, time, generate, gamemode, reload, save, load, setharts
+

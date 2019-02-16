@@ -1,0 +1,11 @@
+{
+  "blockaddress": "minecraft:barrel",
+  "default": {
+    "name": "cube:full",
+    "side_texture_files": ["assets/minecraft/textures/block/barrel_bottom.png",
+                           "assets/minecraft/textures/block/barrel_side.png",
+                           "assets/minecraft/textures/block/barrel_top.png"],
+    "blockname": "minecraft/barrel",
+    "side_indexes": [0, 2, 1, 1, 1, 1]
+  }
+}

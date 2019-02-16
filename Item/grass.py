@@ -9,6 +9,6 @@ class Grass(G.itemclass):
         return True
 
     def getTexturFile(self):
-        return G.local+"/assets/textures/item/GRASS.png"
+        return G.local+"/assets/minecraft/textures/item/GRASS.png"
 
 G.itemhandler.register(Grass)

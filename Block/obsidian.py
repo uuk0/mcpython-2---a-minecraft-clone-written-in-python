@@ -1,18 +1,19 @@
 import globals as G
 import mathhelper
+import modsystem.ModLoader
 
-"""class for obsidian"""
+
 class Obsidian(G.blockclass):
+    """class for obsidian"""
     def getName(self):
         return "minecraft:obsidian"
 
-    def getTexturData(self, inst):
-        return mathhelper.tex_coords((0, 0), (0, 0), (0, 0), n2=1)
+    def getModelFile(self, inst):
+        return "minecraft:obsidian"
 
-    def getTexturFile(self, inst):
-        return "minecraft/obsidian"
 
-    def getAllTexturFiles(self):
-        return ["minecraft/obsidian"]
+@modsystem.ModLoader.ModEventEntry("game:registry:on_block_registrate_periode", "minecraft",
+                                   info="registrating obsidian")
+def register():
+    G.blockhandler.register(Obsidian)
 
-G.blockhandler.register(Obsidian)

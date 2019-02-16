@@ -9,7 +9,7 @@ class Glowstone(G.itemclass):
         return True
 
     def getTexturFile(self):
-        return G.local+"/assets/textures/item/GLOWSTONE.png"
+        return G.local+"/assets/minecraft/textures/item/GLOWSTONE.png"
 
 G.itemhandler.register(Glowstone)
 
@@ -22,7 +22,7 @@ class GlowstoneDust(G.itemclass):
         return True
 
     def getTexturFile(self):
-        return G.local+"/assets/textures/item/glowstone_dust.png"
+        return G.local+"/assets/minecraft/textures/item/glowstone_dust.png"
 
     def hasBlock(self):
         return False

@@ -1,122 +1,155 @@
 import globals as G
 import mathhelper
 import notations
+import modsystem.ModLoader
 
-"""the base class for Logs"""
+
 class Log(G.blockclass):
+    """the base class for Logs"""
     oredictnames = [notations.OreDictItems.WOOD_LOG]
 
-    def getName(self):
+    def _getDefaultData(self, inst):
+        return {"rotation":"UD"}
+
+
+class McLog(Log):
+    """base class of all here listed logs"""
+    def getBrakeSoundFile(self, inst):
+        return [G.local + "/assets/minecraft/sounds/brake/wood1.wma",
+                G.local + "/assets/minecraft/sounds/brake/wood2.wma",
+                G.local + "/assets/minecraft/sounds/brake/wood3.wma",
+                G.local + "/assets/minecraft/sounds/brake/wood4.wma"]
+
+    def getModelFile(self, inst):
         return "minecraft:log"
 
-    """returns the textur file position for the front"""
-    def getFrontTextur(self):
-        return None
 
-    """returns the textur file position for the side"""
-    def getSideTextur(self):
-        return None
-
-    """returns the right formated textur data"""
-    def getTexturData(self, inst):
-        data = []
-        if not inst.blocksettedto:
-            data = [self.getFrontTextur()] * 2 + [self.getSideTextur()] * 4
-        elif inst.blocksettedto[1] != inst.position[1] and inst.blocksettedto[0] == inst.position[0] and inst.blocksettedto[2] == inst.position[2]:
-            data = [self.getFrontTextur()] * 2 + [self.getSideTextur()] * 4
-        else:
-            data = [self.getFrontTextur()] * 2 + [self.getSideTextur()] * 4
-        return mathhelper.text_coords_complex(*data+self.getTexturSize())
-
-"""base class of all here listed logs"""
-class McLog(Log):
-    def getTexturSize(self):
-        return [1, 4]
-
-    def getFrontTextur(self):
-        return (0, 1)
-
-    def getSideTextur(self):
-        return (0, 2)
-
-    def getBrakeSoundFile(self, inst):
-        return [G.local + "assets/sounds/brake/wood1.wma",
-                G.local + "assets/sounds/brake/wood2.wma",
-                G.local + "assets/sounds/brake/wood3.wma",
-                G.local + "assets/sounds/brake/wood4.wma"]
-
-"""oak log class"""
-class OakLog(McLog):
-    def getTexturFile(self, inst):
-        return "minecraft/oak_log"
-
-    def getName(self):
-        return "minecraft:oak_log"
-
-G.blockhandler.register(OakLog)
-
-"""stripped oak class"""
-class StrippedOakLog(McLog):
-    def getTexturFile(self, inst):
-        return "minecraft/stripped_oak_log"
-
-    def getName(self):
-        return "minecraft:stripped_oak_log"
-
-G.blockhandler.register(StrippedOakLog)
-
-"""acacia Log class"""
-class AcaciaLog(Log):
-    def getAllTexturFiles(self):
-        return ["minecraft/acacia_log"]
-
-    def getTexturFile(self, inst):
-        return "minecraft/acacia_log"
-
-    def getTexturSize(self):
-        return [1, 4]
-
-    def getFrontTextur(self):
-        return (0, 1)
-
-    def getSideTextur(self):
-        return (0, 2)
+class AcaciaLog(McLog):
+    """acacia Log class"""
+    def getStateName(self, inst):
+        return "acacia_log"
 
     def getName(self):
         return "minecraft:acacia_log"
 
-    def getBrakeSoundFile(self, inst):
-        return [G.local + "assets/sounds/brake/wood1.wma",
-                G.local + "assets/sounds/brake/wood2.wma",
-                G.local + "assets/sounds/brake/wood3.wma",
-                G.local + "assets/sounds/brake/wood4.wma"]
 
-G.blockhandler.register(AcaciaLog)
+class StrippedAcaciaLog(McLog):
+    """stripped acacia Log class"""
+    def getStateName(self, inst):
+        return "stripped_acacia_log"
 
-"""birch class"""
-class BirchLog(Log):
-    def getAllTexturFiles(self):
-        return ["minecraft/birch_log"]
+    def getName(self):
+        return "minecraft:stripped_acacia_log"
 
-    def getTexturFile(self, inst):
-        return "minecraft/birch_log"
 
-    def getTexturSize(self):
-        return [1, 4]
-
-    def getFrontTextur(self):
-        return (0, 1)
-
-    def getSideTextur(self):
-        return (0, 2)
+class BirchLog(McLog):
+    """birch Log class"""
+    def getStateName(self, inst):
+        return "birch_log"
 
     def getName(self):
         return "minecraft:birch_log"
 
-    def getBrakeSoundFile(self, inst):
-        return [G.local + "assets/sounds/brake/wood1.wma",
-                G.local + "assets/sounds/brake/wood2.wma",
-                G.local + "assets/sounds/brake/wood3.wma",
-                G.local + "assets/sounds/brake/wood4.wma"]
 
-G.blockhandler.register(BirchLog)
+class StrippedBirchLog(McLog):
+    """stripped birch Log class"""
+    def getStateName(self, inst):
+        return "stripped_birch_log"
+
+    def getName(self):
+        return "minecraft:stripped_birch_log"
+
+
+class DarkOakLog(McLog):
+    """dark oak Log class"""
+    def getStateName(self, inst):
+        return "dark_oak_log"
+
+    def getName(self):
+        return "minecraft:dark_oak_log"
+
+
+class StrippedDarkOakLog(McLog):
+    """stripped dark oak Log class"""
+    def getStateName(self, inst):
+        return "stripped_dark_oak_log"
+
+    def getName(self):
+        return "minecraft:stripped_dark_oak_log"
+
+
+class JungleLog(McLog):
+    """jungle Log class"""
+    def getStateName(self, inst):
+        return "jungle_log"
+
+    def getName(self):
+        return "minecraft:jungle_log"
+
+
+class StrippedJungleLog(McLog):
+    """stripped jungle Log class"""
+    def getStateName(self, inst):
+        return "stripped_jungle_log"
+
+    def getName(self):
+        return "minecraft:stripped_jungle_log"
+
+
+class OakLog(McLog):
+    """oak Log class"""
+    def getStateName(self, inst):
+        return "oak_log"
+
+    def getName(self):
+        return "minecraft:oak_log"
+
+
+class StrippedOakLog(McLog):
+    """stripped oak Log class"""
+    def getStateName(self, inst):
+        return "stripped_oak_log"
+
+    def getName(self):
+        return "minecraft:stripped_oak_log"
+
+
+class SpruceLog(McLog):
+    """spruce Log class"""
+    def getStateName(self, inst):
+        return "spruce_log"
+
+    def getName(self):
+        return "minecraft:spruce_log"
+
+
+class StrippedSpruceLog(McLog):
+    """stripped spruce Log class"""
+    def getStateName(self, inst):
+        return "stripped_spruce_log"
+
+    def getName(self):
+        return "minecraft:stripped_spruce_log"
+
+
+@modsystem.ModLoader.ModEventEntry("game:registry:on_block_registrate_periode", "minecraft",
+                                   info="registrating logs")
+def register():
+    G.blockhandler.register(StrippedSpruceLog)
+    G.blockhandler.register(SpruceLog)
+    G.blockhandler.register(StrippedOakLog)
+    G.blockhandler.register(OakLog)
+    G.blockhandler.register(StrippedJungleLog)
+    G.blockhandler.register(JungleLog)
+    G.blockhandler.register(StrippedDarkOakLog)
+    G.blockhandler.register(DarkOakLog)
+    G.blockhandler.register(StrippedBirchLog)
+    G.blockhandler.register(BirchLog)
+    G.blockhandler.register(StrippedAcaciaLog)
+    G.blockhandler.register(AcaciaLog)
+
+
+
+
+
+

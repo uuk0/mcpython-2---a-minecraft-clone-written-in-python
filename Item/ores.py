@@ -10,7 +10,7 @@ class CoalOre(G.itemclass):
         return True
 
     def getTexturFile(self):
-        return G.local+"/assets/textures/item/COAL_ORE.png"
+        return G.local+"/assets/minecraft/textures/item/COAL_ORE.png"
 
 G.itemhandler.register(CoalOre)
 
@@ -23,7 +23,7 @@ class DiamondOre(G.itemclass):
         return True
 
     def getTexturFile(self):
-        return G.local+"/assets/textures/item/DIAMOND_ORE.png"
+        return G.local+"/assets/minecraft/textures/item/DIAMOND_ORE.png"
 
 G.itemhandler.register(DiamondOre)
 
@@ -36,7 +36,7 @@ class EmeraldOre(G.itemclass):
         return True
 
     def getTexturFile(self):
-        return G.local+"/assets/textures/item/EMERALD_ORE.png"
+        return G.local+"/assets/minecraft/textures/item/EMERALD_ORE.png"
 
 G.itemhandler.register(EmeraldOre)
 
@@ -49,7 +49,7 @@ class GoldOre(G.itemclass):
         return True
 
     def getTexturFile(self):
-        return G.local+"/assets/textures/item/GOLD_ORE.png"
+        return G.local+"/assets/minecraft/textures/item/GOLD_ORE.png"
 
 G.itemhandler.register(GoldOre)
 
@@ -62,7 +62,7 @@ class IronOre(G.itemclass):
         return True
 
     def getTexturFile(self):
-        return G.local+"/assets/textures/item/IRON_ORE.png"
+        return G.local+"/assets/minecraft/textures/item/IRON_ORE.png"
 
 G.itemhandler.register(IronOre)
 
@@ -75,7 +75,7 @@ class LapisOre(G.itemclass):
         return True
 
     def getTexturFile(self):
-        return G.local+"/assets/textures/item/LAPIS_ORE.png"
+        return G.local+"/assets/minecraft/textures/item/LAPIS_ORE.png"
 
 G.itemhandler.register(LapisOre)
 
@@ -88,7 +88,7 @@ class NetherQuartz(G.itemclass):
         return True
 
     def getTexturFile(self):
-        return G.local+"/assets/textures/item/QUARTZ_ORE.png"
+        return G.local+"/assets/minecraft/textures/item/QUARTZ_ORE.png"
 
 G.itemhandler.register(NetherQuartz)
 
@@ -101,7 +101,7 @@ class RedstoneOre(G.itemclass):
         return True
 
     def getTexturFile(self):
-        return G.local+"/assets/textures/item/REDSTONE_ORE.png"
+        return G.local+"/assets/minecraft/textures/item/REDSTONE_ORE.png"
 
 G.itemhandler.register(RedstoneOre)
 

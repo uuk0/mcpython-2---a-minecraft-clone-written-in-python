@@ -1,0 +1,99 @@
+{
+  "blockaddress": "minecraft:wool",
+  "wool_white": {
+    "name": "cube:full",
+    "side_texture_files": ["assets/minecraft/textures/block/white_wool.png"],
+    "blockname": "minecraft/white_wool",
+    "side_indexes": [0, 0, 0, 0, 0, 0]
+  },
+  "wool_orange": {
+    "name": "cube:full",
+    "side_texture_files": ["assets/minecraft/textures/block/orange_wool.png"],
+    "blockname": "minecraft/orange_wool",
+    "side_indexes": [0, 0, 0, 0, 0, 0]
+  },
+  "wool_magenta": {
+    "name": "cube:full",
+    "side_texture_files": ["assets/minecraft/textures/block/magenta_wool.png"],
+    "blockname": "minecraft/magenta_wool",
+    "side_indexes": [0, 0, 0, 0, 0, 0]
+  },
+  "wool_light_blue": {
+    "name": "cube:full",
+    "side_texture_files": ["assets/minecraft/textures/block/light_blue_wool.png"],
+    "blockname": "minecraft/light_blue_wool",
+    "side_indexes": [0, 0, 0, 0, 0, 0]
+  },
+  "wool_yellow": {
+    "name": "cube:full",
+    "side_texture_files": ["assets/minecraft/textures/block/yellow_wool.png"],
+    "blockname": "minecraft/yellow_wool",
+    "side_indexes": [0, 0, 0, 0, 0, 0]
+  },
+  "wool_lime": {
+    "name": "cube:full",
+    "side_texture_files": ["assets/minecraft/textures/block/lime_wool.png"],
+    "blockname": "minecraft/lime_wool",
+    "side_indexes": [0, 0, 0, 0, 0, 0]
+  },
+  "wool_pink": {
+    "name": "cube:full",
+    "side_texture_files": ["assets/minecraft/textures/block/pink_wool.png"],
+    "blockname": "minecraft/pink_wool",
+    "side_indexes": [0, 0, 0, 0, 0, 0]
+  },
+  "wool_gray": {
+    "name": "cube:full",
+    "side_texture_files": ["assets/minecraft/textures/block/gray_wool.png"],
+    "blockname": "minecraft/gray_wool",
+    "side_indexes": [0, 0, 0, 0, 0, 0]
+  },
+  "wool_light_gray": {
+    "name": "cube:full",
+    "side_texture_files": ["assets/minecraft/textures/block/light_gray_wool.png"],
+    "blockname": "minecraft/light_gray_wool",
+    "side_indexes": [0, 0, 0, 0, 0, 0]
+  },
+  "wool_cyan": {
+    "name": "cube:full",
+    "side_texture_files": ["assets/minecraft/textures/block/cyan_wool.png"],
+    "blockname": "minecraft/cyan_wool",
+    "side_indexes": [0, 0, 0, 0, 0, 0]
+  },
+  "wool_purple": {
+    "name": "cube:full",
+    "side_texture_files": ["assets/minecraft/textures/block/purple_wool.png"],
+    "blockname": "minecraft/purple_wool",
+    "side_indexes": [0, 0, 0, 0, 0, 0]
+  },
+  "wool_blue": {
+    "name": "cube:full",
+    "side_texture_files": ["assets/minecraft/textures/block/blue_wool.png"],
+    "blockname": "minecraft/blue_wool",
+    "side_indexes": [0, 0, 0, 0, 0, 0]
+  },
+  "wool_brown": {
+    "name": "cube:full",
+    "side_texture_files": ["assets/minecraft/textures/block/brown_wool.png"],
+    "blockname": "minecraft/brown_wool",
+    "side_indexes": [0, 0, 0, 0, 0, 0]
+  },
+  "wool_green": {
+    "name": "cube:full",
+    "side_texture_files": ["assets/minecraft/textures/block/green_wool.png"],
+    "blockname": "minecraft/green_wool",
+    "side_indexes": [0, 0, 0, 0, 0, 0]
+  },
+  "wool_red": {
+    "name": "cube:full",
+    "side_texture_files": ["assets/minecraft/textures/block/red_wool.png"],
+    "blockname": "minecraft/red_wool",
+    "side_indexes": [0, 0, 0, 0, 0, 0]
+  },
+  "wool_black": {
+    "name": "cube:full",
+    "side_texture_files": ["assets/minecraft/textures/block/black_wool.png"],
+    "blockname": "minecraft/black_wool",
+    "side_indexes": [0, 0, 0, 0, 0, 0]
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "blockaddress": "minecraft:notdefinited",
+  "default": {
+    "name": "cube:full",
+    "side_texture_files": ["assets/minecraft/textures/missingtexture.png"],
+    "blockname": "minecraft/not_definited",
+    "side_indexes": [0, 0, 0, 0, 0, 0]
+  }
+}

@@ -9,7 +9,7 @@ class CoalBlock(G.itemclass):
         return True
 
     def getTexturFile(self):
-        return G.local+"/assets/textures/item/COAL_BLOCK.png"
+        return G.local+"/assets/minecraft/textures/item/COAL_BLOCK.png"
 
 G.itemhandler.register(CoalBlock)
 
@@ -22,7 +22,7 @@ class DiamondBlock(G.itemclass):
         return True
 
     def getTexturFile(self):
-        return G.local+"/assets/textures/item/DIAMOND_BLOCK.png"
+        return G.local+"/assets/minecraft/textures/item/DIAMOND_BLOCK.png"
 
 G.itemhandler.register(DiamondBlock)
 
@@ -35,7 +35,7 @@ class EmeraldBlock(G.itemclass):
         return True
 
     def getTexturFile(self):
-        return G.local+"/assets/textures/item/EMERALD_BLOCK.png"
+        return G.local+"/assets/minecraft/textures/item/EMERALD_BLOCK.png"
 
 G.itemhandler.register(EmeraldBlock)
 
@@ -48,7 +48,7 @@ class GoldBlock(G.itemclass):
         return True
 
     def getTexturFile(self):
-        return G.local+"/assets/textures/item/GOLD_BLOCK.png"
+        return G.local+"/assets/minecraft/textures/item/GOLD_BLOCK.png"
 
 G.itemhandler.register(GoldBlock)
 
@@ -61,7 +61,7 @@ class IronBlock(G.itemclass):
         return True
 
     def getTexturFile(self):
-        return G.local+"/assets/textures/item/IRON_BLOCK.png"
+        return G.local+"/assets/minecraft/textures/item/IRON_BLOCK.png"
 
 G.itemhandler.register(IronBlock)
 
@@ -74,7 +74,7 @@ class LapisBlock(G.itemclass):
         return True
 
     def getTexturFile(self):
-        return G.local+"/assets/textures/item/LAPIS_BLOCK.png"
+        return G.local+"/assets/minecraft/textures/item/LAPIS_BLOCK.png"
 
 G.itemhandler.register(LapisBlock)
 
@@ -87,7 +87,7 @@ class QuartzBlock(G.itemclass):
         return True
 
     def getTexturFile(self):
-        return G.local+"/assets/textures/item/QUARTZ_BLOCK#0.png"
+        return G.local+"/assets/minecraft/textures/item/QUARTZ_BLOCK#0.png"
 
 G.itemhandler.register(QuartzBlock)
 
@@ -100,7 +100,7 @@ class ChiseledQuartzBlock(G.itemclass):
         return True
 
     def getTexturFile(self):
-        return G.local+"/assets/textures/item/QUARTZ_BLOCK#1.png"
+        return G.local+"/assets/minecraft/textures/item/QUARTZ_BLOCK#1.png"
 
 G.itemhandler.register(ChiseledQuartzBlock)
 
@@ -113,7 +113,7 @@ class QuartzPillar(G.itemclass):
         return True
 
     def getTexturFile(self):
-        return G.local+"/assets/textures/item/QUARTZ_BLOCK#2.png"
+        return G.local+"/assets/minecraft/textures/item/QUARTZ_BLOCK#2.png"
 
 G.itemhandler.register(QuartzPillar)
 
@@ -126,6 +126,6 @@ class RedstoneBlock(G.itemclass):
         return True
 
     def getTexturFile(self):
-        return G.local+"/assets/textures/item/REDSTONE_BLOCK.png"
+        return G.local+"/assets/minecraft/textures/item/REDSTONE_BLOCK.png"
 
 G.itemhandler.register(RedstoneBlock)

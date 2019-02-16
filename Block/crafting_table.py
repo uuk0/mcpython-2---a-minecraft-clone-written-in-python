@@ -1,23 +1,22 @@
 import globals as G
 import mathhelper
 from Inventory.crafting import Crafting as CraftingInventory
+import modsystem.ModLoader
 
-"""class for crafting table"""
+
 class CraftingTable(G.blockclass):
+    """class for crafting table"""
     def _getDefaultData(self, inst):
         return {"inventory":CraftingInventory()}
 
     def getName(self):
         return "minecraft:crafting_table"
 
-    def getTexturData(self, inst):
-        return mathhelper.tex_coords((0, 1), (0, 0), (0, 3), n2=4)
+    def getModelFile(self, inst):
+        return "minecraft:crafting_table"
 
-    def getTexturFile(self, inst):
-        return "minecraft/crafting_table"
-
-    def getAllTexturFiles(self):
-        return ["minecraft/crafting_table"]
+    def getStateName(self, inst):
+        return "crafting_table"
 
     def hasInventory(self, inst):
         return True
@@ -28,4 +27,9 @@ class CraftingTable(G.blockclass):
     def isOpeningInventory(self, inst, item):
         return True
 
-G.blockhandler.register(CraftingTable)
+
+@modsystem.ModLoader.ModEventEntry("game:registry:on_block_registrate_periode", "minecraft",
+                                   info="registrating crafting table")
+def register():
+    G.blockhandler.register(CraftingTable)
+

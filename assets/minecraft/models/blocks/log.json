@@ -1,0 +1,101 @@
+{
+  "blockaddress": "minecraft:log",
+  "acacia_log": {
+    "name": "cube:log",
+    "side_texture_files": ["assets/minecraft/textures/block/acacia_log.png",
+                           "assets/minecraft/textures/block/acacia_log_top.png"],
+    "blockname": "minecraft/acacia_log",
+    "FRONT_INDEX": 1,
+    "SIDE_INDEX": 0
+  },
+  "stripped_acacia_log": {
+    "name": "cube:log",
+    "side_texture_files": ["assets/minecraft/textures/block/stripped_acacia_log.png",
+                           "assets/minecraft/textures/block/stripped_acacia_log_top.png"],
+    "blockname": "minecraft/stripped_acacia_log",
+    "FRONT_INDEX": 1,
+    "SIDE_INDEX": 0
+  },
+  "birch_log": {
+    "name": "cube:log",
+    "side_texture_files": ["assets/minecraft/textures/block/birch_log.png",
+                           "assets/minecraft/textures/block/birch_log_top.png"],
+    "blockname": "minecraft/birch_log",
+    "FRONT_INDEX": 1,
+    "SIDE_INDEX": 0
+  },
+  "stripped_birch_log": {
+    "name": "cube:log",
+    "side_texture_files": ["assets/minecraft/textures/block/stripped_birch_log.png",
+                           "assets/minecraft/textures/block/stripped_birch_log_top.png"],
+    "blockname": "minecraft/stripped_birch_log",
+    "FRONT_INDEX": 1,
+    "SIDE_INDEX": 0
+  },
+  "dark_oak_log": {
+    "name": "cube:log",
+    "side_texture_files": [
+      "assets/minecraft/textures/block/dark_oak_log.png",
+      "assets/minecraft/textures/block/dark_oak_log_top.png"
+    ],
+    "blockname": "minecraft/dark_oak_log",
+    "FRONT_INDEX": 1,
+    "SIDE_INDEX": 0
+  },
+  "stripped_dark_oak_log": {
+    "name": "cube:log",
+    "side_texture_files": ["assets/minecraft/textures/block/stripped_dark_oak_log.png",
+                           "assets/minecraft/textures/block/stripped_dark_oak_log_top.png"],
+    "blockname": "minecraft/stripped_dark_oak_log",
+    "FRONT_INDEX": 1,
+    "SIDE_INDEX": 0
+  },
+  "jungle_log": {
+    "name": "cube:log",
+    "side_texture_files": ["assets/minecraft/textures/block/jungle_log.png",
+                           "assets/minecraft/textures/block/jungle_log_top.png"],
+    "blockname": "minecraft/jungle_log",
+    "FRONT_INDEX": 1,
+    "SIDE_INDEX": 0
+  },
+  "stripped_jungle_log": {
+    "name": "cube:log",
+    "side_texture_files": ["assets/minecraft/textures/block/stripped_jungle_log.png",
+                           "assets/minecraft/textures/block/stripped_jungle_log_top.png"],
+    "blockname": "minecraft/stripped_jungle_log",
+    "FRONT_INDEX": 1,
+    "SIDE_INDEX": 0
+  },
+  "oak_log": {
+    "name": "cube:log",
+    "side_texture_files": ["assets/minecraft/textures/block/oak_log.png",
+                           "assets/minecraft/textures/block/oak_log_top.png"],
+    "blockname": "minecraft/oak_log",
+    "FRONT_INDEX": 1,
+    "SIDE_INDEX": 0
+  },
+  "stripped_oak_log": {
+    "name": "cube:log",
+    "side_texture_files": ["assets/minecraft/textures/block/stripped_oak_log.png",
+                           "assets/minecraft/textures/block/stripped_oak_log_top.png"],
+    "blockname": "minecraft/stripped_oak_log",
+    "FRONT_INDEX": 1,
+    "SIDE_INDEX": 0
+  },
+  "spruce_log": {
+    "name": "cube:log",
+    "side_texture_files": ["assets/minecraft/textures/block/spruce_log.png",
+                           "assets/minecraft/textures/block/spruce_log_top.png"],
+    "blockname": "minecraft/spruce_log",
+    "FRONT_INDEX": 1,
+    "SIDE_INDEX": 0
+  },
+  "stripped_spruce_log": {
+    "name": "cube:log",
+    "side_texture_files": ["assets/minecraft/textures/block/stripped_spruce_log.png",
+                           "assets/minecraft/textures/block/stripped_spruce_log_top.png"],
+    "blockname": "minecraft/stripped_spruce_log",
+    "FRONT_INDEX": 1,
+    "SIDE_INDEX": 0
+  }
+}

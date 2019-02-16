@@ -1,19 +1,18 @@
 import globals as G
 import mathhelper
+import modsystem.ModLoader
 
-"""class for sand"""
+
 class Sand(G.blockclass):
+    """class for sand"""
     def getName(self):
         return "minecraft:sand"
 
-    def getTexturData(self, inst):
-        return mathhelper.tex_coords((0, 0), (0, 0), (0, 0), n2=1)
+    def getModelFile(self, inst):
+        return "minecraft:sand"
 
-    def getTexturFile(self, inst):
-        return "minecraft/sand"
-
-    def getAllTexturFiles(self):
-        return ["minecraft/sand"]
+    def getStateName(self, inst):
+        return "sand"
 
     def isBrakeAble(self, inst):
         return True
@@ -21,38 +20,44 @@ class Sand(G.blockclass):
     """makes the block falling"""
     def on_block_update(self, inst):
         (x, y, z) = inst.position
-        if not (x, y-1, z) in G.model.world and y > 0 and not (hasattr(inst, "blocked") and not inst.blocked):
+        cx, _, cz = mathhelper.sectorize(inst.position)
+        chunkprovider = G.player.dimension.worldprovider.getChunkProviderFor((cx, cz))
+        if not (x, y-1, z) in chunkprovider.world and y > 0 and not (hasattr(inst, "blocked") and not inst.blocked):
             inst.blocked = True
             G.tickhandler.tick(self.on_tick_update, args=[inst], tick=4)
 
     """fall the block"""
     def on_tick_update(self, inst):
         (x, y, z) = inst.position
-        if not (x, y - 1, z) in G.model.world and y > 0:
+        cx, _, cz = mathhelper.sectorize(inst.position)
+        chunkprovider = G.player.dimension.worldprovider.getChunkProviderFor((cx, cz))
+        if not (x, y - 1, z) in chunkprovider.world and y > 0:
             G.model.add_block((x, y-1, z), inst)
             G.model.remove_block((x, y, z))
         inst.blocked = False
 
     def getBrakeSoundFile(self, inst):
-        return [G.local + "assets/sounds/brake/sand1.wma",
-                G.local + "assets/sounds/brake/sand2.wma",
-                G.local + "assets/sounds/brake/sand3.wma",
-                G.local + "assets/sounds/brake/sand4.wma"]
+        return [G.local + "/assets/minecraft/sounds/brake/sand1.wma",
+                G.local + "/assets/minecraft/sounds/brake/sand2.wma",
+                G.local + "/assets/minecraft/sounds/brake/sand3.wma",
+                G.local + "/assets/minecraft/sounds/brake/sand4.wma"]
 
-G.blockhandler.register(Sand)
 
-"""class for redsand"""
 class RedSand(Sand):
+    """class for redsand"""
     def getName(self):
         return "minecraft:red_sand"
 
-    def getTexturData(self, inst):
-        return mathhelper.tex_coords((0, 0), (0, 0), (0, 0), n2=1)
+    def getModelFile(self, inst):
+        return "minecraft:sand"
 
-    def getTexturFile(self, inst):
-        return "minecraft/redsand"
+    def getStateName(self, inst):
+        return "red_sand"
 
-    def getAllTexturFiles(self):
-        return ["minecraft/redsand"]
 
-G.blockhandler.register(RedSand)
+@modsystem.ModLoader.ModEventEntry("game:registry:on_block_registrate_periode", "minecraft",
+                                   info="registrating sand & red sand")
+def register():
+    G.blockhandler.register(RedSand)
+    G.blockhandler.register(Sand)
+

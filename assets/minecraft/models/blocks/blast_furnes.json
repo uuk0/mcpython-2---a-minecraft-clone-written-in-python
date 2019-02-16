@@ -1,0 +1,13 @@
+{
+  "blockaddress": "minecraft:blast_furnes",
+  "default": {
+    "name": "cube:full",
+    "side_texture_files": ["assets/minecraft/textures/block/blast_furnace_front.png",
+                           "assets/minecraft/textures/block/blast_furnace_front_on.png",
+                           "assets/minecraft/textures/block/blast_furnace_side.png",
+                           "assets/minecraft/textures/block/blast_furnace_top.png"],
+    "blockname": "minecraft/blast_furnes",
+    "side_indexes": [0, 2, 1, 1, 1, 1],
+    "relative_index": false
+  }
+}

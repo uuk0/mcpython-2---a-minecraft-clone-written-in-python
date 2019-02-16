@@ -1,0 +1,51 @@
+{
+  "blockaddress": "minecraft:sandstone",
+  "sandstone": {
+    "name": "cube:full",
+    "side_texture_files": ["assets/minecraft/textures/block/sandstone.png",
+                           "assets/minecraft/textures/block/sandstone_bottom.png",
+                           "assets/minecraft/textures/block/sandstone_top.png"],
+    "blockname": "minecraft/sandstone",
+    "side_indexes": [0, 1, 2, 2, 2, 2]
+  },
+  "chiseled_sandstone": {
+    "name": "cube:full",
+    "side_texture_files": ["assets/minecraft/textures/block/chiseled_sandstone.png",
+                           "assets/minecraft/textures/block/sandstone_bottom.png",
+                           "assets/minecraft/textures/block/sandstone_top.png"],
+    "blockname": "minecraft/chiseled_sandstone",
+    "side_indexes": [0, 1, 2, 2, 2, 2]
+  },
+  "cut_sandstone": {
+    "name": "cube:full",
+    "side_texture_files": ["assets/minecraft/textures/block/cut_sandstone.png",
+                           "assets/minecraft/textures/block/sandstone_bottom.png",
+                           "assets/minecraft/textures/block/sandstone_top.png"],
+    "blockname": "minecraft/cut_sandstone",
+    "side_indexes": [0, 1, 2, 2, 2, 2]
+  },
+  "red_sandstone": {
+    "name": "cube:full",
+    "side_texture_files": ["assets/minecraft/textures/block/red_sandstone.png",
+                           "assets/minecraft/textures/block/red_sandstone_bottom.png",
+                           "assets/minecraft/textures/block/red_sandstone_top.png"],
+    "blockname": "minecraft/red_sandstone",
+    "side_indexes": [0, 1, 2, 2, 2, 2]
+  },
+  "red_chiseled_sandstone": {
+    "name": "cube:full",
+    "side_texture_files": ["assets/minecraft/textures/block/chiseled_red_sandstone.png",
+                           "assets/minecraft/textures/block/red_sandstone_bottom.png",
+                           "assets/minecraft/textures/block/red_sandstone_top.png"],
+    "blockname": "minecraft/chiseled_red_sandstone",
+    "side_indexes": [0, 1, 2, 2, 2, 2]
+  },
+  "red_cut_sandstone": {
+    "name": "cube:full",
+    "side_texture_files": ["assets/minecraft/textures/block/cut_red_sandstone.png",
+                           "assets/minecraft/textures/block/red_sandstone_bottom.png",
+                           "assets/minecraft/textures/block/red_sandstone_top.png"],
+    "blockname": "minecraft/cut_red_sandstone",
+    "side_indexes": [0, 1, 2, 2, 2, 2]
+  }
+}

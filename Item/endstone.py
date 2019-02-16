@@ -9,7 +9,7 @@ class Endstone(G.itemclass):
         return True
 
     def getTexturFile(self):
-        return G.local+"/assets/textures/item/END_STONE.png"
+        return G.local+"/assets/minecraft/textures/item/END_STONE.png"
 
 G.itemhandler.register(Endstone)
 
@@ -22,6 +22,6 @@ class Endstone(G.itemclass):
         return True
 
     def getTexturFile(self):
-        return G.local+"/assets/textures/item/END_BRICKS.png"
+        return G.local+"/assets/minecraft/textures/item/END_BRICKS.png"
 
 G.itemhandler.register(Endstone)

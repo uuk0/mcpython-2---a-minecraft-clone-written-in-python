@@ -9,6 +9,6 @@ class Barrel(G.itemclass):
         return True
 
     def getTexturFile(self):
-        return G.local+"/assets/textures/item/Barrel.png"
+        return G.local+"/assets/minecraft/textures/item/Barrel.png"
 
 G.itemhandler.register(Barrel)

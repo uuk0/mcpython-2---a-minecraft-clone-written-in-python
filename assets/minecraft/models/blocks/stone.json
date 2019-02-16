@@ -1,0 +1,81 @@
+{
+  "blockaddress": "minecraft:stone",
+  "stone": {
+    "name": "cube:full",
+    "side_texture_files": ["assets/minecraft/textures/block/stone.png"],
+    "blockname": "minecraft/stone",
+    "side_indexes": [0, 0, 0, 0, 0, 0]
+  },
+  "cobbelstone": {
+    "name": "cube:full",
+    "side_texture_files": ["assets/minecraft/textures/block/cobblestone.png"],
+    "blockname": "minecraft/cobbelstone",
+    "side_indexes": [0, 0, 0, 0, 0, 0]
+  },
+  "stone_brick": {
+    "name": "cube:full",
+    "side_texture_files": ["assets/minecraft/textures/block/stone_bricks.png"],
+    "blockname": "minecraft/stone_brick",
+    "side_indexes": [0, 0, 0, 0, 0, 0]
+  },
+  "mossy_stone_brick": {
+    "name": "cube:full",
+    "side_texture_files": ["assets/minecraft/textures/block/mossy_stone_bricks.png"],
+    "blockname": "minecraft/mossy_stone_brick",
+    "side_indexes": [0, 0, 0, 0, 0, 0]
+  },
+  "cracked_stone_brick": {
+    "name": "cube:full",
+    "side_texture_files": ["assets/minecraft/textures/block/cracked_stone_bricks.png"],
+    "blockname": "minecraft/cracked_stone_brick",
+    "side_indexes": [0, 0, 0, 0, 0, 0]
+  },
+  "chiseled_stone_brick": {
+    "name": "cube:full",
+    "side_texture_files": ["assets/minecraft/textures/block/chiseled_stone_bricks.png"],
+    "blockname": "minecraft/chiseled_stone_brick",
+    "side_indexes": [0, 0, 0, 0, 0, 0]
+  },
+  "mossy_cobbelstone": {
+    "name": "cube:full",
+    "side_texture_files": ["assets/minecraft/textures/block/mossy_cobblestone.png"],
+    "blockname": "minecraft/mossy_cobbelstone",
+    "side_indexes": [0, 0, 0, 0, 0, 0]
+  },
+  "andesite": {
+    "name": "cube:full",
+    "side_texture_files": ["assets/minecraft/textures/block/andesite.png"],
+    "blockname": "minecraft/andesite",
+    "side_indexes": [0, 0, 0, 0, 0, 0]
+  },
+  "polished_andesite": {
+    "name": "cube:full",
+    "side_texture_files": ["assets/minecraft/textures/block/polished_andesite.png"],
+    "blockname": "minecraft/polished_andesite",
+    "side_indexes": [0, 0, 0, 0, 0, 0]
+  },
+  "diorite": {
+    "name": "cube:full",
+    "side_texture_files": ["assets/minecraft/textures/block/diorite.png"],
+    "blockname": "minecraft/diorite",
+    "side_indexes": [0, 0, 0, 0, 0, 0]
+  },
+  "polished_diorite": {
+    "name": "cube:full",
+    "side_texture_files": ["assets/minecraft/textures/block/polished_diorite.png"],
+    "blockname": "minecraft/polished_diorite",
+    "side_indexes": [0, 0, 0, 0, 0, 0]
+  },
+  "granite": {
+    "name": "cube:full",
+    "side_texture_files": ["assets/minecraft/textures/block/granite.png"],
+    "blockname": "minecraft/granite",
+    "side_indexes": [0, 0, 0, 0, 0, 0]
+  },
+  "polished_granite": {
+    "name": "cube:full",
+    "side_texture_files": ["assets/minecraft/textures/block/polished_granite.png"],
+    "blockname": "minecraft/polished_granite",
+    "side_indexes": [0, 0, 0, 0, 0, 0]
+  }
+}

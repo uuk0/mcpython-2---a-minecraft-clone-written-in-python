@@ -11,7 +11,7 @@ class whiteWool(G.itemclass):
         return True
 
     def getTexturFile(self):
-        return G.local + "/assets/textures/item/WOOL#0.png"
+        return G.local + "/assets/minecraft/textures/item/WOOL#0.png"
 
 
 G.itemhandler.register(whiteWool)
@@ -27,7 +27,7 @@ class orangeWool(G.itemclass):
         return True
 
     def getTexturFile(self):
-        return G.local + "/assets/textures/item/WOOL#1.png"
+        return G.local + "/assets/minecraft/textures/item/WOOL#1.png"
 
 
 G.itemhandler.register(orangeWool)
@@ -43,7 +43,7 @@ class magentaWool(G.itemclass):
         return True
 
     def getTexturFile(self):
-        return G.local + "/assets/textures/item/WOOL#2.png"
+        return G.local + "/assets/minecraft/textures/item/WOOL#2.png"
 
 
 G.itemhandler.register(magentaWool)
@@ -59,7 +59,7 @@ class light_blueWool(G.itemclass):
         return True
 
     def getTexturFile(self):
-        return G.local + "/assets/textures/item/WOOL#3.png"
+        return G.local + "/assets/minecraft/textures/item/WOOL#3.png"
 
 
 G.itemhandler.register(light_blueWool)
@@ -75,7 +75,7 @@ class yellowWool(G.itemclass):
         return True
 
     def getTexturFile(self):
-        return G.local + "/assets/textures/item/WOOL#4.png"
+        return G.local + "/assets/minecraft/textures/item/WOOL#4.png"
 
 
 G.itemhandler.register(yellowWool)
@@ -91,7 +91,7 @@ class limeWool(G.itemclass):
         return True
 
     def getTexturFile(self):
-        return G.local + "/assets/textures/item/WOOL#5.png"
+        return G.local + "/assets/minecraft/textures/item/WOOL#5.png"
 
 
 G.itemhandler.register(limeWool)
@@ -107,7 +107,7 @@ class pinkWool(G.itemclass):
         return True
 
     def getTexturFile(self):
-        return G.local + "/assets/textures/item/WOOL#6.png"
+        return G.local + "/assets/minecraft/textures/item/WOOL#6.png"
 
 
 G.itemhandler.register(pinkWool)
@@ -123,7 +123,7 @@ class grayWool(G.itemclass):
         return True
 
     def getTexturFile(self):
-        return G.local + "/assets/textures/item/WOOL#7.png"
+        return G.local + "/assets/minecraft/textures/item/WOOL#7.png"
 
 
 G.itemhandler.register(grayWool)
@@ -139,7 +139,7 @@ class light_grayWool(G.itemclass):
         return True
 
     def getTexturFile(self):
-        return G.local + "/assets/textures/item/WOOL#8.png"
+        return G.local + "/assets/minecraft/textures/item/WOOL#8.png"
 
 
 G.itemhandler.register(light_grayWool)
@@ -155,7 +155,7 @@ class cyanWool(G.itemclass):
         return True
 
     def getTexturFile(self):
-        return G.local + "/assets/textures/item/WOOL#9.png"
+        return G.local + "/assets/minecraft/textures/item/WOOL#9.png"
 
 
 G.itemhandler.register(cyanWool)
@@ -171,7 +171,7 @@ class purpleWool(G.itemclass):
         return True
 
     def getTexturFile(self):
-        return G.local + "/assets/textures/item/WOOL#10.png"
+        return G.local + "/assets/minecraft/textures/item/WOOL#10.png"
 
 
 G.itemhandler.register(purpleWool)
@@ -187,7 +187,7 @@ class BlueWool(G.itemclass):
         return True
 
     def getTexturFile(self):
-        return G.local + "/assets/textures/item/WOOL#11.png"
+        return G.local + "/assets/minecraft/textures/item/WOOL#11.png"
 
 
 G.itemhandler.register(BlueWool)
@@ -203,7 +203,7 @@ class brownWool(G.itemclass):
         return True
 
     def getTexturFile(self):
-        return G.local + "/assets/textures/item/WOOL#12.png"
+        return G.local + "/assets/minecraft/textures/item/WOOL#12.png"
 
 
 G.itemhandler.register(brownWool)
@@ -219,7 +219,7 @@ class greenWool(G.itemclass):
         return True
 
     def getTexturFile(self):
-        return G.local + "/assets/textures/item/WOOL#13.png"
+        return G.local + "/assets/minecraft/textures/item/WOOL#13.png"
 
 
 G.itemhandler.register(greenWool)
@@ -235,7 +235,7 @@ class redWool(G.itemclass):
         return True
 
     def getTexturFile(self):
-        return G.local + "/assets/textures/item/WOOL#14.png"
+        return G.local + "/assets/minecraft/textures/item/WOOL#14.png"
 
 
 G.itemhandler.register(redWool)
@@ -251,7 +251,7 @@ class blackWool(G.itemclass):
         return True
 
     def getTexturFile(self):
-        return G.local + "/assets/textures/item/WOOL#15.png"
+        return G.local + "/assets/minecraft/textures/item/WOOL#15.png"
 
 
 G.itemhandler.register(blackWool)

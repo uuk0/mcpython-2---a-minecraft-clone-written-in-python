@@ -1,0 +1,51 @@
+{
+  "blockaddress": "minecraft:ores",
+  "coal_ore": {
+    "name": "cube:full",
+    "side_texture_files": ["assets/minecraft/textures/block/coal_ore.png"],
+    "blockname": "minecraft/coal_ore",
+    "side_indexes": [0, 0, 0, 0, 0, 0]
+  },
+  "diamond_ore": {
+    "name": "cube:full",
+    "side_texture_files": ["assets/minecraft/textures/block/diamond_ore.png"],
+    "blockname": "minecraft/diamond_ore",
+    "side_indexes": [0, 0, 0, 0, 0, 0]
+  },
+  "emerald_ore": {
+    "name": "cube:full",
+    "side_texture_files": ["assets/minecraft/textures/block/emerald_ore.png"],
+    "blockname": "minecraft/emerald_ore",
+    "side_indexes": [0, 0, 0, 0, 0, 0]
+  },
+  "gold_ore": {
+    "name": "cube:full",
+    "side_texture_files": ["assets/minecraft/textures/block/gold_ore.png"],
+    "blockname": "minecraft/gold_ore",
+    "side_indexes": [0, 0, 0, 0, 0, 0]
+  },
+  "iron_ore": {
+    "name": "cube:full",
+    "side_texture_files": ["assets/minecraft/textures/block/iron_ore.png"],
+    "blockname": "minecraft/iron_ore",
+    "side_indexes": [0, 0, 0, 0, 0, 0]
+  },
+  "lapis_ore": {
+    "name": "cube:full",
+    "side_texture_files": ["assets/minecraft/textures/block/lapis_ore.png"],
+    "blockname": "minecraft/lapis_ore",
+    "side_indexes": [0, 0, 0, 0, 0, 0]
+  },
+  "nether_quartz_ore": {
+    "name": "cube:full",
+    "side_texture_files": ["assets/minecraft/textures/block/nether_quartz_ore.png"],
+    "blockname": "minecraft/nether_quartz_ore",
+    "side_indexes": [0, 0, 0, 0, 0, 0]
+  },
+  "redstone_ore": {
+    "name": "cube:full",
+    "side_texture_files": ["assets/minecraft/textures/block/redstone_ore.png"],
+    "blockname": "minecraft/redstone_ore",
+    "side_indexes": [0, 0, 0, 0, 0, 0]
+  }
+}

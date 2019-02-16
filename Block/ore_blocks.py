@@ -1,163 +1,81 @@
 import globals as G
 import mathhelper
+import Block.log
+import modsystem.ModLoader
 
-"""class for coal block"""
-class CoalBlock(G.blockclass):
+
+class IOreBlock(G.blockclass):
+    def getModelFile(self, inst):
+        return "minecraft:ore_blocks"
+
+    def getStateName(self, inst):
+        return self.getName().split(":")[1]
+
+
+class CoalBlock(IOreBlock):
+    """class for coal block"""
     def getName(self):
         return "minecraft:coal_block"
 
-    def getTexturData(self, inst):
-        return mathhelper.tex_coords((0, 0), (0, 0), (0, 0), n2=1)
 
-    def getTexturFile(self, inst):
-        return "minecraft/coal_block"
-
-    def getAllTexturFiles(self):
-        return ["minecraft/coal_block"]
-
-G.blockhandler.register(CoalBlock)
-
-"""class for diamond block"""
-class DiamondBlock(G.blockclass):
+class DiamondBlock(IOreBlock):
+    """class for diamond block"""
     def getName(self):
         return "minecraft:diamond_block"
 
-    def getTexturData(self, inst):
-        return mathhelper.tex_coords((0, 0), (0, 0), (0, 0), n2=1)
 
-    def getTexturFile(self, inst):
-        return "minecraft/diamond_block"
-
-    def getAllTexturFiles(self):
-        return ["minecraft/diamond_block"]
-
-G.blockhandler.register(DiamondBlock)
-
-"""class for emerald block"""
-class EmeraldBlock(G.blockclass):
+class EmeraldBlock(IOreBlock):
+    """class for emerald block"""
     def getName(self):
         return "minecraft:emerald_block"
 
-    def getTexturData(self, inst):
-        return mathhelper.tex_coords((0, 0), (0, 0), (0, 0), n2=1)
 
-    def getTexturFile(self, inst):
-        return "minecraft/emerald_block"
-
-    def getAllTexturFiles(self):
-        return ["minecraft/emerald_block"]
-
-G.blockhandler.register(EmeraldBlock)
-
-"""class for gold block"""
-class GoldBlock(G.blockclass):
+class GoldBlock(IOreBlock):
+    """class for gold block"""
     def getName(self):
         return "minecraft:gold_block"
 
-    def getTexturData(self, inst):
-        return mathhelper.tex_coords((0, 0), (0, 0), (0, 0), n2=1)
 
-    def getTexturFile(self, inst):
-        return "minecraft/gold_block"
-
-    def getAllTexturFiles(self):
-        return ["minecraft/gold_block"]
-
-G.blockhandler.register(GoldBlock)
-
-"""class for iron block"""
-class IronBlock(G.blockclass):
+class IronBlock(IOreBlock):
+    """class for iron block"""
     def getName(self):
         return "minecraft:iron_block"
 
-    def getTexturData(self, inst):
-        return mathhelper.tex_coords((0, 0), (0, 0), (0, 0), n2=1)
 
-    def getTexturFile(self, inst):
-        return "minecraft/iron_block"
-
-    def getAllTexturFiles(self):
-        return ["minecraft/iron_block"]
-
-G.blockhandler.register(IronBlock)
-
-"""class for lapis block"""
-class LapisBlock(G.blockclass):
+class LapisBlock(IOreBlock):
+    """class for lapis block"""
     def getName(self):
         return "minecraft:lapis_block"
 
-    def getTexturData(self, inst):
-        return mathhelper.tex_coords((0, 0), (0, 0), (0, 0), n2=1)
 
-    def getTexturFile(self, inst):
-        return "minecraft/lapis_block"
-
-    def getAllTexturFiles(self):
-        return ["minecraft/lapis_block"]
-
-G.blockhandler.register(LapisBlock)
-
-"""class for quartz block"""
-class QuartzBlock(G.blockclass):
+class QuartzBlock(IOreBlock):
+    """class for quartz block"""
     def getName(self):
         return "minecraft:quartz_block"
 
-    def getTexturData(self, inst):
-        return mathhelper.tex_coords((0, 0), (0, 2), (0, 1), n2=4)
 
-    def getTexturFile(self, inst):
-        return "minecraft/quartz_block"
-
-    def getAllTexturFiles(self):
-        return ["minecraft/quartz_block"]
-
-G.blockhandler.register(QuartzBlock)
-
-"""class for chiseled quartz block"""
-class ChiseledQuartzBlock(G.blockclass):
+class ChiseledQuartzBlock(IOreBlock):
+    """class for chiseled quartz block"""
     def getName(self):
         return "minecraft:chiseled_quartz_block"
 
-    def getTexturData(self, inst):
-        return mathhelper.tex_coords((0, 0), (0, 1), (0, 1), n2=3)
 
-    def getTexturFile(self, inst):
-        return "minecraft/chiseled_quartz_block"
-
-    def getAllTexturFiles(self):
-        return ["minecraft/chiseled_quartz_block"]
-
-G.blockhandler.register(ChiseledQuartzBlock)
-
-"""class for quartz pillar"""
-class QuartzPillar(G.blockclass):
+class QuartzPillar(Block.log.McLog, IOreBlock):
+    """class for quartz pillar"""
     def getName(self):
         return "minecraft:quartz_pillar"
 
-    def getTexturData(self, inst):
-        return mathhelper.tex_coords((0, 1), (0, 1), (0, 0), n2=3)
+    def getModelFile(self, inst):
+        return "minecraft:ore_blocks"
 
-    def getTexturFile(self, inst):
-        return "minecraft/quartz_pillar"
+    def getStateName(self, inst):
+        return self.getName().split(":")[1]
 
-    def getAllTexturFiles(self):
-        return ["minecraft/quartz_pillar"]
 
-G.blockhandler.register(QuartzPillar)
-
-"""class for redstone block"""
-class RedstoneBlock(G.blockclass):
+class RedstoneBlock(IOreBlock):
+    """class for redstone block"""
     def getName(self):
         return "minecraft:redstone_block"
-
-    def getTexturData(self, inst):
-        return mathhelper.tex_coords((0, 0), (0, 0), (0, 0), n2=1)
-
-    def getTexturFile(self, inst):
-        return "minecraft/redstone_block"
-
-    def getAllTexturFiles(self):
-        return ["minecraft/redstone_block"]
 
     def getErmittedRedstoneSignal(self, inst, side):
         return 15
@@ -165,4 +83,18 @@ class RedstoneBlock(G.blockclass):
     def bindsToRedstoneWire(self, inst, side):
         return True
 
-G.blockhandler.register(RedstoneBlock)
+
+@modsystem.ModLoader.ModEventEntry("game:registry:on_block_registrate_periode", "minecraft",
+                                   info="registrating ore blocks")
+def register():
+    G.blockhandler.register(RedstoneBlock)
+    G.blockhandler.register(QuartzPillar)
+    G.blockhandler.register(ChiseledQuartzBlock)
+    G.blockhandler.register(QuartzBlock)
+    G.blockhandler.register(LapisBlock)
+    G.blockhandler.register(IronBlock)
+    G.blockhandler.register(GoldBlock)
+    G.blockhandler.register(EmeraldBlock)
+    G.blockhandler.register(DiamondBlock)
+    G.blockhandler.register(CoalBlock)
+

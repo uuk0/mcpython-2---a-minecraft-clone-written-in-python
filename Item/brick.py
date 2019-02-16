@@ -9,6 +9,6 @@ class Brick(G.itemclass):
         return True
 
     def getTexturFile(self):
-        return G.local+"/assets/textures/item/BRICK_BLOCK.png"
+        return G.local+"/assets/minecraft/textures/item/BRICK_BLOCK.png"
 
 G.itemhandler.register(Brick)

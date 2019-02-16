@@ -2,7 +2,7 @@ import pyglet
 
 import globals as G
 import log
-import texturhandler
+import texturslitcher
 
 """class for ItemStack"""
 class IItemStack:
@@ -31,7 +31,17 @@ class IItemStack:
             self.item = None
         self.__amount = amount
         if self.item:
-            texturhandler.resize(self.item.getTexturFile(), (32, 32), self.item.getTexturFile())
+            image = texturslitcher.ImageAtlas.load_image(self.item.getTexturFile())
+            texturslitcher.ImageAtlas.save_image(
+                texturslitcher.ImageAtlas.resize(
+                    texturslitcher.ImageAtlas.load_image(self.item.getTexturFile()),
+                    (32, 32)
+                ),
+                self.item.getTexturFile()
+            )
+            texturslitcher.ImageAtlas.resize(image, (32, 32))
+            texturslitcher.ImageAtlas.save_image(image, self.item.getTexturFile())
+            #texturhandler.resize(self.item.getTexturFile(), (32, 32), self.item.getTexturFile())
             self.image = pyglet.sprite.Sprite(pyglet.image.load(self.item.getTexturFile()))
         else:
             self.image = None

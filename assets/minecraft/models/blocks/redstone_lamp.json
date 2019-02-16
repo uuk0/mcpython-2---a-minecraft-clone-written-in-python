@@ -1,0 +1,15 @@
+{
+  "blockaddress": "minecraft:redstone_lamp",
+  "active": {
+    "name": "cube:full",
+    "side_texture_files": ["assets/minecraft/textures/block/redstone_lamp_on.png"],
+    "blockname": "minecraft/redstone_lamp_active",
+    "side_indexes": [0, 0, 0, 0, 0, 0]
+  },
+  "inactive": {
+    "name": "cube:full",
+    "side_texture_files": ["assets/minecraft/textures/block/redstone_lamp.png"],
+    "blockname": "minecraft/redstone_lamp_inactive",
+    "side_indexes": [0, 0, 0, 0, 0, 0]
+  }
+}

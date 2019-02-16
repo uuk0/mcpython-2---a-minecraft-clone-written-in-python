@@ -2,6 +2,10 @@ import globals as G
 import pyglet
 import config
 import traceback
+from pyglet.window import key as keys
+import notations
+import imagecutter
+
 
 def _isRecipi(recipi, slots):
     try:
@@ -45,6 +49,7 @@ def _isRecipi(recipi, slots):
             traceback.print_exc()
         return [False, None]
 
+
 """class for playerinventory"""
 class PlayerInventory(G.inventorycollection):
     tag = ["player:hotbar",
@@ -73,6 +78,32 @@ class PlayerInventory(G.inventorycollection):
 
     def isDisablyingGame(self):
         return self.guitype != 0
+
+    def on_try_close(self):
+        self.guitype = 0
+        G.inventoryhandler.hide_inventory(self)
+        G.inventoryhandler.show_inventory(self)
+        G.window.set_exclusive_mouse(True)
+
+    def on_key_press(self, key, mod):
+        if key == keys.E:
+            self.on_try_close()
+
+    def on_show(self):
+        for e in self.inventorys:
+            if e.active:
+                G.inventoryhandler.hide_inventory(e)
+        if self.guitype == 0:
+            G.inventoryhandler.show_inventory(self.inventorys[0])
+        else:
+            for e in self.inventorys:
+                G.inventoryhandler.show_inventory(e)
+
+    def on_hide(self):
+        for e in self.inventorys:
+            if e.active:
+                G.inventoryhandler.hide_inventory(e)
+
 
 """class of player inventory crafting part"""
 class Crafting(G.inventoryclass):
@@ -140,12 +171,32 @@ class Rows(G.inventoryclass):
         for y in [64, 102, 140]:
             for x in [18, 56, 94, 132, 170, 209, 247, 286, 324]:
                 slots.append(G.inventoryslot((x, y)))
-        slots += [G.inventoryslot((18, 190)),
-                  G.inventoryslot((18, 228)),
-                  G.inventoryslot((18, 266)),
-                  G.inventoryslot((18, 304))]
+        slots += [G.inventoryslot((18, 190), controll_function=self.headcheck),
+                  G.inventoryslot((18, 228), controll_function=self.bodycheck),
+                  G.inventoryslot((18, 266), controll_function=self.leggincheck),
+                  G.inventoryslot((18, 304), controll_function=self.bootcheck)]
         slots.append(G.inventoryslot((165, 190)))
         return slots
+
+    def headcheck(self, stack):
+        if type(stack.item) in G.notationhandler.notations["oredict"].items["armor:heads"]:
+            return True
+        return False
+
+    def bodycheck(self, stack):
+        if type(stack.item) in G.notationhandler.notations["oredict"].items["armor:bodys"]:
+            return True
+        return False
+
+    def leggincheck(self, stack):
+        if type(stack.item) in G.notationhandler.notations["oredict"].items["armor:leggins"]:
+            return True
+        return False
+
+    def bootcheck(self, stack):
+        if type(stack.item) in G.notationhandler.notations["oredict"].items["armor:foots"]:
+            return True
+        return False
 
     def getBasePosition(self):
         if not hasattr(G.window, "player"):
@@ -155,24 +206,35 @@ class Rows(G.inventoryclass):
         elif G.window.player.inventory.inventorys[0].type == 0:
             return (G.window.size[0] / 2 - G.window.player.inventory.inventorys[0].image1.width / 2, G.window.size[1] / 2 - G.window.player.inventory.inventorys[0].image1.height / 2 - 270)
 
+
 """class of player inventory hotbar part"""
 class Hotbar(G.inventoryclass):
     tag = ["player:hotbar",
            "player:inventory",
            "system:nothideable"]
+
     def __init__(self):
-        self.image1 = pyglet.sprite.Sprite(
-            pyglet.image.load(G.local + "assets/textures/gui/hotbar.png"))
-        self.image2 = pyglet.sprite.Sprite(
-            pyglet.image.load(G.local + "assets/textures/gui/container/playerinventory.png"))
-        self.image3 = pyglet.sprite.Sprite(
-            pyglet.image.load(G.local + "assets/textures/gui/hotbar_select.png"))
+        self.cut_images()
+        self.image1 = pyglet.sprite.Sprite(pyglet.image.load(G.local + "/tmp/gui/hotbar.png"))
+        self.image2 = pyglet.sprite.Sprite(pyglet.image.load(G.local + "/tmp/gui/playerinventory.png"))
+        self.image3 = pyglet.sprite.Sprite(pyglet.image.load(G.local + "/tmp/gui/hotbar_select.png"))
         self.type = 0
         self.lasttype = 0
         G.inventoryclass.__init__(self)
         self.image1.position = self.position
         self.image2.position = self.position
         self.image3.position = self.position
+
+    def cut_images(self):
+        imagecutter.cut_image(G.local + "/assets/minecraft/textures/gui/widgets.png", (0, 0), (182, 22),
+                              G.local + "/tmp/gui/hotbar.png")
+        imagecutter.cut_image(G.local + "/assets/minecraft/textures/gui/container/inventory.png", (0, 0), (176, 166),
+                              G.local + "/tmp/gui/playerinventory.png")
+        imagecutter.cut_image(G.local + "/assets/minecraft/textures/gui/widgets.png", (0, 22), (24, 46),
+                              G.local + "/tmp/gui/hotbar_select.png")
+        imagecutter.resize_mutli(G.local + "/tmp/gui/hotbar.png", (2, 2))
+        imagecutter.resize(G.local + "/tmp/gui/playerinventory.png", (375, 353))
+        imagecutter.resize_mutli(G.local + "/tmp/gui/hotbar_select.png", (2, 2))
 
     def creatSlots(self):
         return [G.inventoryslot((8, 6)),
@@ -215,8 +277,8 @@ class Hotbar(G.inventoryclass):
         self.image2.position = self.position
         if self.type == 0:
             self.image1.draw()
-            self.image3.x = self.image2.x + G.player.selectedinventoryslot * 40
-            self.image3.y = self.image2.y
+            self.image3.x = self.image2.x + G.player.selectedinventoryslot * 40 - 1
+            self.image3.y = self.image2.y - 1
             self.image3.draw()
         elif self.type == 1:
             self.image2.draw()

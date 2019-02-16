@@ -1,0 +1,6 @@
+
+
+make every class and file upper case
+move texturedatahandler to texturhandler
+changed eventhandler blockupdate binds to use id's
+sort imports in EVERY file

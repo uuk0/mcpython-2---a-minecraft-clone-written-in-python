@@ -1,0 +1,68 @@
+{
+  "blockaddress": "minecraft:ore_blocks",
+  "coal_block": {
+    "name": "cube:full",
+    "side_texture_files": ["assets/minecraft/textures/block/coal_block.png"],
+    "blockname": "minecraft/coal_block",
+    "side_indexes": [0, 0, 0, 0, 0, 0]
+  },
+  "diamond_block": {
+    "name": "cube:full",
+    "side_texture_files": ["assets/minecraft/textures/block/diamond_block.png"],
+    "blockname": "minecraft/diamond_block",
+    "side_indexes": [0, 0, 0, 0, 0, 0]
+  },
+  "emerald_block": {
+    "name": "cube:full",
+    "side_texture_files": ["assets/minecraft/textures/block/emerald_block.png"],
+    "blockname": "minecraft/emerald_block",
+    "side_indexes": [0, 0, 0, 0, 0, 0]
+  },
+  "gold_block": {
+    "name": "cube:full",
+    "side_texture_files": ["assets/minecraft/textures/block/gold_block.png"],
+    "blockname": "minecraft/gold_block",
+    "side_indexes": [0, 0, 0, 0, 0, 0]
+  },
+  "iron_block": {
+    "name": "cube:full",
+    "side_texture_files": ["assets/minecraft/textures/block/iron_block.png"],
+    "blockname": "minecraft/iron_block",
+    "side_indexes": [0, 0, 0, 0, 0, 0]
+  },
+  "lapis_block": {
+    "name": "cube:full",
+    "side_texture_files": ["assets/minecraft/textures/block/lapis_block.png"],
+    "blockname": "minecraft/lapis_block",
+    "side_indexes": [0, 0, 0, 0, 0, 0]
+  },
+  "quartz_block": {
+    "name": "cube:full",
+    "side_texture_files": ["assets/minecraft/textures/block/quartz_block_bottom.png",
+                           "assets/minecraft/textures/block/quartz_block_side.png",
+                           "assets/minecraft/textures/block/quartz_block_top.png"],
+    "blockname": "minecraft/quartz_block",
+    "side_indexes": [2, 0, 1, 1, 1, 1]
+  },
+  "redstone_block": {
+    "name": "cube:full",
+    "side_texture_files": ["assets/minecraft/textures/block/redstone_block.png"],
+    "blockname": "minecraft/redstone_block",
+    "side_indexes": [0, 0, 0, 0, 0, 0]
+  },
+  "quartz_pillar": {
+    "name": "cube:log",
+    "side_texture_files": ["assets/minecraft/textures/block/quartz_pillar.png",
+                           "assets/minecraft/textures/block/quartz_pillar_top.png"],
+    "blockname": "minecraft/quartz_pillar",
+    "FRONT_INDEX": 1,
+    "SIDE_INDEX": 0
+  },
+  "chiseled_quartz_block": {
+    "name": "cube:full",
+    "side_texture_files": ["assets/minecraft/textures/block/chiseled_quartz_block.png",
+                           "assets/minecraft/textures/block/chiseled_quartz_block_top.png"],
+    "blockname": "minecraft/chiseled_quartz_block",
+    "side_indexes": [1, 0, 0, 0, 0, 0]
+  }
+}

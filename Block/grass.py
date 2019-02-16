@@ -1,31 +1,35 @@
 import globals as G
 import mathhelper
 import notations
+import modsystem.ModLoader
 
-"""class for grass"""
+
 class Grass(G.blockclass):
+    """class for grass"""
     oredictnames = [notations.OreDictItems.DIRT]
 
     def getName(self):
         return "minecraft:grass"
 
-    def getTexturData(self, inst):
-        return mathhelper.tex_coords((0, 0), (0, 1), (0, 2), n2=4)
+    def getModelFile(self, inst):
+        return "minecraft:dirt"
 
-    def getTexturFile(self, inst):
-        return "minecraft/grass"
-
-    def getAllTexturFiles(self):
-        return ["minecraft/grass"]
+    def getStateName(self, inst):
+        return "grass"
 
     """returns dirt as drop"""
     def getDrop(self, inst):
         return {"minecraft:dirt":1}
 
     def getBrakeSoundFile(self, inst):
-        return [G.local + "assets/sounds/brake/grass1.wma",
-                G.local + "assets/sounds/brake/grass2.wma",
-                G.local + "assets/sounds/brake/grass3.wma",
-                G.local + "assets/sounds/brake/grass4.wma"]
+        return [G.local + "/assets/minecraft/sounds/brake/grass1.wma",
+                G.local + "/assets/minecraft/sounds/brake/grass2.wma",
+                G.local + "/assets/minecraft/sounds/brake/grass3.wma",
+                G.local + "/assets/minecraft/sounds/brake/grass4.wma"]
 
-G.blockhandler.register(Grass)
+
+@modsystem.ModLoader.ModEventEntry("game:registry:on_block_registrate_periode", "minecraft",
+                                   info="registrating grass")
+def register():
+    G.blockhandler.register(Grass)
+

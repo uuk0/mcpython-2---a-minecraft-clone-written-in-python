@@ -9,6 +9,6 @@ class Tnt(G.itemclass):
         return True
 
     def getTexturFile(self):
-        return G.local+"/assets/textures/item/TNT.png"
+        return G.local+"/assets/minecraft/textures/item/TNT.png"
 
 G.itemhandler.register(Tnt)

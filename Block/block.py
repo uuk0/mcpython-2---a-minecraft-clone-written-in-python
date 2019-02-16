@@ -2,6 +2,10 @@ import config
 import globals as G
 import log
 import mathhelper
+import pyglet
+import traceback
+import modelloader
+import modsystem.ModLoader
 
 """
 block handler class
@@ -10,7 +14,7 @@ use G.blockhandler.register(class) to add new blocks
 class BlockHandler:
     def __init__(self):
         self.blocks = {}
-        self.prefixes = []
+        self.blocksall = {}
         self.fromoredict = {}
 
     """register an new blockclass to blocktable"""
@@ -19,8 +23,14 @@ class BlockHandler:
             log.printMSG("[BLOCKHANDLER][ERROR] can't register block class "+str(blockclass)+". blockclass has no attribute blockclassregigisterable")
             return
         inst = blockclass()
+        G.eventhandler.call("game:registry:on_block_registrated", inst)
         self.blocks[inst.getName()] = inst
-        self.prefixes.append(inst.getName().split(":")[0])
+        d = inst.getName().split(":")
+        for i in range(len(d)):
+            string = ""
+            for e in d[i:]:
+                string += ":" + e
+            self.blocksall[string[1:]] = inst
 
         G.soundhandler.loadSound(inst.getBrakeSoundFile(None))
         if config.DEBUG.PRINT_BLOCK_REGISTRATING:
@@ -29,6 +39,9 @@ class BlockHandler:
         for e in inst.oredictnames:
             if not e in self.fromoredict: self.fromoredict[e] = []
             self.fromoredict[e].append(inst)
+            G.notationhandler.notate("oredict", e, inst)
+        for e in inst.destroygroupnames:
+            G.notationhandler.notate("destroygroup", e, inst)
         G.eventhandler.call("game:registry:on_block_registrated", inst)
 
     """returns a new blockinst - class representing the block"""
@@ -39,12 +52,10 @@ class BlockHandler:
     def getByName(self, name, exc=True):
         if name in self.blocks:
             return self.blocks[name]
+        elif name in self.blocksall:
+            return self.blocksall[name]
         else:
-            for e in self.prefixes:
-                if e+":"+name in self.blocks:
-                    return self.blocks[e+":"+name]
-            if exc:
-                log.printMSG("[BLOCKHANDLER][ERROR] can't access block named "+str(name))
+            log.printMSG("[BLOCKHANDLER][ERROR] can't access block named "+str(name))
 
 G.blockhandler = BlockHandler()
 
@@ -66,14 +77,6 @@ class BlockClass:
     def getName(self):
         return "minecraft:none"
 
-    """returns the textur data of the block"""
-    def getTexturData(self, inst):
-        return
-
-    """returns the active textur file for textur data"""
-    def getTexturFile(self, inst):
-        return
-
     """callen when the block is created"""
     def onCreat(self, inst):
         pass
@@ -81,10 +84,6 @@ class BlockClass:
     """calllen when the block is deleted"""
     def onDelet(self, inst):
         pass
-
-    """returns all used texturfiles"""
-    def getAllTexturFiles(self):
-        return []
 
     """returns if the block is brakeable in gamemode 0"""
     def isBrakeAble(self, inst):
@@ -106,23 +105,20 @@ class BlockClass:
 
     """returns the sound which is played when block is broken. may be a list if more than 1 is possible"""
     def getBrakeSoundFile(self, inst):
-        return [G.local + "assets/sounds/brake/stone1.wma",
-                G.local + "assets/sounds/brake/stone2.wma",
-                G.local + "assets/sounds/brake/stone3.wma",
-                G.local + "assets/sounds/brake/stone4.wma"]
+        return [G.local + "/assets/minecraft/sounds/brake/stone1.wma",
+                G.local + "/assets/minecraft/sounds/brake/stone2.wma",
+                G.local + "/assets/minecraft/sounds/brake/stone3.wma",
+                G.local + "/assets/minecraft/sounds/brake/stone4.wma"]
 
-    """overwrites the 'default' render and his functions
-    use draw() to draw your block if it is setted to True"""
-    def hasExternalDraw(self, inst):
-        return False
-
-    """'shows' the block if hasExternalDraw() returns True"""
     def show(self, inst):
-        pass
+        try:
+            G.modelhandler.models[inst.getModelFile()].addToBatch(inst, inst.position)
+        except:
+            log.printMSG(inst.getName())
+            raise
 
-    """'hides' the block if hasExternalDraw() returns True"""
     def hide(self, inst):
-        pass
+        G.modelhandler.models[inst.getModelFile()].removeFromBatch(inst, inst.position)
 
     """returns if a side is a full side. These Meanes you can't look through it
     side is N, E, S, W, U or D
@@ -172,6 +168,24 @@ class BlockClass:
     def convertPositionToRenderable(self, inst, position):
         return position
 
+    def isVisableInWorld(self, inst):
+        return True #not G.model.exposed(inst.position)
+
+    def getStorageData(self, inst):
+        return {"name":self.getName(), "data":inst.data}
+
+    def setStorageData(self, data, inst):
+        inst.data = data["data"]
+
+    def getStateName(self, inst):
+        return "default"
+
+    def getModelFile(self, inst):
+        return "minecraft:notdefinited"
+
+    def getItemFile(self, inst):
+        return None
+
 G.blockclass = BlockClass
 
 
@@ -201,6 +215,7 @@ class IBlockInstants(BlockClass):
         self.data = self.blockclass._getDefaultData(self)
         if not "redstone_state" in self.data and self.can_be_redstone_powered():
             self.data["redstone_state"] = False
+        self.showndata = []
 
     def getName(self):
         return self.blockclass.getName()
@@ -233,9 +248,6 @@ class IBlockInstants(BlockClass):
 
     def getBrakeSoundFile(self):
         return self.blockclass.getBrakeSoundFile(self)
-
-    def hasExternalDraw(self):
-        return self.blockclass.hasExternalDraw(self)
 
     def show(self):
         self.blockclass.show(self)
@@ -273,11 +285,33 @@ class IBlockInstants(BlockClass):
     def convertPositionToRenderable(self, position):
         return self.blockclass.convertPositionToRenderable(self, position)
 
+    def isVisableInWorld(self):
+        return self.blockclass.isVisableInWorld(self)
+
+    def getStorageData(self):
+        return self.blockclass.getStorageData(self)
+
+    def setStorageData(self, data):
+        self.blockclass.setStorageData(data, self)
+
+    def getStateName(self):
+        return self.blockclass.getStateName(self)
+
+    def getModelFile(self):
+        return self.blockclass.getModelFile(self)
+
+    def getItemFile(self):
+        return self.blockclass.getItemFile(self)
+
+
 G.blockinst = IBlockInstants
+
 
 def loadBlocks(*args):
     import importlib, os
-    for e in os.listdir(G.local + "Block"):
+    for e in os.listdir(G.local + "/Block"):
         importlib.import_module("Block." + e.split(".")[0])
 
-G.eventhandler.on_event("game:registry:on_block_registrate_periode", loadBlocks)
+
+loadBlocks()
+

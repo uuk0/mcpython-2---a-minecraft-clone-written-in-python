@@ -1,27 +1,41 @@
 import globals as G
 import mathhelper
 import notations
+import modsystem.ModLoader
 
-"""class for dirt"""
+
 class Dirt(G.blockclass):
+    """class for dirt"""
     oredictnames = [notations.OreDictItems.DIRT]
 
     def getName(self):
         return "minecraft:dirt"
 
-    def getTexturData(self, inst):
-        return mathhelper.tex_coords((0, 0), (0, 0), (0, 0), n2=1)
+    def getModelFile(self, inst):
+        return "minecraft:dirt"
 
-    def getTexturFile(self, inst):
-        return "minecraft/dirt"
-
-    def getAllTexturFiles(self):
-        return ["minecraft/dirt"]
+    def getStateName(self, inst):
+        return "dirt"
 
     def getBrakeSoundFile(self, inst):
-        return [G.local + "assets/sounds/brake/grass1.wma",
-                G.local + "assets/sounds/brake/grass2.wma",
-                G.local + "assets/sounds/brake/grass3.wma",
-                G.local + "assets/sounds/brake/grass4.wma"]
+        return [G.local + "/assets/minecraft/sounds/brake/grass1.wma",
+                G.local + "/assets/minecraft/sounds/brake/grass2.wma",
+                G.local + "/assets/minecraft/sounds/brake/grass3.wma",
+                G.local + "/assets/minecraft/sounds/brake/grass4.wma"]
 
-G.blockhandler.register(Dirt)
+
+class CoarseDirt(Dirt):
+    """class for coarse dirt"""
+    def getName(self):
+        return "minecraft:coarse_dirt"
+
+    def getStateName(self, inst):
+        return "coarse_dirt"
+
+
+@modsystem.ModLoader.ModEventEntry("game:registry:on_block_registrate_periode", "minecraft",
+                                   info="registrating dirt & coarse dirt")
+def register():
+    G.blockhandler.register(CoarseDirt)
+    G.blockhandler.register(Dirt)
+

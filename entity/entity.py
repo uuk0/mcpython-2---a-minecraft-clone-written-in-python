@@ -1,37 +1,46 @@
 import globals as G
+import modsystem.ModLoader
+import pyglet.gl
+
 
 class EntityHandler:
     def __init__(self):
         self.entitys = []
+        self.entityclasses = {}
+        G.eventhandler.on_event("opengl:draw3d", self.draw)
 
     def register(self, entity):
-        self.entitys.append(entity)
+        self.entityclasses[entity.getName(None)] = entity
         G.eventhandler.call("game:registry:on_entity_registrated", entity)
+
+    def draw(self, *args, **kwargs):
+        pyglet.gl.glColor3d(1, 1, 1)
+        for entity in self.entitys:
+            entity.draw()
+
+    def add_entity(self, name, position):
+        entity = self.entityclasses[name](position)
+        self.entitys.append(entity)
+        return entity
+
 
 G.entityhandler = EntityHandler()
 
-"""class for entitys
-is not used at the moment"""
+
 class Entity:
+    """class for entitys
+    is not used at the moment"""
     tags = []
 
-    def __init__(self):
-        self.position = (0, 0, 0)
+    def __init__(self, position=(0, 0, 0)):
+        self.position = position
 
     """returns the name of the entity"""
     def getName(self):
         return "minecraft:none"
 
-    """callen when the entity is shown"""
-    def on_show(self):
-        pass
-
-    """callen when the entity is hidden"""
-    def on_hide(self):
-        pass
-
-    """callen when the entity is drawn"""
     def draw(self):
+        """callen when the entity is drawn"""
         pass
 
     """returns the drop of the entity"""
@@ -50,11 +59,16 @@ class Entity:
     def setNBT(self, nbt):
         pass
 
+    def update(self, dt):
+        pass
+
+
 G.entityclass = Entity
 
 from . import boxmodel
 
-def loadEntititys(*args):
-    from . import player
 
-G.eventhandler.on_event("game:registry:on_entity_registrate_periode", loadEntititys)
+@modsystem.ModLoader.ModEventEntry("game:registry:on_entity_registrate_periode", "minecraft",
+                                   info="registrating entitys")
+def register():
+    from . import player

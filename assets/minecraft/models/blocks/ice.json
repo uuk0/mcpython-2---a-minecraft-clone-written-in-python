@@ -1,0 +1,21 @@
+{
+  "blockaddress": "minecraft:ice",
+  "ice": {
+    "name": "cube:full",
+    "side_texture_files": ["assets/minecraft/textures/block/ice.png"],
+    "blockname": "minecraft/ice",
+    "side_indexes": [0, 0, 0, 0, 0, 0]
+  },
+  "packed_ice": {
+    "name": "cube:full",
+    "side_texture_files": ["assets/minecraft/textures/block/packed_ice.png"],
+    "blockname": "minecraft/packed_ice",
+    "side_indexes": [0, 0, 0, 0, 0, 0]
+  },
+  "blue_ice": {
+    "name": "cube:full",
+    "side_texture_files": ["assets/minecraft/textures/block/blue_ice.png"],
+    "blockname": "minecraft/blue_ice",
+    "side_indexes": [0, 0, 0, 0, 0, 0]
+  }
+}

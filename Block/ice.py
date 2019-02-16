@@ -1,50 +1,48 @@
 import globals as G
 import mathhelper
+import modsystem.ModLoader
 
-"""class for ice"""
+
 class Ice(G.blockclass):
+    """class for ice"""
     def getName(self):
         return "minecraft:ice"
 
-    def getTexturData(self, inst):
-        return mathhelper.tex_coords((0, 0), (0, 0), (0, 0), n2=1)
+    def getModelFile(self, inst):
+        return "minecraft:ice"
 
-    def getTexturFile(self, inst):
-        return "minecraft/ice"
+    def getStateName(self, inst):
+        return "ice"
 
-    def getAllTexturFiles(self):
-        return ["minecraft/ice"]
 
-G.blockhandler.register(Ice)
-
-"""class for packed ice"""
 class PackedIce(G.blockclass):
+    """class for packed ice"""
     def getName(self):
         return "minecraft:packed_ice"
 
-    def getTexturData(self, inst):
-        return mathhelper.tex_coords((0, 0), (0, 0), (0, 0), n2=1)
+    def getModelFile(self, inst):
+        return "minecraft:ice"
 
-    def getTexturFile(self, inst):
-        return "minecraft/packed_ice"
+    def getStateName(self, inst):
+        return "packed_ice"
 
-    def getAllTexturFiles(self):
-        return ["minecraft/packed_ice"]
 
-G.blockhandler.register(PackedIce)
-
-"""class for blue ice"""
 class BlueIce(G.blockclass):
+    """class for blue ice"""
     def getName(self):
         return "minecraft:blue_ice"
 
-    def getTexturData(self, inst):
-        return mathhelper.tex_coords((0, 0), (0, 0), (0, 0), n2=1)
+    def getModelFile(self, inst):
+        return "minecraft:ice"
 
-    def getTexturFile(self, inst):
-        return "minecraft/blue_ice"
+    def getStateName(self, inst):
+        return "blue_ice"
 
-    def getAllTexturFiles(self):
-        return ["minecraft/blue_ice"]
 
-G.blockhandler.register(BlueIce)
+@modsystem.ModLoader.ModEventEntry("game:registry:on_block_registrate_periode", "minecraft",
+                                   info="registrating ice")
+def register():
+    G.blockhandler.register(BlueIce)
+    G.blockhandler.register(PackedIce)
+    G.blockhandler.register(Ice)
+

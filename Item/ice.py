@@ -9,7 +9,7 @@ class Ice(G.itemclass):
         return True
 
     def getTexturFile(self):
-        return G.local+"/assets/textures/item/ICE.png"
+        return G.local+"/assets/minecraft/textures/item/ICE.png"
 
 G.itemhandler.register(Ice)
 
@@ -22,7 +22,7 @@ class PackedIce(G.itemclass):
         return True
 
     def getTexturFile(self):
-        return G.local+"/assets/textures/item/PACKED_ICE.png"
+        return G.local+"/assets/minecraft/textures/item/PACKED_ICE.png"
 
 G.itemhandler.register(PackedIce)
 
@@ -35,6 +35,6 @@ class BlueIce(G.itemclass):
         return True
 
     def getTexturFile(self):
-        return G.local+"/assets/textures/item/BLUE_ICE.png"
+        return G.local+"/assets/minecraft/textures/item/BLUE_ICE.png"
 
 G.itemhandler.register(BlueIce)

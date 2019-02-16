@@ -81,7 +81,7 @@ class chat(G.inventoryclass):
     """execute an command"""
     def execute(self, command):
         splitted = command.split(" ")
-        if command[0] != "/":
+        if len(command) > 0 and command[0] != "/":
             log.printMSG("[CHAT] "+command)
             return
         else:

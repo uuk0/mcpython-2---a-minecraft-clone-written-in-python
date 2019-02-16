@@ -1,0 +1,9 @@
+{
+  "blockaddress": "minecraft:brick",
+  "default": {
+    "name": "cube:full",
+    "side_texture_files": ["assets/minecraft/textures/block/bricks.png"],
+    "blockname": "minecraft/brick",
+    "side_indexes": [0, 0, 0, 0, 0, 0]
+  }
+}

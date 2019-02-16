@@ -9,7 +9,7 @@ class Coal(G.itemclass):
         return False
 
     def getTexturFile(self):
-        return G.local+"/assets/textures/item/COAL#0.png"
+        return G.local+"/assets/minecraft/textures/item/COAL#0.png"
 
 G.itemhandler.register(Coal)
 
@@ -22,7 +22,7 @@ class CharCoal(G.itemclass):
         return False
 
     def getTexturFile(self):
-        return G.local+"/assets/textures/item/COAL#1.png"
+        return G.local+"/assets/minecraft/textures/item/COAL#1.png"
 
 G.itemhandler.register(CharCoal)
 
@@ -35,7 +35,7 @@ class Diamond(G.itemclass):
         return False
 
     def getTexturFile(self):
-        return G.local+"/assets/textures/item/Diamond.png"
+        return G.local+"/assets/minecraft/textures/item/Diamond.png"
 
 G.itemhandler.register(Diamond)
 
@@ -48,7 +48,7 @@ class Emerald(G.itemclass):
         return False
 
     def getTexturFile(self):
-        return G.local+"/assets/textures/item/Emerald.png"
+        return G.local+"/assets/minecraft/textures/item/Emerald.png"
 
 G.itemhandler.register(Emerald)
 
@@ -61,7 +61,7 @@ class Gold(G.itemclass):
         return False
 
     def getTexturFile(self):
-        return G.local+"/assets/textures/item/Gold_Ingot.png"
+        return G.local+"/assets/minecraft/textures/item/Gold_Ingot.png"
 
 G.itemhandler.register(Gold)
 
@@ -74,7 +74,7 @@ class Iron(G.itemclass):
         return False
 
     def getTexturFile(self):
-        return G.local+"/assets/textures/item/Iron_Ingot.png"
+        return G.local+"/assets/minecraft/textures/item/Iron_Ingot.png"
 
 G.itemhandler.register(Iron)
 
@@ -87,7 +87,7 @@ class Lapis(G.itemclass):
         return False
 
     def getTexturFile(self):
-        return G.local+"/assets/textures/item/Lapis_Lazuli.png"
+        return G.local+"/assets/minecraft/textures/item/Lapis_Lazuli.png"
 
 G.itemhandler.register(Lapis)
 
@@ -100,7 +100,7 @@ class NetherQuartz(G.itemclass):
         return False
 
     def getTexturFile(self):
-        return G.local+"/assets/textures/item/Nether_Quartz.png"
+        return G.local+"/assets/minecraft/textures/item/Nether_Quartz.png"
 
 G.itemhandler.register(NetherQuartz)
 
@@ -113,6 +113,6 @@ class Redstone(G.itemclass):
         return False
 
     def getTexturFile(self):
-        return G.local+"/assets/textures/item/Redstone_Dust.png"
+        return G.local+"/assets/minecraft/textures/item/Redstone_Dust.png"
 
 G.itemhandler.register(Redstone)

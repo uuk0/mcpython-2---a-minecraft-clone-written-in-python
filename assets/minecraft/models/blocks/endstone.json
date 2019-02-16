@@ -1,0 +1,15 @@
+{
+  "blockaddress": "minecraft:endstone",
+  "endstone": {
+    "name": "cube:full",
+    "side_texture_files": ["assets/minecraft/textures/block/end_stone.png"],
+    "blockname": "minecraft/endstone",
+    "side_indexes": [0, 0, 0, 0, 0, 0]
+  },
+  "endstonebrick": {
+    "name": "cube:full",
+    "side_texture_files": ["assets/minecraft/textures/block/end_stone_bricks.png"],
+    "blockname": "minecraft/endstonebrick",
+    "side_indexes": [0, 0, 0, 0, 0, 0]
+  }
+}

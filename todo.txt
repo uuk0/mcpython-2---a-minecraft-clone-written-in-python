@@ -1,4 +1,4 @@
-from fogleman:
+﻿from fogleman:
 """
 Minecraft
 
@@ -19,7 +19,10 @@ The code should become well commented and more easily configurable. It should be
 
 I think it would be great to turn the project into more of a library / API... a Python package that you import and then use / configure to setup a world and run it. Something along these lines...
 
-import mc
+import mc DONE. use import main (will init everything) or import file by file and configurate them
+
+config via config.py
+use registrys for changing things during runtime
 
 world = mc.World(...) DONE. use G.window = window.Window(...)
 world.set_block(x, y, z, mc.DIRT) DONE. use G.model.add_block(x, y, z, <name>)
@@ -31,125 +34,132 @@ The API could contain functionality for the following:
     Hooks for terrain generation.
 """
 
+water
+
 update list:
   before re-starting after every update, clean up every file
 
+
+  reimplement colliding system!!!!
+  change the way how state events are handled (like by mods)
+
   BUG FIXES
-  fix bug: cactus is not shown
-  fix bug: some errors in player.py in update_input in try-except system(???)
-  fix bug: sand is NOT falling the whole way down
-  fix bug: can't clos
+	  fix bug: cactus is not shown -> add BoxModel
+	  fix bug: some errors in player.py in update_input in try-except system(???)
+	  fix bug: sand is NOT falling the whole way down
+	  fix bug: can't close crafting inventory
+	  fix bug: when braking / adding blocks, surround blocks are not updated corectly
 
   ITEM AND BLOCK UPDATE
-  add inventory updates for blocks
-  add hardness and braketime
-  add states / functions to blocks:
-    redstonestate
-    on_redstone_update(side)
-    on_inventory_update
-  add tools
-  add Blastresistence
-  add chest, enderchests, shulkerboxes
-  add redstone, redstonerepeater, redstonecomperator, redstone torch
-  add torches
-  add hoppers, droppers and dispensers
-  add piston and sticky pistons
-  add observers
-  add map
-  add water and lava
-  add farmland, grass paths, coast dirt
-  add weat etc.
-  add item picture generator for blocks in startup
-  add ability to load Models from file
-  add enchantment table, anvil
-  add enchanted books
-  finish log orientation system
-  add spawneggs
-
-  TOOLTIP UPDATE
-  add tooltips with language binding
+	  add inventory updates for blocks
+	  add hardness and braketime
+	  add states / functions to blocks:
+	    redstonestate
+	    on_redstone_update(side)
+	    on_inventory_update
+	  add tools
+	  add Blastresistence
+	  add chest, enderchests, shulkerboxes
+	  add redstone, redstonerepeater, redstonecomperator, redstone torch
+	  add torches
+	  add hoppers, droppers and dispensers
+	  add piston and sticky pistons
+	  add observers
+	  add map
+	  add water and lava
+	  add farmland, grass paths, coast dirt
+	  add weat etc.
+	  add item picture generator for blocks in startup
+	  add ability to load Models from file
+	  add enchantment table, anvil
+	  add enchanted books
+	  add logs surrounded on all sides by the same texture
+	  finish log orientation system
+	  add spawneggs
+	  add model for cactus
+	  add blastfurnes, furnes, command_blocks (model exists)
 
   MODLOADER UPDATE
-  add mod injection by file to language data
-  add language collection (something that 'fills' every gap with something, may be configurateable)
-  modloader -> can we import .jar files without jython
+     modloader -> can we import .jar files without jython
 
   CRAFTING UPDATE
-  add crafting table inventory
-  add furnes
-  add furnes recipis
-  add recipis for oredrops
-  add oredict notation posibility to recipis
-  add brakegroup notation for blocks
-  add shortcuts (1-9, SHIFT, MOUSE_MIDDLE) to item-inventory movement system
-  add recipi book (and also for mod-crafting systems?)
+	  fix crafting table inventory
+	  add furnes
+	  add furnes recipis
+	  add recipis for oredrops
+	  add oredict notation posibility to recipis
+	  add shortcuts (1-9, SHIFT, MOUSE_MIDDLE) to item-inventory movement system
+	  add recipi book (and also for mod-crafting systems?)
 
   LOG UPDATE
-  add log - folder with active log, last logs and crashlog
+     add log - folder with active log, last logs and crashlog
 
   INVENTORY UPDATE
-  add states / functions to inventorys:
-    getWeight()
+	  add states / functions to inventorys:
+	    getWeight()
 
+  (
   USEFULL TOOLS
-  tool to upload every file to github by one command?
+     tool to upload every file to github by one command?
+  )
 
   FUN UPDATE
-  add tnt explosion
+	  add tnt explosion (done?)
 
-  SOME MORE TIMING UPDATE
-  add random updates
+	  SOME MORE TIMING UPDATE
+	  add random updates
 
   SOME MORE WOLRDS UPDATE
-  add dimension system
-  add saves
-  -> mc-worlds?
-  add the end and nether
-  add dungeons
-  add ship wracks
-  finish tree gen and cactus gen
+	  saves -> mc-worlds?
+	  add the end and nether
+	  add dungeons    -> ORESGENERATOR?
+	  add ship wracks -> ORESGENERATOR?
+	  finish tree gen and cactus gen
 
   STATE UPDATE
-  add game menü & options
+     add game menü & options
 
   SOME OTHER MODDING UPDATE
-  add data packs
-  -> mc-datapacks?
-  add scoreboards
+	  add data packs
+	  -> mc-datapacks?
+	  add scoreboards
 
   ENTITY UPDATE
-  add mobspawning-system
-  add loot and xp to player when he kills to and mob
-  add AI to mobs
+	  add mobspawning-system
+	  add loot and xp to player when he kills to and mob
+	  add AI to mobs
 
   INVENTORY UPDATE
-  add harts, xp, hunger over hotbar
-  fix crafting table
-  add ability to change lang data during runtime
+	  add xp, hunger over hotbar
+	  fix crafting table & furnes
+	  add ability to change lang data during runtime
 
   THE TIME & VIEW UPDATE
-  add weather
-  add light and shadows
-  ability to add shaders?
+	  add weather
+	  add light and shadows
+	  ability to add shaders?
 
   OPTION UPDATE
-  add option for worldgen
-  add configs for EVERYTHING
-  add an config for advanced vanilla functions
-  add options & bind it to escape-state
+	  add option for worldgen
+	  add configs for EVERYTHING
+	  add an config for advanced vanilla functions
+	  add options & bind it to escape-state
 
   ARE WE ALOWN UPDATE
-  add client/server architekture
-  -> binding to mc-server/clients?
-  add opentolan binding to escape-state
+	  add client/server architekture
+	  -> binding to mc-server/clients?
+	  add opentolan binding to escape-state
 
   THE COMMAND UPDATE
-  add real command complet and chat
-  add MORE commands
+	  add real command complet and chat
+	  add MORE commands
 
   WHAT HAVE WE TO DO UPDATE
-  add advancements & bind it to escape-state
-  add statistics   & bind it to escape-state
+	  add advancements & bind it to escape-state
+	  add statistics   & bind it to escape-state
 
   EVENTHANDLER
-  make blockupdate using EVENT ID's
+	  make blockupdate using EVENT ID's
+
+  TEXTURE UPDATE
+	  add ability to add something via another .json file to exisiting Model definitions

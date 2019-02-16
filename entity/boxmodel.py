@@ -3,11 +3,14 @@ import mathhelper
 import globals as G
 import pyglet
 from pyglet.gl import *
+import log
 
-"""
-class for not-block objects
-"""
+
 class BoxModel(object):
+    """
+    class for not-block objects
+    """
+
     # top bottom left right front back
     textures = [(-1, -1), (-1, -1), (-1, -1), (-1, -1), (-1, -1), (-1, -1)]
     texture_data = None
@@ -15,8 +18,8 @@ class BoxModel(object):
     position = (0,0,0)
     rotate_angle = (0, 0, 0)
 
-    def __init__(self, length, width, height, texturefile, pixel_length, pixel_width, pixel_height):
-        self.image = G.texturhandler.getByName(texturefile)
+    def __init__(self, length, width, height, image, pixel_length, pixel_width, pixel_height):
+        self.image = image
 
         self.length, self.width, self.height = length, width, height
         self.pixel_length, self.pixel_width, self.pixel_height = pixel_length, pixel_width, pixel_height
@@ -71,5 +74,5 @@ class BoxModel(object):
         glRotatef(self.rotate_angle[-1] * (180 / float(math.pi)), 0.0, 0.0, 1.0)
         if self.display:
             self.display.draw(GL_QUADS)
-            print("drawing...")
         glPopMatrix()
+

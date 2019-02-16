@@ -15,12 +15,18 @@ class SoundHandler:
                 self.loadSound(e)
             return
         if file in self.sounds: return
-        self.sounds[file] = pyglet.media.load(file, streaming=False)
+        try:
+            self.sounds[file] = pyglet.media.load(file, streaming=False)
+        except:
+            pass
 
     """play an sound"""
     def playSound(self, position, file):
         if type(file) == list:
             file = random.choice(file)
-        self.sounds[file].play()
+        try:
+            self.sounds[file].play()
+        except KeyError:
+            pass
 
 G.soundhandler = SoundHandler()

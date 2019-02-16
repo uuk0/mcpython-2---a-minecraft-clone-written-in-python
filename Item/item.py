@@ -1,20 +1,32 @@
 import globals as G
 import log
+import language
+import modsystem.ModLoader
+import traceback
 
-"""class for itemhandler"""
+
 class ItemHandler:
+    """class for itemhandler"""
     def __init__(self):
         self.itemclasses = {}
         self.prefixes = []
 
-    """register an item-class"""
     def register(self, klass):
+        """register an item-class"""
         self.itemclasses[klass.getName(None)] = klass
         self.prefixes.append(klass.getName(None).split(":")[0])
         G.eventhandler.call("game:registry:on_item_registrated", klass)
+        if klass.hasBlock(None):
+            try:
+                for e in G.blockhandler.blocks[klass.getName(None)].oredictnames:
+                    G.notationhandler.notate("oredict", e, klass)
+            except:
+                log.printMSG("some trouble during loading Item class "+str(klass))
+        for e in klass.oredictnames:
+            G.notationhandler.notate("oredict", e, klass)
 
-    """returns an item class by name"""
     def getByName(self, name, exc=True):
+        """returns an item class by name"""
         if name in self.itemclasses:
             return self.itemclasses[name]
         else:
@@ -28,6 +40,8 @@ G.itemhandler = ItemHandler()
 
 """class for Item"""
 class ItemClass:
+    oredictnames = []
+
     def __init__(self):
         pass
 
@@ -41,7 +55,7 @@ class ItemClass:
 
     """returns the textur file"""
     def getTexturFile(self):
-        pass
+        return G.local+"/assets/minecraft/textures/missingtexture.png"
 
     """returns how many items can be stacked"""
     def getMaxStackSize(self):
@@ -51,13 +65,23 @@ class ItemClass:
     def getBlockName(self):
         return self.getName()
 
+    def getToolTipText(self):
+        text = ""
+        for e in self.getName().split(":"):
+            text += "." + e
+        text = text[1:]
+        if "block."+text in G.LANG.active.data: return G.LANG.active.data["block."+text]
+        if "item"+text   in G.LANG.active.data: return G.LANG.active.data["item"+text]
+        return text
+
 
 G.itemclass = ItemClass
 
-def loadItems(*args):
+
+@modsystem.ModLoader.ModEventEntry("game:registry:on_item_registrate_preiode", "minecraft",
+                                   info="registrating items")
+def register():
     import importlib, os
-    for e in os.listdir(G.local+"Item"):
+    for e in os.listdir(G.local+"/Item"):
         importlib.import_module("Item."+e.split(".")[0])
 
-
-G.eventhandler.on_event("game:registry:on_item_registrate_preiode", loadItems)

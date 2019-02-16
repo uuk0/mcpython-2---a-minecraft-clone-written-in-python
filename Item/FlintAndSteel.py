@@ -3,7 +3,7 @@ import globals as G
 """class for flint and steel"""
 
 
-class Barrel(G.itemclass):
+class FlintAndSteel(G.itemclass):
     def getName(self):
         return "minecraft:flint_and_steel"
 
@@ -11,7 +11,7 @@ class Barrel(G.itemclass):
         return False
 
     def getTexturFile(self):
-        return G.local + "/assets/textures/item/flint_and_steel.png"
+        return G.local + "/assets/minecraft/textures/item/flint_and_steel.png"
 
 
-G.itemhandler.register(Barrel)
+G.itemhandler.register(FlintAndSteel)

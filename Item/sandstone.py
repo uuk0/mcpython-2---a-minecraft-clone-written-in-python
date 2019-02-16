@@ -9,7 +9,7 @@ class Sandstone(G.itemclass):
         return True
 
     def getTexturFile(self):
-        return G.local+"/assets/textures/item/SANDSTONE#0.png"
+        return G.local+"/assets/minecraft/textures/item/SANDSTONE#0.png"
 
 G.itemhandler.register(Sandstone)
 
@@ -22,7 +22,7 @@ class ChiseledSandstone(G.itemclass):
         return True
 
     def getTexturFile(self):
-        return G.local+"/assets/textures/item/SANDSTONE#1.png"
+        return G.local+"/assets/minecraft/textures/item/SANDSTONE#1.png"
 
 G.itemhandler.register(ChiseledSandstone)
 
@@ -35,7 +35,7 @@ class CutSandstone(G.itemclass):
         return True
 
     def getTexturFile(self):
-        return G.local+"/assets/textures/item/SANDSTONE#2.png"
+        return G.local+"/assets/minecraft/textures/item/SANDSTONE#2.png"
 
 G.itemhandler.register(CutSandstone)
 
@@ -48,7 +48,7 @@ class RedSandstone(G.itemclass):
         return True
 
     def getTexturFile(self):
-        return G.local+"/assets/textures/item/RED_SANDSTONE.png"
+        return G.local+"/assets/minecraft/textures/item/RED_SANDSTONE.png"
 
 G.itemhandler.register(RedSandstone)
 
@@ -61,7 +61,7 @@ class RedChiseledSandStone(G.itemclass):
         return True
 
     def getTexturFile(self):
-        return G.local+"/assets/textures/item/RED_SANDSTONE#1.png"
+        return G.local+"/assets/minecraft/textures/item/RED_SANDSTONE#1.png"
 
 G.itemhandler.register(RedChiseledSandStone)
 
@@ -74,7 +74,7 @@ class RedCutSandStone(G.itemclass):
         return True
 
     def getTexturFile(self):
-        return G.local+"/assets/textures/item/RED_SANDSTONE#2.png"
+        return G.local+"/assets/minecraft/textures/item/RED_SANDSTONE#2.png"
 
 G.itemhandler.register(RedCutSandStone)
 

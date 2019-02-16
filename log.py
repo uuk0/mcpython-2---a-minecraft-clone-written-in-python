@@ -1,7 +1,11 @@
 import datetime
 
-"""returns a timestamp in string"""
+CASH = []
+
+LINES = []
+
 def getStamp():
+    """returns a timestamp in string"""
     stamp = datetime.datetime.now()
     s = ""
     s += "["+str(stamp.year)+"]"
@@ -12,7 +16,18 @@ def getStamp():
     s += "["+str(stamp.second)+" "*(2-len(str(stamp.second)))+"]"
     return s
 
-"""print an message with a timestamp into the chat"""
-def printMSG(msg):
-    if not str(msg).startswith("[") or str(msg).startswith("[["): return
-    print(getStamp()+str(msg))
+
+
+def printMSG(*msg, end="\n"):
+    """
+    print an message with a timestamp into the chat
+    :param msg: the message which should be printed out
+    """
+    stamp = getStamp()
+    _print(stamp, *msg, end=end)
+    CASH.append([stamp] + list([str(e) for e in msg]))
+    LINES.append([stamp, msg])
+
+global print
+_print = print
+print = printMSG

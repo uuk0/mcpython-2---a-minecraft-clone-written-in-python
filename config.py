@@ -4,6 +4,10 @@ log.printMSG("[CONSTANTLOADER][INFO] loading constants...")
 
 import math, globals as G
 
+DEFAULT_GAMEMODE = 1
+
+SKIN = 0  # 0: steve, 1: alex
+
 class DEBUG:
     PRINT_CRAFTING_STUFF = False
     PRINT_BLOCK_REGISTRATING = False
@@ -31,6 +35,8 @@ class Physiks:
     JUMP_SPEED = math.sqrt(2 * GRAVITY * MAX_JUMP_HEIGHT)
     TERMINAL_VELOCITY = 50
 
+    MOUSE_REAKTION = 0.15
+
 PLAYER_HEIGHT = 2
 
 FACES = [
@@ -52,31 +58,31 @@ class AdvancedVanilla:
         GRASS_TO_DIRT = True
         DIRT_TO_GRASS = False
 
+    START_INVENTORY = {}
+
 class WorldGenerator:
-    GenerateMinTasks = 1
+    USED_DEBUG_GEN = True
 
-    GenerateTerrainSmoothTime = 1
+    GenerateTerrainSmoothTime = 10
     GenerateTemperaturSmoothTime = 3
-    GenerateTerrainRange = 4
+    GenerateBiomeSmoothTime = 3
 
-    PRIORITY_HIGHMAP_SELF = 4
+    WorldSize = [(-1, -1), (2, 2)]
 
-    WorldSize = [64, 64]
+    #MIN_CAVE_ENTRYS_PER_CHUNK = 3
+    #MAX_CAVE_ENTRYS_PRE_CHUNK = 10
 
-    MIN_CAVE_ENTRYS_PER_CHUNK = 3
-    MAX_CAVE_ENTRYS_PRE_CHUNK = 10
+    #PERLIN_MAX_POSITION_RANGE = 8
+    #PERLIN_MAX_SIZE_RANGE = 1
 
-    PERLIN_MAX_POSITION_RANGE = 8
-    PERLIN_MAX_SIZE_RANGE = 1
+    #PERLIN_MAX_SIZE = 5
 
-    PERLIN_MAX_SIZE = 5
+    #PERLIN_SCALE = 4.0
+    #PERLIN_OKTAVES = 10
+    #PERLIN_PERSISTENCE = 0.5
+    #PERLIN_LACUNARITY = 2.0
 
-    PERLIN_SCALE = 4.0
-    PERLIN_OKTAVES = 10
-    PERLIN_PERSISTENCE = 0.5
-    PERLIN_LACUNARITY = 2.0
-
-    GENERATE_PERLIN = False
+    #GENERATE_PERLIN = False
 
 class SlotConfig:
     #Slot Image size definition

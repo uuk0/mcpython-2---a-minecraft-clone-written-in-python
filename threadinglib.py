@@ -10,6 +10,7 @@ def dictToAttrList(d):
     for e in d.keys():
         al += str(e) + "=" + str(d[e]) + ", "
     return al if al == "" else al[:-2]
+
 class Function:
     def __init__(self, args, kwargs):
         self.args = args

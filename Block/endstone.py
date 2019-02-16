@@ -1,34 +1,35 @@
 import globals as G
 import mathhelper
+import modsystem.ModLoader
 
-"""class for endstone"""
+
 class Endstone(G.blockclass):
+    """class for endstone"""
     def getName(self):
         return "minecraft:endstone"
 
-    def getTexturData(self, inst):
-        return mathhelper.tex_coords((0, 0), (0, 0), (0, 0), n2=1)
+    def getModelFile(self, inst):
+        return "minecraft:endstone"
 
-    def getTexturFile(self, inst):
-        return "minecraft/endstone"
+    def getStateName(self, inst):
+        return "endstone"
 
-    def getAllTexturFiles(self):
-        return ["minecraft/endstone"]
 
-G.blockhandler.register(Endstone)
-
-"""class for endstonebrick"""
 class EndstoneBrick(G.blockclass):
+    """class for endstonebrick"""
     def getName(self):
         return "minecraft:endstone_brick"
 
-    def getTexturData(self, inst):
-        return mathhelper.tex_coords((0, 0), (0, 0), (0, 0), n2=1)
+    def getModelFile(self, inst):
+        return "minecraft:endstone"
 
-    def getTexturFile(self, inst):
-        return "minecraft/endstone_brick"
+    def getStateName(self, inst):
+        return "endstonebrick"
 
-    def getAllTexturFiles(self):
-        return ["minecraft/endstone_brick"]
 
-G.blockhandler.register(EndstoneBrick)
+@modsystem.ModLoader.ModEventEntry("game:registry:on_block_registrate_periode", "minecraft",
+                                   info="registrating endstone & endstonebrick")
+def register():
+    G.blockhandler.register(EndstoneBrick)
+    G.blockhandler.register(Endstone)
+

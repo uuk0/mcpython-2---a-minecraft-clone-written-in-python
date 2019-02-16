@@ -2,13 +2,9 @@
 
 Simple Minecraft-inspired demo written in Python and Pyglet.
 
+Orginal Game:
 http://www.youtube.com/watch?v=kC3lwK631X8
 
-**Like this project?**
-
-You might also like my other Minecraft clone written in C using modern OpenGL (GL shader language). It performs better, has better terrain generation and saves state to a sqlite database. See here:
-
-https://github.com/fogleman/Craft
 
 ## Goals and Vision
 
@@ -38,9 +34,9 @@ The API could contain functionality for the following:
 ## How to Run
 
 ```shell
-pip install pyglet
-git clone https://github.com/fogleman/Minecraft.git
-cd Minecraft
+pip install pyglet pillow numpy noise
+git clone ssh://uuk@git.code.sf.net/p/mcpython/code mcpython-code
+cd mcpython
 python main.py
 ```
 
@@ -93,6 +89,7 @@ See the [wiki](https://github.com/fogleman/Minecraft/wiki) for this project to i
 - Mouse: look around
 - Space: jump
 - Tab: toggle flying mode
+- Escape: pause the game
 
 ### Building
 

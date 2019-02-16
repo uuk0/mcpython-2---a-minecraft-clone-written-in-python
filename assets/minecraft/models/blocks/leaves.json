@@ -1,0 +1,39 @@
+{
+  "blockaddress": "minecraft:leaves",
+  "acacia_leaves": {
+    "name": "cube:full",
+    "side_texture_files": ["assets/minecraft/textures/block/acacia_leaves.png"],
+    "blockname": "minecraft/acacia_leave",
+    "side_indexes": [0, 0, 0, 0, 0, 0]
+  },
+  "birch_leaves": {
+    "name": "cube:full",
+    "side_texture_files": ["assets/minecraft/textures/block/birch_leaves.png"],
+    "blockname": "minecraft/birch_leave",
+    "side_indexes": [0, 0, 0, 0, 0, 0]
+  },
+  "dark_oak_leaves": {
+    "name": "cube:full",
+    "side_texture_files": ["assets/minecraft/textures/block/dark_oak_leaves.png"],
+    "blockname": "minecraft/dark_oak_leave",
+    "side_indexes": [0, 0, 0, 0, 0, 0]
+  },
+  "jungle_leaves": {
+    "name": "cube:full",
+    "side_texture_files": ["assets/minecraft/textures/block/jungle_leaves.png"],
+    "blockname": "minecraft/jungle_leave",
+    "side_indexes": [0, 0, 0, 0, 0, 0]
+  },
+  "oak_leaves": {
+    "name": "cube:full",
+    "side_texture_files": ["assets/minecraft/textures/block/oak_leaves.png"],
+    "blockname": "minecraft/oak_leave",
+    "side_indexes": [0, 0, 0, 0, 0, 0]
+  },
+  "spruce_leaves": {
+    "name": "cube:full",
+    "side_texture_files": ["assets/minecraft/textures/block/spruce_leaves.png"],
+    "blockname": "minecraft/spruce_leave",
+    "side_indexes": [0, 0, 0, 0, 0, 0]
+  }
+}

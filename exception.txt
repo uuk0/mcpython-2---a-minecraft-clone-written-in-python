@@ -1,0 +1,521 @@
+
+
+--------------------------------------------------------------------------------
+- MCPYTHON VERSION 19W06B                                                      -
+--------------------------------------------------------------------------------
+informations about os, location, version etc.
+:timestamp | [2019][2 ][10][18][8 ][13]
+:versionid | 2019061
+:G.local | C:/Python/mcpython/mcpython-2---a-minecraft-clone-written-in-python
+:os name | Windows
+:os version | 10.0.17763
+:os proccessor | AMD64 Family 21 Model 112 Stepping 0, AuthenticAMD
+:os proccessor architektur | ('32bit', 'WindowsPE')
+:pyglet | 1.3.2
+
+--------------------------------------------------------------------------------
+- MCPYTHON VERSION 19W06B                                                      -
+--------------------------------------------------------------------------------
+informations about os, location, version etc.
+:timestamp | [2019][2 ][10][19][3 ][58]
+:versionid | 2019061
+:G.local | C:/Python/mcpython/mcpython-2---a-minecraft-clone-written-in-python
+:os name | Windows
+:os version | 10.0.17763
+:os proccessor | AMD64 Family 21 Model 112 Stepping 0, AuthenticAMD
+:os proccessor architektur | ('32bit', 'WindowsPE')
+:pyglet | 1.3.2
+
+--------------------------------------------------------------------------------
+- MCPYTHON VERSION 19W06B                                                      -
+--------------------------------------------------------------------------------
+informations about os, location, version etc.
+:timestamp | [2019][2 ][10][19][4 ][37]
+:versionid | 2019061
+:G.local | C:/Python/mcpython/mcpython-2---a-minecraft-clone-written-in-python
+:os name | Windows
+:os version | 10.0.17763
+:os proccessor | AMD64 Family 21 Model 112 Stepping 0, AuthenticAMD
+:os proccessor architektur | ('32bit', 'WindowsPE')
+:pyglet | 1.3.2
+
+--------------------------------------------------------------------------------
+- MCPYTHON VERSION 19W06B                                                      -
+--------------------------------------------------------------------------------
+informations about os, location, version etc.
+:timestamp | [2019][2 ][10][19][5 ][40]
+:versionid | 2019061
+:G.local | C:/Python/mcpython/mcpython-2---a-minecraft-clone-written-in-python
+:os name | Windows
+:os version | 10.0.17763
+:os proccessor | AMD64 Family 21 Model 112 Stepping 0, AuthenticAMD
+:os proccessor architektur | ('32bit', 'WindowsPE')
+:pyglet | 1.3.2
+
+--------------------------------------------------------------------------------
+- MCPYTHON VERSION 19W06B                                                      -
+--------------------------------------------------------------------------------
+informations about os, location, version etc.
+:timestamp | [2019][2 ][10][19][6 ][57]
+:versionid | 2019061
+:G.local | C:/Python/mcpython/mcpython-2---a-minecraft-clone-written-in-python
+:os name | Windows
+:os version | 10.0.17763
+:os proccessor | AMD64 Family 21 Model 112 Stepping 0, AuthenticAMD
+:os proccessor architektur | ('32bit', 'WindowsPE')
+:pyglet | 1.3.2
+
+--------------------------------------------------------------------------------
+- MCPYTHON VERSION 19W06B                                                      -
+--------------------------------------------------------------------------------
+informations about os, location, version etc.
+:timestamp | [2019][2 ][10][19][8 ][27]
+:versionid | 2019061
+:G.local | C:/Python/mcpython/mcpython-2---a-minecraft-clone-written-in-python
+:os name | Windows
+:os version | 10.0.17763
+:os proccessor | AMD64 Family 21 Model 112 Stepping 0, AuthenticAMD
+:os proccessor architektur | ('32bit', 'WindowsPE')
+:pyglet | 1.3.2
+
+--------------------------------------------------------------------------------
+- MCPYTHON VERSION 19W06B                                                      -
+--------------------------------------------------------------------------------
+informations about os, location, version etc.
+:timestamp | [2019][2 ][10][19][8 ][51]
+:versionid | 2019061
+:G.local | C:/Python/mcpython/mcpython-2---a-minecraft-clone-written-in-python
+:os name | Windows
+:os version | 10.0.17763
+:os proccessor | AMD64 Family 21 Model 112 Stepping 0, AuthenticAMD
+:os proccessor architektur | ('32bit', 'WindowsPE')
+:pyglet | 1.3.2
+stamp: [2019][2 ][10][19][9 ][33]
+an exception occured
+Traceback (most recent call last):
+  File "C:\Python\mcpython\mcpython-2---a-minecraft-clone-written-in-python\eventhandler.py", line 91, in call
+    self.functions[e][0](name, *list(self.functions[e][2])+list(args), **kwargs)
+  File "C:\Python\mcpython\mcpython-2---a-minecraft-clone-written-in-python\state\game.py", line 172, in on_event
+    cx, _, cz = mathhelper.sectorize(previous)
+  File "C:\Python\mcpython\mcpython-2---a-minecraft-clone-written-in-python\mathhelper.py", line 103, in sectorize
+    x, y, z = normalize(position)
+  File "C:\Python\mcpython\mcpython-2---a-minecraft-clone-written-in-python\mathhelper.py", line 86, in normalize
+    x, y, z = position
+TypeError: cannot unpack non-iterable NoneType object
+
+
+--------------------------------------------------------------------------------
+- MCPYTHON VERSION 19W06B                                                      -
+--------------------------------------------------------------------------------
+informations about os, location, version etc.
+:timestamp | [2019][2 ][10][19][38][52]
+:versionid | 2019061
+:G.local | C:/Python/mcpython/mcpython-2---a-minecraft-clone-written-in-python
+:os name | Windows
+:os version | 10.0.17763
+:os proccessor | AMD64 Family 21 Model 112 Stepping 0, AuthenticAMD
+:os proccessor architektur | ('32bit', 'WindowsPE')
+:pyglet | 1.3.2
+
+--------------------------------------------------------------------------------
+- MCPYTHON VERSION 19W06B                                                      -
+--------------------------------------------------------------------------------
+informations about os, location, version etc.
+:timestamp | [2019][2 ][10][19][39][11]
+:versionid | 2019061
+:G.local | C:/Python/mcpython/mcpython-2---a-minecraft-clone-written-in-python
+:os name | Windows
+:os version | 10.0.17763
+:os proccessor | AMD64 Family 21 Model 112 Stepping 0, AuthenticAMD
+:os proccessor architektur | ('32bit', 'WindowsPE')
+:pyglet | 1.3.2
+
+--------------------------------------------------------------------------------
+- MCPYTHON VERSION 19W06B                                                      -
+--------------------------------------------------------------------------------
+informations about os, location, version etc.
+:timestamp | [2019][2 ][10][19][44][39]
+:versionid | 2019061
+:G.local | C:/Python/mcpython/mcpython-2---a-minecraft-clone-written-in-python
+:os name | Windows
+:os version | 10.0.17763
+:os proccessor | AMD64 Family 21 Model 112 Stepping 0, AuthenticAMD
+:os proccessor architektur | ('32bit', 'WindowsPE')
+:pyglet | 1.3.2
+
+--------------------------------------------------------------------------------
+- MCPYTHON VERSION 19W06B                                                      -
+--------------------------------------------------------------------------------
+informations about os, location, version etc.
+:timestamp | [2019][2 ][10][19][47][6 ]
+:versionid | 2019061
+:G.local | C:/Python/mcpython/mcpython-2---a-minecraft-clone-written-in-python
+:os name | Windows
+:os version | 10.0.17763
+:os proccessor | AMD64 Family 21 Model 112 Stepping 0, AuthenticAMD
+:os proccessor architektur | ('32bit', 'WindowsPE')
+:pyglet | 1.3.2
+
+--------------------------------------------------------------------------------
+- MCPYTHON VERSION 19W06B                                                      -
+--------------------------------------------------------------------------------
+informations about os, location, version etc.
+:timestamp | [2019][2 ][10][19][52][8 ]
+:versionid | 2019061
+:G.local | C:/Python/mcpython/mcpython-2---a-minecraft-clone-written-in-python
+:os name | Windows
+:os version | 10.0.17763
+:os proccessor | AMD64 Family 21 Model 112 Stepping 0, AuthenticAMD
+:os proccessor architektur | ('32bit', 'WindowsPE')
+:pyglet | 1.3.2
+
+--------------------------------------------------------------------------------
+- MCPYTHON VERSION 19W06B                                                      -
+--------------------------------------------------------------------------------
+informations about os, location, version etc.
+:timestamp | [2019][2 ][10][19][53][36]
+:versionid | 2019061
+:G.local | C:/Python/mcpython/mcpython-2---a-minecraft-clone-written-in-python
+:os name | Windows
+:os version | 10.0.17763
+:os proccessor | AMD64 Family 21 Model 112 Stepping 0, AuthenticAMD
+:os proccessor architektur | ('32bit', 'WindowsPE')
+:pyglet | 1.3.2
+
+--------------------------------------------------------------------------------
+- MCPYTHON VERSION 19W06B                                                      -
+--------------------------------------------------------------------------------
+informations about os, location, version etc.
+:timestamp | [2019][2 ][12][14][37][35]
+:versionid | 2019061
+:G.local | C:/Python/mcpython/mcpython-2---a-minecraft-clone-written-in-python
+:os name | Windows
+:os version | 10.0.17763
+:os proccessor | AMD64 Family 21 Model 112 Stepping 0, AuthenticAMD
+:os proccessor architektur | ('32bit', 'WindowsPE')
+:pyglet | 1.3.2
+
+--------------------------------------------------------------------------------
+- MCPYTHON VERSION 19W06B                                                      -
+--------------------------------------------------------------------------------
+informations about os, location, version etc.
+:timestamp | [2019][2 ][12][14][40][17]
+:versionid | 2019061
+:G.local | C:/Python/mcpython/mcpython-2---a-minecraft-clone-written-in-python
+:os name | Windows
+:os version | 10.0.17763
+:os proccessor | AMD64 Family 21 Model 112 Stepping 0, AuthenticAMD
+:os proccessor architektur | ('32bit', 'WindowsPE')
+:pyglet | 1.3.2
+
+--------------------------------------------------------------------------------
+- MCPYTHON VERSION 19W06B                                                      -
+--------------------------------------------------------------------------------
+informations about os, location, version etc.
+:timestamp | [2019][2 ][12][14][56][8 ]
+:versionid | 2019061
+:G.local | C:/Python/mcpython/mcpython-2---a-minecraft-clone-written-in-python
+:os name | Windows
+:os version | 10.0.17763
+:os proccessor | AMD64 Family 21 Model 112 Stepping 0, AuthenticAMD
+:os proccessor architektur | ('32bit', 'WindowsPE')
+:pyglet | 1.3.2
+
+--------------------------------------------------------------------------------
+- MCPYTHON VERSION 19W06B                                                      -
+--------------------------------------------------------------------------------
+informations about os, location, version etc.
+:timestamp | [2019][2 ][12][14][57][31]
+:versionid | 2019061
+:G.local | C:/Python/mcpython/mcpython-2---a-minecraft-clone-written-in-python
+:os name | Windows
+:os version | 10.0.17763
+:os proccessor | AMD64 Family 21 Model 112 Stepping 0, AuthenticAMD
+:os proccessor architektur | ('32bit', 'WindowsPE')
+:pyglet | 1.3.2
+
+--------------------------------------------------------------------------------
+- MCPYTHON VERSION 19W06B                                                      -
+--------------------------------------------------------------------------------
+informations about os, location, version etc.
+:timestamp | [2019][2 ][12][14][58][42]
+:versionid | 2019061
+:G.local | C:/Python/mcpython/mcpython-2---a-minecraft-clone-written-in-python
+:os name | Windows
+:os version | 10.0.17763
+:os proccessor | AMD64 Family 21 Model 112 Stepping 0, AuthenticAMD
+:os proccessor architektur | ('32bit', 'WindowsPE')
+:pyglet | 1.3.2
+
+--------------------------------------------------------------------------------
+- MCPYTHON VERSION 19W06B                                                      -
+--------------------------------------------------------------------------------
+informations about os, location, version etc.
+:timestamp | [2019][2 ][12][15][6 ][55]
+:versionid | 2019061
+:G.local | C:/Python/mcpython/mcpython-2---a-minecraft-clone-written-in-python
+:os name | Windows
+:os version | 10.0.17763
+:os proccessor | AMD64 Family 21 Model 112 Stepping 0, AuthenticAMD
+:os proccessor architektur | ('32bit', 'WindowsPE')
+:pyglet | 1.3.2
+
+--------------------------------------------------------------------------------
+- MCPYTHON VERSION 19W06B                                                      -
+--------------------------------------------------------------------------------
+informations about os, location, version etc.
+:timestamp | [2019][2 ][12][15][11][12]
+:versionid | 2019061
+:G.local | C:/Python/mcpython/mcpython-2---a-minecraft-clone-written-in-python
+:os name | Windows
+:os version | 10.0.17763
+:os proccessor | AMD64 Family 21 Model 112 Stepping 0, AuthenticAMD
+:os proccessor architektur | ('32bit', 'WindowsPE')
+:pyglet | 1.3.2
+
+--------------------------------------------------------------------------------
+- MCPYTHON VERSION 19W06B                                                      -
+--------------------------------------------------------------------------------
+informations about os, location, version etc.
+:timestamp | [2019][2 ][12][15][20][50]
+:versionid | 2019061
+:G.local | C:/Python/mcpython/mcpython-2---a-minecraft-clone-written-in-python
+:os name | Windows
+:os version | 10.0.17763
+:os proccessor | AMD64 Family 21 Model 112 Stepping 0, AuthenticAMD
+:os proccessor architektur | ('32bit', 'WindowsPE')
+:pyglet | 1.3.2
+
+--------------------------------------------------------------------------------
+- MCPYTHON VERSION 19W07A                                                      -
+--------------------------------------------------------------------------------
+informations about os, location, version etc.
+:timestamp | [2019][2 ][12][17][31][30]
+:versionid | 2019070
+:G.local | C:/Python/mcpython/mcpython-2---a-minecraft-clone-written-in-python
+:os name | Windows
+:os version | 10.0.17763
+:os proccessor | AMD64 Family 21 Model 112 Stepping 0, AuthenticAMD
+:os proccessor architektur | ('32bit', 'WindowsPE')
+:pyglet | 1.3.2
+
+--------------------------------------------------------------------------------
+- MCPYTHON VERSION 19W07A                                                      -
+--------------------------------------------------------------------------------
+informations about os, location, version etc.
+:timestamp | [2019][2 ][12][17][31][49]
+:versionid | 2019070
+:G.local | C:/Python/mcpython/mcpython-2---a-minecraft-clone-written-in-python
+:os name | Windows
+:os version | 10.0.17763
+:os proccessor | AMD64 Family 21 Model 112 Stepping 0, AuthenticAMD
+:os proccessor architektur | ('32bit', 'WindowsPE')
+:pyglet | 1.3.2
+
+--------------------------------------------------------------------------------
+- MCPYTHON VERSION 19W07A                                                      -
+--------------------------------------------------------------------------------
+informations about os, location, version etc.
+:timestamp | [2019][2 ][12][18][17][25]
+:versionid | 2019070
+:G.local | C:/Python/mcpython/mcpython-2---a-minecraft-clone-written-in-python
+:os name | Windows
+:os version | 10.0.17763
+:os proccessor | AMD64 Family 21 Model 112 Stepping 0, AuthenticAMD
+:os proccessor architektur | ('32bit', 'WindowsPE')
+:pyglet | 1.3.2
+
+--------------------------------------------------------------------------------
+- MCPYTHON VERSION 19W07A                                                      -
+--------------------------------------------------------------------------------
+informations about os, location, version etc.
+:timestamp | [2019][2 ][12][18][21][17]
+:versionid | 2019070
+:G.local | C:/Python/mcpython/mcpython-2---a-minecraft-clone-written-in-python
+:os name | Windows
+:os version | 10.0.17763
+:os proccessor | AMD64 Family 21 Model 112 Stepping 0, AuthenticAMD
+:os proccessor architektur | ('32bit', 'WindowsPE')
+:pyglet | 1.3.2
+
+--------------------------------------------------------------------------------
+- MCPYTHON VERSION 19W07A                                                      -
+--------------------------------------------------------------------------------
+informations about os, location, version etc.
+:timestamp | [2019][2 ][12][18][21][55]
+:versionid | 2019070
+:G.local | C:/Python/mcpython/mcpython-2---a-minecraft-clone-written-in-python
+:os name | Windows
+:os version | 10.0.17763
+:os proccessor | AMD64 Family 21 Model 112 Stepping 0, AuthenticAMD
+:os proccessor architektur | ('32bit', 'WindowsPE')
+:pyglet | 1.3.2
+
+--------------------------------------------------------------------------------
+- MCPYTHON VERSION 19W07A                                                      -
+--------------------------------------------------------------------------------
+informations about os, location, version etc.
+:timestamp | [2019][2 ][12][18][24][11]
+:versionid | 2019070
+:G.local | C:/Python/mcpython/mcpython-2---a-minecraft-clone-written-in-python
+:os name | Windows
+:os version | 10.0.17763
+:os proccessor | AMD64 Family 21 Model 112 Stepping 0, AuthenticAMD
+:os proccessor architektur | ('32bit', 'WindowsPE')
+:pyglet | 1.3.2
+
+--------------------------------------------------------------------------------
+- MCPYTHON VERSION 19W07A                                                      -
+--------------------------------------------------------------------------------
+informations about os, location, version etc.
+:timestamp | [2019][2 ][12][18][26][30]
+:versionid | 2019070
+:G.local | C:/Python/mcpython/mcpython-2---a-minecraft-clone-written-in-python
+:os name | Windows
+:os version | 10.0.17763
+:os proccessor | AMD64 Family 21 Model 112 Stepping 0, AuthenticAMD
+:os proccessor architektur | ('32bit', 'WindowsPE')
+:pyglet | 1.3.2
+
+--------------------------------------------------------------------------------
+- MCPYTHON VERSION 19W07A                                                      -
+--------------------------------------------------------------------------------
+informations about os, location, version etc.
+:timestamp | [2019][2 ][13][19][39][12]
+:versionid | 2019070
+:G.local | C:/Python/mcpython/mcpython-2---a-minecraft-clone-written-in-python
+:os name | Windows
+:os version | 10.0.17763
+:os proccessor | AMD64 Family 21 Model 112 Stepping 0, AuthenticAMD
+:os proccessor architektur | ('32bit', 'WindowsPE')
+:pyglet | 1.3.2
+
+--------------------------------------------------------------------------------
+- MCPYTHON VERSION 19W07A                                                      -
+--------------------------------------------------------------------------------
+informations about os, location, version etc.
+:timestamp | [2019][2 ][15][20][11][20]
+:versionid | 2019070
+:G.local | C:\Python\mcpython\mcpython-2---a-minecraft-clone-written-in-python
+:os name | Windows
+:os version | 10.0.17763
+:os proccessor | AMD64 Family 21 Model 112 Stepping 0, AuthenticAMD
+:os proccessor architektur | ('32bit', 'WindowsPE')
+:pyglet | 1.3.2
+
+--------------------------------------------------------------------------------
+- MCPYTHON VERSION 19W07A                                                      -
+--------------------------------------------------------------------------------
+informations about os, location, version etc.
+:timestamp | [2019][2 ][16][16][36][28]
+:versionid | 2019070
+:G.local | C:/Python/mcpython/mcpython-2---a-minecraft-clone-written-in-python
+:os name | Windows
+:os version | 10.0.17763
+:os proccessor | AMD64 Family 21 Model 112 Stepping 0, AuthenticAMD
+:os proccessor architektur | ('32bit', 'WindowsPE')
+:pyglet | 1.3.2
+
+--------------------------------------------------------------------------------
+- MCPYTHON VERSION 19W07A                                                      -
+--------------------------------------------------------------------------------
+informations about os, location, version etc.
+:timestamp | [2019][2 ][16][16][42][3 ]
+:versionid | 2019070
+:G.local | C:/Python/mcpython/mcpython-2---a-minecraft-clone-written-in-python
+:os name | Windows
+:os version | 10.0.17763
+:os proccessor | AMD64 Family 21 Model 112 Stepping 0, AuthenticAMD
+:os proccessor architektur | ('32bit', 'WindowsPE')
+:pyglet | 1.3.2
+
+--------------------------------------------------------------------------------
+- MCPYTHON VERSION 19W07A                                                      -
+--------------------------------------------------------------------------------
+informations about os, location, version etc.
+:timestamp | [2019][2 ][16][16][43][7 ]
+:versionid | 2019070
+:G.local | C:/Python/mcpython/mcpython-2---a-minecraft-clone-written-in-python
+:os name | Windows
+:os version | 10.0.17763
+:os proccessor | AMD64 Family 21 Model 112 Stepping 0, AuthenticAMD
+:os proccessor architektur | ('32bit', 'WindowsPE')
+:pyglet | 1.3.2
+
+--------------------------------------------------------------------------------
+- MCPYTHON VERSION 19W07A                                                      -
+--------------------------------------------------------------------------------
+informations about os, location, version etc.
+:timestamp | [2019][2 ][16][16][43][28]
+:versionid | 2019070
+:G.local | C:/Python/mcpython/mcpython-2---a-minecraft-clone-written-in-python
+:os name | Windows
+:os version | 10.0.17763
+:os proccessor | AMD64 Family 21 Model 112 Stepping 0, AuthenticAMD
+:os proccessor architektur | ('32bit', 'WindowsPE')
+:pyglet | 1.3.2
+
+--------------------------------------------------------------------------------
+- MCPYTHON VERSION 19W07A                                                      -
+--------------------------------------------------------------------------------
+informations about os, location, version etc.
+:timestamp | [2019][2 ][16][16][51][50]
+:versionid | 2019070
+:G.local | C:/Python/mcpython/mcpython-2---a-minecraft-clone-written-in-python
+:os name | Windows
+:os version | 10.0.17763
+:os proccessor | AMD64 Family 21 Model 112 Stepping 0, AuthenticAMD
+:os proccessor architektur | ('32bit', 'WindowsPE')
+:pyglet | 1.3.2
+
+--------------------------------------------------------------------------------
+- MCPYTHON VERSION 19W07A                                                      -
+--------------------------------------------------------------------------------
+informations about os, location, version etc.
+:timestamp | [2019][2 ][16][16][55][46]
+:versionid | 2019070
+:G.local | C:/Python/mcpython/mcpython-2---a-minecraft-clone-written-in-python
+:os name | Windows
+:os version | 10.0.17763
+:os proccessor | AMD64 Family 21 Model 112 Stepping 0, AuthenticAMD
+:os proccessor architektur | ('32bit', 'WindowsPE')
+:pyglet | 1.3.2
+
+--------------------------------------------------------------------------------
+- MCPYTHON VERSION 19W07A                                                      -
+--------------------------------------------------------------------------------
+informations about os, location, version etc.
+:timestamp | [2019][2 ][16][16][56][4 ]
+:versionid | 2019070
+:G.local | C:/Python/mcpython/mcpython-2---a-minecraft-clone-written-in-python
+:os name | Windows
+:os version | 10.0.17763
+:os proccessor | AMD64 Family 21 Model 112 Stepping 0, AuthenticAMD
+:os proccessor architektur | ('32bit', 'WindowsPE')
+:pyglet | 1.3.2
+
+--------------------------------------------------------------------------------
+- MCPYTHON VERSION 19W07A                                                      -
+--------------------------------------------------------------------------------
+informations about os, location, version etc.
+:timestamp | [2019][2 ][16][16][56][39]
+:versionid | 2019070
+:G.local | C:/Python/mcpython/mcpython-2---a-minecraft-clone-written-in-python
+:os name | Windows
+:os version | 10.0.17763
+:os proccessor | AMD64 Family 21 Model 112 Stepping 0, AuthenticAMD
+:os proccessor architektur | ('32bit', 'WindowsPE')
+:pyglet | 1.3.2
+
+--------------------------------------------------------------------------------
+- MCPYTHON VERSION 19W07A                                                      -
+--------------------------------------------------------------------------------
+informations about os, location, version etc.
+:timestamp | [2019][2 ][16][16][59][6 ]
+:versionid | 2019070
+:G.local | C:/Python/mcpython/mcpython-2---a-minecraft-clone-written-in-python
+:os name | Windows
+:os version | 10.0.17763
+:os proccessor | AMD64 Family 21 Model 112 Stepping 0, AuthenticAMD
+:os proccessor architektur | ('32bit', 'WindowsPE')
+:pyglet | 1.3.2
