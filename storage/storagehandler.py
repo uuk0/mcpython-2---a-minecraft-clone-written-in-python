@@ -1,10 +1,21 @@
 import globals as G
 import storage.loader, storage.saver
 import log
+import os
+import importlib
 
 """
-TODO: add inventorys, entitys, playerlist -> name binding, blocktable, dimensioninfo (with name -> id table)
+TODO: add entitys
 """
+
+"""
+the following versions ARE supported:
+    0.0.1
+    
+the following version ARE N O T supported:
+    0.0.0
+"""
+
 
 class StorageHandler:
     def __init__(self):
@@ -42,6 +53,7 @@ class StorageHandler:
             self.saveWorld(G.window.worldname)
         obj = self.getFor(file)
         self.cleanUpModel()
+        if not obj: return
         obj["loader"].loadWorld(file)
         G.model.change_sectors(None, G.window.get_motion_vector())
 
@@ -54,13 +66,12 @@ class StorageHandler:
         obj["saver"].saveWorld(file)
 
     def cleanUpModel(self):
-        G.model.change_sectors(G.window.get_motion_vector(), None)
-        for e in list(chunkprovider.world.keys()):
-            G.model.remove_block(e, immediate=False)
+        G.model.clear()
+
 
 G.storagehandler = StorageHandler()
 
-import os, importlib
 
 for e in os.listdir(G.local+"/storage/datafixer"):
     importlib.import_module("storage.datafixer."+str(e.split(".")[0]))
+

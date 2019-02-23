@@ -1,6 +1,7 @@
 import math
 
 import pyglet
+import time
 
 import config
 import globals as G
@@ -8,7 +9,6 @@ import log
 import mathhelper
 import world.model as model
 import player
-import time
 
 
 class Window(pyglet.window.Window):
@@ -197,6 +197,8 @@ class Window(pyglet.window.Window):
                 task = task[1:]
                 while len(task) > 0:
                     st = task.pop(0)
+                    cx, _, cz = mathhelper.sectorize(position)
+                    chunkprovider = G.player.dimension.worldprovider.getChunkProviderFor((cx, cz))
                     if st == "sdata":
                         chunkprovider.world[position].setStorageData(task.pop(0))
                     else:

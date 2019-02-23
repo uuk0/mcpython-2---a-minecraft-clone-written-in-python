@@ -15,7 +15,6 @@ class WorldGeneratorHandler:
         self.generators[generator.getName()] = generator
 
 
-
 class WorldGenerator:
     def __init__(self, worldprovider):
         self.worldprovider = worldprovider
@@ -63,7 +62,7 @@ class WorldGenerator:
         self.generateHighMapToChunkProvider(chunk)
         self.generateSurfaceToChunkProvider(chunk)
         self.generatePerlinToChunkProvider(chunk)
-        self.generateOres(chunk)
+        #self.generateOres(chunk)
         self.generateUnderGroundStructursToChunkProvider(chunk)
         self.generateSurfaceStructursToChunkProvider(chunk)
         self.generateSurfaceLook(chunk)

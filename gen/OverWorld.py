@@ -45,7 +45,6 @@ class OverWorldGenetor(gen.WorldGenerator.WorldGenerator):
                                                     (gen.noise.noise(x, -11, z, freq=1000, level=4)+0.25)) + \
                                                                    biome.getMinHigh()
 
-
     def generateSurfaceToChunkProvider(self, chunk):
         r = self.random
         chunkprovider = self.worldprovider.getChunkProviderFor(chunk)
@@ -56,13 +55,16 @@ class OverWorldGenetor(gen.WorldGenerator.WorldGenerator):
             for dz in range(0, 16):
                 x, z = cx * 16 + dx, cz * 16 + dz
                 biome = chunkprovider.generationcache["biomemap"][(x, z)]
+                high = chunkprovider.generationcache["highmap"][(x, z)]
                 for y in range(chunkprovider.generationcache["highmap"][(x, z)]+1):
                     if y == 0:
                         chunkprovider.generationcache["blocks"][(x, y, z)] = "bedrock"
-                    elif y < chunkprovider.generationcache["highmap"][(x, z)] - 5:
-                        chunkprovider.generationcache["blocks"][(x, y, z)] = "stone"
-                    else:
-                        chunkprovider.generationcache["blocks_main"][(x, y, z)] = "stone"
+                    #elif y == high:
+                    #    chunkprovider.generationcache["blocks_main"][(x, y, z)] = "grass"
+                    #elif y > high - 5:
+                    #    chunkprovider.generationcache["blocks"][(x, y, z)] = "dirt"
+                    #else:
+                    #    chunkprovider.generationcache["blocks"][(x, y, z)] = "stone"
 
     def generateBlocksFromChunkProvider(self, chunk):
         r = self.random

@@ -43,6 +43,8 @@ def add_traceback():
 
 
 def add_crash():
+    log.printMSG("THE GAME CRASHED!!!")
+    traceback.print_exc()
     try:
         _add_text("####################################")
         _add_text("the game crashed")

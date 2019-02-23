@@ -119,6 +119,8 @@ class Game(G.State):
                         if not "player:inventory" in e.tag:
                             G.inventoryhandler.hide_inventory(e.id)
                 else:
+                    if G.window.worldname:
+                        G.commandhandler.executeCommand("/save", None, None)
                     G.statehandler.setState("minecraft:escape_menu")
             elif symbol == config.Keyboard.TOGGLE_FLYING and G.player.gamemode == 1:
                 G.window.flying = not G.window.flying

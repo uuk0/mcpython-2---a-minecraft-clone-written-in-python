@@ -1,6 +1,8 @@
 import globals as G
 
 import mods.GameObjectCreator.Model
+import texturslitcher
+import PIL.Image as Image
 
 
 class BlockHelper:
@@ -10,6 +12,7 @@ class BlockHelper:
         self.drops = {self.name:1}
         self.model = "minecraft:notdefinited"
         self.modelinfo = "default"
+        self.itemfile = None
         self.__created = False
         self.__model = None
 
@@ -26,6 +29,12 @@ class BlockHelper:
         if self.__created: return
         self.__created = True
         sup = self
+        print(sup, sup.itemfile)
+        if sup.itemfile:
+
+            image = Image.open(sup.itemfile)
+            image.resize((32, 32))
+            image.save(sup.itemfile)
 
         class FactoriedBlockByGameObjectCreator(G.blockclass):
             def getName(self):
@@ -36,6 +45,9 @@ class BlockHelper:
 
             def getStateName(self, inst):
                 return sup.modelinfo
+
+            def getItemFile(self, inst):
+                return sup.itemfile
 
         G.blockhandler.register(FactoriedBlockByGameObjectCreator)
 

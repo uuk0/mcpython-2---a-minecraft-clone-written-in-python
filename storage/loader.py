@@ -6,16 +6,17 @@ class Loader:
         pass
 
     def getStorageVersion(self):
-        return None
+        raise NotImplementedError()
 
     def loadWorld(self, file):
-        pass
+        raise NotImplementedError()
 
     def loadDim(self, dim, file):
-        pass
+        raise NotImplementedError()
 
     def loadChunk(self, cx, cz, file):
-        pass
+        raise NotImplementedError()
 
     def isFile(self, file):
         return False
+

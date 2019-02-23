@@ -86,6 +86,9 @@ class ModLoader:
         self.mdirs = []
         self.events = []
 
+    def get_mod_by_name(self, name):
+        return self.mods[name]
+
     def registerRegistrationEvent(self, entry):
         self.events = self.events[:-2] + [entry] + self.events[-2:]
 
@@ -192,11 +195,6 @@ class ModLoader:
         self.call_events(sorter)
 
     def bind_events(self, sorter):
-        """
-        for mod in sorter.modlistsorted:
-            if mod.getName() in EVENTLIST:
-                for buffer in EVENTLIST[mod.getName()]:
-                    G.eventhandler.on_event(*buffer)"""
         for mod in self.mods.values():
             mod.register_event_bindings()
 
@@ -212,7 +210,8 @@ class ModLoader:
                 if name in EVENTLIST and entry.name in EVENTLIST[name]:
                     for info in EVENTLIST[name][entry.name]:
                         #print("\x1b[2K\r", end="")
-                        log.printMSG("[MODLOADER]["+entry.name+"][INFO] mod "+str(info[0].modname)+" is "+\
+                        log.printMSG("[MODLOADER]["+entry.name+"][INFO] mod "+\
+                                     str(self.mods[info[0].modname].getUserFriendlyName())+" is "+\
                                      str(info[0].info))
                         info[1](*info[0].add)
                         entry.on_event_call(entry, info, name)
@@ -309,7 +308,7 @@ class Mod:
     def getDependencies(self):
         """returns all dependencies (a list of [modname, [{MINVERSION}, {MAXVERSION}],
         [function to detect if it is correct]])"""
-        return []
+        return [["minecraft"]]
 
     def getMcPythonVersions(self):
         """returns the version snapshot for which is it written (may be list. ends with None if upper is supported.

@@ -172,7 +172,10 @@ class BlockClass:
         return True #not G.model.exposed(inst.position)
 
     def getStorageData(self, inst):
-        return {"name":self.getName(), "data":inst.data}
+        cx, _, cz = mathhelper.sectorize(inst.position)
+        chunkprovider = G.player.dimension.worldprovider.getChunkProviderFor((cx, cz))
+        return {"name": self.getName(), "data": inst.data,
+                "shown": inst.position in chunkprovider.shown}
 
     def setStorageData(self, data, inst):
         inst.data = data["data"]

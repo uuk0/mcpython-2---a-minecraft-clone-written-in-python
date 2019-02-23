@@ -9,10 +9,12 @@ class Loader(storage.loader.Loader):
         return (0, 0, 0)
 
     def loadWorld(self, file):
+        log.printMSG("[SAVER][0.0.0][WARNING] version 0.0.0 is NOT supported. do this on your own risk")
         with open(file+"/player.json") as f:
             playerdata = json.load(f)
 
-        while len(sum([chunkprovider.world for chunkprovider in G.player.dimension.worldprovider.chunkproviders])) != 0:
+        while sum([len(chunkprovider.world) for chunkprovider in
+                   G.player.dimension.worldprovider.chunkproviders.values()]) != 0:
             G.storagehandler.cleanUpModel()
         G.window.position = playerdata["pos"]
         G.window.rotation = playerdata["rot"]
@@ -33,10 +35,15 @@ class Loader(storage.loader.Loader):
 
     def loadChunk(self, cx, cz, file):
         log.printMSG(cx, cz)
-        with open(file) as f:
+        with open(file, mode="rb") as f:
             chunkdata = pickle.load(f)
+        mx, mz = int(cx), int(cz)
         for rpos in chunkdata.keys():
-            pos = rpos[0] + cx * 16, rpos[1], rpos[2] + cz * 16
+            x, y, z = rpos.split(",")
+            x = int(x[1:])
+            y = int(y[1:])
+            z = int(z[1:-1])
+            pos = (x+mx*16, y, z+mz*16)
             G.BlockGenerateTasks[pos] = [chunkdata[rpos]["name"], "sdata", chunkdata[rpos]]
 
     def isFile(self, file):
@@ -60,6 +67,7 @@ class Saver(storage.saver.Saver):
         return (0, 0, 0)
 
     def saveWorld(self, file):
+        log.printMSG("[SAVER][0.0.0][WARNING] version 0.0.0 is NOT supported. do this on your own risk")
         if not os.path.isdir(file): os.makedirs(file)
         self.saveDim(G.player.dimension, file+"/DIM"+str(G.player.dimension.id))
         playerdata = {"dim":G.player.dimension.id,
@@ -82,15 +90,15 @@ class Saver(storage.saver.Saver):
         if dim != G.player.dimension:
             log.printMSG("[WORLDSAVER][0.0.0][ERROR] can't save unloaded dim "+str(dim))
             return
-        for cx, _, cz in G.player.dimension.worldprovider.chunks.keys():
+        for cx, cz in G.player.dimension.worldprovider.chunkproviders.keys():
             self.saveChunk(cx, cz, file+"/"+str(cx)+"."+str(cz)+".chunk")
 
     def _transformposition(self, cx, cz, x, y, z):
         return x - cx * 16, y, z - cz * 16
 
     def saveChunk(self, cx, cz, file):
-        if not (cx, 0, cz) in G.player.dimension.worldprovider.chunks:
-            log.printMSG("[WORLDSAVER][0.0.0][ERROR] can't saveunloaded chunk "+str(cx, cz))
+        if not (cx, cz) in G.player.dimension.worldprovider.chunkproviders:
+            log.printMSG("[WORLDSAVER][0.0.0][ERROR] can't save unloaded chunk "+str(cx, cz))
             return
         chunkdata = {}
         chunkprovider = G.player.dimension.worldprovider.getChunkProviderFor((cx, cz))

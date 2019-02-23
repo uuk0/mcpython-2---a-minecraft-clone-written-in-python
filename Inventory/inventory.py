@@ -190,6 +190,7 @@ class Slot:
         self.canplayersetitems = canplayersetitems
         self.update_func = update_func
         self.controll_function = controll_function
+
     def draw(self, position):
         """draw the slot"""
         self.stack.drawImage((self.position[0]+position[0],

@@ -14,8 +14,9 @@ import world.Dimensions as Dimensions
 
 import time
 
-"""class for model"""
+
 class Model(object):
+    """class for model"""
     def __init__(self):
 
         G.model = self
@@ -84,8 +85,8 @@ class Model(object):
                         nx, ny, nz = x + dx, y + dy, z + dz
                         cx, _, cz = mathhelper.sectorize((nx, ny, nz))
                         chunkprovider = G.player.dimension.worldprovider.getChunkProviderFor((cx, cz))
-                        if (((nx, ny, nz) not in chunkprovider.world or G.GAMESTAGE != 3) and \
-                            (nx, ny, nz) not in G.BlockGenerateTasks) and chunkprovider.generated:
+                        if (((nx, ny, nz) not in chunkprovider.world or G.GAMESTAGE != 3) and
+                            (nx, ny, nz) not in G.BlockGenerateTasks):
                             return True
                         else:
                             pass
@@ -331,5 +332,6 @@ class Model(object):
         self.change_sectors(G.window.get_motion_vector(), None)
         for chunkprovider in G.player.dimension.worldprovider.chunkproviders.values():
             for e in chunkprovider.world.copy().keys():
-                self.remove_block(e, immediate=False)
+                self.remove_block(e, immediate=True)
+        G.entityhandler.entitys = []
 

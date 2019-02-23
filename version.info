@@ -419,3 +419,21 @@ version 19w07a:
         for sorting mods
   modloader will now print less debug stuff
   fixed bug: blocks without items for which items were generated have not correct items
+
+version 19w08a:
+  mods should NOT longer give subpackages their modinstance, use G.modloader.get_mod_by_name(<modname>)
+  modeventprint will take now getUserFriendlyName() of mod instead of getName()
+  added variable in world.OverWorld for the active generator
+  REMOVED oregen for the moment
+  fixed save-system complete
+  fixed bug: chunkloadingsystem used open(file, mode="r") instead of open(file, mode="rb")
+  fixed bug: chunkloadingsystem is unpacking string wrong
+  fixed bug: when closing world, entitys are NOT removed
+  new storage version: 0.0.1 OLD MAY NOT SUPPORTED BECAUSE IT DOESN'T WORK ALL TIME
+  removed duplicate definition of function to clear the model
+  version 0.0.1 will have optimized chunk storage (empty chunks will not be saved)
+  inventorys & entitys are now saved
+  Block has now an storage attribute wether it is shown or not
+  fixed bug: when saving the world, the last world is overwritten also
+  fixed bug: blocks builed outside of generated chunks are not shown until some kind of reload of the block
+  when in esc-state, the world will AUTOMATICLY saved

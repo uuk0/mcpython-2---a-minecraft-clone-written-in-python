@@ -5,6 +5,10 @@ import log
 import config
 
 
+OVERWORLD_GENERATOR = gen.OverWorld.OverWorldGenetor if not config.WorldGenerator.USED_DEBUG_GEN else \
+    gen.DebugWorldGenerator.DebugWorldGenerator
+
+
 class OverWorld(world.Dimensions.Dimension):
     def getID(self):
         return 0
@@ -16,9 +20,7 @@ class OverWorld(world.Dimensions.Dimension):
         return True
 
     def creatWorldGenerator(self):
-        if config.WorldGenerator.USED_DEBUG_GEN:
-            return gen.DebugWorldGenerator.DebugWorldGenerator(self.worldprovider)
-        return gen.OverWorld.OverWorldGenetor(self.worldprovider)
+        return OVERWORLD_GENERATOR(self.worldprovider)
 
     def getWorldSize(self):
         return config.WorldGenerator.WorldSize

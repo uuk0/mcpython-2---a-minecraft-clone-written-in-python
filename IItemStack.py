@@ -31,8 +31,10 @@ class IItemStack:
             self.item = None
         self.__amount = amount
         if self.item:
-            image = texturslitcher.ImageAtlas.load_image(self.item.getTexturFile())
-            texturslitcher.ImageAtlas.save_image(
+            texturslitcher.ImageAtlas.load_image(self.item.getTexturFile()).resize((32, 32)).\
+                save(self.item.getTexturFile())
+            self.image = pyglet.sprite.Sprite(pyglet.image.load(self.item.getTexturFile()))
+            """texturslitcher.ImageAtlas.save_image(
                 texturslitcher.ImageAtlas.resize(
                     texturslitcher.ImageAtlas.load_image(self.item.getTexturFile()),
                     (32, 32)
@@ -42,7 +44,7 @@ class IItemStack:
             texturslitcher.ImageAtlas.resize(image, (32, 32))
             texturslitcher.ImageAtlas.save_image(image, self.item.getTexturFile())
             #texturhandler.resize(self.item.getTexturFile(), (32, 32), self.item.getTexturFile())
-            self.image = pyglet.sprite.Sprite(pyglet.image.load(self.item.getTexturFile()))
+            self.image = pyglet.sprite.Sprite(pyglet.image.load(self.item.getTexturFile()))"""
         else:
             self.image = None
         self.texturfile = self.item.getTexturFile() if self.item else None

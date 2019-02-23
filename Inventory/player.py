@@ -105,8 +105,8 @@ class PlayerInventory(G.inventorycollection):
                 G.inventoryhandler.hide_inventory(e)
 
 
-"""class of player inventory crafting part"""
 class Crafting(G.inventoryclass):
+    """class of player inventory crafting part"""
     tag = ["player:inventory", "inventorys:crafting", "system:nothideable"]
     def __init__(self, *args, **kwargs):
         G.inventoryclass.__init__(self, *args, **kwargs)

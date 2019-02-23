@@ -58,8 +58,7 @@ class Dimension:
             G.player.dimension = self
 
     def leave(self):
-        self.map = self.worldprovider.world
-        chunkprovider.world = {}
+        G.storagehandler.cleanUpModel()
 
 
 

@@ -10,7 +10,7 @@ class Save:
     def executeCommand(command, entity, position):
         splitted = command.split(" ")
         if len(splitted) > 1:
-            d = G.local+"saves/"+splitted[1]
+            d = G.local+"/saves/"+splitted[1]
         elif G.window.worldname:
             d = G.window.worldname
         else:

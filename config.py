@@ -61,7 +61,7 @@ class AdvancedVanilla:
     START_INVENTORY = {}
 
 class WorldGenerator:
-    USED_DEBUG_GEN = True
+    USED_DEBUG_GEN = False
 
     GenerateTerrainSmoothTime = 10
     GenerateTemperaturSmoothTime = 3
