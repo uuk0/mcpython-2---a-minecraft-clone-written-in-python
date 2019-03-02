@@ -4,6 +4,7 @@ import config
 import world.WorldProvider
 import log
 
+
 class DimensionHandler:
     def __init__(self):
         self.dimensionclasses = {}
@@ -11,8 +12,11 @@ class DimensionHandler:
 
     def register(self, klass):
         self.dimensionclasses[klass.getName(None)] = klass
-        if klass.shouldBeOnGenerationInitialisated(None):
-            klass()
+
+    def generateclasses(self):
+        for klass in self.dimensionclasses.values():
+            if klass.shouldBeOnGenerationInitialisated(None):
+                klass()
 
     def prepare(self):
         for dim in self.dimensions.values():

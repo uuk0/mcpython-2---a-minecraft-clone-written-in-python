@@ -77,6 +77,9 @@ class Model(object):
         blocks, True otherwise.
 
         """
+        bcx, _, bcz = mathhelper.sectorize(position)
+        basechunkprovider = G.player.dimension.worldprovider.getChunkProviderFor((bcx, bcz))
+        flag1 = basechunkprovider.generated
         x, y, z = position
         for dx in range(-1, 2):
             for dy in range(-1, 2):
@@ -86,7 +89,7 @@ class Model(object):
                         cx, _, cz = mathhelper.sectorize((nx, ny, nz))
                         chunkprovider = G.player.dimension.worldprovider.getChunkProviderFor((cx, cz))
                         if (((nx, ny, nz) not in chunkprovider.world or G.GAMESTAGE != 3) and
-                            (nx, ny, nz) not in G.BlockGenerateTasks):
+                            (nx, ny, nz) not in G.BlockGenerateTasks) and not (flag1 and not chunkprovider.generated):
                             return True
                         else:
                             pass
@@ -121,6 +124,8 @@ class Model(object):
         else:
             block = texture
             block.position = position
+        if not block:
+            return
         chunkprovider.world[position] = block
         if immediate:
             if self.exposed(position):
@@ -252,21 +257,23 @@ class Model(object):
         drawn to the canvas.
 
         """
-        chunkprovider = G.player.dimension.worldprovider.getChunkProviderFor((sector[0],
-                                                    sector[2] if len(sector) > 2 else sector[1]))
-        for position in chunkprovider.world.keys():
-            chunkprovider.world[position].show()
+        if G.player.dimension:
+            chunkprovider = G.player.dimension.worldprovider.getChunkProviderFor((sector[0],
+                                                        sector[2] if len(sector) > 2 else sector[1]))
+            for position in chunkprovider.world.keys():
+                chunkprovider.world[position].show()
 
     def hide_sector(self, sector):
         """ Ensure all blocks in the given sector that should be hidden are
         removed from the canvas.
 
         """
-        chunkprovider = G.player.dimension.worldprovider.getChunkProviderFor((sector[0],
-                                                                              sector[2] if len(sector) > 2 else sector[
-                                                                                  1]))
-        for position in chunkprovider.world.keys():
-            chunkprovider.world[position].hide()
+        if G.player.dimension:
+            chunkprovider = G.player.dimension.worldprovider.getChunkProviderFor((sector[0],
+                                                                                  sector[2] if len(sector) > 2 else sector[
+                                                                                      1]))
+            for position in chunkprovider.world.keys():
+                chunkprovider.world[position].hide()
 
     def change_sectors(self, before, after):
         """ Move from sector `before` to sector `after`. A sector is a
@@ -334,4 +341,5 @@ class Model(object):
             for e in chunkprovider.world.copy().keys():
                 self.remove_block(e, immediate=True)
         G.entityhandler.entitys = []
+        G.eventhandler.call("core:model:cleanup")
 

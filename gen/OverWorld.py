@@ -6,7 +6,7 @@ import log
 import gen.noise
 
 
-class OverWorldGenetor(gen.WorldGenerator.WorldGenerator):
+class OverWorldGenerator(gen.WorldGenerator.WorldGenerator):
     BIOMES = ["minecraft:birch_forest", "minecraft:plains"]
 
     def generateTemperaturMapToChunkProvider(self, chunk):
@@ -59,12 +59,12 @@ class OverWorldGenetor(gen.WorldGenerator.WorldGenerator):
                 for y in range(chunkprovider.generationcache["highmap"][(x, z)]+1):
                     if y == 0:
                         chunkprovider.generationcache["blocks"][(x, y, z)] = "bedrock"
-                    #elif y == high:
-                    #    chunkprovider.generationcache["blocks_main"][(x, y, z)] = "grass"
-                    #elif y > high - 5:
-                    #    chunkprovider.generationcache["blocks"][(x, y, z)] = "dirt"
-                    #else:
-                    #    chunkprovider.generationcache["blocks"][(x, y, z)] = "stone"
+                    elif y == high:
+                        chunkprovider.generationcache["blocks_main"][(x, y, z)] = "grass"
+                    elif y > high - 5:
+                        chunkprovider.generationcache["blocks"][(x, y, z)] = "dirt"
+                    else:
+                        chunkprovider.generationcache["blocks"][(x, y, z)] = "stone"
 
     def generateBlocksFromChunkProvider(self, chunk):
         r = self.random

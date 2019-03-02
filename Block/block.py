@@ -46,7 +46,9 @@ class BlockHandler:
 
     """returns a new blockinst - class representing the block"""
     def getInst(self, name, position, blocksettedto=None):
-        return IBlockInstants(name, position, blocksettedto=blocksettedto)
+        if self.getByName(name):
+            return IBlockInstants(name, position, blocksettedto=blocksettedto)
+        return None
 
     """returns the block class by name"""
     def getByName(self, name, exc=True):

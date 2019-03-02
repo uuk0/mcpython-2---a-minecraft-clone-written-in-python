@@ -77,12 +77,13 @@ update list:
 	  finish log orientation system
 	  add spawneggs
 	  add model for cactus
-	  add blastfurnes, furnes, command_blocks (model exists)
+	  add blastfurnes, furnes, command_blocks
 
   MODLOADER UPDATE
-     modloader -> can we import .jar files without jython
+     modloader -> can we import .jar files with(out) jython
 
   CRAFTING UPDATE
+      re-add full crafting
 	  fix crafting table inventory
 	  add furnes
 	  add furnes recipis
@@ -91,20 +92,12 @@ update list:
 	  add shortcuts (1-9, SHIFT, MOUSE_MIDDLE) to item-inventory movement system
 	  add recipi book (and also for mod-crafting systems?)
 
-  LOG UPDATE
-     add log - folder with active log, last logs and crashlog
-
   INVENTORY UPDATE
 	  add states / functions to inventorys:
 	    getWeight()
 
-  (
-  USEFULL TOOLS
-     tool to upload every file to github by one command?
-  )
-
   FUN UPDATE
-	  add tnt explosion (done?)
+	  add tnt explosion
 
 	  SOME MORE TIMING UPDATE
 	  add random updates

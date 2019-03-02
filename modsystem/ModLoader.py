@@ -57,7 +57,7 @@ class ModEventCallEntry:
         binds an given function to these modeventcallentry
         """
         name = args[0].__name__
-        if name  == "on_start":
+        if name == "on_start":
             self.start_function = args[0]
         elif name == "on_end":
             self.end_function = args[0]
@@ -228,7 +228,9 @@ ModEventCallEntry("game:registry:on_prepare_plugin_registrate_periode")
 ModEventCallEntry("game:registry:on_argument_parser_type_registrate_periode")
 
 
-@ModEventCallEntry("game:registry:on_texture_registrate_periode")
+textureentry = ModEventCallEntry("game:registry:on_texture_registrate_periode")
+
+@textureentry
 def on_end(entry):
     G.imageatlashandler.init()
 
@@ -274,6 +276,7 @@ def register_l_block(blockname):
 
 
 ModEventCallEntry("game:registry:on_biome_registrate_periode")
+ModEventCallEntry("game:registry:on_dimension_registrate_periode")
 ModEventCallEntry("game:registry:on_inventory:registrate_periode")
 ModEventCallEntry("game:registry:on_crafting_recipi_registrate_periode")
 ModEventCallEntry("game:registry:on_structur_registrate_periode")

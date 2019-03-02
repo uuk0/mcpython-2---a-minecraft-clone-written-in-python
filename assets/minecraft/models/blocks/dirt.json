@@ -4,7 +4,7 @@
     "name": "cube:full",
     "side_texture_files": ["assets/minecraft/textures/block/grass_block_side.png",
                            "assets/minecraft/textures/block/dirt.png",
-                           "assets/minecraft/textures/block/grass_top.png",
+                           "tmp/minecraft/block/grass/item_0.png",
                            "assets/minecraft/textures/block/coarse_dirt.png"],
     "blockname": "minecraft/grass",
     "side_indexes": [2, 1, 0, 0, 0, 0],

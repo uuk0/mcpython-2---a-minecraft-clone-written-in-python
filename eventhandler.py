@@ -149,6 +149,7 @@ G.eventhandler.addEventName("opengl:draw2d")
 G.eventhandler.addEventName("opengl:draw3d")
 G.eventhandler.addEventName("game:on_block_add_by_player")
 G.eventhandler.addEventName("game:on_block_remove_by_player")
+G.eventhandler.addEventName("core:model:cleanup")
 
 #REGISTRATE PERIODES EVENTS
 """

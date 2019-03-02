@@ -8,7 +8,7 @@ class Notation:
         G.notationhandler._addNotation(self)
 
     def notate(self, object, string):
-        if not string in self.items:
+        if string not in self.items:
             self.addGroup(string)
         self.items[string].append(object)
 
@@ -30,6 +30,11 @@ class NotationHandler:
 
     def notate(self, notation, string, obj):
         self.notations[notation].notate(obj, string)
+
+    def getnotatedobjectsfor(self, notation, string):
+        if not notation in self.notations: return []
+        if not string in self.notations[notation].items: return []
+        return self.notations[notation].items[string]
 
 
 G.notationhandler = NotationHandler()

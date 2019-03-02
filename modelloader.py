@@ -16,7 +16,10 @@ class ModelHandler:
 
     def loadFromDir(self, dir):
         for e in os.listdir(dir):
-            self.loadFromFile(dir+"/"+e)
+            try:
+                self.loadFromFile(dir+"/"+e)
+            except:
+                log.printMSG("[MODELLOADER][ERROR] can't load file "+str(dir+"/"+e))
 
 
 G.modelhandler = ModelHandler()

@@ -77,7 +77,9 @@ class Game(G.State):
 
             if any([G.inventoryhandler.inventorys[inventory].isDisablyingGame() for inventory in \
                     G.inventoryhandler.activeinventorys]):
-                #log.printMSG([G.inventoryhandler.inventorys[inventory] for inventory in G.inventoryhandler.activeinventorys])
+                log.printMSG([(G.inventoryhandler.inventorys[inventory],
+                               G.inventoryhandler.inventorys[inventory].isDisablyingGame())
+                              for inventory in G.inventoryhandler.activeinventorys])
                 if symbol == key.ESCAPE:
                     for e in G.inventoryhandler.activeated:
                         inv = G.inventoryhandler.inventorys[e]
@@ -198,7 +200,7 @@ class Game(G.State):
                             G.player.inventory.inventorys[0].slots[G.player.selectedinventoryslot].stack.amount -= 1
                         block = chunkprovider.world[previous]
                         G.soundhandler.playSound(previous, block.getBrakeSoundFile())
-                    elif block and chunkprovider.world[block].isOpeningInventory(
+                    elif block and chunkprovider and chunkprovider.world[block].isOpeningInventory(
                             G.player.inventory.inventorys[0].slots[G.player.selectedinventoryslot].stack):
                         #log.printMSG(chunkprovider.world[block], chunkprovider.world[block].blockclass, chunkprovider.world[block].getInventorys())
                         for e in chunkprovider.world[block].getInventorys():

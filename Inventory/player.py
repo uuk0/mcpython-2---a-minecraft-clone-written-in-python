@@ -5,59 +5,19 @@ import traceback
 from pyglet.window import key as keys
 import notations
 import imagecutter
+import crafting.IGridInventory
 
 
-def _isRecipi(recipi, slots):
-    try:
-        if not recipi: return [False, None]
-        slots = slots[:-1]
-        recipisize = len(recipi[0]), len(recipi[0][0])
-        if recipisize == (1, 1):
-            isitem = []
-            slot = None
-            for e in slots:
-                isitem.append((e.stack and e.stack.item))
-                if e.stack and e.stack.item and e.stack.item.getName() == recipi[2][recipi[0][0][0]][0] and \
-                        e.stack.amount >= recipi[2][recipi[0][0][0]][1]:
-                    slot = e
-            if slot and isitem.count(None) == 3:
-                return [True, [slot]]
-        elif recipisize == (2, 2):
-            items = []
-            for e in recipi[0]:
-                for e in e:
-                    items.append(recipi[2][e] if e != " " else " ")
-            flag = True
-            for i, e in enumerate(items):
-                if not ((slots[i].stack.item and e[0] == slots[i].stack.item.getName() and e[1] <= slots[i].stack.amount) or (not slots[i].stack.item and e[0] == " ")):
-                    flag = False
-            if flag:
-                return [True, slots]
-        elif recipisize == (1, 2):
-            items = [recipi[2][recipi[0][0][0]], recipi[2][recipi[0][0][1]]]
-            for i1, sl in enumerate([[slots[0], slots[2]], [slots[1], slots[3]]]):
-                if all([x.stack.item and x.stack.item.getName() == items[i] for i, x in enumerate(sl)]):
-                    return [True, sl]
-        elif recipisize == (2, 1):
-            items = [recipi[2][recipi[0][0][0]], recipi[2][recipi[0][1][0]]]
-            for i1, sl in enumerate([[slots[0], slots[1]], [slots[2], slots[3]]]):
-                if all([x.stack.item and x.stack.item.getName() == items[i] for i, x in enumerate(sl)]):
-                    return [True, sl]
-        return [False, None]
-    except:
-        if config.DEBUG.PRINT_CRAFTING_STUFF:
-            traceback.print_exc()
-        return [False, None]
-
-
-"""class for playerinventory"""
 class PlayerInventory(G.inventorycollection):
+    """class for playerinventory"""
     tag = ["player:hotbar",
            "player:inventory",
            "system:nothideable"]
+
     def __init__(self):
         G.inventorycollection.__init__(self)
         self.guitype = 0
+        self.inventorys[-1].main = self
 
     def creatInventorys(self):
         return [Hotbar(), Rows(), Crafting()]
@@ -105,20 +65,33 @@ class PlayerInventory(G.inventorycollection):
                 G.inventoryhandler.hide_inventory(e)
 
 
-class Crafting(G.inventoryclass):
+class Crafting(G.inventoryclass, crafting.IGridInventory.IGridInventory):
     """class of player inventory crafting part"""
     tag = ["player:inventory", "inventorys:crafting", "system:nothideable"]
+
+    def get_grid_size(self):
+        return (2, 2)
+
+    def get_output_size(self):
+        return (1, 1)
+
+    def get_input_slots(self):
+        return [self.slots[:2], self.slots[2:-1]]
+
+    def get_output_slots(self):
+        return [self.slots[-1]]
+
     def __init__(self, *args, **kwargs):
         G.inventoryclass.__init__(self, *args, **kwargs)
-        self.active_recipi = None
+        crafting.IGridInventory.IGridInventory.__init__(self)
         self.used_slots = []
 
     def creatSlots(self):
-        return [G.inventoryslot((210, 282), update_func=self.update_input),
-                G.inventoryslot((248, 282), update_func=self.update_input),
-                G.inventoryslot((210, 244), update_func=self.update_input),
-                G.inventoryslot((248, 244), update_func=self.update_input),
-                G.inventoryslot((328, (282+244)/2-2), canplayersetitems=False, update_func=self.update_input)]
+        return [self.add_input((210, 282)),
+                self.add_input((248, 282)),
+                self.add_input((210, 244)),
+                self.add_input((248, 244)),
+                self.add_output((328, (282+244)/2-2))]
 
     def getBasePosition(self):
         if not hasattr(G.window, "player"):
@@ -132,38 +105,11 @@ class Crafting(G.inventoryclass):
 
     """updates the recipi stored"""
     def update_input(self, slot):
-        data = _isRecipi(self.active_recipi, self.slots)
-        if slot in self.slots[:4] or slot == None:
-            if slot and self.active_recipi and data[0] and data[1] == self.used_slots:
-                return
-            else:
-                for e in G.craftinghandler.getRecipisFor("minecraft:crafting").values():
-                    data = _isRecipi(e, self.slots)
-                    if data[0]:
-                        self.active_recipi = e
-                        self.slots[4].setItem(*e[2][e[1][0][0]])
-                        self.used_slots = data[1]
-                        return
-                self.active_recipi = None
-                self.used_slots = []
-                self.slots[4].setItem(None)
-        else:
-            if self.active_recipi and not (slot.stack and slot.stack.item):
-                try:
-                    i = 0
-                    for l in self.active_recipi[0]:
-                        for e in l:
-                            if self.used_slots[i].stack:
-                                self.used_slots[i].stack.amount -= self.active_recipi[2][e][1]
-                                if i < len(self.used_slots) and self.used_slots[i].stack.amount == 0:
-                                    self.used_slots[i].setItem(None)
-                        i += 1
-                    self.update_input(None)
-                except:
-                    pass
+        pass
 
-"""class of player inventory 'row' part"""
+
 class Rows(G.inventoryclass):
+    """class of player inventory 'row' part"""
     tag = ["player:inventory",
            "system:nothideable"]
     def creatSlots(self):
@@ -207,14 +153,13 @@ class Rows(G.inventoryclass):
             return (G.window.size[0] / 2 - G.window.player.inventory.inventorys[0].image1.width / 2, G.window.size[1] / 2 - G.window.player.inventory.inventorys[0].image1.height / 2 - 270)
 
 
-"""class of player inventory hotbar part"""
 class Hotbar(G.inventoryclass):
+    """class of player inventory hotbar part"""
     tag = ["player:hotbar",
            "player:inventory",
            "system:nothideable"]
 
     def __init__(self):
-        self.cut_images()
         self.image1 = pyglet.sprite.Sprite(pyglet.image.load(G.local + "/tmp/gui/hotbar.png"))
         self.image2 = pyglet.sprite.Sprite(pyglet.image.load(G.local + "/tmp/gui/playerinventory.png"))
         self.image3 = pyglet.sprite.Sprite(pyglet.image.load(G.local + "/tmp/gui/hotbar_select.png"))
@@ -225,16 +170,6 @@ class Hotbar(G.inventoryclass):
         self.image2.position = self.position
         self.image3.position = self.position
 
-    def cut_images(self):
-        imagecutter.cut_image(G.local + "/assets/minecraft/textures/gui/widgets.png", (0, 0), (182, 22),
-                              G.local + "/tmp/gui/hotbar.png")
-        imagecutter.cut_image(G.local + "/assets/minecraft/textures/gui/container/inventory.png", (0, 0), (176, 166),
-                              G.local + "/tmp/gui/playerinventory.png")
-        imagecutter.cut_image(G.local + "/assets/minecraft/textures/gui/widgets.png", (0, 22), (24, 46),
-                              G.local + "/tmp/gui/hotbar_select.png")
-        imagecutter.resize_mutli(G.local + "/tmp/gui/hotbar.png", (2, 2))
-        imagecutter.resize(G.local + "/tmp/gui/playerinventory.png", (375, 353))
-        imagecutter.resize_mutli(G.local + "/tmp/gui/hotbar_select.png", (2, 2))
 
     def creatSlots(self):
         return [G.inventoryslot((8, 6)),

@@ -67,8 +67,10 @@ class InventoryHandler:
         """only callen by eventhandler
             draws all shown entitys"""
         data = []
+        # function to remove double-inventorys. may be recoded by list(tuple(...))
         for e in self.activeinventorys:
-            if not e in data: data.append(e)
+            if not e in data:
+                data.append(e)
         self.activeinventorys = data
         for e in self.activeinventorys:
             self.inventorys[e].draw()
@@ -207,7 +209,8 @@ class Slot:
         """set the item of the slot"""
         self.stack = IItemStack.IItemStack(name, amount)
         self.stack.slot = self
-        if self.update_func: self.update_func(self)
+        if self.update_func:
+            self.update_func(self)
         self.stack.update_func = self.update_func
 
 

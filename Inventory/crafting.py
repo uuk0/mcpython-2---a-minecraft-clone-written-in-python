@@ -1,9 +1,11 @@
 import globals as G
 import pyglet
 import Inventory.inventory
+import log
 
-"""class for crafting in crafting table"""
+
 class Crafting(G.inventoryclass):
+    """class for crafting in crafting table"""
     tag = ["inventorys:crafting:crafting_table",
            "inventorys:crafting"]
     size = (3, 3)

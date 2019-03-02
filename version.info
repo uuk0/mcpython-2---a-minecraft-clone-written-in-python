@@ -437,3 +437,24 @@ version 19w08a:
   fixed bug: when saving the world, the last world is overwritten also
   fixed bug: blocks builed outside of generated chunks are not shown until some kind of reload of the block
   when in esc-state, the world will AUTOMATICLY saved
+
+version 19w09a:
+  fixed bug: world is empty generated
+  fixed miss-spell in gen/OverWorld (these could couse a lot of mods to crash, check it if it crashes)
+  splitted crafting.py into crafting/CraftingHandler, crafting/ICraftingInventory, crafting/FurnesGrid,
+                            crafting/CraftingTableGrid
+  fixed /generate command
+  added crafting/IGridInventory for storing informations about crafting GRIDS
+  changed the name-storage for craftinghandler
+  added crafting/Recipe
+  added notationhandler.getnotatedobjectsfor(notation, string)
+  added texturegenerator.py for all things that should be done and moved everythng to their
+  changed some behevoir of imageatlas.save_image(file)
+  added event "core:model:cleanup"
+  added WORLDSIZE-attribute to world/OverWorld
+  fixed bug: Biome is not posted to globals
+  added BiomeHandler.registerOverwrite(orginal, biome) for better biome overwrite
+  added registration event: "game:registry:on_dimension_registrate_periode"
+  changed the way how dimensions are handled
+  fixed some printing stuff of ImageAtlasHandler
+  blocks at chunk edges bordering to ungenerated chunks will NOT be shown if the block is in an generated chunk

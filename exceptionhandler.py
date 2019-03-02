@@ -39,7 +39,10 @@ def add_header(head=True):
 def add_traceback():
     _add_text("stamp: "+log.getStamp())
     _add_text("an exception occured\n")
-    with open(G.local + "/exception.txt", mode="a") as f: traceback.print_exc(file=f)
+    with open(G.local + "/exception.txt", mode="a") as f:
+        traceback.print_exc(file=f)
+        _add_text("called via:")
+        traceback.print_stack(file=f)
 
 
 def add_crash():
