@@ -9,8 +9,9 @@ from entity.player import PlayerEntity as PlayerEntity
 import tooltip
 import pyglet
 
-"""class for player"""
+
 class player:
+    """class for player"""
     def __init__(self):
         G.player = self
         self.inventory = playerinventory.PlayerInventory()
@@ -129,7 +130,8 @@ class player:
                     self.movingslot.stack.amount = self.movingslot.stack.item.getMaxStackSize()
             elif self.movingslot.stack.item:
                 if button == mouse.LEFT:
-                    if not (slot.stack and slot.stack.item) and slot.canplayersetitems and (not slot.controll_function or slot.controll_function(self.movingslot.stack)):
+                    if not (slot.stack and slot.stack.item) and slot.canplayersetitems and (not slot.controll_function
+                                                            or slot.controll_function(self.movingslot.stack)):
                         slot.setStack(self.movingslot.stack)
                         self.movingslot.setItem(None)
                         self.movingslot.position = self.movingslotstart

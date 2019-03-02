@@ -37,6 +37,7 @@ class EscapeMenu(G.State):
             pyglet.gl.glColor3d(0.8, 0.8, 0.8)
             G.player.dimension.worldprovider.batch.draw()
         elif name == "opengl:draw2d":
+            G.statehandler.states["minecraft:game"].draw_label()
             self.label.draw()
             self.sprite1.draw()
             self.label1.draw()

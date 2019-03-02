@@ -77,7 +77,9 @@ class Game(G.State):
 
             if any([G.inventoryhandler.inventorys[inventory].isDisablyingGame() for inventory in \
                     G.inventoryhandler.activeinventorys]):
-                #log.printMSG([G.inventoryhandler.inventorys[inventory] for inventory in G.inventoryhandler.activeinventorys])
+                log.printMSG([(G.inventoryhandler.inventorys[inventory],
+                               G.inventoryhandler.inventorys[inventory].isDisablyingGame())
+                              for inventory in G.inventoryhandler.activeinventorys])
                 if symbol == key.ESCAPE:
                     for e in G.inventoryhandler.activeated:
                         inv = G.inventoryhandler.inventorys[e]
@@ -198,7 +200,7 @@ class Game(G.State):
                             G.player.inventory.inventorys[0].slots[G.player.selectedinventoryslot].stack.amount -= 1
                         block = chunkprovider.world[previous]
                         G.soundhandler.playSound(previous, block.getBrakeSoundFile())
-                    elif block and chunkprovider.world[block].isOpeningInventory(
+                    elif block and chunkprovider and chunkprovider.world[block].isOpeningInventory(
                             G.player.inventory.inventorys[0].slots[G.player.selectedinventoryslot].stack):
                         #log.printMSG(chunkprovider.world[block], chunkprovider.world[block].blockclass, chunkprovider.world[block].getInventorys())
                         for e in chunkprovider.world[block].getInventorys():
@@ -257,6 +259,10 @@ class Game(G.State):
         self.label1.text = '%02d (%.2f, %.2f, %.2f) %d' % (
             pyglet.clock.get_fps(), x, y, z,
             len(G.player.dimension.worldprovider.chunkproviders))
+
+        vector = G.window.get_sight_vector()
+        block, _ = G.model.hit_test(G.window.position, vector)
+        self.label1.text += "; looking at: "+str(block)
 
         nx, ny, nz = mathhelper.normalize(G.window.position)
         self.label1.y = G.window.height - 10

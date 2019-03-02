@@ -31,4 +31,5 @@ class Gamemode:
     def getHelp():
         return "/gamemode {0, 1, 2, 3, survival, creative, adventure, spectator} [<player>]: set the gamemode of the player"
 
+
 G.commandhandler.register(Gamemode)

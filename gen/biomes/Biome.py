@@ -16,6 +16,10 @@ class BiomeHandler:
         self.biomes[biome.getName()] = biome
         self.biomemap.append(biome)
 
+    def registerOverwrite(self, orginal, biome):
+        if orginal in self.biomemap: self.biomemap.remove(orginal)
+        self.register(biome)
+
     def getBiomeEntry(self, r: gen.Random.Random, x: int, z: int, worldprovider, table: list) -> list:
         v = gen.noise.noise(x, -100, z)
         v *= len(self.biomes) / 2
@@ -77,6 +81,9 @@ class Biome:
 
     @staticmethod
     def getOreVeins(): return []
+
+
+G.biomeclass = Biome
 
 
 @modsystem.ModLoader.ModEventEntry("game:registry:on_biome_registrate_periode", "minecraft",

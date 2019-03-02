@@ -31,11 +31,11 @@ class ImageAtlasHandler:
     def init(self):
         log.printMSG("initing image atlases...")
         for i, e in enumerate(self.atlases.values()):
-            log.printMSG(i, "/", len(self.atlases))
+            log.printMSG(i+1, "/", len(self.atlases))
             e.init()
         log.printMSG("creating image atlasses...")
         for i, e in enumerate(self.imageatlases):
-            log.printMSG(i, "/", len(self.atlases))
+            log.printMSG(i+1, "/", len(self.imageatlases))
             e.init()
         log.printMSG("transforming names...")
         for e in self.othernames.keys():
@@ -90,6 +90,7 @@ class ImageAtlas:
                     if os.path.isfile(e+"/"+file):
                         file = e + "/" + file
                         return file
+            raise IOError(file+" is not a valid file and can't be found through resourcelocator")
         return file
 
     @staticmethod
@@ -103,7 +104,14 @@ class ImageAtlas:
 
     @staticmethod
     def save_image(image, file):
-        file = ImageAtlas.convertFileName(file)
+        try:
+            file = ImageAtlas.convertFileName(file)
+        except IOError:
+            if "tmp" in file:
+                if not file.startswith(G.local):
+                    file = G.local + "/" + file
+            else:
+                raise
         return image.save(file)
 
     def __init__(self, addressname, size=(16, 16)):
@@ -165,6 +173,7 @@ class ImageAtlas:
         self.pygletatlas = self._imageatlas.pygletatlas
         return self._imageatlas.getImageDataFor([x + self.relativeindex for x in side_indexes])
 
+
 class _ImageAtlas(ImageAtlas):
     def __init__(self, *args, **kwargs):
         ImageAtlas.__init__(self, *args, **kwargs)
@@ -200,8 +209,8 @@ class _ImageAtlas(ImageAtlas):
             if x >= self._size[0]:
                 x = 0
                 y += 1
-            #if y >= self._size[1] and i < 256:
-                #raise RuntimeError("unsupported image lenght at index "+str(i))
+            # if y >= self._size[1] and i < 256:
+                # raise RuntimeError("unsupported image lenght at index "+str(i))
             i += 1
         d = os.path.dirname(self.storeto)
         if not os.path.exists(d): os.makedirs(d)

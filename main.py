@@ -61,7 +61,7 @@ except ImportError:
 
 log.printMSG("[MAINTHREAD][INFO] everything fine (or not?). Starting loading submoduls step by step")
 
-import eventhandler
+import gen.biomes.Biome
 import eventhandler
 import crafting
 import language
@@ -74,6 +74,8 @@ import gen.biomes.Biome
 import state
 import state.State
 import storage.storagehandler
+import crafting.CraftingHandler, crafting.CraftingTableGrid, crafting.FurnesGrid
+import texturegenerator
 
 log.printMSG("[MAINTHREAD][INFO] we are ready to start, only a few things to do")
 

@@ -16,6 +16,7 @@ import argumentparser
 EVENTLIST = {}  # modname -> ModEventEntry
 EVENTENTRYLIST = {}  # eventname -> entry
 
+
 def _null_function(*args, **kwargs): pass
 
 
@@ -43,21 +44,22 @@ class ModEventCallEntry:
     entry for modloader for loading stages of mods
     """
     def __init__(self, name, start_function=_null_function, end_function=_null_function,
-                 on_event_binding=_null_function, on_event_call=_null_function):
+                 on_event_binding=_null_function, on_event_call=_null_function, register=True):
         self.name = name
         self.start_function = start_function  # will be called before every other binding to these entry
         self.end_function = end_function
         self.on_event_binding = on_event_binding
         self.on_event_call = on_event_call
         EVENTENTRYLIST[name] = self
-        G.modloader.registerRegistrationEvent(self)
+        if register:
+            G.modloader.registerRegistrationEvent(self)
 
     def __call__(self, *args, **kwargs):
         """
         binds an given function to these modeventcallentry
         """
         name = args[0].__name__
-        if name  == "on_start":
+        if name == "on_start":
             self.start_function = args[0]
         elif name == "on_end":
             self.end_function = args[0]
@@ -228,7 +230,9 @@ ModEventCallEntry("game:registry:on_prepare_plugin_registrate_periode")
 ModEventCallEntry("game:registry:on_argument_parser_type_registrate_periode")
 
 
-@ModEventCallEntry("game:registry:on_texture_registrate_periode")
+textureentry = ModEventCallEntry("game:registry:on_texture_registrate_periode")
+
+@textureentry
 def on_end(entry):
     G.imageatlashandler.init()
 
@@ -274,6 +278,7 @@ def register_l_block(blockname):
 
 
 ModEventCallEntry("game:registry:on_biome_registrate_periode")
+ModEventCallEntry("game:registry:on_dimension_registrate_periode")
 ModEventCallEntry("game:registry:on_inventory:registrate_periode")
 ModEventCallEntry("game:registry:on_crafting_recipi_registrate_periode")
 ModEventCallEntry("game:registry:on_structur_registrate_periode")

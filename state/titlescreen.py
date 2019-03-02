@@ -36,6 +36,8 @@ class TitleScreen(G.State):
             if x >= 424 and y >= 348 and x <= 777 and y <= 381:
                 G.window.flying = True
                 G.window.position = (0, 4000, 0)
+                G.dimensionhandler.generateclasses()
+                G.player.dimension = G.dimensionhandler.dimensions[0]
                 G.eventhandler.call("worldgen:newworld")
                 G.window.time = 0
                 G.window.day = 0

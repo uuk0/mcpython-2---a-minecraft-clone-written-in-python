@@ -19,7 +19,7 @@ class Grass(G.blockclass):
 
     """returns dirt as drop"""
     def getDrop(self, inst):
-        return {"minecraft:dirt":1}
+        return {"minecraft:dirt": 1}
 
     def getBrakeSoundFile(self, inst):
         return [G.local + "/assets/minecraft/sounds/brake/grass1.wma",
