@@ -17,6 +17,10 @@ class AcaciaLeave(G.blockclass):
     def getDrop(self, inst):
         return {}
 
+    def isFullBlock(self):
+        return False
+
+
 class BirchLeave(G.blockclass):
     """class for birch leave"""
     def getName(self):
@@ -30,6 +34,9 @@ class BirchLeave(G.blockclass):
 
     def getDrop(self, inst):
         return {}
+
+    def isFullBlock(self):
+        return False
 
 
 class DarkOakLeave(G.blockclass):
@@ -46,6 +53,9 @@ class DarkOakLeave(G.blockclass):
     def getDrop(self, inst):
         return {}
 
+    def isFullBlock(self):
+        return False
+
 
 class JungleLeave(G.blockclass):
     """class for jungle leave"""
@@ -60,6 +70,9 @@ class JungleLeave(G.blockclass):
 
     def getDrop(self, inst):
         return {}
+
+    def isFullBlock(self):
+        return False
 
 
 class OakLeave(G.blockclass):
@@ -76,6 +89,9 @@ class OakLeave(G.blockclass):
     def getDrop(self, inst):
         return {}
 
+    def isFullBlock(self):
+        return False
+
 
 class SpruceLeave(G.blockclass):
     """class for spruce leave"""
@@ -90,6 +106,9 @@ class SpruceLeave(G.blockclass):
 
     def getDrop(self, inst):
         return {}
+
+    def isFullBlock(self):
+        return False
 
 
 @modsystem.ModLoader.ModEventEntry("game:registry:on_block_registrate_periode", "minecraft",

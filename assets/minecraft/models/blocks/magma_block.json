@@ -1,0 +1,9 @@
+{
+  "blockaddress": "minecraft:magma_block",
+  "default": {
+    "name": "cube:full",
+    "side_texture_files": ["assets/minecraft/textures/block/magma.png"],
+    "blockname": "minecraft/magma",
+    "side_indexes": [0, 0, 0, 0, 0, 0]
+  }
+}

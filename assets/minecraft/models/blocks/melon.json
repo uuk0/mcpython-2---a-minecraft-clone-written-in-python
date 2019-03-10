@@ -1,0 +1,10 @@
+{
+  "blockaddress": "minecraft:melon",
+  "default": {
+    "name": "cube:full",
+    "side_texture_files": ["assets/minecraft/textures/block/melon_side.png",
+    "assets/minecraft/textures/block/melon_top.png"],
+    "blockname": "minecraft/melon",
+    "side_indexes": [0, 0, 1, 1, 1, 1]
+  }
+}

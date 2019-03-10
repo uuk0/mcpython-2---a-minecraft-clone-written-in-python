@@ -138,8 +138,7 @@ class ModLoader:
 
     def checkDependecies(self):
         flag = True
-        for mod in self.mods.keys():
-            mod = self.mods[mod]
+        for mod in self.mods.values():
             versions = mod.getMcPythonVersions()
             if versions != None:
                 if type(versions) == str:
@@ -168,7 +167,7 @@ class ModLoader:
                         depend_func = e[2] if len(e) > 2 else None
                         version_modd = modd.getVersion()
                         if not (depend_min[0] <= version_modd[0] <= depend_max[0] and depend_min[1] <= version_modd[
-                            1] <= \
+                            1] <=
                                 depend_max[1] and depend_min[2] <= version_modd[2] <= depend_max[2]) and \
                                 ((depend_func and depend_func()) or not depend_func):
                             log.printMSG("[MODLOADER][ERROR] depenencie error: mod " + str(mod) + " needs mod " + str(
@@ -192,7 +191,7 @@ class ModLoader:
         sorter.sort()
         log.printMSG("[MODLOADER] we will load mods in the following order:")
         for mod in sorter.modlistsorted:
-            log.printMSG("  :"+str(mod.getName()))
+            log.printMSG("  :"+str(mod.getUserFriendlyName()))
         self.bind_events(sorter)
         self.call_events(sorter)
 
@@ -328,6 +327,18 @@ class Mod:
     def getFileName(self):
         """returns the file name of the folder of the mod. is used to do mod.path"""
         return ""
+
+    def register_before(self):
+        """
+        :return: a list of mods that should be inited AFTER these mod
+        """
+        return []
+
+    def register_after_if_present(self):
+        """
+        :return: a list of modnames that mod should be loaded after if the mod is present
+        """
+        return []
 
 
 G.mod = Mod

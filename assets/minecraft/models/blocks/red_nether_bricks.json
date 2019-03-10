@@ -1,0 +1,9 @@
+{
+  "blockaddress": "minecraft:red_nether_bricks",
+  "default": {
+    "name": "cube:full",
+    "side_texture_files": ["assets/minecraft/textures/block/red_nether_bricks.png"],
+    "blockname": "minecraft/red_nether_bricks",
+    "side_indexes": [0, 0, 0, 0, 0, 0]
+  }
+}

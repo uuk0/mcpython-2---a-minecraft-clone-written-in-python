@@ -34,6 +34,10 @@ class Game(G.State):
             w = (24000 - G.window.time) / 24000
             pyglet.gl.glClearColor(0.5*w, 0.69*w, 1.0*w, 1*w)
             pyglet.gl.glColor3d(w, w, w)
+            # draw with alpha - alpha setup
+            pyglet.gl.glEnable(pyglet.gl.GL_BLEND)
+            pyglet.gl.glBlendFunc(pyglet.gl.GL_SRC_ALPHA, pyglet.gl.GL_ONE_MINUS_SRC_ALPHA)
+            # end alpha setup
             G.player.dimension.worldprovider.batch.draw()
             self.draw_focused_block()
         elif name == "opengl:draw2d":
@@ -262,7 +266,14 @@ class Game(G.State):
 
         vector = G.window.get_sight_vector()
         block, _ = G.model.hit_test(G.window.position, vector)
-        self.label1.text += "; looking at: "+str(block)
+        if block:
+            cx, _, cz = mathhelper.sectorize(block)
+            chunkprovider = G.player.dimension.worldprovider.getChunkProviderFor((cx, cz))
+        else:
+            chunkprovider = None
+        self.label1.text += "; looking at: "+str(block) + \
+                            ("" if not block or block not in chunkprovider.world else
+                             " - " + str(chunkprovider.world[block].getName()))
 
         nx, ny, nz = mathhelper.normalize(G.window.position)
         self.label1.y = G.window.height - 10

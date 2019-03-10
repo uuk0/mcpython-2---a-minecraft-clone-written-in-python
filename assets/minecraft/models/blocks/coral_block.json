@@ -1,0 +1,63 @@
+{
+  "blockaddress": "minecraft:coral_block",
+  "brain": {
+    "name": "cube:full",
+    "side_texture_files": ["assets/minecraft/textures/block/brain_coral_block.png"],
+    "blockname": "minecraft/coral_brain",
+    "side_indexes": [0, 0, 0, 0, 0, 0]
+  },
+  "dead_brain": {
+    "name": "cube:full",
+    "side_texture_files": ["assets/minecraft/textures/block/dead_brain_coral_block.png"],
+    "blockname": "minecraft/dead_coral_brain",
+    "side_indexes": [0, 0, 0, 0, 0, 0]
+  },
+  "bubble": {
+    "name": "cube:full",
+    "side_texture_files": ["assets/minecraft/textures/block/bubble_coral_block.png"],
+    "blockname": "minecraft/coral_bubble",
+    "side_indexes": [0, 0, 0, 0, 0, 0]
+  },
+  "dead_bubble": {
+    "name": "cube:full",
+    "side_texture_files": ["assets/minecraft/textures/block/dead_bubble_coral_block.png"],
+    "blockname": "minecraft/dead_coral_bubble",
+    "side_indexes": [0, 0, 0, 0, 0, 0]
+  },
+  "fire": {
+    "name": "cube:full",
+    "side_texture_files": ["assets/minecraft/textures/block/fire_coral_block.png"],
+    "blockname": "minecraft/coral_fire",
+    "side_indexes": [0, 0, 0, 0, 0, 0]
+  },
+  "dead_fire": {
+    "name": "cube:full",
+    "side_texture_files": ["assets/minecraft/textures/block/dead_fire_coral_block.png"],
+    "blockname": "minecraft/dead_coral_fire",
+    "side_indexes": [0, 0, 0, 0, 0, 0]
+  },
+  "horn": {
+    "name": "cube:full",
+    "side_texture_files": ["assets/minecraft/textures/block/horn_coral_block.png"],
+    "blockname": "minecraft/coral_horn",
+    "side_indexes": [0, 0, 0, 0, 0, 0]
+  },
+  "dead_horn": {
+    "name": "cube:full",
+    "side_texture_files": ["assets/minecraft/textures/block/dead_horn_coral_block.png"],
+    "blockname": "minecraft/dead_coral_horn",
+    "side_indexes": [0, 0, 0, 0, 0, 0]
+  },
+  "tube": {
+    "name": "cube:full",
+    "side_texture_files": ["assets/minecraft/textures/block/tube_coral_block.png"],
+    "blockname": "minecraft/coral_tube",
+    "side_indexes": [0, 0, 0, 0, 0, 0]
+  },
+  "dead_tube": {
+    "name": "cube:full",
+    "side_texture_files": ["assets/minecraft/textures/block/dead_tube_coral_block.png"],
+    "blockname": "minecraft/dead_coral_tube",
+    "side_indexes": [0, 0, 0, 0, 0, 0]
+  }
+}

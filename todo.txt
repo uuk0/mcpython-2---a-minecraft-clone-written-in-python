@@ -49,6 +49,7 @@ update list:
 	  fix bug: sand is NOT falling the whole way down
 	  fix bug: can't close crafting inventory
 	  fix bug: when braking / adding blocks, surround blocks are not updated corectly
+	  fix bug: all alpha-using blocks are rendered weired when placed next to each other (enable side-only drawing!!!)
 
   ITEM AND BLOCK UPDATE
 	  add inventory updates for blocks
@@ -67,10 +68,10 @@ update list:
 	  add observers
 	  add map
 	  add water and lava
-	  add farmland, grass paths, coast dirt
+	  add farmland, grass paths
 	  add weat etc.
 	  add item picture generator for blocks in startup
-	  add ability to load Models from file
+	  add ability to load real Models from file
 	  add enchantment table, anvil
 	  add enchanted books
 	  add logs surrounded on all sides by the same texture
@@ -78,6 +79,13 @@ update list:
 	  add spawneggs
 	  add model for cactus
 	  add blastfurnes, furnes, command_blocks
+	  destroy overlay? (because we are using alpha now)
+	  glass plane
+	  iron bars
+	  fences
+	  mushrooms
+	  smoth stone
+	  make leaves use colormap to color themselves (at the moment only one color!!!)
 
   MODLOADER UPDATE
      modloader -> can we import .jar files with(out) jython
@@ -144,7 +152,7 @@ update list:
 	  add opentolan binding to escape-state
 
   THE COMMAND UPDATE
-	  add real command complet and chat
+	  add real command complet and real chat
 	  add MORE commands
 
   WHAT HAVE WE TO DO UPDATE

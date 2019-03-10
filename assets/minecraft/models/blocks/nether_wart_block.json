@@ -1,0 +1,9 @@
+{
+  "blockaddress": "minecraft:nether_wart_block",
+  "default": {
+    "name": "cube:full",
+    "side_texture_files": ["assets/minecraft/textures/block/nether_wart_block.png"],
+    "blockname": "minecraft/nether_wart_block",
+    "side_indexes": [0, 0, 0, 0, 0, 0]
+  }
+}

@@ -459,5 +459,26 @@ version 19w09a:
   fixed some printing stuff of ImageAtlasHandler
   blocks at chunk edges bordering to ungenerated chunks will NOT be shown if the block is in an generated chunk
 
-version 19w09b:
-  added looking at label & all labels are now drawn also in esc-state
+version 19w10a:
+  updated the textures to 19w09a
+  added looking at label with block and position & all labels are now drawn also in esc-state
+  added register_before-attribute to mod for the mods that should be loaded after these mod. THESE ARE NOT DEPENDENCIES
+  added register_after_if_present-attribute to mod for mods that these mod should be loaded after if the mod is present
+  the load-order printed out by modloader will now use the user friendly name of the mod
+  added Function-system for .mcfunction files
+  added /function-command
+  added datapack-folder for .mcfunction-files (only at the moment)
+  added scoreboards
+  added ScoreBoard-types registered in command-phase -> you can plugin easy to /scoreboard <your_name> ...
+  added concret & concretpowder
+  EVERYTHING IS NOW DRAWN WITH ALPHA. SO LEAVES ARE DRAWN CORRECT
+  added minecraft:barrel/open
+  textureslither-atlashandler will now sort subatlases by size for better results when more blocks are added
+  added terracotta and glazed terracotta
+  added glass, stained glass
+  added (temporary) isFullBlock-function to block
+  added coral blocks & dead coral blocks
+  fixed bug: last slot of an imageatlas is not used
+  added shulker boxes, clay block, prismarin, mycelium, note blocks, netherrack, nether bricks, nether wart block
+  added podzol, red nether bricks, pumpkin, magma block, melon, slime block, bookshelf, bone block
+  added sponge, purpur block, purpur pillar

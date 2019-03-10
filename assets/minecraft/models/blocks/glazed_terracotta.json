@@ -1,0 +1,99 @@
+{
+  "blockaddress": "minecraft:glazed_terracotta",
+  "black": {
+    "name": "cube:full",
+    "side_texture_files": ["assets/minecraft/textures/block/black_glazed_terracotta.png"],
+    "blockname": "minecraft/glazed_terracotta_black",
+    "side_indexes": [0, 0, 0, 0, 0, 0]
+  },
+  "blue": {
+    "name": "cube:full",
+    "side_texture_files": ["assets/minecraft/textures/block/blue_glazed_terracotta.png"],
+    "blockname": "minecraft/glazed_terracotta_blue",
+    "side_indexes": [0, 0, 0, 0, 0, 0]
+  },
+  "brown": {
+    "name": "cube:full",
+    "side_texture_files": ["assets/minecraft/textures/block/brown_glazed_terracotta.png"],
+    "blockname": "minecraft/glazed_terracotta_brown",
+    "side_indexes": [0, 0, 0, 0, 0, 0]
+  },
+  "cyan": {
+    "name": "cube:full",
+    "side_texture_files": ["assets/minecraft/textures/block/cyan_glazed_terracotta.png"],
+    "blockname": "minecraft/glazed_terracotta_cyan",
+    "side_indexes": [0, 0, 0, 0, 0, 0]
+  },
+  "gray": {
+    "name": "cube:full",
+    "side_texture_files": ["assets/minecraft/textures/block/gray_glazed_terracotta.png"],
+    "blockname": "minecraft/glazed_terracotta_gray",
+    "side_indexes": [0, 0, 0, 0, 0, 0]
+  },
+  "green": {
+    "name": "cube:full",
+    "side_texture_files": ["assets/minecraft/textures/block/green_glazed_terracotta.png"],
+    "blockname": "minecraft/glazed_terracotta_green",
+    "side_indexes": [0, 0, 0, 0, 0, 0]
+  },
+  "light_blue": {
+    "name": "cube:full",
+    "side_texture_files": ["assets/minecraft/textures/block/light_blue_glazed_terracotta.png"],
+    "blockname": "minecraft/glazed_terracotta_light_blue",
+    "side_indexes": [0, 0, 0, 0, 0, 0]
+  },
+  "light_gray": {
+    "name": "cube:full",
+    "side_texture_files": ["assets/minecraft/textures/block/light_gray_glazed_terracotta.png"],
+    "blockname": "minecraft/glazed_terracotta_light_gray",
+    "side_indexes": [0, 0, 0, 0, 0, 0]
+  },
+  "lime": {
+    "name": "cube:full",
+    "side_texture_files": ["assets/minecraft/textures/block/lime_glazed_terracotta.png"],
+    "blockname": "minecraft/glazed_terracotta_lime",
+    "side_indexes": [0, 0, 0, 0, 0, 0]
+  },
+  "magenta": {
+    "name": "cube:full",
+    "side_texture_files": ["assets/minecraft/textures/block/magenta_glazed_terracotta.png"],
+    "blockname": "minecraft/glazed_terracotta_magenta",
+    "side_indexes": [0, 0, 0, 0, 0, 0]
+  },
+  "orange": {
+    "name": "cube:full",
+    "side_texture_files": ["assets/minecraft/textures/block/orange_glazed_terracotta.png"],
+    "blockname": "minecraft/glazed_terracotta_orange",
+    "side_indexes": [0, 0, 0, 0, 0, 0]
+  },
+  "pink": {
+    "name": "cube:full",
+    "side_texture_files": ["assets/minecraft/textures/block/pink_glazed_terracotta.png"],
+    "blockname": "minecraft/glazed_terracotta_pink",
+    "side_indexes": [0, 0, 0, 0, 0, 0]
+  },
+  "purple": {
+    "name": "cube:full",
+    "side_texture_files": ["assets/minecraft/textures/block/purple_glazed_terracotta.png"],
+    "blockname": "minecraft/glazed_terracotta_purple",
+    "side_indexes": [0, 0, 0, 0, 0, 0]
+  },
+  "red": {
+    "name": "cube:full",
+    "side_texture_files": ["assets/minecraft/textures/block/red_glazed_terracotta.png"],
+    "blockname": "minecraft/glazed_terracotta_red",
+    "side_indexes": [0, 0, 0, 0, 0, 0]
+  },
+  "white": {
+    "name": "cube:full",
+    "side_texture_files": ["assets/minecraft/textures/block/white_glazed_terracotta.png"],
+    "blockname": "minecraft/glazed_terracotta_white",
+    "side_indexes": [0, 0, 0, 0, 0, 0]
+  },
+  "yellow": {
+    "name": "cube:full",
+    "side_texture_files": ["assets/minecraft/textures/block/yellow_glazed_terracotta.png"],
+    "blockname": "minecraft/glazed_terracotta_yellow",
+    "side_indexes": [0, 0, 0, 0, 0, 0]
+  }
+}

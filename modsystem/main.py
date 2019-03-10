@@ -1,4 +1,5 @@
 import globals as G
+import world.OverWorld
 
 
 class McPython(G.mod):
@@ -12,6 +13,8 @@ class McPython(G.mod):
 
     def getUserFriendlyName(self):
         """function which returns the user-freindly name of the mod."""
-        return "Mc Python"
+        return "Minecraft"
+
 
 G.modloader.register(McPython)
+

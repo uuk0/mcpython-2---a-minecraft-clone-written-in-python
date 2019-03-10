@@ -128,6 +128,9 @@ class BlockClass:
     def isFullSide(self, inst, side):
         return True
 
+    def isFullBlock(self):
+        return True
+
     """returns the default data for block inst"""
     def _getDefaultData(self, inst):
         return {}

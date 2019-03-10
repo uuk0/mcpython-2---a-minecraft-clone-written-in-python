@@ -33,9 +33,27 @@ class CoarseDirt(Dirt):
         return "coarse_dirt"
 
 
+class Mycelium(Dirt):
+    def getName(self):
+        return "minecraft:mycelium"
+
+    def getStateName(self, inst):
+        return "mycelium"
+
+
+class Podzol(Dirt):
+    def getName(self):
+        return "minecraft:podzol"
+
+    def getStateName(self, inst):
+        return "podzol"
+
+
 @modsystem.ModLoader.ModEventEntry("game:registry:on_block_registrate_periode", "minecraft",
                                    info="registrating dirt & coarse dirt")
 def register():
     G.blockhandler.register(CoarseDirt)
     G.blockhandler.register(Dirt)
+    G.blockhandler.register(Mycelium)
+    G.blockhandler.register(Podzol)
 

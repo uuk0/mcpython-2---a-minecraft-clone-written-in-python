@@ -6,13 +6,26 @@ class ModSorter:
         self.modlist = modlist
         self.modlistsorted = []
         self.modlistnames = []
+        self.externaldep = {}
 
     def sort(self):
+        for mod in self.modlist.values():
+            for m in mod.register_before():
+                if m not in self.externaldep:
+                    self.externaldep[m] = []
+                self.externaldep[m].append(mod.getName())
+            for m in mod.register_after_if_present():
+                if m in self.modlist.keys():
+                    if mod.getName() not in self.externaldep:
+                        self.externaldep[mod.getName()] = []
+                    self.externaldep[mod.getName()].append(m)
         data = []
         for mod in self.modlist.values():
             depend = []
             for e in mod.getDependencies():
                 depend.append(e[0])
+            if mod.getName() in self.externaldep:
+                depend += self.externaldep[mod.getName()]
             data.append((mod.getName(), set(depend)))
         sorteddata = self.topological_sort(data)
         for e in sorteddata:

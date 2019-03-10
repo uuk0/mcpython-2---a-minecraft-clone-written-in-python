@@ -1,0 +1,99 @@
+{
+  "blockaddress": "minecraft:concret_powder",
+  "black": {
+    "name": "cube:full",
+    "side_texture_files": ["assets/minecraft/textures/block/black_concrete_powder.png"],
+    "blockname": "minecraft/concret_powder_black",
+    "side_indexes": [0, 0, 0, 0, 0, 0]
+  },
+  "blue": {
+    "name": "cube:full",
+    "side_texture_files": ["assets/minecraft/textures/block/blue_concrete_powder.png"],
+    "blockname": "minecraft/concret_powder_blue",
+    "side_indexes": [0, 0, 0, 0, 0, 0]
+  },
+  "brown": {
+    "name": "cube:full",
+    "side_texture_files": ["assets/minecraft/textures/block/brown_concrete_powder.png"],
+    "blockname": "minecraft/concret_powder_brown",
+    "side_indexes": [0, 0, 0, 0, 0, 0]
+  },
+  "cyan": {
+    "name": "cube:full",
+    "side_texture_files": ["assets/minecraft/textures/block/cyan_concrete_powder.png"],
+    "blockname": "minecraft/concret_powder_cyan",
+    "side_indexes": [0, 0, 0, 0, 0, 0]
+  },
+  "gray": {
+    "name": "cube:full",
+    "side_texture_files": ["assets/minecraft/textures/block/gray_concrete_powder.png"],
+    "blockname": "minecraft/concret_powder_gray",
+    "side_indexes": [0, 0, 0, 0, 0, 0]
+  },
+  "green": {
+    "name": "cube:full",
+    "side_texture_files": ["assets/minecraft/textures/block/green_concrete_powder.png"],
+    "blockname": "minecraft/concret_powder_green",
+    "side_indexes": [0, 0, 0, 0, 0, 0]
+  },
+  "light_blue": {
+    "name": "cube:full",
+    "side_texture_files": ["assets/minecraft/textures/block/light_blue_concrete_powder.png"],
+    "blockname": "minecraft/concret_powder_light_blue",
+    "side_indexes": [0, 0, 0, 0, 0, 0]
+  },
+  "light_gray": {
+    "name": "cube:full",
+    "side_texture_files": ["assets/minecraft/textures/block/light_gray_concrete_powder.png"],
+    "blockname": "minecraft/concret_powder_light_gray",
+    "side_indexes": [0, 0, 0, 0, 0, 0]
+  },
+  "lime": {
+    "name": "cube:full",
+    "side_texture_files": ["assets/minecraft/textures/block/lime_concrete_powder.png"],
+    "blockname": "minecraft/concret_powder_lime",
+    "side_indexes": [0, 0, 0, 0, 0, 0]
+  },
+  "magenta": {
+    "name": "cube:full",
+    "side_texture_files": ["assets/minecraft/textures/block/magenta_concrete_powder.png"],
+    "blockname": "minecraft/concret_powder_magenta",
+    "side_indexes": [0, 0, 0, 0, 0, 0]
+  },
+  "orange": {
+    "name": "cube:full",
+    "side_texture_files": ["assets/minecraft/textures/block/orange_concrete_powder.png"],
+    "blockname": "minecraft/concret_powder_orange",
+    "side_indexes": [0, 0, 0, 0, 0, 0]
+  },
+  "pink": {
+    "name": "cube:full",
+    "side_texture_files": ["assets/minecraft/textures/block/pink_concrete_powder.png"],
+    "blockname": "minecraft/concret_powder_pink",
+    "side_indexes": [0, 0, 0, 0, 0, 0]
+  },
+  "purple": {
+    "name": "cube:full",
+    "side_texture_files": ["assets/minecraft/textures/block/purple_concrete_powder.png"],
+    "blockname": "minecraft/concret_powder_purple",
+    "side_indexes": [0, 0, 0, 0, 0, 0]
+  },
+  "red": {
+    "name": "cube:full",
+    "side_texture_files": ["assets/minecraft/textures/block/red_concrete_powder.png"],
+    "blockname": "minecraft/concret_powder_red",
+    "side_indexes": [0, 0, 0, 0, 0, 0]
+  },
+  "white": {
+    "name": "cube:full",
+    "side_texture_files": ["assets/minecraft/textures/block/white_concrete_powder.png"],
+    "blockname": "minecraft/concret_powder_white",
+    "side_indexes": [0, 0, 0, 0, 0, 0]
+  },
+  "yellow": {
+    "name": "cube:full",
+    "side_texture_files": ["assets/minecraft/textures/block/yellow_concrete_powder.png"],
+    "blockname": "minecraft/concret_powder_yellow",
+    "side_indexes": [0, 0, 0, 0, 0, 0]
+  }
+}

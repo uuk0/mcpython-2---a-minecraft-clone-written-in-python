@@ -66,6 +66,7 @@ import eventhandler
 import crafting
 import language
 import ticksystem
+import scoreboard.ScoreboardHandler
 import command.Command
 import soundhandler
 import state.State

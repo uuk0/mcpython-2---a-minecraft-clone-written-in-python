@@ -1,0 +1,105 @@
+{
+  "blockaddress": "minecraft:shulker_box",
+  "default": {
+    "name": "cube:full",
+    "side_texture_files": ["assets/minecraft/textures/block/shulker_box.png"],
+    "blockname": "minecraft/shulker_box",
+    "side_indexes": [0, 0, 0, 0, 0, 0]
+  },
+  "black_shulker_box": {
+    "name": "cube:full",
+    "side_texture_files": ["assets/minecraft/textures/block/black_shulker_box.png"],
+    "blockname": "minecraft/black_shulker_box",
+    "side_indexes": [0, 0, 0, 0, 0, 0]
+  },
+  "blue_shulker_box": {
+    "name": "cube:full",
+    "side_texture_files": ["assets/minecraft/textures/block/blue_shulker_box.png"],
+    "blockname": "minecraft/blue_shulker_box",
+    "side_indexes": [0, 0, 0, 0, 0, 0]
+  },
+  "brown_shulker_box": {
+    "name": "cube:full",
+    "side_texture_files": ["assets/minecraft/textures/block/brown_shulker_box.png"],
+    "blockname": "minecraft/brown_shulker_box",
+    "side_indexes": [0, 0, 0, 0, 0, 0]
+  },
+  "cyan_shulker_box": {
+    "name": "cube:full",
+    "side_texture_files": ["assets/minecraft/textures/block/cyan_shulker_box.png"],
+    "blockname": "minecraft/cyan_shulker_box",
+    "side_indexes": [0, 0, 0, 0, 0, 0]
+  },
+  "gray_shulker_box": {
+    "name": "cube:full",
+    "side_texture_files": ["assets/minecraft/textures/block/gray_shulker_box.png"],
+    "blockname": "minecraft/gray_shulker_box",
+    "side_indexes": [0, 0, 0, 0, 0, 0]
+  },
+  "green_shulker_box": {
+    "name": "cube:full",
+    "side_texture_files": ["assets/minecraft/textures/block/green_shulker_box.png"],
+    "blockname": "minecraft/green_shulker_box",
+    "side_indexes": [0, 0, 0, 0, 0, 0]
+  },
+  "light_blue_shulker_box": {
+    "name": "cube:full",
+    "side_texture_files": ["assets/minecraft/textures/block/light_blue_shulker_box.png"],
+    "blockname": "minecraft/light_blue_shulker_box",
+    "side_indexes": [0, 0, 0, 0, 0, 0]
+  },
+  "light_gray_shulker_box": {
+    "name": "cube:full",
+    "side_texture_files": ["assets/minecraft/textures/block/light_gray_shulker_box.png"],
+    "blockname": "minecraft/light_gray_shulker_box",
+    "side_indexes": [0, 0, 0, 0, 0, 0]
+  },
+  "lime_shulker_box": {
+    "name": "cube:full",
+    "side_texture_files": ["assets/minecraft/textures/block/lime_shulker_box.png"],
+    "blockname": "minecraft/lime_shulker_box",
+    "side_indexes": [0, 0, 0, 0, 0, 0]
+  },
+  "magenta_shulker_box": {
+    "name": "cube:full",
+    "side_texture_files": ["assets/minecraft/textures/block/magenta_shulker_box.png"],
+    "blockname": "minecraft/magenta_shulker_box",
+    "side_indexes": [0, 0, 0, 0, 0, 0]
+  },
+  "orange_shulker_box": {
+    "name": "cube:full",
+    "side_texture_files": ["assets/minecraft/textures/block/orange_shulker_box.png"],
+    "blockname": "minecraft/orange_shulker_box",
+    "side_indexes": [0, 0, 0, 0, 0, 0]
+  },
+  "pink_shulker_box": {
+    "name": "cube:full",
+    "side_texture_files": ["assets/minecraft/textures/block/pink_shulker_box.png"],
+    "blockname": "minecraft/pink_shulker_box",
+    "side_indexes": [0, 0, 0, 0, 0, 0]
+  },
+  "purple_shulker_box": {
+    "name": "cube:full",
+    "side_texture_files": ["assets/minecraft/textures/block/purple_shulker_box.png"],
+    "blockname": "minecraft/purple_shulker_box",
+    "side_indexes": [0, 0, 0, 0, 0, 0]
+  },
+  "red_shulker_box": {
+    "name": "cube:full",
+    "side_texture_files": ["assets/minecraft/textures/block/red_shulker_box.png"],
+    "blockname": "minecraft/red_shulker_box",
+    "side_indexes": [0, 0, 0, 0, 0, 0]
+  },
+  "white_shulker_box": {
+    "name": "cube:full",
+    "side_texture_files": ["assets/minecraft/textures/block/white_shulker_box.png"],
+    "blockname": "minecraft/white_shulker_box",
+    "side_indexes": [0, 0, 0, 0, 0, 0]
+  },
+  "yellow_shulker_box": {
+    "name": "cube:full",
+    "side_texture_files": ["assets/minecraft/textures/block/yellow_shulker_box.png"],
+    "blockname": "minecraft/yellow_shulker_box",
+    "side_indexes": [0, 0, 0, 0, 0, 0]
+  }
+}

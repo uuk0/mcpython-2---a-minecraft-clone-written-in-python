@@ -1,0 +1,15 @@
+{
+  "blockaddress": "minecraft:sponge",
+  "sponge": {
+    "name": "cube:full",
+    "side_texture_files": ["assets/minecraft/textures/block/sponge.png"],
+    "blockname": "minecraft/sponge",
+    "side_indexes": [0, 0, 0, 0, 0, 0]
+  },
+  "wet_sponge": {
+    "name": "cube:full",
+    "side_texture_files": ["assets/minecraft/textures/block/wet_sponge.png"],
+    "blockname": "minecraft/wet_sponge",
+    "side_indexes": [0, 0, 0, 0, 0, 0]
+  }
+}

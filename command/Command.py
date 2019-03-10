@@ -20,7 +20,9 @@ class CommandHandler:
         self.commands.append(command)
         G.eventhandler.call("game:registry:on_command_registrated", command)
 
+
 G.commandhandler = CommandHandler()
+
 
 class CommandClass:
     @staticmethod
@@ -35,11 +37,12 @@ class CommandClass:
     def getHelp():
         return ""
 
+
 G.commandclass = CommandClass
 
 
 @modsystem.ModLoader.ModEventEntry("game:registry:on_command_registrate_periode", "minecraft",
                                    info="registrating commands")
 def register():
-    from . import give, setblock, time, generate, gamemode, reload, save, load, setharts
+    from . import give, setblock, time, generate, gamemode, reload, save, load, setharts, function_command
 

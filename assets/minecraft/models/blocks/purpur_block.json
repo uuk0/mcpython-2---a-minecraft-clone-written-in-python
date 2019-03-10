@@ -1,0 +1,17 @@
+{
+  "blockaddress": "minecraft:purpur_block",
+  "purpur_block": {
+    "name": "cube:full",
+    "side_texture_files": ["assets/minecraft/textures/block/purpur_block.png"],
+    "blockname": "minecraft/pumpkin",
+    "side_indexes": [0, 0, 0, 0, 0, 0]
+  },
+  "purpur_pillar": {
+    "name": "cube:log",
+    "side_texture_files": ["assets/minecraft/textures/block/purpur_pillar.png",
+                           "assets/minecraft/textures/block/purpur_pillar_top.png"],
+    "blockname": "minecraft/acacia_log",
+    "FRONT_INDEX": 1,
+    "SIDE_INDEX": 0
+  }
+}

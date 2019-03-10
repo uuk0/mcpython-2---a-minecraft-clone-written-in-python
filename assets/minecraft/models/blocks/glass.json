@@ -1,0 +1,105 @@
+{
+  "blockaddress": "minecraft:glass",
+  "default": {
+    "name": "cube:full",
+    "side_texture_files": ["assets/minecraft/textures/block/glass.png"],
+    "blockname": "minecraft/glass",
+    "side_indexes": [0, 0, 0, 0, 0, 0]
+  },
+  "black_stained_glass": {
+    "name": "cube:full",
+    "side_texture_files": ["assets/minecraft/textures/block/black_stained_glass.png"],
+    "blockname": "minecraft/black_stained_glass",
+    "side_indexes": [0, 0, 0, 0, 0, 0]
+  },
+  "blue_stained_glass": {
+    "name": "cube:full",
+    "side_texture_files": ["assets/minecraft/textures/block/blue_stained_glass.png"],
+    "blockname": "minecraft/blue_stained_glass",
+    "side_indexes": [0, 0, 0, 0, 0, 0]
+  },
+  "brown_stained_glass": {
+    "name": "cube:full",
+    "side_texture_files": ["assets/minecraft/textures/block/brown_stained_glass.png"],
+    "blockname": "minecraft/brown_stained_glass",
+    "side_indexes": [0, 0, 0, 0, 0, 0]
+  },
+  "cyan_stained_glass": {
+    "name": "cube:full",
+    "side_texture_files": ["assets/minecraft/textures/block/cyan_stained_glass.png"],
+    "blockname": "minecraft/cyan_stained_glass",
+    "side_indexes": [0, 0, 0, 0, 0, 0]
+  },
+  "gray_stained_glass": {
+    "name": "cube:full",
+    "side_texture_files": ["assets/minecraft/textures/block/gray_stained_glass.png"],
+    "blockname": "minecraft/gray_stained_glass",
+    "side_indexes": [0, 0, 0, 0, 0, 0]
+  },
+  "green_stained_glass": {
+    "name": "cube:full",
+    "side_texture_files": ["assets/minecraft/textures/block/green_stained_glass.png"],
+    "blockname": "minecraft/green_stained_glass",
+    "side_indexes": [0, 0, 0, 0, 0, 0]
+  },
+  "light_blue_stained_glass": {
+    "name": "cube:full",
+    "side_texture_files": ["assets/minecraft/textures/block/light_blue_stained_glass.png"],
+    "blockname": "minecraft/light_blue_stained_glass",
+    "side_indexes": [0, 0, 0, 0, 0, 0]
+  },
+  "light_gray_stained_glass": {
+    "name": "cube:full",
+    "side_texture_files": ["assets/minecraft/textures/block/light_gray_stained_glass.png"],
+    "blockname": "minecraft/light_gray_stained_glass",
+    "side_indexes": [0, 0, 0, 0, 0, 0]
+  },
+  "lime_stained_glass": {
+    "name": "cube:full",
+    "side_texture_files": ["assets/minecraft/textures/block/lime_stained_glass.png"],
+    "blockname": "minecraft/lime_stained_glass",
+    "side_indexes": [0, 0, 0, 0, 0, 0]
+  },
+  "magenta_stained_glass": {
+    "name": "cube:full",
+    "side_texture_files": ["assets/minecraft/textures/block/magenta_stained_glass.png"],
+    "blockname": "minecraft/magenta_stained_glass",
+    "side_indexes": [0, 0, 0, 0, 0, 0]
+  },
+  "orange_stained_glass": {
+    "name": "cube:full",
+    "side_texture_files": ["assets/minecraft/textures/block/orange_stained_glass.png"],
+    "blockname": "minecraft/orange_stained_glass",
+    "side_indexes": [0, 0, 0, 0, 0, 0]
+  },
+  "pink_stained_glass": {
+    "name": "cube:full",
+    "side_texture_files": ["assets/minecraft/textures/block/pink_stained_glass.png"],
+    "blockname": "minecraft/pink_stained_glass",
+    "side_indexes": [0, 0, 0, 0, 0, 0]
+  },
+  "purple_stained_glass": {
+    "name": "cube:full",
+    "side_texture_files": ["assets/minecraft/textures/block/purple_stained_glass.png"],
+    "blockname": "minecraft/purple_stained_glass",
+    "side_indexes": [0, 0, 0, 0, 0, 0]
+  },
+  "red_stained_glass": {
+    "name": "cube:full",
+    "side_texture_files": ["assets/minecraft/textures/block/red_stained_glass.png"],
+    "blockname": "minecraft/red_stained_glass",
+    "side_indexes": [0, 0, 0, 0, 0, 0]
+  },
+  "white_stained_glass": {
+    "name": "cube:full",
+    "side_texture_files": ["assets/minecraft/textures/block/white_stained_glass.png"],
+    "blockname": "minecraft/white_stained_glass",
+    "side_indexes": [0, 0, 0, 0, 0, 0]
+  },
+  "yellow_stained_glass": {
+    "name": "cube:full",
+    "side_texture_files": ["assets/minecraft/textures/block/yellow_stained_glass.png"],
+    "blockname": "minecraft/yellow_stained_glass",
+    "side_indexes": [0, 0, 0, 0, 0, 0]
+  }
+}

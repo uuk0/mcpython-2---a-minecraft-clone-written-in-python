@@ -30,7 +30,9 @@ class ImageAtlasHandler:
 
     def init(self):
         log.printMSG("initing image atlases...")
-        for i, e in enumerate(self.atlases.values()):
+        keys = list(self.atlases.values())
+        keys.sort(key=lambda x: len(x.imagefiles), reverse=True)
+        for i, e in enumerate(keys):
             log.printMSG(i+1, "/", len(self.atlases))
             e.init()
         log.printMSG("creating image atlasses...")
@@ -43,6 +45,7 @@ class ImageAtlasHandler:
                 if not v in self.atlases:
                     self.atlases[v] = self.atlases[e]
 
+
 class IImageType:
     TYPES = []
 
@@ -53,6 +56,7 @@ class IImageType:
     @staticmethod
     def getSubImages(image, data):
         return []
+
 
 class ToSplit(IImageType):
     @staticmethod
@@ -86,7 +90,7 @@ class ImageAtlas:
             l = G.modloader.mods.values()
             for i, e in enumerate([G.local] + [mod.path for mod in l]):
                 if e:
-                    #log.printMSG([(mod.path, mod, file) for mod in G.modloader.mods.values()])
+                    # log.printMSG([(mod.path, mod, file) for mod in G.modloader.mods.values()])
                     if os.path.isfile(e+"/"+file):
                         file = e + "/" + file
                         return file
@@ -133,7 +137,7 @@ class ImageAtlas:
         if self.__inited: raise RuntimeError("can't init an inited ImageAtlas")
         self.__inited = True
         for imageatlas in G.imageatlashandler.imageatlases:
-            if len(imageatlas.imagefiles) + len(self.imagefiles) < imageatlas._size[0] * imageatlas._size[1]:
+            if len(imageatlas.imagefiles) + len(self.imagefiles) <= imageatlas._size[0] * imageatlas._size[1]:
                 self.relativeindex = len(imageatlas.imagefiles)
                 for e in self.imagefiles:
                     imageatlas.add_image_from_file(e[0], e[2])
@@ -209,7 +213,7 @@ class _ImageAtlas(ImageAtlas):
             if x >= self._size[0]:
                 x = 0
                 y += 1
-            # if y >= self._size[1] and i < 256:
+            # if y >= self._size[1] and i <= 256:
                 # raise RuntimeError("unsupported image lenght at index "+str(i))
             i += 1
         d = os.path.dirname(self.storeto)

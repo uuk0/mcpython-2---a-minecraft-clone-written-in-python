@@ -1,0 +1,9 @@
+{
+  "blockaddress": "minecraft:slime_block",
+  "default": {
+    "name": "cube:full",
+    "side_texture_files": ["assets/minecraft/textures/block/slime_block.png"],
+    "blockname": "minecraft/slime_block",
+    "side_indexes": [0, 0, 0, 0, 0, 0]
+  }
+}

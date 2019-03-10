@@ -2264,3 +2264,1955 @@ informations about os, location, version etc.
 :os proccessor | AMD64 Family 21 Model 112 Stepping 0, AuthenticAMD
 :os proccessor architektur | ('32bit', 'WindowsPE')
 :pyglet | 1.3.2
+
+--------------------------------------------------------------------------------
+- MCPYTHON VERSION 19W09B                                                      -
+--------------------------------------------------------------------------------
+informations about os, location, version etc.
+:timestamp | [2019][3 ][4 ][20][25][15]
+:versionid | 2019091
+:G.local | C:/Python/mcpython/mcpython_7
+:os name | Windows
+:os version | 10.0.17763
+:os proccessor | AMD64 Family 21 Model 112 Stepping 0, AuthenticAMD
+:os proccessor architektur | ('32bit', 'WindowsPE')
+:pyglet | 1.3.2
+
+--------------------------------------------------------------------------------
+- MCPYTHON VERSION 19W09B                                                      -
+--------------------------------------------------------------------------------
+informations about os, location, version etc.
+:timestamp | [2019][3 ][4 ][20][31][28]
+:versionid | 2019091
+:G.local | C:/Python/mcpython/mcpython_7
+:os name | Windows
+:os version | 10.0.17763
+:os proccessor | AMD64 Family 21 Model 112 Stepping 0, AuthenticAMD
+:os proccessor architektur | ('32bit', 'WindowsPE')
+:pyglet | 1.3.2
+stamp: [2019][3 ][4 ][20][31][42]
+an exception occured
+
+called via:Traceback (most recent call last):
+  File "C:\Python\mcpython\mcpython_7\eventhandler.py", line 91, in call
+    self.functions[e][0](name, *list(self.functions[e][2])+list(args), **kwargs)
+  File "C:\Python\mcpython\mcpython_7\state\titlescreen.py", line 40, in on_event
+    G.player.dimension = G.dimensionhandler.dimensions[0]
+KeyError: 0
+  File "C:/Python/mcpython/mcpython_7/main.py", line 120, in <module>
+    main()
+  File "C:/Python/mcpython/mcpython_7/main.py", line 111, in main
+    pyglet.app.run()
+  File "C:\Python\interpretter\Python37-32_1\lib\site-packages\pyglet\app\__init__.py", line 138, in run
+    event_loop.run()
+  File "C:\Python\interpretter\Python37-32_1\lib\site-packages\pyglet\app\base.py", line 142, in run
+    self._run()
+  File "C:\Python\interpretter\Python37-32_1\lib\site-packages\pyglet\app\base.py", line 155, in _run
+    platform_event_loop.step(timeout)
+  File "C:\Python\interpretter\Python37-32_1\lib\site-packages\pyglet\app\win32.py", line 123, in step
+    _user32.DispatchMessageW(ctypes.byref(msg))
+  File "C:\Python\interpretter\Python37-32_1\lib\site-packages\pyglet\window\win32\__init__.py", line 639, in f
+    result = event_handler(msg, wParam, lParam)
+  File "C:\Python\interpretter\Python37-32_1\lib\site-packages\pyglet\window\win32\__init__.py", line 891, in _event_lbuttondown
+    'on_mouse_press', mouse.LEFT, lParam)
+  File "C:\Python\interpretter\Python37-32_1\lib\site-packages\pyglet\window\win32\__init__.py", line 884, in _event_mousebutton
+    self.dispatch_event(ev, x, y, button, self._get_modifiers())
+  File "C:\Python\interpretter\Python37-32_1\lib\site-packages\pyglet\window\__init__.py", line 1232, in dispatch_event
+    if EventDispatcher.dispatch_event(self, *args) != False:
+  File "C:\Python\interpretter\Python37-32_1\lib\site-packages\pyglet\event.py", line 367, in dispatch_event
+    if getattr(self, event_type)(*args):
+  File "C:\Python\mcpython\mcpython_7\window.py", line 278, in on_mouse_press
+    G.eventhandler.call("core:window:on_mouse_press", x, y, button, modifiers)
+  File "C:\Python\mcpython\mcpython_7\eventhandler.py", line 93, in call
+    exceptionhandler.add_traceback()
+  File "C:\Python\mcpython\mcpython_7\exceptionhandler.py", line 45, in add_traceback
+    traceback.print_stack(file=f)
+
+
+--------------------------------------------------------------------------------
+- MCPYTHON VERSION 19W09B                                                      -
+--------------------------------------------------------------------------------
+informations about os, location, version etc.
+:timestamp | [2019][3 ][4 ][20][32][7 ]
+:versionid | 2019091
+:G.local | C:/Python/mcpython/mcpython_7
+:os name | Windows
+:os version | 10.0.17763
+:os proccessor | AMD64 Family 21 Model 112 Stepping 0, AuthenticAMD
+:os proccessor architektur | ('32bit', 'WindowsPE')
+:pyglet | 1.3.2
+
+--------------------------------------------------------------------------------
+- MCPYTHON VERSION 19W09B                                                      -
+--------------------------------------------------------------------------------
+informations about os, location, version etc.
+:timestamp | [2019][3 ][4 ][20][50][8 ]
+:versionid | 2019091
+:G.local | C:/Python/mcpython/mcpython_7
+:os name | Windows
+:os version | 10.0.17763
+:os proccessor | AMD64 Family 21 Model 112 Stepping 0, AuthenticAMD
+:os proccessor architektur | ('32bit', 'WindowsPE')
+:pyglet | 1.3.2
+
+--------------------------------------------------------------------------------
+- MCPYTHON VERSION 19W09B                                                      -
+--------------------------------------------------------------------------------
+informations about os, location, version etc.
+:timestamp | [2019][3 ][4 ][21][3 ][22]
+:versionid | 2019091
+:G.local | C:/Python/mcpython/mcpython_7
+:os name | Windows
+:os version | 10.0.17763
+:os proccessor | AMD64 Family 21 Model 112 Stepping 0, AuthenticAMD
+:os proccessor architektur | ('32bit', 'WindowsPE')
+:pyglet | 1.3.2
+
+--------------------------------------------------------------------------------
+- MCPYTHON VERSION 19W09B                                                      -
+--------------------------------------------------------------------------------
+informations about os, location, version etc.
+:timestamp | [2019][3 ][9 ][8 ][42][2 ]
+:versionid | 2019091
+:G.local | C:/Python/mcpython/mcpython_7
+:os name | Windows
+:os version | 10.0.17763
+:os proccessor | AMD64 Family 21 Model 112 Stepping 0, AuthenticAMD
+:os proccessor architektur | ('32bit', 'WindowsPE')
+:pyglet | 1.3.2
+
+--------------------------------------------------------------------------------
+- MCPYTHON VERSION 19W09B                                                      -
+--------------------------------------------------------------------------------
+informations about os, location, version etc.
+:timestamp | [2019][3 ][9 ][8 ][42][28]
+:versionid | 2019091
+:G.local | C:/Python/mcpython/mcpython_7
+:os name | Windows
+:os version | 10.0.17763
+:os proccessor | AMD64 Family 21 Model 112 Stepping 0, AuthenticAMD
+:os proccessor architektur | ('32bit', 'WindowsPE')
+:pyglet | 1.3.2
+
+--------------------------------------------------------------------------------
+- MCPYTHON VERSION 19W09B                                                      -
+--------------------------------------------------------------------------------
+informations about os, location, version etc.
+:timestamp | [2019][3 ][9 ][8 ][42][45]
+:versionid | 2019091
+:G.local | C:/Python/mcpython/mcpython_7
+:os name | Windows
+:os version | 10.0.17763
+:os proccessor | AMD64 Family 21 Model 112 Stepping 0, AuthenticAMD
+:os proccessor architektur | ('32bit', 'WindowsPE')
+:pyglet | 1.3.2
+
+--------------------------------------------------------------------------------
+- MCPYTHON VERSION 19W09B                                                      -
+--------------------------------------------------------------------------------
+informations about os, location, version etc.
+:timestamp | [2019][3 ][9 ][8 ][43][29]
+:versionid | 2019091
+:G.local | C:/Python/mcpython/mcpython_7
+:os name | Windows
+:os version | 10.0.17763
+:os proccessor | AMD64 Family 21 Model 112 Stepping 0, AuthenticAMD
+:os proccessor architektur | ('32bit', 'WindowsPE')
+:pyglet | 1.3.2
+
+--------------------------------------------------------------------------------
+- MCPYTHON VERSION 19W09B                                                      -
+--------------------------------------------------------------------------------
+informations about os, location, version etc.
+:timestamp | [2019][3 ][9 ][8 ][44][9 ]
+:versionid | 2019091
+:G.local | C:/Python/mcpython/mcpython_7
+:os name | Windows
+:os version | 10.0.17763
+:os proccessor | AMD64 Family 21 Model 112 Stepping 0, AuthenticAMD
+:os proccessor architektur | ('32bit', 'WindowsPE')
+:pyglet | 1.3.2
+
+--------------------------------------------------------------------------------
+- MCPYTHON VERSION 19W09B                                                      -
+--------------------------------------------------------------------------------
+informations about os, location, version etc.
+:timestamp | [2019][3 ][9 ][8 ][44][28]
+:versionid | 2019091
+:G.local | C:/Python/mcpython/mcpython_7
+:os name | Windows
+:os version | 10.0.17763
+:os proccessor | AMD64 Family 21 Model 112 Stepping 0, AuthenticAMD
+:os proccessor architektur | ('32bit', 'WindowsPE')
+:pyglet | 1.3.2
+
+--------------------------------------------------------------------------------
+- MCPYTHON VERSION 19W09B                                                      -
+--------------------------------------------------------------------------------
+informations about os, location, version etc.
+:timestamp | [2019][3 ][9 ][8 ][46][47]
+:versionid | 2019091
+:G.local | C:/Python/mcpython/mcpython_7
+:os name | Windows
+:os version | 10.0.17763
+:os proccessor | AMD64 Family 21 Model 112 Stepping 0, AuthenticAMD
+:os proccessor architektur | ('32bit', 'WindowsPE')
+:pyglet | 1.3.2
+
+--------------------------------------------------------------------------------
+- MCPYTHON VERSION 19W09B                                                      -
+--------------------------------------------------------------------------------
+informations about os, location, version etc.
+:timestamp | [2019][3 ][9 ][8 ][47][23]
+:versionid | 2019091
+:G.local | C:/Python/mcpython/mcpython_7
+:os name | Windows
+:os version | 10.0.17763
+:os proccessor | AMD64 Family 21 Model 112 Stepping 0, AuthenticAMD
+:os proccessor architektur | ('32bit', 'WindowsPE')
+:pyglet | 1.3.2
+
+--------------------------------------------------------------------------------
+- MCPYTHON VERSION 19W09B                                                      -
+--------------------------------------------------------------------------------
+informations about os, location, version etc.
+:timestamp | [2019][3 ][9 ][9 ][17][26]
+:versionid | 2019091
+:G.local | C:/Python/mcpython/mcpython_7
+:os name | Windows
+:os version | 10.0.17763
+:os proccessor | AMD64 Family 21 Model 112 Stepping 0, AuthenticAMD
+:os proccessor architektur | ('32bit', 'WindowsPE')
+:pyglet | 1.3.2
+
+--------------------------------------------------------------------------------
+- MCPYTHON VERSION 19W09B                                                      -
+--------------------------------------------------------------------------------
+informations about os, location, version etc.
+:timestamp | [2019][3 ][9 ][9 ][23][29]
+:versionid | 2019091
+:G.local | C:/Python/mcpython/mcpython_7
+:os name | Windows
+:os version | 10.0.17763
+:os proccessor | AMD64 Family 21 Model 112 Stepping 0, AuthenticAMD
+:os proccessor architektur | ('32bit', 'WindowsPE')
+:pyglet | 1.3.2
+
+--------------------------------------------------------------------------------
+- MCPYTHON VERSION 19W09B                                                      -
+--------------------------------------------------------------------------------
+informations about os, location, version etc.
+:timestamp | [2019][3 ][9 ][9 ][38][7 ]
+:versionid | 2019091
+:G.local | C:/Python/mcpython/mcpython_7
+:os name | Windows
+:os version | 10.0.17763
+:os proccessor | AMD64 Family 21 Model 112 Stepping 0, AuthenticAMD
+:os proccessor architektur | ('32bit', 'WindowsPE')
+:pyglet | 1.3.2
+stamp: [2019][3 ][9 ][9 ][41][21]
+an exception occured
+
+called via:Traceback (most recent call last):
+  File "C:\Python\mcpython\mcpython_7\eventhandler.py", line 91, in call
+    self.functions[e][0](name, *list(self.functions[e][2])+list(args), **kwargs)
+  File "C:\Python\mcpython\mcpython_7\state\game.py", line 75, in on_event
+    G.chat.on_key_press(symbol, modifiers)
+  File "C:\Python\mcpython\mcpython_7\chat.py", line 52, in on_key_press
+    self.execute(self.text)
+  File "C:\Python\mcpython\mcpython_7\chat.py", line 88, in execute
+    G.commandhandler.executeCommand(command, G.player.entity, G.window.position)
+  File "C:\Python\mcpython\mcpython_7\command\Command.py", line 14, in executeCommand
+    command.executeCommand(line, entity, position)
+  File "C:\Python\mcpython\mcpython_7\command\give.py", line 29, in executeCommand
+    selector.player.addToInventory(splitted[2], 1 if len(splitted) == 3 else int(splitted[3]))
+  File "C:\Python\mcpython\mcpython_7\player.py", line 84, in addToInventory
+    e.setItem(item, amount)
+  File "C:\Python\mcpython\mcpython_7\Inventory\inventory.py", line 210, in setItem
+    self.stack = IItemStack.IItemStack(name, amount)
+  File "C:\Python\mcpython\mcpython_7\IItemStack.py", line 34, in __init__
+    texturslitcher.ImageAtlas.load_image(self.item.getTexturFile()).resize((32, 32)).\
+  File "C:\Python\mcpython\mcpython_7_mods\mods\ae2\extensions\extracells\cells.py", line 43, in getTexturFile
+    return mod.path + "/assets/extracells/textures/items/storage.fluid.4096k.png"
+TypeError: unsupported operand type(s) for +: 'NoneType' and 'str'
+  File "C:/Python/mcpython/mcpython_7/main.py", line 120, in <module>
+    main()
+  File "C:/Python/mcpython/mcpython_7/main.py", line 111, in main
+    pyglet.app.run()
+  File "C:\Python\interpretter\Python37-32_1\lib\site-packages\pyglet\app\__init__.py", line 138, in run
+    event_loop.run()
+  File "C:\Python\interpretter\Python37-32_1\lib\site-packages\pyglet\app\base.py", line 142, in run
+    self._run()
+  File "C:\Python\interpretter\Python37-32_1\lib\site-packages\pyglet\app\base.py", line 155, in _run
+    platform_event_loop.step(timeout)
+  File "C:\Python\interpretter\Python37-32_1\lib\site-packages\pyglet\app\win32.py", line 123, in step
+    _user32.DispatchMessageW(ctypes.byref(msg))
+  File "C:\Python\interpretter\Python37-32_1\lib\site-packages\pyglet\window\win32\__init__.py", line 639, in f
+    result = event_handler(msg, wParam, lParam)
+  File "C:\Python\interpretter\Python37-32_1\lib\site-packages\pyglet\window\win32\__init__.py", line 710, in _event_key
+    self.dispatch_event(ev, symbol, modifiers)
+  File "C:\Python\interpretter\Python37-32_1\lib\site-packages\pyglet\window\__init__.py", line 1232, in dispatch_event
+    if EventDispatcher.dispatch_event(self, *args) != False:
+  File "C:\Python\interpretter\Python37-32_1\lib\site-packages\pyglet\event.py", line 367, in dispatch_event
+    if getattr(self, event_type)(*args):
+  File "C:\Python\mcpython\mcpython_7\window.py", line 309, in on_key_press
+    G.eventhandler.call("core:window:on_key_press", symbol, modifiers)
+  File "C:\Python\mcpython\mcpython_7\eventhandler.py", line 93, in call
+    exceptionhandler.add_traceback()
+  File "C:\Python\mcpython\mcpython_7\exceptionhandler.py", line 45, in add_traceback
+    traceback.print_stack(file=f)
+
+
+--------------------------------------------------------------------------------
+- MCPYTHON VERSION 19W09B                                                      -
+--------------------------------------------------------------------------------
+informations about os, location, version etc.
+:timestamp | [2019][3 ][9 ][9 ][42][38]
+:versionid | 2019091
+:G.local | C:/Python/mcpython/mcpython_7
+:os name | Windows
+:os version | 10.0.17763
+:os proccessor | AMD64 Family 21 Model 112 Stepping 0, AuthenticAMD
+:os proccessor architektur | ('32bit', 'WindowsPE')
+:pyglet | 1.3.2
+stamp: [2019][3 ][9 ][9 ][43][12]
+an exception occured
+
+called via:Traceback (most recent call last):
+  File "C:\Python\mcpython\mcpython_7\eventhandler.py", line 91, in call
+    self.functions[e][0](name, *list(self.functions[e][2])+list(args), **kwargs)
+  File "C:\Python\mcpython\mcpython_7\state\game.py", line 75, in on_event
+    G.chat.on_key_press(symbol, modifiers)
+  File "C:\Python\mcpython\mcpython_7\chat.py", line 52, in on_key_press
+    self.execute(self.text)
+  File "C:\Python\mcpython\mcpython_7\chat.py", line 88, in execute
+    G.commandhandler.executeCommand(command, G.player.entity, G.window.position)
+  File "C:\Python\mcpython\mcpython_7\command\Command.py", line 14, in executeCommand
+    command.executeCommand(line, entity, position)
+  File "C:\Python\mcpython\mcpython_7\command\give.py", line 29, in executeCommand
+    selector.player.addToInventory(splitted[2], 1 if len(splitted) == 3 else int(splitted[3]))
+  File "C:\Python\mcpython\mcpython_7\player.py", line 84, in addToInventory
+    e.setItem(item, amount)
+  File "C:\Python\mcpython\mcpython_7\Inventory\inventory.py", line 210, in setItem
+    self.stack = IItemStack.IItemStack(name, amount)
+  File "C:\Python\mcpython\mcpython_7\IItemStack.py", line 34, in __init__
+    texturslitcher.ImageAtlas.load_image(self.item.getTexturFile()).resize((32, 32)).\
+  File "C:\Python\mcpython\mcpython_7\texturslitcher.py", line 99, in load_image
+    file = ImageAtlas.convertFileName(file)
+  File "C:\Python\mcpython\mcpython_7\texturslitcher.py", line 93, in convertFileName
+    raise IOError(file+" is not a valid file and can't be found through resourcelocator")
+OSError: C:\Python\mcpython\mcpython_7_mods\mods/ae2ae2/extensions/extracells/assets/extracells/textures/items/storage.fluid.4096k.png is not a valid file and can't be found through resourcelocator
+  File "C:/Python/mcpython/mcpython_7/main.py", line 120, in <module>
+    main()
+  File "C:/Python/mcpython/mcpython_7/main.py", line 111, in main
+    pyglet.app.run()
+  File "C:\Python\interpretter\Python37-32_1\lib\site-packages\pyglet\app\__init__.py", line 138, in run
+    event_loop.run()
+  File "C:\Python\interpretter\Python37-32_1\lib\site-packages\pyglet\app\base.py", line 142, in run
+    self._run()
+  File "C:\Python\interpretter\Python37-32_1\lib\site-packages\pyglet\app\base.py", line 155, in _run
+    platform_event_loop.step(timeout)
+  File "C:\Python\interpretter\Python37-32_1\lib\site-packages\pyglet\app\win32.py", line 123, in step
+    _user32.DispatchMessageW(ctypes.byref(msg))
+  File "C:\Python\interpretter\Python37-32_1\lib\site-packages\pyglet\window\win32\__init__.py", line 639, in f
+    result = event_handler(msg, wParam, lParam)
+  File "C:\Python\interpretter\Python37-32_1\lib\site-packages\pyglet\window\win32\__init__.py", line 710, in _event_key
+    self.dispatch_event(ev, symbol, modifiers)
+  File "C:\Python\interpretter\Python37-32_1\lib\site-packages\pyglet\window\__init__.py", line 1232, in dispatch_event
+    if EventDispatcher.dispatch_event(self, *args) != False:
+  File "C:\Python\interpretter\Python37-32_1\lib\site-packages\pyglet\event.py", line 367, in dispatch_event
+    if getattr(self, event_type)(*args):
+  File "C:\Python\mcpython\mcpython_7\window.py", line 309, in on_key_press
+    G.eventhandler.call("core:window:on_key_press", symbol, modifiers)
+  File "C:\Python\mcpython\mcpython_7\eventhandler.py", line 93, in call
+    exceptionhandler.add_traceback()
+  File "C:\Python\mcpython\mcpython_7\exceptionhandler.py", line 45, in add_traceback
+    traceback.print_stack(file=f)
+
+
+--------------------------------------------------------------------------------
+- MCPYTHON VERSION 19W09B                                                      -
+--------------------------------------------------------------------------------
+informations about os, location, version etc.
+:timestamp | [2019][3 ][9 ][9 ][43][49]
+:versionid | 2019091
+:G.local | C:/Python/mcpython/mcpython_7
+:os name | Windows
+:os version | 10.0.17763
+:os proccessor | AMD64 Family 21 Model 112 Stepping 0, AuthenticAMD
+:os proccessor architektur | ('32bit', 'WindowsPE')
+:pyglet | 1.3.2
+stamp: [2019][3 ][9 ][9 ][44][35]
+an exception occured
+
+called via:Traceback (most recent call last):
+  File "C:\Python\mcpython\mcpython_7\eventhandler.py", line 91, in call
+    self.functions[e][0](name, *list(self.functions[e][2])+list(args), **kwargs)
+  File "C:\Python\mcpython\mcpython_7\state\game.py", line 75, in on_event
+    G.chat.on_key_press(symbol, modifiers)
+  File "C:\Python\mcpython\mcpython_7\chat.py", line 52, in on_key_press
+    self.execute(self.text)
+  File "C:\Python\mcpython\mcpython_7\chat.py", line 88, in execute
+    G.commandhandler.executeCommand(command, G.player.entity, G.window.position)
+  File "C:\Python\mcpython\mcpython_7\command\Command.py", line 14, in executeCommand
+    command.executeCommand(line, entity, position)
+  File "C:\Python\mcpython\mcpython_7\command\give.py", line 29, in executeCommand
+    selector.player.addToInventory(splitted[2], 1 if len(splitted) == 3 else int(splitted[3]))
+  File "C:\Python\mcpython\mcpython_7\player.py", line 84, in addToInventory
+    e.setItem(item, amount)
+  File "C:\Python\mcpython\mcpython_7\Inventory\inventory.py", line 210, in setItem
+    self.stack = IItemStack.IItemStack(name, amount)
+  File "C:\Python\mcpython\mcpython_7\IItemStack.py", line 34, in __init__
+    texturslitcher.ImageAtlas.load_image(self.item.getTexturFile()).resize((32, 32)).\
+  File "C:\Python\mcpython\mcpython_7\texturslitcher.py", line 99, in load_image
+    file = ImageAtlas.convertFileName(file)
+  File "C:\Python\mcpython\mcpython_7\texturslitcher.py", line 93, in convertFileName
+    raise IOError(file+" is not a valid file and can't be found through resourcelocator")
+OSError: C:\Python\mcpython\mcpython_7_mods\mods/ae2extensions/extracells/assets/extracells/textures/items/storage.fluid.4096k.png is not a valid file and can't be found through resourcelocator
+  File "C:/Python/mcpython/mcpython_7/main.py", line 120, in <module>
+    main()
+  File "C:/Python/mcpython/mcpython_7/main.py", line 111, in main
+    pyglet.app.run()
+  File "C:\Python\interpretter\Python37-32_1\lib\site-packages\pyglet\app\__init__.py", line 138, in run
+    event_loop.run()
+  File "C:\Python\interpretter\Python37-32_1\lib\site-packages\pyglet\app\base.py", line 142, in run
+    self._run()
+  File "C:\Python\interpretter\Python37-32_1\lib\site-packages\pyglet\app\base.py", line 155, in _run
+    platform_event_loop.step(timeout)
+  File "C:\Python\interpretter\Python37-32_1\lib\site-packages\pyglet\app\win32.py", line 123, in step
+    _user32.DispatchMessageW(ctypes.byref(msg))
+  File "C:\Python\interpretter\Python37-32_1\lib\site-packages\pyglet\window\win32\__init__.py", line 639, in f
+    result = event_handler(msg, wParam, lParam)
+  File "C:\Python\interpretter\Python37-32_1\lib\site-packages\pyglet\window\win32\__init__.py", line 710, in _event_key
+    self.dispatch_event(ev, symbol, modifiers)
+  File "C:\Python\interpretter\Python37-32_1\lib\site-packages\pyglet\window\__init__.py", line 1232, in dispatch_event
+    if EventDispatcher.dispatch_event(self, *args) != False:
+  File "C:\Python\interpretter\Python37-32_1\lib\site-packages\pyglet\event.py", line 367, in dispatch_event
+    if getattr(self, event_type)(*args):
+  File "C:\Python\mcpython\mcpython_7\window.py", line 309, in on_key_press
+    G.eventhandler.call("core:window:on_key_press", symbol, modifiers)
+  File "C:\Python\mcpython\mcpython_7\eventhandler.py", line 93, in call
+    exceptionhandler.add_traceback()
+  File "C:\Python\mcpython\mcpython_7\exceptionhandler.py", line 45, in add_traceback
+    traceback.print_stack(file=f)
+
+
+--------------------------------------------------------------------------------
+- MCPYTHON VERSION 19W09B                                                      -
+--------------------------------------------------------------------------------
+informations about os, location, version etc.
+:timestamp | [2019][3 ][9 ][9 ][45][2 ]
+:versionid | 2019091
+:G.local | C:/Python/mcpython/mcpython_7
+:os name | Windows
+:os version | 10.0.17763
+:os proccessor | AMD64 Family 21 Model 112 Stepping 0, AuthenticAMD
+:os proccessor architektur | ('32bit', 'WindowsPE')
+:pyglet | 1.3.2
+
+--------------------------------------------------------------------------------
+- MCPYTHON VERSION 19W09B                                                      -
+--------------------------------------------------------------------------------
+informations about os, location, version etc.
+:timestamp | [2019][3 ][9 ][9 ][45][14]
+:versionid | 2019091
+:G.local | C:/Python/mcpython/mcpython_7
+:os name | Windows
+:os version | 10.0.17763
+:os proccessor | AMD64 Family 21 Model 112 Stepping 0, AuthenticAMD
+:os proccessor architektur | ('32bit', 'WindowsPE')
+:pyglet | 1.3.2
+
+--------------------------------------------------------------------------------
+- MCPYTHON VERSION 19W09B                                                      -
+--------------------------------------------------------------------------------
+informations about os, location, version etc.
+:timestamp | [2019][3 ][9 ][16][32][50]
+:versionid | 2019091
+:G.local | C:/Python/mcpython/mcpython_7
+:os name | Windows
+:os version | 10.0.17763
+:os proccessor | AMD64 Family 21 Model 112 Stepping 0, AuthenticAMD
+:os proccessor architektur | ('32bit', 'WindowsPE')
+:pyglet | 1.3.2
+stamp: [2019][3 ][9 ][16][33][26]
+an exception occured
+
+called via:Traceback (most recent call last):
+  File "C:\Python\mcpython\mcpython_7\eventhandler.py", line 91, in call
+    self.functions[e][0](name, *list(self.functions[e][2])+list(args), **kwargs)
+  File "C:\Python\mcpython\mcpython_7\state\game.py", line 75, in on_event
+    G.chat.on_key_press(symbol, modifiers)
+  File "C:\Python\mcpython\mcpython_7\chat.py", line 52, in on_key_press
+    self.execute(self.text)
+  File "C:\Python\mcpython\mcpython_7\chat.py", line 88, in execute
+    G.commandhandler.executeCommand(command, G.player.entity, G.window.position)
+  File "C:\Python\mcpython\mcpython_7\command\Command.py", line 14, in executeCommand
+    command.executeCommand(line, entity, position)
+  File "C:\Python\mcpython\mcpython_7\command\function_command.py", line 16, in executeCommand
+    if index not in Function.FUNCTIONTABLE and not index.startwith(G.local+"/datapacks"):
+AttributeError: type object 'Function' has no attribute 'FUNCTIONTABLE'
+  File "C:/Python/mcpython/mcpython_7/main.py", line 120, in <module>
+    main()
+  File "C:/Python/mcpython/mcpython_7/main.py", line 111, in main
+    pyglet.app.run()
+  File "C:\Python\interpretter\Python37-32_1\lib\site-packages\pyglet\app\__init__.py", line 138, in run
+    event_loop.run()
+  File "C:\Python\interpretter\Python37-32_1\lib\site-packages\pyglet\app\base.py", line 142, in run
+    self._run()
+  File "C:\Python\interpretter\Python37-32_1\lib\site-packages\pyglet\app\base.py", line 155, in _run
+    platform_event_loop.step(timeout)
+  File "C:\Python\interpretter\Python37-32_1\lib\site-packages\pyglet\app\win32.py", line 123, in step
+    _user32.DispatchMessageW(ctypes.byref(msg))
+  File "C:\Python\interpretter\Python37-32_1\lib\site-packages\pyglet\window\win32\__init__.py", line 639, in f
+    result = event_handler(msg, wParam, lParam)
+  File "C:\Python\interpretter\Python37-32_1\lib\site-packages\pyglet\window\win32\__init__.py", line 710, in _event_key
+    self.dispatch_event(ev, symbol, modifiers)
+  File "C:\Python\interpretter\Python37-32_1\lib\site-packages\pyglet\window\__init__.py", line 1232, in dispatch_event
+    if EventDispatcher.dispatch_event(self, *args) != False:
+  File "C:\Python\interpretter\Python37-32_1\lib\site-packages\pyglet\event.py", line 367, in dispatch_event
+    if getattr(self, event_type)(*args):
+  File "C:\Python\mcpython\mcpython_7\window.py", line 309, in on_key_press
+    G.eventhandler.call("core:window:on_key_press", symbol, modifiers)
+  File "C:\Python\mcpython\mcpython_7\eventhandler.py", line 93, in call
+    exceptionhandler.add_traceback()
+  File "C:\Python\mcpython\mcpython_7\exceptionhandler.py", line 45, in add_traceback
+    traceback.print_stack(file=f)
+
+
+--------------------------------------------------------------------------------
+- MCPYTHON VERSION 19W09B                                                      -
+--------------------------------------------------------------------------------
+informations about os, location, version etc.
+:timestamp | [2019][3 ][9 ][16][35][56]
+:versionid | 2019091
+:G.local | C:/Python/mcpython/mcpython_7
+:os name | Windows
+:os version | 10.0.17763
+:os proccessor | AMD64 Family 21 Model 112 Stepping 0, AuthenticAMD
+:os proccessor architektur | ('32bit', 'WindowsPE')
+:pyglet | 1.3.2
+stamp: [2019][3 ][9 ][16][36][23]
+an exception occured
+
+called via:Traceback (most recent call last):
+  File "C:\Python\mcpython\mcpython_7\eventhandler.py", line 91, in call
+    self.functions[e][0](name, *list(self.functions[e][2])+list(args), **kwargs)
+  File "C:\Python\mcpython\mcpython_7\state\game.py", line 75, in on_event
+    G.chat.on_key_press(symbol, modifiers)
+  File "C:\Python\mcpython\mcpython_7\chat.py", line 52, in on_key_press
+    self.execute(self.text)
+  File "C:\Python\mcpython\mcpython_7\chat.py", line 88, in execute
+    G.commandhandler.executeCommand(command, G.player.entity, G.window.position)
+  File "C:\Python\mcpython\mcpython_7\command\Command.py", line 14, in executeCommand
+    command.executeCommand(line, entity, position)
+  File "C:\Python\mcpython\mcpython_7\command\function_command.py", line 16, in executeCommand
+    if index not in Function.FUNCTIONTABLE and not index.startwith(G.local+"/datapacks"):
+AttributeError: 'str' object has no attribute 'startwith'
+  File "C:/Python/mcpython/mcpython_7/main.py", line 120, in <module>
+    main()
+  File "C:/Python/mcpython/mcpython_7/main.py", line 111, in main
+    pyglet.app.run()
+  File "C:\Python\interpretter\Python37-32_1\lib\site-packages\pyglet\app\__init__.py", line 138, in run
+    event_loop.run()
+  File "C:\Python\interpretter\Python37-32_1\lib\site-packages\pyglet\app\base.py", line 142, in run
+    self._run()
+  File "C:\Python\interpretter\Python37-32_1\lib\site-packages\pyglet\app\base.py", line 155, in _run
+    platform_event_loop.step(timeout)
+  File "C:\Python\interpretter\Python37-32_1\lib\site-packages\pyglet\app\win32.py", line 123, in step
+    _user32.DispatchMessageW(ctypes.byref(msg))
+  File "C:\Python\interpretter\Python37-32_1\lib\site-packages\pyglet\window\win32\__init__.py", line 639, in f
+    result = event_handler(msg, wParam, lParam)
+  File "C:\Python\interpretter\Python37-32_1\lib\site-packages\pyglet\window\win32\__init__.py", line 710, in _event_key
+    self.dispatch_event(ev, symbol, modifiers)
+  File "C:\Python\interpretter\Python37-32_1\lib\site-packages\pyglet\window\__init__.py", line 1232, in dispatch_event
+    if EventDispatcher.dispatch_event(self, *args) != False:
+  File "C:\Python\interpretter\Python37-32_1\lib\site-packages\pyglet\event.py", line 367, in dispatch_event
+    if getattr(self, event_type)(*args):
+  File "C:\Python\mcpython\mcpython_7\window.py", line 309, in on_key_press
+    G.eventhandler.call("core:window:on_key_press", symbol, modifiers)
+  File "C:\Python\mcpython\mcpython_7\eventhandler.py", line 93, in call
+    exceptionhandler.add_traceback()
+  File "C:\Python\mcpython\mcpython_7\exceptionhandler.py", line 45, in add_traceback
+    traceback.print_stack(file=f)
+
+
+--------------------------------------------------------------------------------
+- MCPYTHON VERSION 19W09B                                                      -
+--------------------------------------------------------------------------------
+informations about os, location, version etc.
+:timestamp | [2019][3 ][9 ][16][36][42]
+:versionid | 2019091
+:G.local | C:/Python/mcpython/mcpython_7
+:os name | Windows
+:os version | 10.0.17763
+:os proccessor | AMD64 Family 21 Model 112 Stepping 0, AuthenticAMD
+:os proccessor architektur | ('32bit', 'WindowsPE')
+:pyglet | 1.3.2
+
+--------------------------------------------------------------------------------
+- MCPYTHON VERSION 19W10A                                                      -
+--------------------------------------------------------------------------------
+informations about os, location, version etc.
+:timestamp | [2019][3 ][9 ][18][54][58]
+:versionid | 2019100
+:G.local | C:/Python/mcpython/mcpython_7
+:os name | Windows
+:os version | 10.0.17763
+:os proccessor | AMD64 Family 21 Model 112 Stepping 0, AuthenticAMD
+:os proccessor architektur | ('32bit', 'WindowsPE')
+:pyglet | 1.3.2
+
+--------------------------------------------------------------------------------
+- MCPYTHON VERSION 19W10A                                                      -
+--------------------------------------------------------------------------------
+informations about os, location, version etc.
+:timestamp | [2019][3 ][9 ][18][57][41]
+:versionid | 2019100
+:G.local | C:/Python/mcpython/mcpython_7
+:os name | Windows
+:os version | 10.0.17763
+:os proccessor | AMD64 Family 21 Model 112 Stepping 0, AuthenticAMD
+:os proccessor architektur | ('32bit', 'WindowsPE')
+:pyglet | 1.3.2
+
+--------------------------------------------------------------------------------
+- MCPYTHON VERSION 19W10A                                                      -
+--------------------------------------------------------------------------------
+informations about os, location, version etc.
+:timestamp | [2019][3 ][9 ][19][1 ][5 ]
+:versionid | 2019100
+:G.local | C:/Python/mcpython/mcpython_7
+:os name | Windows
+:os version | 10.0.17763
+:os proccessor | AMD64 Family 21 Model 112 Stepping 0, AuthenticAMD
+:os proccessor architektur | ('32bit', 'WindowsPE')
+:pyglet | 1.3.2
+stamp: [2019][3 ][9 ][19][1 ][35]
+an exception occured
+
+called via:Traceback (most recent call last):
+  File "C:\Python\mcpython\mcpython_7\eventhandler.py", line 91, in call
+    self.functions[e][0](name, *list(self.functions[e][2])+list(args), **kwargs)
+  File "C:\Python\mcpython\mcpython_7\state\game.py", line 40, in on_event
+    self.draw_label()
+  File "C:\Python\mcpython\mcpython_7\state\game.py", line 267, in draw_label
+    chunkprovider = G.model.worldprovider.getChunkProviderFor((cx, cz))
+AttributeError: 'Model' object has no attribute 'worldprovider'
+  File "C:/Python/mcpython/mcpython_7/main.py", line 121, in <module>
+    main()
+  File "C:/Python/mcpython/mcpython_7/main.py", line 112, in main
+    pyglet.app.run()
+  File "C:\Python\interpretter\Python37-32_1\lib\site-packages\pyglet\app\__init__.py", line 138, in run
+    event_loop.run()
+  File "C:\Python\interpretter\Python37-32_1\lib\site-packages\pyglet\app\base.py", line 142, in run
+    self._run()
+  File "C:\Python\interpretter\Python37-32_1\lib\site-packages\pyglet\app\base.py", line 154, in _run
+    timeout = self.idle()
+  File "C:\Python\interpretter\Python37-32_1\lib\site-packages\pyglet\app\base.py", line 281, in idle
+    window.dispatch_event('on_draw')
+  File "C:\Python\interpretter\Python37-32_1\lib\site-packages\pyglet\window\__init__.py", line 1232, in dispatch_event
+    if EventDispatcher.dispatch_event(self, *args) != False:
+  File "C:\Python\interpretter\Python37-32_1\lib\site-packages\pyglet\event.py", line 367, in dispatch_event
+    if getattr(self, event_type)(*args):
+  File "C:\Python\mcpython\mcpython_7\window.py", line 375, in on_draw
+    G.eventhandler.call("opengl:draw2d")
+  File "C:\Python\mcpython\mcpython_7\eventhandler.py", line 93, in call
+    exceptionhandler.add_traceback()
+  File "C:\Python\mcpython\mcpython_7\exceptionhandler.py", line 45, in add_traceback
+    traceback.print_stack(file=f)
+
+stamp: [2019][3 ][9 ][19][1 ][35]
+an exception occured
+
+called via:Traceback (most recent call last):
+  File "C:\Python\mcpython\mcpython_7\eventhandler.py", line 91, in call
+    self.functions[e][0](name, *list(self.functions[e][2])+list(args), **kwargs)
+  File "C:\Python\mcpython\mcpython_7\state\game.py", line 40, in on_event
+    self.draw_label()
+  File "C:\Python\mcpython\mcpython_7\state\game.py", line 267, in draw_label
+    chunkprovider = G.model.worldprovider.getChunkProviderFor((cx, cz))
+AttributeError: 'Model' object has no attribute 'worldprovider'
+  File "C:/Python/mcpython/mcpython_7/main.py", line 121, in <module>
+    main()
+  File "C:/Python/mcpython/mcpython_7/main.py", line 112, in main
+    pyglet.app.run()
+  File "C:\Python\interpretter\Python37-32_1\lib\site-packages\pyglet\app\__init__.py", line 138, in run
+    event_loop.run()
+  File "C:\Python\interpretter\Python37-32_1\lib\site-packages\pyglet\app\base.py", line 142, in run
+    self._run()
+  File "C:\Python\interpretter\Python37-32_1\lib\site-packages\pyglet\app\base.py", line 154, in _run
+    timeout = self.idle()
+  File "C:\Python\interpretter\Python37-32_1\lib\site-packages\pyglet\app\base.py", line 281, in idle
+    window.dispatch_event('on_draw')
+  File "C:\Python\interpretter\Python37-32_1\lib\site-packages\pyglet\window\__init__.py", line 1232, in dispatch_event
+    if EventDispatcher.dispatch_event(self, *args) != False:
+  File "C:\Python\interpretter\Python37-32_1\lib\site-packages\pyglet\event.py", line 367, in dispatch_event
+    if getattr(self, event_type)(*args):
+  File "C:\Python\mcpython\mcpython_7\window.py", line 375, in on_draw
+    G.eventhandler.call("opengl:draw2d")
+  File "C:\Python\mcpython\mcpython_7\eventhandler.py", line 93, in call
+    exceptionhandler.add_traceback()
+  File "C:\Python\mcpython\mcpython_7\exceptionhandler.py", line 45, in add_traceback
+    traceback.print_stack(file=f)
+
+stamp: [2019][3 ][9 ][19][1 ][35]
+an exception occured
+
+called via:Traceback (most recent call last):
+  File "C:\Python\mcpython\mcpython_7\eventhandler.py", line 91, in call
+    self.functions[e][0](name, *list(self.functions[e][2])+list(args), **kwargs)
+  File "C:\Python\mcpython\mcpython_7\state\game.py", line 40, in on_event
+    self.draw_label()
+  File "C:\Python\mcpython\mcpython_7\state\game.py", line 267, in draw_label
+    chunkprovider = G.model.worldprovider.getChunkProviderFor((cx, cz))
+AttributeError: 'Model' object has no attribute 'worldprovider'
+  File "C:/Python/mcpython/mcpython_7/main.py", line 121, in <module>
+    main()
+  File "C:/Python/mcpython/mcpython_7/main.py", line 112, in main
+    pyglet.app.run()
+  File "C:\Python\interpretter\Python37-32_1\lib\site-packages\pyglet\app\__init__.py", line 138, in run
+    event_loop.run()
+  File "C:\Python\interpretter\Python37-32_1\lib\site-packages\pyglet\app\base.py", line 142, in run
+    self._run()
+  File "C:\Python\interpretter\Python37-32_1\lib\site-packages\pyglet\app\base.py", line 154, in _run
+    timeout = self.idle()
+  File "C:\Python\interpretter\Python37-32_1\lib\site-packages\pyglet\app\base.py", line 281, in idle
+    window.dispatch_event('on_draw')
+  File "C:\Python\interpretter\Python37-32_1\lib\site-packages\pyglet\window\__init__.py", line 1232, in dispatch_event
+    if EventDispatcher.dispatch_event(self, *args) != False:
+  File "C:\Python\interpretter\Python37-32_1\lib\site-packages\pyglet\event.py", line 367, in dispatch_event
+    if getattr(self, event_type)(*args):
+  File "C:\Python\mcpython\mcpython_7\window.py", line 375, in on_draw
+    G.eventhandler.call("opengl:draw2d")
+  File "C:\Python\mcpython\mcpython_7\eventhandler.py", line 93, in call
+    exceptionhandler.add_traceback()
+  File "C:\Python\mcpython\mcpython_7\exceptionhandler.py", line 45, in add_traceback
+    traceback.print_stack(file=f)
+
+stamp: [2019][3 ][9 ][19][1 ][36]
+an exception occured
+
+called via:Traceback (most recent call last):
+  File "C:\Python\mcpython\mcpython_7\eventhandler.py", line 91, in call
+    self.functions[e][0](name, *list(self.functions[e][2])+list(args), **kwargs)
+  File "C:\Python\mcpython\mcpython_7\state\game.py", line 40, in on_event
+    self.draw_label()
+  File "C:\Python\mcpython\mcpython_7\state\game.py", line 267, in draw_label
+    chunkprovider = G.model.worldprovider.getChunkProviderFor((cx, cz))
+AttributeError: 'Model' object has no attribute 'worldprovider'
+  File "C:/Python/mcpython/mcpython_7/main.py", line 121, in <module>
+    main()
+  File "C:/Python/mcpython/mcpython_7/main.py", line 112, in main
+    pyglet.app.run()
+  File "C:\Python\interpretter\Python37-32_1\lib\site-packages\pyglet\app\__init__.py", line 138, in run
+    event_loop.run()
+  File "C:\Python\interpretter\Python37-32_1\lib\site-packages\pyglet\app\base.py", line 142, in run
+    self._run()
+  File "C:\Python\interpretter\Python37-32_1\lib\site-packages\pyglet\app\base.py", line 154, in _run
+    timeout = self.idle()
+  File "C:\Python\interpretter\Python37-32_1\lib\site-packages\pyglet\app\base.py", line 281, in idle
+    window.dispatch_event('on_draw')
+  File "C:\Python\interpretter\Python37-32_1\lib\site-packages\pyglet\window\__init__.py", line 1232, in dispatch_event
+    if EventDispatcher.dispatch_event(self, *args) != False:
+  File "C:\Python\interpretter\Python37-32_1\lib\site-packages\pyglet\event.py", line 367, in dispatch_event
+    if getattr(self, event_type)(*args):
+  File "C:\Python\mcpython\mcpython_7\window.py", line 375, in on_draw
+    G.eventhandler.call("opengl:draw2d")
+  File "C:\Python\mcpython\mcpython_7\eventhandler.py", line 93, in call
+    exceptionhandler.add_traceback()
+  File "C:\Python\mcpython\mcpython_7\exceptionhandler.py", line 45, in add_traceback
+    traceback.print_stack(file=f)
+
+stamp: [2019][3 ][9 ][19][1 ][36]
+an exception occured
+
+called via:Traceback (most recent call last):
+  File "C:\Python\mcpython\mcpython_7\eventhandler.py", line 91, in call
+    self.functions[e][0](name, *list(self.functions[e][2])+list(args), **kwargs)
+  File "C:\Python\mcpython\mcpython_7\state\game.py", line 40, in on_event
+    self.draw_label()
+  File "C:\Python\mcpython\mcpython_7\state\game.py", line 267, in draw_label
+    chunkprovider = G.model.worldprovider.getChunkProviderFor((cx, cz))
+AttributeError: 'Model' object has no attribute 'worldprovider'
+  File "C:/Python/mcpython/mcpython_7/main.py", line 121, in <module>
+    main()
+  File "C:/Python/mcpython/mcpython_7/main.py", line 112, in main
+    pyglet.app.run()
+  File "C:\Python\interpretter\Python37-32_1\lib\site-packages\pyglet\app\__init__.py", line 138, in run
+    event_loop.run()
+  File "C:\Python\interpretter\Python37-32_1\lib\site-packages\pyglet\app\base.py", line 142, in run
+    self._run()
+  File "C:\Python\interpretter\Python37-32_1\lib\site-packages\pyglet\app\base.py", line 154, in _run
+    timeout = self.idle()
+  File "C:\Python\interpretter\Python37-32_1\lib\site-packages\pyglet\app\base.py", line 281, in idle
+    window.dispatch_event('on_draw')
+  File "C:\Python\interpretter\Python37-32_1\lib\site-packages\pyglet\window\__init__.py", line 1232, in dispatch_event
+    if EventDispatcher.dispatch_event(self, *args) != False:
+  File "C:\Python\interpretter\Python37-32_1\lib\site-packages\pyglet\event.py", line 367, in dispatch_event
+    if getattr(self, event_type)(*args):
+  File "C:\Python\mcpython\mcpython_7\window.py", line 375, in on_draw
+    G.eventhandler.call("opengl:draw2d")
+  File "C:\Python\mcpython\mcpython_7\eventhandler.py", line 93, in call
+    exceptionhandler.add_traceback()
+  File "C:\Python\mcpython\mcpython_7\exceptionhandler.py", line 45, in add_traceback
+    traceback.print_stack(file=f)
+
+stamp: [2019][3 ][9 ][19][1 ][36]
+an exception occured
+
+called via:Traceback (most recent call last):
+  File "C:\Python\mcpython\mcpython_7\eventhandler.py", line 91, in call
+    self.functions[e][0](name, *list(self.functions[e][2])+list(args), **kwargs)
+  File "C:\Python\mcpython\mcpython_7\state\game.py", line 40, in on_event
+    self.draw_label()
+  File "C:\Python\mcpython\mcpython_7\state\game.py", line 267, in draw_label
+    chunkprovider = G.model.worldprovider.getChunkProviderFor((cx, cz))
+AttributeError: 'Model' object has no attribute 'worldprovider'
+  File "C:/Python/mcpython/mcpython_7/main.py", line 121, in <module>
+    main()
+  File "C:/Python/mcpython/mcpython_7/main.py", line 112, in main
+    pyglet.app.run()
+  File "C:\Python\interpretter\Python37-32_1\lib\site-packages\pyglet\app\__init__.py", line 138, in run
+    event_loop.run()
+  File "C:\Python\interpretter\Python37-32_1\lib\site-packages\pyglet\app\base.py", line 142, in run
+    self._run()
+  File "C:\Python\interpretter\Python37-32_1\lib\site-packages\pyglet\app\base.py", line 154, in _run
+    timeout = self.idle()
+  File "C:\Python\interpretter\Python37-32_1\lib\site-packages\pyglet\app\base.py", line 281, in idle
+    window.dispatch_event('on_draw')
+  File "C:\Python\interpretter\Python37-32_1\lib\site-packages\pyglet\window\__init__.py", line 1232, in dispatch_event
+    if EventDispatcher.dispatch_event(self, *args) != False:
+  File "C:\Python\interpretter\Python37-32_1\lib\site-packages\pyglet\event.py", line 367, in dispatch_event
+    if getattr(self, event_type)(*args):
+  File "C:\Python\mcpython\mcpython_7\window.py", line 375, in on_draw
+    G.eventhandler.call("opengl:draw2d")
+  File "C:\Python\mcpython\mcpython_7\eventhandler.py", line 93, in call
+    exceptionhandler.add_traceback()
+  File "C:\Python\mcpython\mcpython_7\exceptionhandler.py", line 45, in add_traceback
+    traceback.print_stack(file=f)
+
+stamp: [2019][3 ][9 ][19][1 ][36]
+an exception occured
+
+called via:Traceback (most recent call last):
+  File "C:\Python\mcpython\mcpython_7\eventhandler.py", line 91, in call
+    self.functions[e][0](name, *list(self.functions[e][2])+list(args), **kwargs)
+  File "C:\Python\mcpython\mcpython_7\state\game.py", line 40, in on_event
+    self.draw_label()
+  File "C:\Python\mcpython\mcpython_7\state\game.py", line 267, in draw_label
+    chunkprovider = G.model.worldprovider.getChunkProviderFor((cx, cz))
+AttributeError: 'Model' object has no attribute 'worldprovider'
+  File "C:/Python/mcpython/mcpython_7/main.py", line 121, in <module>
+    main()
+  File "C:/Python/mcpython/mcpython_7/main.py", line 112, in main
+    pyglet.app.run()
+  File "C:\Python\interpretter\Python37-32_1\lib\site-packages\pyglet\app\__init__.py", line 138, in run
+    event_loop.run()
+  File "C:\Python\interpretter\Python37-32_1\lib\site-packages\pyglet\app\base.py", line 142, in run
+    self._run()
+  File "C:\Python\interpretter\Python37-32_1\lib\site-packages\pyglet\app\base.py", line 154, in _run
+    timeout = self.idle()
+  File "C:\Python\interpretter\Python37-32_1\lib\site-packages\pyglet\app\base.py", line 281, in idle
+    window.dispatch_event('on_draw')
+  File "C:\Python\interpretter\Python37-32_1\lib\site-packages\pyglet\window\__init__.py", line 1232, in dispatch_event
+    if EventDispatcher.dispatch_event(self, *args) != False:
+  File "C:\Python\interpretter\Python37-32_1\lib\site-packages\pyglet\event.py", line 367, in dispatch_event
+    if getattr(self, event_type)(*args):
+  File "C:\Python\mcpython\mcpython_7\window.py", line 375, in on_draw
+    G.eventhandler.call("opengl:draw2d")
+  File "C:\Python\mcpython\mcpython_7\eventhandler.py", line 93, in call
+    exceptionhandler.add_traceback()
+  File "C:\Python\mcpython\mcpython_7\exceptionhandler.py", line 45, in add_traceback
+    traceback.print_stack(file=f)
+
+stamp: [2019][3 ][9 ][19][1 ][36]
+an exception occured
+
+called via:Traceback (most recent call last):
+  File "C:\Python\mcpython\mcpython_7\eventhandler.py", line 91, in call
+    self.functions[e][0](name, *list(self.functions[e][2])+list(args), **kwargs)
+  File "C:\Python\mcpython\mcpython_7\state\game.py", line 40, in on_event
+    self.draw_label()
+  File "C:\Python\mcpython\mcpython_7\state\game.py", line 267, in draw_label
+    chunkprovider = G.model.worldprovider.getChunkProviderFor((cx, cz))
+AttributeError: 'Model' object has no attribute 'worldprovider'
+  File "C:/Python/mcpython/mcpython_7/main.py", line 121, in <module>
+    main()
+  File "C:/Python/mcpython/mcpython_7/main.py", line 112, in main
+    pyglet.app.run()
+  File "C:\Python\interpretter\Python37-32_1\lib\site-packages\pyglet\app\__init__.py", line 138, in run
+    event_loop.run()
+  File "C:\Python\interpretter\Python37-32_1\lib\site-packages\pyglet\app\base.py", line 142, in run
+    self._run()
+  File "C:\Python\interpretter\Python37-32_1\lib\site-packages\pyglet\app\base.py", line 154, in _run
+    timeout = self.idle()
+  File "C:\Python\interpretter\Python37-32_1\lib\site-packages\pyglet\app\base.py", line 281, in idle
+    window.dispatch_event('on_draw')
+  File "C:\Python\interpretter\Python37-32_1\lib\site-packages\pyglet\window\__init__.py", line 1232, in dispatch_event
+    if EventDispatcher.dispatch_event(self, *args) != False:
+  File "C:\Python\interpretter\Python37-32_1\lib\site-packages\pyglet\event.py", line 367, in dispatch_event
+    if getattr(self, event_type)(*args):
+  File "C:\Python\mcpython\mcpython_7\window.py", line 375, in on_draw
+    G.eventhandler.call("opengl:draw2d")
+  File "C:\Python\mcpython\mcpython_7\eventhandler.py", line 93, in call
+    exceptionhandler.add_traceback()
+  File "C:\Python\mcpython\mcpython_7\exceptionhandler.py", line 45, in add_traceback
+    traceback.print_stack(file=f)
+
+stamp: [2019][3 ][9 ][19][1 ][36]
+an exception occured
+
+called via:Traceback (most recent call last):
+  File "C:\Python\mcpython\mcpython_7\eventhandler.py", line 91, in call
+    self.functions[e][0](name, *list(self.functions[e][2])+list(args), **kwargs)
+  File "C:\Python\mcpython\mcpython_7\state\game.py", line 40, in on_event
+    self.draw_label()
+  File "C:\Python\mcpython\mcpython_7\state\game.py", line 267, in draw_label
+    chunkprovider = G.model.worldprovider.getChunkProviderFor((cx, cz))
+AttributeError: 'Model' object has no attribute 'worldprovider'
+  File "C:/Python/mcpython/mcpython_7/main.py", line 121, in <module>
+    main()
+  File "C:/Python/mcpython/mcpython_7/main.py", line 112, in main
+    pyglet.app.run()
+  File "C:\Python\interpretter\Python37-32_1\lib\site-packages\pyglet\app\__init__.py", line 138, in run
+    event_loop.run()
+  File "C:\Python\interpretter\Python37-32_1\lib\site-packages\pyglet\app\base.py", line 142, in run
+    self._run()
+  File "C:\Python\interpretter\Python37-32_1\lib\site-packages\pyglet\app\base.py", line 154, in _run
+    timeout = self.idle()
+  File "C:\Python\interpretter\Python37-32_1\lib\site-packages\pyglet\app\base.py", line 281, in idle
+    window.dispatch_event('on_draw')
+  File "C:\Python\interpretter\Python37-32_1\lib\site-packages\pyglet\window\__init__.py", line 1232, in dispatch_event
+    if EventDispatcher.dispatch_event(self, *args) != False:
+  File "C:\Python\interpretter\Python37-32_1\lib\site-packages\pyglet\event.py", line 367, in dispatch_event
+    if getattr(self, event_type)(*args):
+  File "C:\Python\mcpython\mcpython_7\window.py", line 375, in on_draw
+    G.eventhandler.call("opengl:draw2d")
+  File "C:\Python\mcpython\mcpython_7\eventhandler.py", line 93, in call
+    exceptionhandler.add_traceback()
+  File "C:\Python\mcpython\mcpython_7\exceptionhandler.py", line 45, in add_traceback
+    traceback.print_stack(file=f)
+
+
+--------------------------------------------------------------------------------
+- MCPYTHON VERSION 19W10A                                                      -
+--------------------------------------------------------------------------------
+informations about os, location, version etc.
+:timestamp | [2019][3 ][9 ][19][2 ][2 ]
+:versionid | 2019100
+:G.local | C:/Python/mcpython/mcpython_7
+:os name | Windows
+:os version | 10.0.17763
+:os proccessor | AMD64 Family 21 Model 112 Stepping 0, AuthenticAMD
+:os proccessor architektur | ('32bit', 'WindowsPE')
+:pyglet | 1.3.2
+
+--------------------------------------------------------------------------------
+- MCPYTHON VERSION 19W10A                                                      -
+--------------------------------------------------------------------------------
+informations about os, location, version etc.
+:timestamp | [2019][3 ][9 ][19][5 ][28]
+:versionid | 2019100
+:G.local | C:/Python/mcpython/mcpython_7
+:os name | Windows
+:os version | 10.0.17763
+:os proccessor | AMD64 Family 21 Model 112 Stepping 0, AuthenticAMD
+:os proccessor architektur | ('32bit', 'WindowsPE')
+:pyglet | 1.3.2
+
+--------------------------------------------------------------------------------
+- MCPYTHON VERSION 19W10A                                                      -
+--------------------------------------------------------------------------------
+informations about os, location, version etc.
+:timestamp | [2019][3 ][9 ][19][20][22]
+:versionid | 2019100
+:G.local | C:/Python/mcpython/mcpython_7
+:os name | Windows
+:os version | 10.0.17763
+:os proccessor | AMD64 Family 21 Model 112 Stepping 0, AuthenticAMD
+:os proccessor architektur | ('32bit', 'WindowsPE')
+:pyglet | 1.3.2
+
+--------------------------------------------------------------------------------
+- MCPYTHON VERSION 19W10A                                                      -
+--------------------------------------------------------------------------------
+informations about os, location, version etc.
+:timestamp | [2019][3 ][9 ][19][20][49]
+:versionid | 2019100
+:G.local | C:/Python/mcpython/mcpython_7
+:os name | Windows
+:os version | 10.0.17763
+:os proccessor | AMD64 Family 21 Model 112 Stepping 0, AuthenticAMD
+:os proccessor architektur | ('32bit', 'WindowsPE')
+:pyglet | 1.3.2
+
+--------------------------------------------------------------------------------
+- MCPYTHON VERSION 19W10A                                                      -
+--------------------------------------------------------------------------------
+informations about os, location, version etc.
+:timestamp | [2019][3 ][9 ][19][26][7 ]
+:versionid | 2019100
+:G.local | C:/Python/mcpython/mcpython_7
+:os name | Windows
+:os version | 10.0.17763
+:os proccessor | AMD64 Family 21 Model 112 Stepping 0, AuthenticAMD
+:os proccessor architektur | ('32bit', 'WindowsPE')
+:pyglet | 1.3.2
+
+--------------------------------------------------------------------------------
+- MCPYTHON VERSION 19W10A                                                      -
+--------------------------------------------------------------------------------
+informations about os, location, version etc.
+:timestamp | [2019][3 ][9 ][19][38][32]
+:versionid | 2019100
+:G.local | C:/Python/mcpython/mcpython_7
+:os name | Windows
+:os version | 10.0.17763
+:os proccessor | AMD64 Family 21 Model 112 Stepping 0, AuthenticAMD
+:os proccessor architektur | ('32bit', 'WindowsPE')
+:pyglet | 1.3.2
+
+--------------------------------------------------------------------------------
+- MCPYTHON VERSION 19W10A                                                      -
+--------------------------------------------------------------------------------
+informations about os, location, version etc.
+:timestamp | [2019][3 ][9 ][19][41][47]
+:versionid | 2019100
+:G.local | C:/Python/mcpython/mcpython_7
+:os name | Windows
+:os version | 10.0.17763
+:os proccessor | AMD64 Family 21 Model 112 Stepping 0, AuthenticAMD
+:os proccessor architektur | ('32bit', 'WindowsPE')
+:pyglet | 1.3.2
+
+--------------------------------------------------------------------------------
+- MCPYTHON VERSION 19W10A                                                      -
+--------------------------------------------------------------------------------
+informations about os, location, version etc.
+:timestamp | [2019][3 ][9 ][19][45][34]
+:versionid | 2019100
+:G.local | C:/Python/mcpython/mcpython_7
+:os name | Windows
+:os version | 10.0.17763
+:os proccessor | AMD64 Family 21 Model 112 Stepping 0, AuthenticAMD
+:os proccessor architektur | ('32bit', 'WindowsPE')
+:pyglet | 1.3.2
+
+--------------------------------------------------------------------------------
+- MCPYTHON VERSION 19W10A                                                      -
+--------------------------------------------------------------------------------
+informations about os, location, version etc.
+:timestamp | [2019][3 ][9 ][19][49][45]
+:versionid | 2019100
+:G.local | C:/Python/mcpython/mcpython_7
+:os name | Windows
+:os version | 10.0.17763
+:os proccessor | AMD64 Family 21 Model 112 Stepping 0, AuthenticAMD
+:os proccessor architektur | ('32bit', 'WindowsPE')
+:pyglet | 1.3.2
+
+--------------------------------------------------------------------------------
+- MCPYTHON VERSION 19W10A                                                      -
+--------------------------------------------------------------------------------
+informations about os, location, version etc.
+:timestamp | [2019][3 ][9 ][19][51][41]
+:versionid | 2019100
+:G.local | C:/Python/mcpython/mcpython_7
+:os name | Windows
+:os version | 10.0.17763
+:os proccessor | AMD64 Family 21 Model 112 Stepping 0, AuthenticAMD
+:os proccessor architektur | ('32bit', 'WindowsPE')
+:pyglet | 1.3.2
+
+--------------------------------------------------------------------------------
+- MCPYTHON VERSION 19W10A                                                      -
+--------------------------------------------------------------------------------
+informations about os, location, version etc.
+:timestamp | [2019][3 ][9 ][19][54][37]
+:versionid | 2019100
+:G.local | C:/Python/mcpython/mcpython_7
+:os name | Windows
+:os version | 10.0.17763
+:os proccessor | AMD64 Family 21 Model 112 Stepping 0, AuthenticAMD
+:os proccessor architektur | ('32bit', 'WindowsPE')
+:pyglet | 1.3.2
+
+--------------------------------------------------------------------------------
+- MCPYTHON VERSION 19W10A                                                      -
+--------------------------------------------------------------------------------
+informations about os, location, version etc.
+:timestamp | [2019][3 ][9 ][19][58][39]
+:versionid | 2019100
+:G.local | C:/Python/mcpython/mcpython_7
+:os name | Windows
+:os version | 10.0.17763
+:os proccessor | AMD64 Family 21 Model 112 Stepping 0, AuthenticAMD
+:os proccessor architektur | ('32bit', 'WindowsPE')
+:pyglet | 1.3.2
+
+--------------------------------------------------------------------------------
+- MCPYTHON VERSION 19W10A                                                      -
+--------------------------------------------------------------------------------
+informations about os, location, version etc.
+:timestamp | [2019][3 ][9 ][20][2 ][22]
+:versionid | 2019100
+:G.local | C:/Python/mcpython/mcpython_7
+:os name | Windows
+:os version | 10.0.17763
+:os proccessor | AMD64 Family 21 Model 112 Stepping 0, AuthenticAMD
+:os proccessor architektur | ('32bit', 'WindowsPE')
+:pyglet | 1.3.2
+
+--------------------------------------------------------------------------------
+- MCPYTHON VERSION 19W10A                                                      -
+--------------------------------------------------------------------------------
+informations about os, location, version etc.
+:timestamp | [2019][3 ][9 ][20][2 ][44]
+:versionid | 2019100
+:G.local | C:/Python/mcpython/mcpython_7
+:os name | Windows
+:os version | 10.0.17763
+:os proccessor | AMD64 Family 21 Model 112 Stepping 0, AuthenticAMD
+:os proccessor architektur | ('32bit', 'WindowsPE')
+:pyglet | 1.3.2
+
+--------------------------------------------------------------------------------
+- MCPYTHON VERSION 19W10A                                                      -
+--------------------------------------------------------------------------------
+informations about os, location, version etc.
+:timestamp | [2019][3 ][9 ][20][3 ][57]
+:versionid | 2019100
+:G.local | C:/Python/mcpython/mcpython_7
+:os name | Windows
+:os version | 10.0.17763
+:os proccessor | AMD64 Family 21 Model 112 Stepping 0, AuthenticAMD
+:os proccessor architektur | ('32bit', 'WindowsPE')
+:pyglet | 1.3.2
+
+--------------------------------------------------------------------------------
+- MCPYTHON VERSION 19W10A                                                      -
+--------------------------------------------------------------------------------
+informations about os, location, version etc.
+:timestamp | [2019][3 ][9 ][20][5 ][1 ]
+:versionid | 2019100
+:G.local | C:/Python/mcpython/mcpython_7
+:os name | Windows
+:os version | 10.0.17763
+:os proccessor | AMD64 Family 21 Model 112 Stepping 0, AuthenticAMD
+:os proccessor architektur | ('32bit', 'WindowsPE')
+:pyglet | 1.3.2
+
+--------------------------------------------------------------------------------
+- MCPYTHON VERSION 19W10A                                                      -
+--------------------------------------------------------------------------------
+informations about os, location, version etc.
+:timestamp | [2019][3 ][9 ][20][26][53]
+:versionid | 2019100
+:G.local | C:/Python/mcpython/mcpython_7
+:os name | Windows
+:os version | 10.0.17763
+:os proccessor | AMD64 Family 21 Model 112 Stepping 0, AuthenticAMD
+:os proccessor architektur | ('32bit', 'WindowsPE')
+:pyglet | 1.3.2
+
+--------------------------------------------------------------------------------
+- MCPYTHON VERSION 19W10A                                                      -
+--------------------------------------------------------------------------------
+informations about os, location, version etc.
+:timestamp | [2019][3 ][9 ][21][9 ][21]
+:versionid | 2019100
+:G.local | C:/Python/mcpython/mcpython_7
+:os name | Windows
+:os version | 10.0.17763
+:os proccessor | AMD64 Family 21 Model 112 Stepping 0, AuthenticAMD
+:os proccessor architektur | ('32bit', 'WindowsPE')
+:pyglet | 1.3.2
+
+--------------------------------------------------------------------------------
+- MCPYTHON VERSION 19W10A                                                      -
+--------------------------------------------------------------------------------
+informations about os, location, version etc.
+:timestamp | [2019][3 ][9 ][21][9 ][59]
+:versionid | 2019100
+:G.local | C:/Python/mcpython/mcpython_7
+:os name | Windows
+:os version | 10.0.17763
+:os proccessor | AMD64 Family 21 Model 112 Stepping 0, AuthenticAMD
+:os proccessor architektur | ('32bit', 'WindowsPE')
+:pyglet | 1.3.2
+
+--------------------------------------------------------------------------------
+- MCPYTHON VERSION 19W10A                                                      -
+--------------------------------------------------------------------------------
+informations about os, location, version etc.
+:timestamp | [2019][3 ][9 ][21][15][20]
+:versionid | 2019100
+:G.local | C:/Python/mcpython/mcpython_7
+:os name | Windows
+:os version | 10.0.17763
+:os proccessor | AMD64 Family 21 Model 112 Stepping 0, AuthenticAMD
+:os proccessor architektur | ('32bit', 'WindowsPE')
+:pyglet | 1.3.2
+
+--------------------------------------------------------------------------------
+- MCPYTHON VERSION 19W10A                                                      -
+--------------------------------------------------------------------------------
+informations about os, location, version etc.
+:timestamp | [2019][3 ][9 ][21][17][53]
+:versionid | 2019100
+:G.local | C:/Python/mcpython/mcpython_7
+:os name | Windows
+:os version | 10.0.17763
+:os proccessor | AMD64 Family 21 Model 112 Stepping 0, AuthenticAMD
+:os proccessor architektur | ('32bit', 'WindowsPE')
+:pyglet | 1.3.2
+
+--------------------------------------------------------------------------------
+- MCPYTHON VERSION 19W10A                                                      -
+--------------------------------------------------------------------------------
+informations about os, location, version etc.
+:timestamp | [2019][3 ][9 ][21][18][15]
+:versionid | 2019100
+:G.local | C:/Python/mcpython/mcpython_7
+:os name | Windows
+:os version | 10.0.17763
+:os proccessor | AMD64 Family 21 Model 112 Stepping 0, AuthenticAMD
+:os proccessor architektur | ('32bit', 'WindowsPE')
+:pyglet | 1.3.2
+
+--------------------------------------------------------------------------------
+- MCPYTHON VERSION 19W10A                                                      -
+--------------------------------------------------------------------------------
+informations about os, location, version etc.
+:timestamp | [2019][3 ][9 ][21][18][55]
+:versionid | 2019100
+:G.local | C:/Python/mcpython/mcpython_7
+:os name | Windows
+:os version | 10.0.17763
+:os proccessor | AMD64 Family 21 Model 112 Stepping 0, AuthenticAMD
+:os proccessor architektur | ('32bit', 'WindowsPE')
+:pyglet | 1.3.2
+
+--------------------------------------------------------------------------------
+- MCPYTHON VERSION 19W10A                                                      -
+--------------------------------------------------------------------------------
+informations about os, location, version etc.
+:timestamp | [2019][3 ][9 ][21][19][27]
+:versionid | 2019100
+:G.local | C:/Python/mcpython/mcpython_7
+:os name | Windows
+:os version | 10.0.17763
+:os proccessor | AMD64 Family 21 Model 112 Stepping 0, AuthenticAMD
+:os proccessor architektur | ('32bit', 'WindowsPE')
+:pyglet | 1.3.2
+
+--------------------------------------------------------------------------------
+- MCPYTHON VERSION 19W10A                                                      -
+--------------------------------------------------------------------------------
+informations about os, location, version etc.
+:timestamp | [2019][3 ][9 ][21][33][12]
+:versionid | 2019100
+:G.local | C:/Python/mcpython/mcpython_7
+:os name | Windows
+:os version | 10.0.17763
+:os proccessor | AMD64 Family 21 Model 112 Stepping 0, AuthenticAMD
+:os proccessor architektur | ('32bit', 'WindowsPE')
+:pyglet | 1.3.2
+
+--------------------------------------------------------------------------------
+- MCPYTHON VERSION 19W10A                                                      -
+--------------------------------------------------------------------------------
+informations about os, location, version etc.
+:timestamp | [2019][3 ][9 ][21][33][29]
+:versionid | 2019100
+:G.local | C:/Python/mcpython/mcpython_7
+:os name | Windows
+:os version | 10.0.17763
+:os proccessor | AMD64 Family 21 Model 112 Stepping 0, AuthenticAMD
+:os proccessor architektur | ('32bit', 'WindowsPE')
+:pyglet | 1.3.2
+
+--------------------------------------------------------------------------------
+- MCPYTHON VERSION 19W10A                                                      -
+--------------------------------------------------------------------------------
+informations about os, location, version etc.
+:timestamp | [2019][3 ][9 ][21][34][39]
+:versionid | 2019100
+:G.local | C:/Python/mcpython/mcpython_7
+:os name | Windows
+:os version | 10.0.17763
+:os proccessor | AMD64 Family 21 Model 112 Stepping 0, AuthenticAMD
+:os proccessor architektur | ('32bit', 'WindowsPE')
+:pyglet | 1.3.2
+
+--------------------------------------------------------------------------------
+- MCPYTHON VERSION 19W10A                                                      -
+--------------------------------------------------------------------------------
+informations about os, location, version etc.
+:timestamp | [2019][3 ][9 ][21][38][6 ]
+:versionid | 2019100
+:G.local | C:/Python/mcpython/mcpython_7
+:os name | Windows
+:os version | 10.0.17763
+:os proccessor | AMD64 Family 21 Model 112 Stepping 0, AuthenticAMD
+:os proccessor architektur | ('32bit', 'WindowsPE')
+:pyglet | 1.3.2
+
+--------------------------------------------------------------------------------
+- MCPYTHON VERSION 19W10A                                                      -
+--------------------------------------------------------------------------------
+informations about os, location, version etc.
+:timestamp | [2019][3 ][9 ][21][38][48]
+:versionid | 2019100
+:G.local | C:/Python/mcpython/mcpython_7
+:os name | Windows
+:os version | 10.0.17763
+:os proccessor | AMD64 Family 21 Model 112 Stepping 0, AuthenticAMD
+:os proccessor architektur | ('32bit', 'WindowsPE')
+:pyglet | 1.3.2
+
+--------------------------------------------------------------------------------
+- MCPYTHON VERSION 19W10A                                                      -
+--------------------------------------------------------------------------------
+informations about os, location, version etc.
+:timestamp | [2019][3 ][9 ][21][43][12]
+:versionid | 2019100
+:G.local | C:/Python/mcpython/mcpython_7
+:os name | Windows
+:os version | 10.0.17763
+:os proccessor | AMD64 Family 21 Model 112 Stepping 0, AuthenticAMD
+:os proccessor architektur | ('32bit', 'WindowsPE')
+:pyglet | 1.3.2
+
+--------------------------------------------------------------------------------
+- MCPYTHON VERSION 19W10A                                                      -
+--------------------------------------------------------------------------------
+informations about os, location, version etc.
+:timestamp | [2019][3 ][9 ][21][49][57]
+:versionid | 2019100
+:G.local | C:/Python/mcpython/mcpython_7
+:os name | Windows
+:os version | 10.0.17763
+:os proccessor | AMD64 Family 21 Model 112 Stepping 0, AuthenticAMD
+:os proccessor architektur | ('32bit', 'WindowsPE')
+:pyglet | 1.3.2
+
+--------------------------------------------------------------------------------
+- MCPYTHON VERSION 19W10A                                                      -
+--------------------------------------------------------------------------------
+informations about os, location, version etc.
+:timestamp | [2019][3 ][9 ][21][55][38]
+:versionid | 2019100
+:G.local | C:/Python/mcpython/mcpython_7
+:os name | Windows
+:os version | 10.0.17763
+:os proccessor | AMD64 Family 21 Model 112 Stepping 0, AuthenticAMD
+:os proccessor architektur | ('32bit', 'WindowsPE')
+:pyglet | 1.3.2
+
+--------------------------------------------------------------------------------
+- MCPYTHON VERSION 19W10A                                                      -
+--------------------------------------------------------------------------------
+informations about os, location, version etc.
+:timestamp | [2019][3 ][9 ][21][57][1 ]
+:versionid | 2019100
+:G.local | C:/Python/mcpython/mcpython_7
+:os name | Windows
+:os version | 10.0.17763
+:os proccessor | AMD64 Family 21 Model 112 Stepping 0, AuthenticAMD
+:os proccessor architektur | ('32bit', 'WindowsPE')
+:pyglet | 1.3.2
+
+--------------------------------------------------------------------------------
+- MCPYTHON VERSION 19W10A                                                      -
+--------------------------------------------------------------------------------
+informations about os, location, version etc.
+:timestamp | [2019][3 ][9 ][21][58][3 ]
+:versionid | 2019100
+:G.local | C:/Python/mcpython/mcpython_7
+:os name | Windows
+:os version | 10.0.17763
+:os proccessor | AMD64 Family 21 Model 112 Stepping 0, AuthenticAMD
+:os proccessor architektur | ('32bit', 'WindowsPE')
+:pyglet | 1.3.2
+
+--------------------------------------------------------------------------------
+- MCPYTHON VERSION 19W10A                                                      -
+--------------------------------------------------------------------------------
+informations about os, location, version etc.
+:timestamp | [2019][3 ][9 ][21][59][34]
+:versionid | 2019100
+:G.local | C:/Python/mcpython/mcpython_7
+:os name | Windows
+:os version | 10.0.17763
+:os proccessor | AMD64 Family 21 Model 112 Stepping 0, AuthenticAMD
+:os proccessor architektur | ('32bit', 'WindowsPE')
+:pyglet | 1.3.2
+
+--------------------------------------------------------------------------------
+- MCPYTHON VERSION 19W10A                                                      -
+--------------------------------------------------------------------------------
+informations about os, location, version etc.
+:timestamp | [2019][3 ][9 ][22][1 ][3 ]
+:versionid | 2019100
+:G.local | C:/Python/mcpython/mcpython_7
+:os name | Windows
+:os version | 10.0.17763
+:os proccessor | AMD64 Family 21 Model 112 Stepping 0, AuthenticAMD
+:os proccessor architektur | ('32bit', 'WindowsPE')
+:pyglet | 1.3.2
+
+--------------------------------------------------------------------------------
+- MCPYTHON VERSION 19W10A                                                      -
+--------------------------------------------------------------------------------
+informations about os, location, version etc.
+:timestamp | [2019][3 ][9 ][22][1 ][50]
+:versionid | 2019100
+:G.local | C:/Python/mcpython/mcpython_7
+:os name | Windows
+:os version | 10.0.17763
+:os proccessor | AMD64 Family 21 Model 112 Stepping 0, AuthenticAMD
+:os proccessor architektur | ('32bit', 'WindowsPE')
+:pyglet | 1.3.2
+
+--------------------------------------------------------------------------------
+- MCPYTHON VERSION 19W10A                                                      -
+--------------------------------------------------------------------------------
+informations about os, location, version etc.
+:timestamp | [2019][3 ][9 ][22][3 ][27]
+:versionid | 2019100
+:G.local | C:/Python/mcpython/mcpython_7
+:os name | Windows
+:os version | 10.0.17763
+:os proccessor | AMD64 Family 21 Model 112 Stepping 0, AuthenticAMD
+:os proccessor architektur | ('32bit', 'WindowsPE')
+:pyglet | 1.3.2
+
+--------------------------------------------------------------------------------
+- MCPYTHON VERSION 19W10A                                                      -
+--------------------------------------------------------------------------------
+informations about os, location, version etc.
+:timestamp | [2019][3 ][9 ][22][8 ][43]
+:versionid | 2019100
+:G.local | C:/Python/mcpython/mcpython_7
+:os name | Windows
+:os version | 10.0.17763
+:os proccessor | AMD64 Family 21 Model 112 Stepping 0, AuthenticAMD
+:os proccessor architektur | ('32bit', 'WindowsPE')
+:pyglet | 1.3.2
+
+--------------------------------------------------------------------------------
+- MCPYTHON VERSION 19W10A                                                      -
+--------------------------------------------------------------------------------
+informations about os, location, version etc.
+:timestamp | [2019][3 ][9 ][22][10][15]
+:versionid | 2019100
+:G.local | C:/Python/mcpython/mcpython_7
+:os name | Windows
+:os version | 10.0.17763
+:os proccessor | AMD64 Family 21 Model 112 Stepping 0, AuthenticAMD
+:os proccessor architektur | ('32bit', 'WindowsPE')
+:pyglet | 1.3.2
+
+--------------------------------------------------------------------------------
+- MCPYTHON VERSION 19W10A                                                      -
+--------------------------------------------------------------------------------
+informations about os, location, version etc.
+:timestamp | [2019][3 ][9 ][22][16][16]
+:versionid | 2019100
+:G.local | C:/Python/mcpython/mcpython_7
+:os name | Windows
+:os version | 10.0.17763
+:os proccessor | AMD64 Family 21 Model 112 Stepping 0, AuthenticAMD
+:os proccessor architektur | ('32bit', 'WindowsPE')
+:pyglet | 1.3.2
+
+--------------------------------------------------------------------------------
+- MCPYTHON VERSION 19W10A                                                      -
+--------------------------------------------------------------------------------
+informations about os, location, version etc.
+:timestamp | [2019][3 ][9 ][22][22][16]
+:versionid | 2019100
+:G.local | C:/Python/mcpython/mcpython_7
+:os name | Windows
+:os version | 10.0.17763
+:os proccessor | AMD64 Family 21 Model 112 Stepping 0, AuthenticAMD
+:os proccessor architektur | ('32bit', 'WindowsPE')
+:pyglet | 1.3.2
+
+--------------------------------------------------------------------------------
+- MCPYTHON VERSION 19W10A                                                      -
+--------------------------------------------------------------------------------
+informations about os, location, version etc.
+:timestamp | [2019][3 ][9 ][22][24][23]
+:versionid | 2019100
+:G.local | C:/Python/mcpython/mcpython_7
+:os name | Windows
+:os version | 10.0.17763
+:os proccessor | AMD64 Family 21 Model 112 Stepping 0, AuthenticAMD
+:os proccessor architektur | ('32bit', 'WindowsPE')
+:pyglet | 1.3.2
+
+--------------------------------------------------------------------------------
+- MCPYTHON VERSION 19W10A                                                      -
+--------------------------------------------------------------------------------
+informations about os, location, version etc.
+:timestamp | [2019][3 ][9 ][22][25][21]
+:versionid | 2019100
+:G.local | C:/Python/mcpython/mcpython_7
+:os name | Windows
+:os version | 10.0.17763
+:os proccessor | AMD64 Family 21 Model 112 Stepping 0, AuthenticAMD
+:os proccessor architektur | ('32bit', 'WindowsPE')
+:pyglet | 1.3.2
+
+--------------------------------------------------------------------------------
+- MCPYTHON VERSION 19W10A                                                      -
+--------------------------------------------------------------------------------
+informations about os, location, version etc.
+:timestamp | [2019][3 ][9 ][22][32][21]
+:versionid | 2019100
+:G.local | C:/Python/mcpython/mcpython_7
+:os name | Windows
+:os version | 10.0.17763
+:os proccessor | AMD64 Family 21 Model 112 Stepping 0, AuthenticAMD
+:os proccessor architektur | ('32bit', 'WindowsPE')
+:pyglet | 1.3.2
+
+--------------------------------------------------------------------------------
+- MCPYTHON VERSION 19W10A                                                      -
+--------------------------------------------------------------------------------
+informations about os, location, version etc.
+:timestamp | [2019][3 ][9 ][22][35][42]
+:versionid | 2019100
+:G.local | C:/Python/mcpython/mcpython_7
+:os name | Windows
+:os version | 10.0.17763
+:os proccessor | AMD64 Family 21 Model 112 Stepping 0, AuthenticAMD
+:os proccessor architektur | ('32bit', 'WindowsPE')
+:pyglet | 1.3.2
+
+--------------------------------------------------------------------------------
+- MCPYTHON VERSION 19W10A                                                      -
+--------------------------------------------------------------------------------
+informations about os, location, version etc.
+:timestamp | [2019][3 ][9 ][22][39][33]
+:versionid | 2019100
+:G.local | C:/Python/mcpython/mcpython_7
+:os name | Windows
+:os version | 10.0.17763
+:os proccessor | AMD64 Family 21 Model 112 Stepping 0, AuthenticAMD
+:os proccessor architektur | ('32bit', 'WindowsPE')
+:pyglet | 1.3.2
+
+--------------------------------------------------------------------------------
+- MCPYTHON VERSION 19W10A                                                      -
+--------------------------------------------------------------------------------
+informations about os, location, version etc.
+:timestamp | [2019][3 ][9 ][22][41][12]
+:versionid | 2019100
+:G.local | C:/Python/mcpython/mcpython_7
+:os name | Windows
+:os version | 10.0.17763
+:os proccessor | AMD64 Family 21 Model 112 Stepping 0, AuthenticAMD
+:os proccessor architektur | ('32bit', 'WindowsPE')
+:pyglet | 1.3.2
+
+--------------------------------------------------------------------------------
+- MCPYTHON VERSION 19W10A                                                      -
+--------------------------------------------------------------------------------
+informations about os, location, version etc.
+:timestamp | [2019][3 ][9 ][22][42][37]
+:versionid | 2019100
+:G.local | C:/Python/mcpython/mcpython_7
+:os name | Windows
+:os version | 10.0.17763
+:os proccessor | AMD64 Family 21 Model 112 Stepping 0, AuthenticAMD
+:os proccessor architektur | ('32bit', 'WindowsPE')
+:pyglet | 1.3.2
+
+--------------------------------------------------------------------------------
+- MCPYTHON VERSION 19W10A                                                      -
+--------------------------------------------------------------------------------
+informations about os, location, version etc.
+:timestamp | [2019][3 ][10][6 ][57][31]
+:versionid | 2019100
+:G.local | C:/Python/mcpython/mcpython_7
+:os name | Windows
+:os version | 10.0.17763
+:os proccessor | AMD64 Family 21 Model 112 Stepping 0, AuthenticAMD
+:os proccessor architektur | ('32bit', 'WindowsPE')
+:pyglet | 1.3.2
+
+--------------------------------------------------------------------------------
+- MCPYTHON VERSION 19W10A                                                      -
+--------------------------------------------------------------------------------
+informations about os, location, version etc.
+:timestamp | [2019][3 ][10][7 ][2 ][56]
+:versionid | 2019100
+:G.local | C:/Python/mcpython/mcpython_7
+:os name | Windows
+:os version | 10.0.17763
+:os proccessor | AMD64 Family 21 Model 112 Stepping 0, AuthenticAMD
+:os proccessor architektur | ('32bit', 'WindowsPE')
+:pyglet | 1.3.2
+
+--------------------------------------------------------------------------------
+- MCPYTHON VERSION 19W10A                                                      -
+--------------------------------------------------------------------------------
+informations about os, location, version etc.
+:timestamp | [2019][3 ][10][7 ][5 ][37]
+:versionid | 2019100
+:G.local | C:/Python/mcpython/mcpython_7
+:os name | Windows
+:os version | 10.0.17763
+:os proccessor | AMD64 Family 21 Model 112 Stepping 0, AuthenticAMD
+:os proccessor architektur | ('32bit', 'WindowsPE')
+:pyglet | 1.3.2
+
+--------------------------------------------------------------------------------
+- MCPYTHON VERSION 19W10A                                                      -
+--------------------------------------------------------------------------------
+informations about os, location, version etc.
+:timestamp | [2019][3 ][10][7 ][8 ][54]
+:versionid | 2019100
+:G.local | C:/Python/mcpython/mcpython_7
+:os name | Windows
+:os version | 10.0.17763
+:os proccessor | AMD64 Family 21 Model 112 Stepping 0, AuthenticAMD
+:os proccessor architektur | ('32bit', 'WindowsPE')
+:pyglet | 1.3.2
+
+--------------------------------------------------------------------------------
+- MCPYTHON VERSION 19W10A                                                      -
+--------------------------------------------------------------------------------
+informations about os, location, version etc.
+:timestamp | [2019][3 ][10][7 ][15][43]
+:versionid | 2019100
+:G.local | C:/Python/mcpython/mcpython_7
+:os name | Windows
+:os version | 10.0.17763
+:os proccessor | AMD64 Family 21 Model 112 Stepping 0, AuthenticAMD
+:os proccessor architektur | ('32bit', 'WindowsPE')
+:pyglet | 1.3.2
+
+--------------------------------------------------------------------------------
+- MCPYTHON VERSION 19W10A                                                      -
+--------------------------------------------------------------------------------
+informations about os, location, version etc.
+:timestamp | [2019][3 ][10][7 ][20][45]
+:versionid | 2019100
+:G.local | C:/Python/mcpython/mcpython_7
+:os name | Windows
+:os version | 10.0.17763
+:os proccessor | AMD64 Family 21 Model 112 Stepping 0, AuthenticAMD
+:os proccessor architektur | ('32bit', 'WindowsPE')
+:pyglet | 1.3.2
+
+--------------------------------------------------------------------------------
+- MCPYTHON VERSION 19W10A                                                      -
+--------------------------------------------------------------------------------
+informations about os, location, version etc.
+:timestamp | [2019][3 ][10][7 ][24][12]
+:versionid | 2019100
+:G.local | C:/Python/mcpython/mcpython_7
+:os name | Windows
+:os version | 10.0.17763
+:os proccessor | AMD64 Family 21 Model 112 Stepping 0, AuthenticAMD
+:os proccessor architektur | ('32bit', 'WindowsPE')
+:pyglet | 1.3.2
+
+--------------------------------------------------------------------------------
+- MCPYTHON VERSION 19W10A                                                      -
+--------------------------------------------------------------------------------
+informations about os, location, version etc.
+:timestamp | [2019][3 ][10][7 ][33][22]
+:versionid | 2019100
+:G.local | C:/Python/mcpython/mcpython_7
+:os name | Windows
+:os version | 10.0.17763
+:os proccessor | AMD64 Family 21 Model 112 Stepping 0, AuthenticAMD
+:os proccessor architektur | ('32bit', 'WindowsPE')
+:pyglet | 1.3.2
+stamp: [2019][3 ][10][7 ][34][10]
+an exception occured
+
+called via:Traceback (most recent call last):
+  File "C:\Python\mcpython\mcpython_7\eventhandler.py", line 91, in call
+    self.functions[e][0](name, *list(self.functions[e][2])+list(args), **kwargs)
+  File "C:\Python\mcpython\mcpython_7\state\game.py", line 195, in on_event
+    G.player.selectedinventoryslot].stack.item.getBlockName(), blocksettedto=block)
+  File "C:\Python\mcpython\mcpython_7\world\model.py", line 133, in add_block
+    self.show_block(position)
+  File "C:\Python\mcpython\mcpython_7\world\model.py", line 211, in show_block
+    self._show_block(position, block)
+  File "C:\Python\mcpython\mcpython_7\world\model.py", line 227, in _show_block
+    block.show()
+  File "C:\Python\mcpython\mcpython_7\Block\block.py", line 261, in show
+    self.blockclass.show(self)
+  File "C:\Python\mcpython\mcpython_7\Block\block.py", line 117, in show
+    G.modelhandler.models[inst.getModelFile()].addToBatch(inst, inst.position)
+KeyError: 'minecraft:purpur_pillar'
+  File "C:/Python/mcpython/mcpython_7/main.py", line 121, in <module>
+    main()
+  File "C:/Python/mcpython/mcpython_7/main.py", line 112, in main
+    pyglet.app.run()
+  File "C:\Python\interpretter\Python37-32_1\lib\site-packages\pyglet\app\__init__.py", line 138, in run
+    event_loop.run()
+  File "C:\Python\interpretter\Python37-32_1\lib\site-packages\pyglet\app\base.py", line 142, in run
+    self._run()
+  File "C:\Python\interpretter\Python37-32_1\lib\site-packages\pyglet\app\base.py", line 155, in _run
+    platform_event_loop.step(timeout)
+  File "C:\Python\interpretter\Python37-32_1\lib\site-packages\pyglet\app\win32.py", line 123, in step
+    _user32.DispatchMessageW(ctypes.byref(msg))
+  File "C:\Python\interpretter\Python37-32_1\lib\site-packages\pyglet\window\win32\__init__.py", line 639, in f
+    result = event_handler(msg, wParam, lParam)
+  File "C:\Python\interpretter\Python37-32_1\lib\site-packages\pyglet\window\win32\__init__.py", line 758, in _event_raw_input
+    self._get_modifiers())
+  File "C:\Python\interpretter\Python37-32_1\lib\site-packages\pyglet\window\__init__.py", line 1232, in dispatch_event
+    if EventDispatcher.dispatch_event(self, *args) != False:
+  File "C:\Python\interpretter\Python37-32_1\lib\site-packages\pyglet\event.py", line 367, in dispatch_event
+    if getattr(self, event_type)(*args):
+  File "C:\Python\mcpython\mcpython_7\window.py", line 278, in on_mouse_press
+    G.eventhandler.call("core:window:on_mouse_press", x, y, button, modifiers)
+  File "C:\Python\mcpython\mcpython_7\eventhandler.py", line 93, in call
+    exceptionhandler.add_traceback()
+  File "C:\Python\mcpython\mcpython_7\exceptionhandler.py", line 45, in add_traceback
+    traceback.print_stack(file=f)
+
+stamp: [2019][3 ][10][7 ][34][12]
+an exception occured
+
+called via:Traceback (most recent call last):
+  File "C:\Python\mcpython\mcpython_7\eventhandler.py", line 91, in call
+    self.functions[e][0](name, *list(self.functions[e][2])+list(args), **kwargs)
+  File "C:\Python\mcpython\mcpython_7\state\game.py", line 225, in on_event
+    G.model.remove_block(block.position)
+  File "C:\Python\mcpython\mcpython_7\world\model.py", line 155, in remove_block
+    self.hide_block(position, chunkprovider.world[position])
+  File "C:\Python\mcpython\mcpython_7\world\model.py", line 246, in hide_block
+    self._hide_block(position, block)
+  File "C:\Python\mcpython\mcpython_7\world\model.py", line 254, in _hide_block
+    block.hide()
+  File "C:\Python\mcpython\mcpython_7\Block\block.py", line 264, in hide
+    self.blockclass.hide(self)
+  File "C:\Python\mcpython\mcpython_7\Block\block.py", line 123, in hide
+    G.modelhandler.models[inst.getModelFile()].removeFromBatch(inst, inst.position)
+KeyError: 'minecraft:purpur_pillar'
+  File "C:/Python/mcpython/mcpython_7/main.py", line 121, in <module>
+    main()
+  File "C:/Python/mcpython/mcpython_7/main.py", line 112, in main
+    pyglet.app.run()
+  File "C:\Python\interpretter\Python37-32_1\lib\site-packages\pyglet\app\__init__.py", line 138, in run
+    event_loop.run()
+  File "C:\Python\interpretter\Python37-32_1\lib\site-packages\pyglet\app\base.py", line 142, in run
+    self._run()
+  File "C:\Python\interpretter\Python37-32_1\lib\site-packages\pyglet\app\base.py", line 155, in _run
+    platform_event_loop.step(timeout)
+  File "C:\Python\interpretter\Python37-32_1\lib\site-packages\pyglet\app\win32.py", line 123, in step
+    _user32.DispatchMessageW(ctypes.byref(msg))
+  File "C:\Python\interpretter\Python37-32_1\lib\site-packages\pyglet\window\win32\__init__.py", line 639, in f
+    result = event_handler(msg, wParam, lParam)
+  File "C:\Python\interpretter\Python37-32_1\lib\site-packages\pyglet\window\win32\__init__.py", line 750, in _event_raw_input
+    self._get_modifiers())
+  File "C:\Python\interpretter\Python37-32_1\lib\site-packages\pyglet\window\__init__.py", line 1232, in dispatch_event
+    if EventDispatcher.dispatch_event(self, *args) != False:
+  File "C:\Python\interpretter\Python37-32_1\lib\site-packages\pyglet\event.py", line 367, in dispatch_event
+    if getattr(self, event_type)(*args):
+  File "C:\Python\mcpython\mcpython_7\window.py", line 278, in on_mouse_press
+    G.eventhandler.call("core:window:on_mouse_press", x, y, button, modifiers)
+  File "C:\Python\mcpython\mcpython_7\eventhandler.py", line 93, in call
+    exceptionhandler.add_traceback()
+  File "C:\Python\mcpython\mcpython_7\exceptionhandler.py", line 45, in add_traceback
+    traceback.print_stack(file=f)
+
+stamp: [2019][3 ][10][7 ][34][13]
+an exception occured
+
+called via:Traceback (most recent call last):
+  File "C:\Python\mcpython\mcpython_7\eventhandler.py", line 91, in call
+    self.functions[e][0](name, *list(self.functions[e][2])+list(args), **kwargs)
+  File "C:\Python\mcpython\mcpython_7\state\game.py", line 195, in on_event
+    G.player.selectedinventoryslot].stack.item.getBlockName(), blocksettedto=block)
+  File "C:\Python\mcpython\mcpython_7\world\model.py", line 133, in add_block
+    self.show_block(position)
+  File "C:\Python\mcpython\mcpython_7\world\model.py", line 211, in show_block
+    self._show_block(position, block)
+  File "C:\Python\mcpython\mcpython_7\world\model.py", line 227, in _show_block
+    block.show()
+  File "C:\Python\mcpython\mcpython_7\Block\block.py", line 261, in show
+    self.blockclass.show(self)
+  File "C:\Python\mcpython\mcpython_7\Block\block.py", line 117, in show
+    G.modelhandler.models[inst.getModelFile()].addToBatch(inst, inst.position)
+KeyError: 'minecraft:purpur_pillar'
+  File "C:/Python/mcpython/mcpython_7/main.py", line 121, in <module>
+    main()
+  File "C:/Python/mcpython/mcpython_7/main.py", line 112, in main
+    pyglet.app.run()
+  File "C:\Python\interpretter\Python37-32_1\lib\site-packages\pyglet\app\__init__.py", line 138, in run
+    event_loop.run()
+  File "C:\Python\interpretter\Python37-32_1\lib\site-packages\pyglet\app\base.py", line 142, in run
+    self._run()
+  File "C:\Python\interpretter\Python37-32_1\lib\site-packages\pyglet\app\base.py", line 155, in _run
+    platform_event_loop.step(timeout)
+  File "C:\Python\interpretter\Python37-32_1\lib\site-packages\pyglet\app\win32.py", line 123, in step
+    _user32.DispatchMessageW(ctypes.byref(msg))
+  File "C:\Python\interpretter\Python37-32_1\lib\site-packages\pyglet\window\win32\__init__.py", line 639, in f
+    result = event_handler(msg, wParam, lParam)
+  File "C:\Python\interpretter\Python37-32_1\lib\site-packages\pyglet\window\win32\__init__.py", line 758, in _event_raw_input
+    self._get_modifiers())
+  File "C:\Python\interpretter\Python37-32_1\lib\site-packages\pyglet\window\__init__.py", line 1232, in dispatch_event
+    if EventDispatcher.dispatch_event(self, *args) != False:
+  File "C:\Python\interpretter\Python37-32_1\lib\site-packages\pyglet\event.py", line 367, in dispatch_event
+    if getattr(self, event_type)(*args):
+  File "C:\Python\mcpython\mcpython_7\window.py", line 278, in on_mouse_press
+    G.eventhandler.call("core:window:on_mouse_press", x, y, button, modifiers)
+  File "C:\Python\mcpython\mcpython_7\eventhandler.py", line 93, in call
+    exceptionhandler.add_traceback()
+  File "C:\Python\mcpython\mcpython_7\exceptionhandler.py", line 45, in add_traceback
+    traceback.print_stack(file=f)
+
+
+--------------------------------------------------------------------------------
+- MCPYTHON VERSION 19W10A                                                      -
+--------------------------------------------------------------------------------
+informations about os, location, version etc.
+:timestamp | [2019][3 ][10][7 ][37][25]
+:versionid | 2019100
+:G.local | C:/Python/mcpython/mcpython_7
+:os name | Windows
+:os version | 10.0.17763
+:os proccessor | AMD64 Family 21 Model 112 Stepping 0, AuthenticAMD
+:os proccessor architektur | ('32bit', 'WindowsPE')
+:pyglet | 1.3.2
+
+--------------------------------------------------------------------------------
+- MCPYTHON VERSION 19W10A                                                      -
+--------------------------------------------------------------------------------
+informations about os, location, version etc.
+:timestamp | [2019][3 ][10][8 ][21][14]
+:versionid | 2019100
+:G.local | C:/Python/mcpython/mcpython_7
+:os name | Windows
+:os version | 10.0.17763
+:os proccessor | AMD64 Family 21 Model 112 Stepping 0, AuthenticAMD
+:os proccessor architektur | ('32bit', 'WindowsPE')
+:pyglet | 1.3.2
+
+--------------------------------------------------------------------------------
+- MCPYTHON VERSION 19W10A                                                      -
+--------------------------------------------------------------------------------
+informations about os, location, version etc.
+:timestamp | [2019][3 ][10][8 ][23][42]
+:versionid | 2019100
+:G.local | C:/Python/mcpython/mcpython_7
+:os name | Windows
+:os version | 10.0.17763
+:os proccessor | AMD64 Family 21 Model 112 Stepping 0, AuthenticAMD
+:os proccessor architektur | ('32bit', 'WindowsPE')
+:pyglet | 1.3.2
+
+--------------------------------------------------------------------------------
+- MCPYTHON VERSION 19W10A                                                      -
+--------------------------------------------------------------------------------
+informations about os, location, version etc.
+:timestamp | [2019][3 ][10][8 ][26][21]
+:versionid | 2019100
+:G.local | C:/Python/mcpython/mcpython_7
+:os name | Windows
+:os version | 10.0.17763
+:os proccessor | AMD64 Family 21 Model 112 Stepping 0, AuthenticAMD
+:os proccessor architektur | ('32bit', 'WindowsPE')
+:pyglet | 1.3.2
+
+--------------------------------------------------------------------------------
+- MCPYTHON VERSION 19W10A                                                      -
+--------------------------------------------------------------------------------
+informations about os, location, version etc.
+:timestamp | [2019][3 ][10][8 ][27][57]
+:versionid | 2019100
+:G.local | C:/Python/mcpython/mcpython_7
+:os name | Windows
+:os version | 10.0.17763
+:os proccessor | AMD64 Family 21 Model 112 Stepping 0, AuthenticAMD
+:os proccessor architektur | ('32bit', 'WindowsPE')
+:pyglet | 1.3.2
+
+--------------------------------------------------------------------------------
+- MCPYTHON VERSION 19W10A                                                      -
+--------------------------------------------------------------------------------
+informations about os, location, version etc.
+:timestamp | [2019][3 ][10][8 ][31][43]
+:versionid | 2019100
+:G.local | C:/Python/mcpython/mcpython_7
+:os name | Windows
+:os version | 10.0.17763
+:os proccessor | AMD64 Family 21 Model 112 Stepping 0, AuthenticAMD
+:os proccessor architektur | ('32bit', 'WindowsPE')
+:pyglet | 1.3.2
+
+--------------------------------------------------------------------------------
+- MCPYTHON VERSION 19W10A                                                      -
+--------------------------------------------------------------------------------
+informations about os, location, version etc.
+:timestamp | [2019][3 ][10][8 ][35][52]
+:versionid | 2019100
+:G.local | C:/Python/mcpython/mcpython_7
+:os name | Windows
+:os version | 10.0.17763
+:os proccessor | AMD64 Family 21 Model 112 Stepping 0, AuthenticAMD
+:os proccessor architektur | ('32bit', 'WindowsPE')
+:pyglet | 1.3.2
+
+--------------------------------------------------------------------------------
+- MCPYTHON VERSION 19W10A                                                      -
+--------------------------------------------------------------------------------
+informations about os, location, version etc.
+:timestamp | [2019][3 ][10][8 ][39][25]
+:versionid | 2019100
+:G.local | C:/Python/mcpython/mcpython_7
+:os name | Windows
+:os version | 10.0.17763
+:os proccessor | AMD64 Family 21 Model 112 Stepping 0, AuthenticAMD
+:os proccessor architektur | ('32bit', 'WindowsPE')
+:pyglet | 1.3.2
+
+--------------------------------------------------------------------------------
+- MCPYTHON VERSION 19W10A                                                      -
+--------------------------------------------------------------------------------
+informations about os, location, version etc.
+:timestamp | [2019][3 ][10][8 ][42][16]
+:versionid | 2019100
+:G.local | C:/Python/mcpython/mcpython_7
+:os name | Windows
+:os version | 10.0.17763
+:os proccessor | AMD64 Family 21 Model 112 Stepping 0, AuthenticAMD
+:os proccessor architektur | ('32bit', 'WindowsPE')
+:pyglet | 1.3.2
+
+--------------------------------------------------------------------------------
+- MCPYTHON VERSION 19W10A                                                      -
+--------------------------------------------------------------------------------
+informations about os, location, version etc.
+:timestamp | [2019][3 ][10][8 ][43][34]
+:versionid | 2019100
+:G.local | C:/Python/mcpython/mcpython_7
+:os name | Windows
+:os version | 10.0.17763
+:os proccessor | AMD64 Family 21 Model 112 Stepping 0, AuthenticAMD
+:os proccessor architektur | ('32bit', 'WindowsPE')
+:pyglet | 1.3.2
+
+--------------------------------------------------------------------------------
+- MCPYTHON VERSION 19W10A                                                      -
+--------------------------------------------------------------------------------
+informations about os, location, version etc.
+:timestamp | [2019][3 ][10][8 ][57][2 ]
+:versionid | 2019100
+:G.local | C:/Python/mcpython/mcpython_7
+:os name | Windows
+:os version | 10.0.17763
+:os proccessor | AMD64 Family 21 Model 112 Stepping 0, AuthenticAMD
+:os proccessor architektur | ('32bit', 'WindowsPE')
+:pyglet | 1.3.2

@@ -1,0 +1,13 @@
+{
+  "blockaddress": "minecraft:bone_block",
+  "default": {
+    "name": "cube:log",
+    "side_texture_files": [
+      "assets/minecraft/textures/block/bone_block_side.png",
+      "assets/minecraft/textures/block/bone_block_top.png"
+    ],
+    "blockname": "minecraft/bone_block",
+    "FRONT_INDEX": 1,
+    "SIDE_INDEX": 0
+  }
+}

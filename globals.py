@@ -116,6 +116,9 @@ modelhandler = None
 #system for what you give us to run with
 argumenthandler = None
 
+# system for scoreboards
+scoreboardhandler = None
+
 
 import random
 #the seed of the world. is overwritten when loading an world

@@ -1,0 +1,18 @@
+{
+  "blockaddress": "minecraft:pumpkin",
+  "default": {
+    "name": "cube:full",
+    "side_texture_files": ["assets/minecraft/textures/block/pumpkin_side.png",
+    "assets/minecraft/textures/block/pumpkin_top.png"],
+    "blockname": "minecraft/pumpkin",
+    "side_indexes": [0, 0, 1, 1, 1, 1]
+  },
+  "carved": {
+    "name": "cube:full",
+    "side_texture_files": ["assets/minecraft/textures/block/pumpkin_side.png",
+    "assets/minecraft/textures/block/pumpkin_top.png",
+    "assets/minecraft/textures/block/carved_pumpkin.png"],
+    "blockname": "minecraft/carved_pumpkin",
+    "side_indexes": [2, 2, 0, 1, 1, 1]
+  }
+}

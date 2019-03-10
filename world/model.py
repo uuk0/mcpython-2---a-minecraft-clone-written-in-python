@@ -88,7 +88,8 @@ class Model(object):
                         nx, ny, nz = x + dx, y + dy, z + dz
                         cx, _, cz = mathhelper.sectorize((nx, ny, nz))
                         chunkprovider = G.player.dimension.worldprovider.getChunkProviderFor((cx, cz))
-                        if (((nx, ny, nz) not in chunkprovider.world or G.GAMESTAGE != 3) and
+                        if (((nx, ny, nz) not in chunkprovider.world or G.GAMESTAGE != 3 or
+                             not chunkprovider.world[(nx, ny, nz)].isFullBlock()) and
                             (nx, ny, nz) not in G.BlockGenerateTasks) and not (flag1 and not chunkprovider.generated):
                             return True
                         else:
@@ -341,5 +342,6 @@ class Model(object):
             for e in chunkprovider.world.copy().keys():
                 self.remove_block(e, immediate=True)
         G.entityhandler.entitys = []
+        G.scoreboardhandler.clear()
         G.eventhandler.call("core:model:cleanup")
 

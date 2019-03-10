@@ -1,0 +1,21 @@
+{
+  "blockaddress": "minecraft:prismarin",
+  "dark_prismarine": {
+    "name": "cube:full",
+    "side_texture_files": ["assets/minecraft/textures/block/dark_prismarine.png"],
+    "blockname": "minecraft/dark_prismarine",
+    "side_indexes": [0, 0, 0, 0, 0, 0]
+  },
+  "prismarine": {
+    "name": "cube:full",
+    "side_texture_files": ["assets/minecraft/textures/block/prismarine.png"],
+    "blockname": "minecraft/prismarine",
+    "side_indexes": [0, 0, 0, 0, 0, 0]
+  },
+  "prismarine_bricks": {
+    "name": "cube:full",
+    "side_texture_files": ["assets/minecraft/textures/block/prismarine_bricks.png"],
+    "blockname": "minecraft/prismarine_bricks",
+    "side_indexes": [0, 0, 0, 0, 0, 0]
+  }
+}
