@@ -3,7 +3,7 @@ import mathhelper
 import modsystem.ModLoader
 
 
-class RedNetherBrick(G.blockclass):
+class RedNetherBrick(G.iblockclass):
     def getName(self):
         return "minecraft:red_nether_bricks"
 

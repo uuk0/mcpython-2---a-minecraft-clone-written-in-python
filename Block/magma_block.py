@@ -3,7 +3,7 @@ import mathhelper
 import modsystem.ModLoader
 
 
-class MagmaBlock(G.blockclass):
+class MagmaBlock(G.iblockclass):
     def getName(self):
         return "minecraft:magma_block"
 

@@ -3,7 +3,7 @@ import log
 import modsystem.ModLoader
 
 
-class Terracotta(G.blockclass):
+class Terracotta(G.iblockclass):
     @staticmethod
     def getColor():
         return ""
@@ -18,7 +18,7 @@ class Terracotta(G.blockclass):
         return self.getColor()
 
 
-class GlazedTerracotta(G.blockclass):
+class GlazedTerracotta(G.iblockclass):
     @staticmethod
     def getColor():
         return ""
@@ -33,7 +33,7 @@ class GlazedTerracotta(G.blockclass):
         return self.getColor()
 
 
-class RawTerracotta(G.blockclass):
+class RawTerracotta(G.iblockclass):
     def getName(self):
         return "minecraft:terracotta"
 

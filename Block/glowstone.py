@@ -3,7 +3,7 @@ import mathhelper
 import modsystem.ModLoader
 
 
-class Glowstone(G.blockclass):
+class Glowstone(G.iblockclass):
     """class for glowstone"""
     def getName(self):
         return "minecraft:glowstone"
@@ -11,7 +11,7 @@ class Glowstone(G.blockclass):
     def getModelFile(self, inst):
         return "minecraft:glowstone"
 
-    def isBrakeAble(self, inst):
+    def isBrakeAbleInGamemode0(self, inst):
         return True
 
 

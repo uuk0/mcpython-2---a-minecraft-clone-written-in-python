@@ -71,6 +71,8 @@ import command.Command
 import soundhandler
 import state.State
 import Block.block, Item.item, entity.entity, Inventory.inventory
+import textures.modelloader
+import textures.TextureAtlas
 import gen.biomes.Biome
 import state
 import state.State

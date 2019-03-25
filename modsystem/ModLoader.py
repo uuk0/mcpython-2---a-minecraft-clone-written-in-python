@@ -12,6 +12,9 @@ import modsystem.ModSorter as ModSorter
 
 import argumentparser
 
+import textures.TextureAtlas
+import textures.util
+
 
 EVENTLIST = {}  # modname -> ModEventEntry
 EVENTENTRYLIST = {}  # eventname -> entry
@@ -87,6 +90,7 @@ class ModLoader:
                 sys.path.append(os.path.dirname(e))
         self.mdirs = []
         self.events = []
+        self.activemodpath = None
 
     def get_mod_by_name(self, name):
         return self.mods[name]
@@ -97,10 +101,7 @@ class ModLoader:
     def register(self, mod):
         """registrates a new mod to registry"""
         if not type(mod) == Mod: mod = mod()
-        if any([x+"/"+mod.getFileName() in self.mdirs for x in self.externaldirs]):
-            for e in self.externaldirs:
-                if e+"/"+mod.getFileName() in self.mdirs:
-                    mod.path = e+"/"+mod.getFileName()
+        mod.path = self.activemodpath
         self.mods[mod.getName()] = mod
 
     def getModDirs(self):
@@ -125,6 +126,7 @@ class ModLoader:
         G.MODS.append(modsystem.main)
         for e in mods:
             # log.printMSG("[MODLOADER][INFO] found mod in " + str(e[1]))
+            self.activemodpath = e[1]
             if e[0] == 2:
                 G.MODS.append(importlib.import_module("mods." + e[2].split(".")[0]))
             elif e[0] == 1:
@@ -135,6 +137,7 @@ class ModLoader:
                     pass
             else:
                 raise RuntimeError()
+        self.activemodpath = None
 
     def checkDependecies(self):
         flag = True
@@ -231,10 +234,15 @@ ModEventCallEntry("game:registry:on_argument_parser_type_registrate_periode")
 
 textureentry = ModEventCallEntry("game:registry:on_texture_registrate_periode")
 
+
+@textureentry
+def on_start(entry):
+    textures.util.construct()
+
+
 @textureentry
 def on_end(entry):
-    G.imageatlashandler.init()
-
+    G.textureatlashandler.generate()
 
 ModEventCallEntry("game:registry:on_sound_registrate_periode")
 ModEventCallEntry("game:registry:on_block_registrate_periode")
@@ -245,18 +253,15 @@ def on_end(entry):
     """
     we know that this is stuff around blocks, but we need it to make shour we have all items registrated
     """
-    import texturslitcher
-    texturslitcher.ImageAtlas.save_image(
-        texturslitcher.ImageAtlas.resize(
-            texturslitcher.ImageAtlas.load_image(G.local + "/assets/minecraft/textures/missingtexture.png"),
-            (32, 32)
-        ),
-        G.local + "/assets/minecraft/textures/missingtexture.png"
-    )
-    for b in G.blockhandler.blocks:
-        if not G.blockhandler.blocks[b].getName() in G.itemhandler.itemclasses:
-            if G.blockhandler.blocks[b].getItemFile(None):
-                file = G.blockhandler.blocks[b].getItemFile(None)
+    import textures.util
+    textures.util.resize_file(G.local + "/assets/minecraft/textures/missingtexture.png",
+                              (32, 32),
+                              G.local + "/assets/minecraft/textures/missingtexture.png")
+    for b in tuple(G.blockhandler.blocktable.values()):
+        b = b.getName()
+        if not G.blockhandler.blocktable[b].getName() in G.itemhandler.itemclasses:
+            if G.blockhandler.blocktable[b].getItemFile(None):
+                file = G.blockhandler.blocktable[b].getItemFile(None)
                 block = b
 
                 class MissingItem(G.itemclass):
@@ -266,7 +271,7 @@ def on_end(entry):
                 G.itemhandler.register(MissingItem)
             else:
                 log.printMSG("[CHECK][ERROR] block " + str(b) + " has no ITEM!!!")
-                register_l_block(G.blockhandler.blocks[b].getName())
+                register_l_block(G.blockhandler.blocktable[b].getName())
 
 
 def register_l_block(blockname):
@@ -340,6 +345,21 @@ class Mod:
         """
         return []
 
+    def subsrcibe_event(self, name, text="is doing stuff", add=[]):
+        return SubscribtionHolder(self, name, text, add=add)
+
 
 G.mod = Mod
+
+
+class SubscribtionHolder:
+    def __init__(self, mod, eventname, eventtext, add=[]):
+        self.mod = mod
+        self.eventname = eventname
+        self.eventtext = eventtext
+        self.add = add
+
+    def __call__(self, *args, **kwargs):
+        ModEventEntry(self.eventname, self.mod.getName(),
+                      info=self.eventtext, add=self.add)(*args, **kwargs)
 

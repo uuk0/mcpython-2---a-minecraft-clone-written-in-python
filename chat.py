@@ -22,12 +22,14 @@ KEYDICT = [{key.A:"a", key.B:"b", key.C:"c", key.D:"d", key.E:"e", key.F:"f", ke
            {key.Q:"@", key.E:"€", key.M:"µ", key._7:"{", key._8:"[", key._9:"]", key._0:"}", key.PLUS:"~",
             940597837824:"\\"}]
 
+
 for e in KEYDICT[0].keys():
     if KEYDICT[0][e].upper() != KEYDICT[0][e] and e not in [940597837824]:
         KEYDICT[1][e] = KEYDICT[0][e].upper()
 
-"""class for chat"""
+
 class chat(G.inventoryclass):
+    """class for chat"""
     def __init__(self):
         G.inventoryclass.__init__(self)
         G.chat = self
@@ -35,6 +37,8 @@ class chat(G.inventoryclass):
         self.lable = pyglet.text.Label('', font_name='Arial', font_size=18,
             x=10, y=30, anchor_x='left', anchor_y='top',
             color=(0, 0, 0, 255))
+        self.commandindex = []
+        self.commandpointer = -1
 
     """draws the chat. only used by eventhandler"""
     def draw(self):
@@ -47,13 +51,25 @@ class chat(G.inventoryclass):
         if symbol in [65505]: return
         elif symbol == config.Keyboard.CLOSE:
             self.text = ""
+            self.commandpointer = -1
             G.inventoryhandler.hide_inventory(self.id)
         elif symbol == config.Keyboard.RUN_COMMAND:
             self.execute(self.text)
+            self.commandindex.insert(0, self.text)
+            self.commandpointer = -1
             self.text = ""
             G.inventoryhandler.hide_inventory(self.id)
         elif symbol == 65288:
             self.text = self.text[:-1]
+        elif symbol == 65507 and (modifiers & key.MOD_CTRL):
+            clipboard.copy(self.text)
+            return
+        elif symbol == key.V and (modifiers & key.MOD_CTRL):
+            self.text += clipboard.paste()
+            return
+        elif symbol == key.D and (modifiers & key.MOD_CTRL):
+            self.text = ""
+            return
         elif (modifiers & key.MOD_SHIFT):
             if symbol in KEYDICT[1]:
                 self.text += KEYDICT[1][symbol]
@@ -66,14 +82,18 @@ class chat(G.inventoryclass):
                 log.printMSG("[CHAT][ERROR] can't interpet key " + str(symbol)+" with ALT")
         elif symbol in KEYDICT[0]:
             self.text += KEYDICT[0][symbol]
-        elif symbol == 65507 and modifiers & 18:
-            clipboard.copy(self.text)
-        elif symbol == key.V and modifiers & 18:
-            self.text += clipboard.paste()
-        elif symbol == key.D and modifiers & 18:
-            self.text = ""
         elif symbol == key.TAB:
             log.printMSG("[CHAT][WARN] complet of commands are not supported")
+        elif symbol == key.UP:
+            if self.commandpointer + 1 < len(self.commandindex):
+                self.commandpointer += 1
+                self.text = self.commandindex[self.commandpointer]
+        elif symbol == key.DOWN:
+            if self.commandpointer > 0:
+                self.commandpointer -= 1
+                self.text = self.commandindex[self.commandpointer]
+            elif self.commandpointer != -1:
+                self.commandpointer = -1
         else:
             log.printMSG("[CHAT][ERROR] can't interpet key "+str(symbol)+" with modifiers: "+str(modifiers))
         G.window.strafe = [0, 0]

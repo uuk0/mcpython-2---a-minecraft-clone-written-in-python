@@ -6,9 +6,13 @@ import modsystem.ModLoader
 SURROUNDING = [(0, 0, -1, "N"), (0, 0, 1, "S"), (0, -1, 0, "U"), (0, 1, 0, "D"), (-1, 0, 0, "W"), (1, 0, 0, "O")]
 
 
-class RedstoneLamp(G.blockclass):
+class RedstoneLamp(G.iblockclass):
     """class for redstone lamp"""
-    def _getDefaultData(self, inst):
+
+    def getName(self):
+        return "minecraft:redstone_lamp"
+
+    def getDefaultData(self, inst):
         return {"active":False}
 
     def getModelFile(self, inst):
@@ -18,6 +22,7 @@ class RedstoneLamp(G.blockclass):
         return "active" if inst.data["active"] else "inactive"
 
     def on_redstone_update(self, inst):
+        """
         x, y, z = inst.position
         flag = False
         for dx, dy, dz, face in SURROUNDING:
@@ -29,7 +34,7 @@ class RedstoneLamp(G.blockclass):
         if inst.data["active"] != flag:
             inst.data["active"] = flag
             G.model.hide_block(inst.position, inst)
-            G.model.show_block(inst.position)
+            G.model.show_block(inst.position)"""
 
     def on_block_update(self, inst):
         self.on_redstone_update(inst)

@@ -3,7 +3,7 @@ import mathhelper
 import modsystem.ModLoader
 
 
-class Ice(G.blockclass):
+class Ice(G.iblockclass):
     """class for ice"""
     def getName(self):
         return "minecraft:ice"
@@ -15,7 +15,7 @@ class Ice(G.blockclass):
         return "ice"
 
 
-class PackedIce(G.blockclass):
+class PackedIce(G.iblockclass):
     """class for packed ice"""
     def getName(self):
         return "minecraft:packed_ice"
@@ -27,7 +27,7 @@ class PackedIce(G.blockclass):
         return "packed_ice"
 
 
-class BlueIce(G.blockclass):
+class BlueIce(G.iblockclass):
     """class for blue ice"""
     def getName(self):
         return "minecraft:blue_ice"

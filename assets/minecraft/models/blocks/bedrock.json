@@ -1,9 +1,11 @@
 {
-  "blockaddress": "minecraft:bedrock",
-  "default": {
-    "name": "cube:full",
-    "side_texture_files": ["assets/minecraft/textures/block/bedrock.png"],
-    "blockname": "minecraft/bedrock",
-    "side_indexes": [0, 0, 0, 0, 0, 0]
-  }
+  "name": "minecraft:bedrock",
+  "files": ["assets/minecraft/textures/block/bedrock.png"],
+  "entrys": [
+    {
+      "type name": "cube:full",
+      "state name": "default",
+      "sides": [0, 0, 0, 0, 0, 0]
+    }
+  ]
 }

@@ -3,7 +3,7 @@ import mathhelper
 import modsystem.ModLoader
 
 
-class SlimeBlock(G.blockclass):
+class SlimeBlock(G.iblockclass):
     """class for slime block"""
     def getName(self):
         return "minecraft:slime_block"

@@ -2,10 +2,11 @@ import pyglet
 
 import globals as G
 import log
-import texturslitcher
+import textures.util
 
-"""class for ItemStack"""
+
 class IItemStack:
+    """class for ItemStack"""
     def __init__(self, name, amount=1):
         self.update_func = None
         self.slot = None
@@ -31,8 +32,7 @@ class IItemStack:
             self.item = None
         self.__amount = amount
         if self.item:
-            texturslitcher.ImageAtlas.load_image(self.item.getTexturFile()).resize((32, 32)).\
-                save(self.item.getTexturFile())
+            textures.util.resize_file(self.item.getTexturFile(), (32, 32))
             self.image = pyglet.sprite.Sprite(pyglet.image.load(self.item.getTexturFile()))
             """texturslitcher.ImageAtlas.save_image(
                 texturslitcher.ImageAtlas.resize(
@@ -66,7 +66,7 @@ class IItemStack:
             self.slot.setItem(None)
         if not self.item: return
         if self.item.getTexturFile() != self.texturfile:
-            texturhandler.resize(self.item.getTexturFile(), (32, 32), self.item.getTexturFile())
+            textures.util.resize_file(self.item.getTexturFile(), (32, 32))
             self.image = pyglet.sprite.Sprite(pyglet.image.load(self.item.getTexturFile()))
             self.texturfile = self.item.getTexturFile()
         self.image.position = position
@@ -76,3 +76,4 @@ class IItemStack:
         if self.amount != 1:
             self.lable.text = str(self.amount)
             self.lable.draw()
+

@@ -54,6 +54,7 @@ def tex_coords(top, bottom, side, n1=1, n2=1):
     result.extend(side * 4)
     return result
 
+
 def text_coords_complex(top, bottom, n, o, s, w, n1=1, n2=1):
     top = tex_coord(*top, n1=n1, n2=n2)
     bottom = tex_coord(*bottom, n1=n1, n2=n2)
@@ -69,6 +70,25 @@ def text_coords_complex(top, bottom, n, o, s, w, n1=1, n2=1):
     result.extend(s)
     result.extend(w)
     return result
+
+
+def tex_coords_better(top, bottom, n, o, s, w, stop=(16,16,), sbottom=(16,16,), sn=(16,16,), so=(16,16,), ss=(16,16,),
+                      sw=(16,16,)):
+    top = tex_coord(*list(top)+list(stop))
+    bottom = tex_coord(*list(bottom)+list(sbottom))
+    n = tex_coord(*list(n) + list(sn))
+    o = tex_coord(*list(o)+list(so))
+    s = tex_coord(*list(s)+list(ss))
+    w = tex_coord(*list(w)+list(sw))
+    result = []
+    result.extend(top)
+    result.extend(bottom)
+    result.extend(n)
+    result.extend(o)
+    result.extend(s)
+    result.extend(w)
+    return result
+
 
 def normalize(position):
     """ Accepts `position` of arbitrary precision and returns the block

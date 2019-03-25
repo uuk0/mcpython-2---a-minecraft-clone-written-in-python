@@ -3,7 +3,7 @@ import mathhelper
 import modsystem.ModLoader
 
 
-class NoteBlock(G.blockclass):
+class NoteBlock(G.iblockclass):
     """class for obsidian"""
     def getName(self):
         return "minecraft:note_block"

@@ -3,7 +3,7 @@ import mathhelper
 import modsystem.ModLoader
 
 
-class NetherBricks(G.blockclass):
+class NetherBricks(G.iblockclass):
     def getName(self):
         return "minecraft:nether_bricks"
 

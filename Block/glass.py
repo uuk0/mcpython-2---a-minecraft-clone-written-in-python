@@ -3,7 +3,7 @@ import mathhelper
 import modsystem.ModLoader
 
 
-class Glass(G.blockclass):
+class Glass(G.iblockclass):
     """class for brick"""
     def getName(self):
         return "minecraft:glass"
@@ -15,7 +15,7 @@ class Glass(G.blockclass):
         return False
 
 
-class BlackStained(G.blockclass):
+class BlackStained(G.iblockclass):
     """class for brick"""
     def getName(self):
         return "minecraft:black_stained_glass"
@@ -30,7 +30,7 @@ class BlackStained(G.blockclass):
         return "black_stained_glass"
 
 
-class blueStained(G.blockclass):
+class blueStained(G.iblockclass):
     """class for brick"""
 
     def getName(self):
@@ -46,7 +46,7 @@ class blueStained(G.blockclass):
         return "blue_stained_glass"
 
 
-class brownStained(G.blockclass):
+class brownStained(G.iblockclass):
     """class for brick"""
 
     def getName(self):
@@ -62,7 +62,7 @@ class brownStained(G.blockclass):
         return "brown_stained_glass"
 
 
-class cyanStained(G.blockclass):
+class cyanStained(G.iblockclass):
     """class for brick"""
 
     def getName(self):
@@ -78,7 +78,7 @@ class cyanStained(G.blockclass):
         return "cyan_stained_glass"
 
 
-class grayStained(G.blockclass):
+class grayStained(G.iblockclass):
     """class for brick"""
 
     def getName(self):
@@ -94,7 +94,7 @@ class grayStained(G.blockclass):
         return "gray_stained_glass"
 
 
-class greenStained(G.blockclass):
+class greenStained(G.iblockclass):
     """class for brick"""
 
     def getName(self):
@@ -110,7 +110,7 @@ class greenStained(G.blockclass):
         return "green_stained_glass"
 
 
-class light_blueStained(G.blockclass):
+class light_blueStained(G.iblockclass):
     """class for brick"""
 
     def getName(self):
@@ -126,7 +126,7 @@ class light_blueStained(G.blockclass):
         return "light_blue_stained_glass"
 
 
-class light_grayStained(G.blockclass):
+class light_grayStained(G.iblockclass):
     """class for brick"""
 
     def getName(self):
@@ -142,7 +142,7 @@ class light_grayStained(G.blockclass):
         return "light_gray_stained_glass"
 
 
-class limeStained(G.blockclass):
+class limeStained(G.iblockclass):
     """class for brick"""
 
     def getName(self):
@@ -158,7 +158,7 @@ class limeStained(G.blockclass):
         return "lime_stained_glass"
 
 
-class magentaStained(G.blockclass):
+class magentaStained(G.iblockclass):
     """class for brick"""
 
     def getName(self):
@@ -174,7 +174,7 @@ class magentaStained(G.blockclass):
         return "magenta_stained_glass"
 
 
-class orangeStained(G.blockclass):
+class orangeStained(G.iblockclass):
     """class for brick"""
 
     def getName(self):
@@ -190,7 +190,7 @@ class orangeStained(G.blockclass):
         return "orange_stained_glass"
 
 
-class pinkStained(G.blockclass):
+class pinkStained(G.iblockclass):
     """class for brick"""
 
     def getName(self):
@@ -206,7 +206,7 @@ class pinkStained(G.blockclass):
         return "pink_stained_glass"
 
 
-class purpleStained(G.blockclass):
+class purpleStained(G.iblockclass):
     """class for brick"""
 
     def getName(self):
@@ -222,7 +222,7 @@ class purpleStained(G.blockclass):
         return "purple_stained_glass"
 
 
-class redStained(G.blockclass):
+class redStained(G.iblockclass):
     """class for brick"""
 
     def getName(self):
@@ -238,7 +238,7 @@ class redStained(G.blockclass):
         return "red_stained_glass"
 
 
-class whiteStained(G.blockclass):
+class whiteStained(G.iblockclass):
     """class for brick"""
 
     def getName(self):
@@ -254,7 +254,7 @@ class whiteStained(G.blockclass):
         return "white_stained_glass"
 
 
-class yellowStained(G.blockclass):
+class yellowStained(G.iblockclass):
     """class for brick"""
 
     def getName(self):
@@ -280,7 +280,7 @@ def register(*args):
 
     for e in local.values():
         try:
-            if issubclass(e, G.blockclass):
+            if issubclass(e, G.iblockclass):
                 G.blockhandler.register(e)
         except TypeError:
             pass

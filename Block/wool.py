@@ -3,7 +3,7 @@ import mathhelper
 import modsystem.ModLoader
 
 
-class WhiteWool(G.blockclass):
+class WhiteWool(G.iblockclass):
     """class for white wool"""
     def getName(self):
         return "minecraft:white_wool"
@@ -15,7 +15,7 @@ class WhiteWool(G.blockclass):
         return "wool_"+str(self.getName().split(":")[1].split("_")[0])
 
 
-class OrangeWool(G.blockclass):
+class OrangeWool(G.iblockclass):
     """class for orange wool"""
     def getName(self):
         return "minecraft:orange_wool"
@@ -27,7 +27,7 @@ class OrangeWool(G.blockclass):
         return "wool_"+str(self.getName().split(":")[1].split("_")[0])
 
 
-class magentaWool(G.blockclass):
+class magentaWool(G.iblockclass):
     """class for magenta wool"""
     def getName(self):
         return "minecraft:magenta_wool"
@@ -39,7 +39,7 @@ class magentaWool(G.blockclass):
         return "wool_"+str(self.getName().split(":")[1].split("_")[0])
 
 
-class light_blueWool(G.blockclass):
+class light_blueWool(G.iblockclass):
     """class for light blue wool"""
     def getName(self):
         return "minecraft:light_blue_wool"
@@ -51,7 +51,7 @@ class light_blueWool(G.blockclass):
         return "wool_light_blue"
 
 
-class yellowWool(G.blockclass):
+class yellowWool(G.iblockclass):
     """class for yellow wool"""
     def getName(self):
         return "minecraft:yellow_wool"
@@ -63,7 +63,7 @@ class yellowWool(G.blockclass):
         return "wool_"+str(self.getName().split(":")[1].split("_")[0])
 
 
-class limeWool(G.blockclass):
+class limeWool(G.iblockclass):
     """class for lime wool"""
     def getName(self):
         return "minecraft:lime_wool"
@@ -75,7 +75,7 @@ class limeWool(G.blockclass):
         return "wool_"+str(self.getName().split(":")[1].split("_")[0])
 
 
-class pinkWool(G.blockclass):
+class pinkWool(G.iblockclass):
     """class for pink wool"""
     def getName(self):
         return "minecraft:pink_wool"
@@ -87,7 +87,7 @@ class pinkWool(G.blockclass):
         return "wool_"+str(self.getName().split(":")[1].split("_")[0])
 
 
-class grayWool(G.blockclass):
+class grayWool(G.iblockclass):
     """class for gray wool"""
     def getName(self):
         return "minecraft:gray_wool"
@@ -99,7 +99,7 @@ class grayWool(G.blockclass):
         return "wool_"+str(self.getName().split(":")[1].split("_")[0])
 
 
-class light_grayWool(G.blockclass):
+class light_grayWool(G.iblockclass):
     """class for light gray wool"""
     def getName(self):
         return "minecraft:light_gray_wool"
@@ -111,7 +111,7 @@ class light_grayWool(G.blockclass):
         return "wool_light_gray"
 
 
-class cyanWool(G.blockclass):
+class cyanWool(G.iblockclass):
     """class for cyan wool"""
     def getName(self):
         return "minecraft:cyan_wool"
@@ -123,7 +123,7 @@ class cyanWool(G.blockclass):
         return "wool_"+str(self.getName().split(":")[1].split("_")[0])
 
 
-class purpleWool(G.blockclass):
+class purpleWool(G.iblockclass):
     """class for purple wool"""
     def getName(self):
         return "minecraft:purple_wool"
@@ -135,7 +135,7 @@ class purpleWool(G.blockclass):
         return "wool_"+str(self.getName().split(":")[1].split("_")[0])
 
 
-class blueWool(G.blockclass):
+class blueWool(G.iblockclass):
     """class for blue wool"""
     def getName(self):
         return "minecraft:blue_wool"
@@ -147,7 +147,7 @@ class blueWool(G.blockclass):
         return "wool_"+str(self.getName().split(":")[1].split("_")[0])
 
 
-class brownWool(G.blockclass):
+class brownWool(G.iblockclass):
     """class for brown wool"""
     def getName(self):
         return "minecraft:brown_wool"
@@ -159,7 +159,7 @@ class brownWool(G.blockclass):
         return "wool_"+str(self.getName().split(":")[1].split("_")[0])
 
 
-class greenWool(G.blockclass):
+class greenWool(G.iblockclass):
     """class for green wool"""
     def getName(self):
         return "minecraft:green_wool"
@@ -171,7 +171,7 @@ class greenWool(G.blockclass):
         return "wool_"+str(self.getName().split(":")[1].split("_")[0])
 
 
-class redWool(G.blockclass):
+class redWool(G.iblockclass):
     """class for red wool"""
     def getName(self):
         return "minecraft:red_wool"
@@ -183,7 +183,7 @@ class redWool(G.blockclass):
         return "wool_"+str(self.getName().split(":")[1].split("_")[0])
 
 
-class blackWool(G.blockclass):
+class blackWool(G.iblockclass):
     """class for black wool"""
     def getName(self):
         return "minecraft:black_wool"

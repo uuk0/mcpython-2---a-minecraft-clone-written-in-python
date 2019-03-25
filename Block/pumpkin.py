@@ -3,7 +3,7 @@ import mathhelper
 import modsystem.ModLoader
 
 
-class Pumpkin(G.blockclass):
+class Pumpkin(G.iblockclass):
     def getName(self):
         return "minecraft:pumpkin"
 
@@ -11,7 +11,7 @@ class Pumpkin(G.blockclass):
         return "minecraft:pumpkin"
 
 
-class CarvedPumpkin(G.blockclass):
+class CarvedPumpkin(G.iblockclass):
     def getName(self):
         return "minecraft:pumpkin"
 

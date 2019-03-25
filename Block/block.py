@@ -2,257 +2,219 @@ import config
 import globals as G
 import log
 import mathhelper
-import pyglet
-import traceback
-import modelloader
-import modsystem.ModLoader
+import exceptionhandler
 
-"""
-block handler class
-use G.blockhandler.register(class) to add new blocks
-"""
+
 class BlockHandler:
+    """
+    block handler class
+    use G.blockhandler.register(class) to add new blocks
+    todo: implement an plugin system for functions / constants to  blocks
+    """
+
     def __init__(self):
-        self.blocks = {}
-        self.blocksall = {}
-        self.fromoredict = {}
+        """
+        creates an new BlockHandler-object
+        """
+        self.blocktable = {}
 
-    """register an new blockclass to blocktable"""
     def register(self, blockclass):
-        if not (hasattr(blockclass, "blockclassregigisterable") and blockclass.blockclassregigisterable) and config.DEBUG.PRINT_BLOCK_REGISTRATING:
-            log.printMSG("[BLOCKHANDLER][ERROR] can't register block class "+str(blockclass)+". blockclass has no attribute blockclassregigisterable")
-            return
-        inst = blockclass()
-        G.eventhandler.call("game:registry:on_block_registrated", inst)
-        self.blocks[inst.getName()] = inst
-        d = inst.getName().split(":")
-        for i in range(len(d)):
-            string = ""
-            for e in d[i:]:
-                string += ":" + e
-            self.blocksall[string[1:]] = inst
+        """
+        register an new blockclass to the blocktable
+        """
+        instance = blockclass()
+        sname = instance.getName().split(":")
+        iname = sname[:]
+        sname.reverse()
+        names = []
+        for i, part in enumerate(sname):
+            name = ":".join(iname[i:])
+            self.blocktable[name] = instance
+            names.append(name)
+        G.eventhandler.call("game:registry:on_block_registrated", instance, names)
 
-        G.soundhandler.loadSound(inst.getBrakeSoundFile(None))
-        if config.DEBUG.PRINT_BLOCK_REGISTRATING:
-            log.printMSG("[BLOCKHANDLER][INFO] registrating block "+inst.getName())
+    def getInst(self, name, position):
+        """returns a new blockinst - class representing the block"""
+        return BlockReference(name, position)
 
-        for e in inst.oredictnames:
-            if not e in self.fromoredict: self.fromoredict[e] = []
-            self.fromoredict[e].append(inst)
-            G.notationhandler.notate("oredict", e, inst)
-        for e in inst.destroygroupnames:
-            G.notationhandler.notate("destroygroup", e, inst)
-        G.eventhandler.call("game:registry:on_block_registrated", inst)
+    def getByName(self, name):
+        """returns the block class by name"""
+        if name in self.blocktable:
+            return self.blocktable[name]
+        return self.getByName("minecraft:none")
 
-    """returns a new blockinst - class representing the block"""
-    def getInst(self, name, position, blocksettedto=None):
-        if self.getByName(name):
-            return IBlockInstants(name, position, blocksettedto=blocksettedto)
-        return None
-
-    """returns the block class by name"""
-    def getByName(self, name, exc=True):
-        if name in self.blocks:
-            return self.blocks[name]
-        elif name in self.blocksall:
-            return self.blocksall[name]
-        else:
-            log.printMSG("[BLOCKHANDLER][ERROR] can't access block named "+str(name))
 
 G.blockhandler = BlockHandler()
 
 
-"""
-Main Block Class
-"""
-class BlockClass:
-    """says if these block-class can be registert
-    set to False if it is an dummy-class"""
-    blockclassregigisterable = True
-    oredictnames = []
-    destroygroupnames = []
+class IBlock:
+    """
+    Main Block Class
+    every block should include this
+    """
 
-    def __init__(self):
-        pass
-
-    """returns the name of the block"""
     def getName(self):
         return "minecraft:none"
 
-    """callen when the block is created"""
     def onCreat(self, inst):
+        """callen when the block is created"""
         pass
 
-    """calllen when the block is deleted"""
     def onDelet(self, inst):
+        """calllen when the block is deleted"""
         pass
 
-    """returns if the block is brakeable in gamemode 0"""
-    def isBrakeAble(self, inst):
+    def isBrakeAbleInGamemode0(self, inst):
+        """returns if the block is brakeable in gamemode 0"""
         return True
 
-    """returns the drops of the block
-    format: as dict: itename:amount"""
     def getDrop(self, inst):
-        return {self.getItemName(inst):1}
+        """returns the drops of the block
+        format: as dict: itename:amount
+        todo: move to loottable"""
+        return {self.getName(): 1}
 
-    """returns the name of the given back item
-    only used if getDrop is not overwritten"""
-    def getItemName(self, inst):
-        return self.getName()
-
-    """callen when the block should updated"""
     def on_block_update(self, inst):
+        """callen when the block should updated"""
         pass
 
-    """returns the sound which is played when block is broken. may be a list if more than 1 is possible"""
-    def getBrakeSoundFile(self, inst):
+    @staticmethod
+    def getBrakeSoundFile(inst):
+        """returns the sound which is played when block is broken. may be a list if more than 1 is possible"""
         return [G.local + "/assets/minecraft/sounds/brake/stone1.wma",
                 G.local + "/assets/minecraft/sounds/brake/stone2.wma",
                 G.local + "/assets/minecraft/sounds/brake/stone3.wma",
                 G.local + "/assets/minecraft/sounds/brake/stone4.wma"]
 
     def show(self, inst):
-        try:
-            G.modelhandler.models[inst.getModelFile()].addToBatch(inst, inst.position)
-        except:
-            log.printMSG(inst.getName())
-            raise
+        """
+        only for historical. here in the past the show function was located
+        """
+        if self.get_model_address(inst) in G.modelhandler.models:
+            G.modelhandler.models[self.get_model_address(inst)].entrys[inst.getStateName()].show(
+                G.player.dimension.worldprovider.batch, inst)
 
     def hide(self, inst):
-        G.modelhandler.models[inst.getModelFile()].removeFromBatch(inst, inst.position)
+        """
+        only for historical. here in the past the hide function was located
+        """
+        if self.get_model_address(inst) in G.modelhandler.models:
+            G.modelhandler.models[self.get_model_address(inst)].entrys[inst.getStateName()].hide(
+                G.player.dimension.worldprovider.batch, inst)
 
-    """returns if a side is a full side. These Meanes you can't look through it
-    side is N, E, S, W, U or D
-    per default, every side is true"""
     def isFullSide(self, inst, side):
+        """returns if a side is a full side. These Meanes you can't look through it
+        side is N, E, S, W, U or D
+        per default, every side is true
+        todo: move model.exposed() usojg this instead of isFullBlock(...)"""
         return True
 
     def isFullBlock(self):
+        """
+        :return: if the block is full or not
+        """
         return True
 
-    """returns the default data for block inst"""
-    def _getDefaultData(self, inst):
+    @staticmethod
+    def getDefaultData(inst):
+        """returns the default data for block inst"""
         return {}
 
-    """returns if the block has an inventory"""
     def hasInventory(self, inst):
+        """returns if the block has an inventory"""
         return False
 
-    """returns the inventorys as a list of the block. may be only Inventory ID'S
-    callen after isOpeningInventory by window to get the inventorys to show.
-    if you want to have your own system, use this and return []"""
     def getInventorys(self, inst):
+        """returns the inventorys as a list of the block. may be only Inventory ID'S
+        callen after isOpeningInventory by window to get the inventorys to show.
+        if you want to have your own system, use this and return []
+        DO NOT USE IT IF YOU DON'T WANT TO DEBUG EVERYTHING BECAUSE THESE IS VERY UNSTABLE"""
         return []
 
-    """returns if the given item opens the inventory"""
     def isOpeningInventory(self, inst, item):
+        """returns if the given item opens the inventory"""
         return False
 
-    """returns the redstone strenght of the block (0-15 normal)"""
-    def getErmittedRedstoneSignal(self, inst, side):
-        return 0
-
-    """returns if redstone should connected to the block"""
-    def bindsToRedstoneWire(self, inst, side):
-        return False
-
-    """callen on redstone update"""
-    def on_redstone_update(self, inst):
-        pass
-
-    """returns if the block is redstoneable"""
-    def can_be_redstone_powered(self, inst):
-        return True
-
-    """returns the cube verticens of the block"""
     def getCubeVerticens(self, inst, x, y, z, n):
+        """returns the cube verticens of the block
+        only for historical reasons. in the past it was used in self.show()"""
         return mathhelper.cube_vertices(x, y, z, n)
 
-    """convert the given base position to an renderable position"""
     def convertPositionToRenderable(self, inst, position):
+        """convert the given base position to an renderable position"""
         return position
 
     def isVisableInWorld(self, inst):
-        return True #not G.model.exposed(inst.position)
+        """returns if the block is theoretcly visable in the world.
+        only for historical reasons. was used in model.show_sector(...)"""
+        return True
 
     def getStorageData(self, inst):
+        """returns the data that should be stored. should be storeable by pickle"""
         cx, _, cz = mathhelper.sectorize(inst.position)
         chunkprovider = G.player.dimension.worldprovider.getChunkProviderFor((cx, cz))
         return {"name": self.getName(), "data": inst.data,
                 "shown": inst.position in chunkprovider.shown}
 
     def setStorageData(self, data, inst):
+        """set stored data to these block. data comes from Block.getStorageData(...)"""
         inst.data = data["data"]
 
     def getStateName(self, inst):
+        """return the model state name (the name under which it can be found in the main {})"""
         return "default"
 
-    def getModelFile(self, inst):
-        return "minecraft:notdefinited"
+    def get_model_address(self, inst):
+        return self.getName()
 
     def getItemFile(self, inst):
+        """returns the itemfile for these block. is used for autogen of items"""
         return None
 
-G.blockclass = BlockClass
+
+G.iblockclass = IBlock
 
 
-"""
-class holding all block data
-overwrites every function with (inst) without it
-"""
-class IBlockInstants(BlockClass):
-    blockclassregigisterable = False
+class BlockReference:
+    """
+    reference in world to an IBlock-class
+    """
 
-    def __oredictnames(self):
-        return self.blockclass.oredictnames
-
-    oredictnames = property(__oredictnames)
-
-    def __destroygroupnames(self):
-        return self.blockclass.destroygroupnames
-
-    destroygroupnames = property(__destroygroupnames)
-
-    def __init__(self, blockname, position, blocksettedto=None):
-        self.blockclass = G.blockhandler.getByName(blockname)
+    def __init__(self, blockname_or_object_or_to_copy, position):
+        self.blockclass = None
+        if issubclass(type(blockname_or_object_or_to_copy), IBlock):
+            self.blockclass = blockname_or_object_or_to_copy
+        elif issubclass(type(blockname_or_object_or_to_copy), BlockReference):
+            self.blockclass = blockname_or_object_or_to_copy.blockclass
+        elif issubclass(type(blockname_or_object_or_to_copy), str):
+            self.blockclass = G.blockhandler.getByName(blockname_or_object_or_to_copy)
+        if not self.blockclass:
+            log.printMSG("[BLOCK][ERROR] can't construct block from "+str(blockname_or_object_or_to_copy)+
+                         ". using minecraft:none instead")
+            self.blockclass = G.blockhandler.getByName("minecraft:none")
         self.position = position
-        self.onCreat()
-        self.blocksettedto = blocksettedto
-        self.multiblockstructurlist = []
-        self.data = self.blockclass._getDefaultData(self)
-        if not "redstone_state" in self.data and self.can_be_redstone_powered():
-            self.data["redstone_state"] = False
+        self.settedto = None
+        self.data = self.blockclass.getDefaultData(self)
         self.showndata = []
+        self.create()
+
+    def create(self):
+        self.blockclass.onCreat(self)
 
     def getName(self):
         return self.blockclass.getName()
 
-    def getTexturData(self):
-        return self.blockclass.getTexturData(self)
-
-    def getTexturFile(self):
-        return self.blockclass.getTexturFile(self)
-
-    def onCreat(self):
-        self.blockclass.onCreat(self)
-
-    def onDelet(self):
-        G.eventhandler._blockremoveupdate(self.position)
+    def delete(self):
         self.blockclass.onDelet(self)
 
-    def isBrakeAble(self):
-        return self.blockclass.isBrakeAble(self)
+    def isBrakeAbleInGamemode0(self):
+        return self.blockclass.isBrakeAbleInGamemode0(self)
 
     def getDrop(self):
-        return self.blockclass.getDrop(self)
-
-    def getItemName(self):
-        return self.blockclass.getItemName(self)
+        return self.blockclass.getDrop()
 
     def on_block_update(self):
         self.blockclass.on_block_update(self)
-        G.eventhandler._blockupdate(self.position)
 
     def getBrakeSoundFile(self):
         return self.blockclass.getBrakeSoundFile(self)
@@ -264,7 +226,13 @@ class IBlockInstants(BlockClass):
         self.blockclass.hide(self)
 
     def isFullSide(self, side):
-        self.blockclass.isFullSide(self, side)
+        return self.blockclass.isFullSide(self, side)
+
+    def isFullBlock(self):
+        return self.blockclass.isFullBlock()
+
+    def getDefaultData(self):
+        return self.blockclass.getDefaultData()
 
     def hasInventory(self):
         return self.blockclass.hasInventory(self)
@@ -274,18 +242,6 @@ class IBlockInstants(BlockClass):
 
     def isOpeningInventory(self, item):
         return self.blockclass.isOpeningInventory(self, item)
-
-    def getErmittedRedstoneSignal(self, side):
-        return self.blockclass.getErmittedRedstoneSignal(self, side)
-
-    def bindsToRedstoneWire(self, inst, side):
-        return self.blockclass.bindsToRedstoneWire(side)
-
-    def on_redstone_update(self):
-        self.blockclass.on_redstone_update(self)
-
-    def can_be_redstone_powered(self):
-        self.blockclass.can_be_redstone_powered(self)
 
     def getCubeVerticens(self, x, y, z, n):
         return self.blockclass.getCubeVerticens(self, x, y, z, n)
@@ -305,14 +261,14 @@ class IBlockInstants(BlockClass):
     def getStateName(self):
         return self.blockclass.getStateName(self)
 
-    def getModelFile(self):
-        return self.blockclass.getModelFile(self)
-
     def getItemFile(self):
         return self.blockclass.getItemFile(self)
 
+    def get_model_address(self):
+        return self.blockclass.getName(self)
 
-G.blockinst = IBlockInstants
+
+G.blockreferenceclass = BlockReference
 
 
 def loadBlocks(*args):

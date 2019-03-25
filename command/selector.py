@@ -1,5 +1,6 @@
 import globals as G
 
+
 class SelectorHandler:
     def __init__(self):
         self.selectors = []
@@ -15,6 +16,7 @@ class SelectorHandler:
 
 
 G.selectorhandler = SelectorHandler()
+
 
 class Selector:
     @staticmethod

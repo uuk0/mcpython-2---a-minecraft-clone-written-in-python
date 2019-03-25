@@ -1,7 +1,16 @@
 import sys, os
 
-#local directory
+# local directory
 local = os.path.dirname(sys.argv[0])
+
+# the blockhandler instance mainly used
+blockhandler = None
+
+# the main block interface. all blocks should include this
+iblockclass = None
+
+# reference to the BlockReference-class
+blockreferenceclass = None
 
 #generatehighmodel = None
 
@@ -108,7 +117,7 @@ window = None
 player = None
 
 #system for images
-imageatlashandler = None
+textureatlashandler = None
 
 #system for what it look like
 modelhandler = None

@@ -3,7 +3,7 @@ import mathhelper
 import modsystem.ModLoader
 
 
-class IOre(G.blockclass):
+class IOre(G.iblockclass):
     def getModelFile(self, inst):
         return "minecraft:ores"
 
@@ -16,7 +16,7 @@ class CoalOre(IOre):
     def getName(self):
         return "minecraft:coal_ore"
 
-    def isBrakeAble(self, inst):
+    def isBrakeAbleInGamemode0(self, inst):
         return True
 
     def getDrop(self, inst):
@@ -28,7 +28,7 @@ class DiamondOre(IOre):
     def getName(self):
         return "minecraft:diamond_ore"
 
-    def isBrakeAble(self, inst):
+    def isBrakeAbleInGamemode0(self, inst):
         return True
 
     def getDrop(self, inst):
@@ -40,7 +40,7 @@ class EmeraldOre(IOre):
     def getName(self):
         return "minecraft:emerald_ore"
 
-    def isBrakeAble(self, inst):
+    def isBrakeAbleInGamemode0(self, inst):
         return True
 
     def getDrop(self, inst):
@@ -52,7 +52,7 @@ class GoldOre(IOre):
     def getName(self):
         return "minecraft:gold_ore"
 
-    def isBrakeAble(self, inst):
+    def isBrakeAbleInGamemode0(self, inst):
         return True
 
     def getDrop(self, inst):
@@ -64,7 +64,7 @@ class IronOre(IOre):
     def getName(self):
         return "minecraft:iron_ore"
 
-    def isBrakeAble(self, inst):
+    def isBrakeAbleInGamemode0(self, inst):
         return True
 
     def getDrop(self, inst):
@@ -76,7 +76,7 @@ class LapisOre(IOre):
     def getName(self):
         return "minecraft:lapis_ore"
 
-    def isBrakeAble(self, inst):
+    def isBrakeAbleInGamemode0(self, inst):
         return True
 
     def getDrop(self, inst):
@@ -88,7 +88,7 @@ class NetherQuartz(IOre):
     def getName(self):
         return "minecraft:nether_quartz_ore"
 
-    def isBrakeAble(self, inst):
+    def isBrakeAbleInGamemode0(self, inst):
         return True
 
     def getDrop(self, inst):
@@ -100,7 +100,7 @@ class RedstoneOre(IOre):
     def getName(self):
         return "minecraft:redstone_ore"
 
-    def isBrakeAble(self, inst):
+    def isBrakeAbleInGamemode0(self, inst):
         return True
 
     def getDrop(self, inst):

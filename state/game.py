@@ -214,7 +214,7 @@ class Game(G.State):
                     cx, _, cz = mathhelper.sectorize(block)
                     chunkprovider = G.player.dimension.worldprovider.getChunkProviderFor((cx, cz))
                     block = chunkprovider.world[block]
-                    if block.isBrakeAble() or G.player.gamemode == 1:
+                    if block.isBrakeAbleInGamemode0() or G.player.gamemode == 1:
                         G.soundhandler.playSound(block.position, block.getBrakeSoundFile())
                         if G.player.gamemode != 1:
                             drops = block.getDrop()
@@ -231,8 +231,9 @@ class Game(G.State):
                     block, previous = G.model.hit_test(G.window.position, vector)
                     cx, _, cz = mathhelper.sectorize(block)
                     chunkprovider = G.player.dimension.worldprovider.getChunkProviderFor((cx, cz))
+                    binst = chunkprovider.world[block]
                     G.player.inventory.inventorys[0].slots[G.player.selectedinventoryslot].stack = \
-                        IItemStack.IItemStack(chunkprovider.world[block].getItemName())
+                        IItemStack.IItemStack(binst.getName())
                     if G.player.inventory.inventorys[0].slots[G.player.selectedinventoryslot].stack.item:
                         G.player.inventory.inventorys[0].slots[G.player.selectedinventoryslot].stack.amount = \
                         G.player.inventory.inventorys[0].slots[G.player.selectedinventoryslot].stack.item.getMaxStackSize()

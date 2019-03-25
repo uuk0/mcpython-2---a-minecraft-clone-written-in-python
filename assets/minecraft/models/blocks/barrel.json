@@ -1,19 +1,19 @@
 {
-  "blockaddress": "minecraft:barrel",
-  "default": {
-    "name": "cube:full",
-    "side_texture_files": ["assets/minecraft/textures/block/barrel_bottom.png",
-                           "assets/minecraft/textures/block/barrel_side.png",
-                           "assets/minecraft/textures/block/barrel_top.png"],
-    "blockname": "minecraft/barrel",
-    "side_indexes": [0, 2, 1, 1, 1, 1]
-  },
-  "open": {
-    "name": "cube:full",
-    "side_texture_files": ["assets/minecraft/textures/block/barrel_bottom.png",
-                           "assets/minecraft/textures/block/barrel_side.png",
-                           "assets/minecraft/textures/block/barrel_top_open.png"],
-    "blockname": "minecraft/barrel_open",
-    "side_indexes": [0, 2, 1, 1, 1, 1]
-  }
+  "name": "minecraft:barrel",
+  "files": ["assets/minecraft/textures/block/barrel_bottom.png",
+            "assets/minecraft/textures/block/barrel_side.png",
+            "assets/minecraft/textures/block/barrel_top.png",
+            "assets/minecraft/textures/block/barrel_top_open.png"],
+  "entrys": [
+    {
+      "type name": "cube:full",
+      "state name": "default",
+      "sides": [2, 0, 1, 1, 1, 1]
+    },
+    {
+      "type name": "cube:full",
+      "state name": "opened",
+      "sides": [2, 0, 1, 1, 1, 1]
+    }
+  ]
 }

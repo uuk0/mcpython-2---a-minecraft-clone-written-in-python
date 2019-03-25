@@ -1,43 +1,11 @@
 {
-  "blockaddress": "minecraft:dirt",
-  "grass": {
-    "name": "cube:full",
-    "side_texture_files": ["assets/minecraft/textures/block/grass_block_side.png",
-                           "assets/minecraft/textures/block/dirt.png",
-                           "tmp/minecraft/block/grass/item_0.png",
-                           "assets/minecraft/textures/block/coarse_dirt.png"],
-    "blockname": "minecraft/grass",
-    "side_indexes": [2, 1, 0, 0, 0, 0],
-    "relative_index": false
-  },
-  "dirt": {
-    "name": "cube:full",
-    "side_texture_files": [],
-    "blockname": "minecraft/dirt",
-    "side_indexes": [1, 1, 1, 1, 1, 1],
-    "relative_index": false
-  },
-  "coarse_dirt": {
-    "name": "cube:full",
-    "side_texture_files": [],
-    "blockname": "minecraft/coarse_dirt",
-    "side_indexes": [3, 3, 3, 3, 3, 3],
-    "relative_index": false
-  },
-  "mycelium": {
-    "name": "cube:full",
-    "side_texture_files": ["assets/minecraft/textures/block/coarse_dirt.png",
-    "assets/minecraft/textures/block/mycelium_side.png",
-    "assets/minecraft/textures/block/mycelium_top.png"],
-    "blockname": "minecraft/grass",
-    "side_indexes": [1, 3, 2, 2, 2, 2]
-  },
-  "podzol": {
-    "name": "cube:full",
-    "side_texture_files": ["assets/minecraft/textures/block/coarse_dirt.png",
-    "assets/minecraft/textures/block/podzol_side.png",
-    "assets/minecraft/textures/block/podzol_top.png"],
-    "blockname": "minecraft/podzol",
-    "side_indexes": [1, 3, 2, 2, 2, 2]
-  }
+  "name": "minecraft:dirt",
+  "files": ["assets/minecraft/textures/block/dirt.png"],
+  "entrys": [
+    {
+      "type name": "cube:full",
+      "state name": "default",
+      "sides": [0, 0, 0, 0, 0, 0]
+    }
+  ]
 }

@@ -1,9 +1,11 @@
 {
-  "blockaddress": "minecraft:clay",
-  "default": {
-    "name": "cube:full",
-    "side_texture_files": ["assets/minecraft/textures/block/clay.png"],
-    "blockname": "minecraft/clay",
-    "side_indexes": [0, 0, 0, 0, 0, 0]
-  }
+  "name": "minecraft:clay",
+  "files": ["assets/minecraft/textures/block/clay.png"],
+  "entrys": [
+    {
+      "type name": "cube:full",
+      "state name": "default",
+      "sides": [0, 0, 0, 0, 0, 0]
+    }
+  ]
 }

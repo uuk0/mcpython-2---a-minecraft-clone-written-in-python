@@ -3,6 +3,8 @@ import log
 import language
 import modsystem.ModLoader
 import traceback
+import exceptionhandler
+import textures.util
 
 
 class ItemHandler:
@@ -16,14 +18,6 @@ class ItemHandler:
         self.itemclasses[klass.getName(None)] = klass
         self.prefixes.append(klass.getName(None).split(":")[0])
         G.eventhandler.call("game:registry:on_item_registrated", klass)
-        if klass.hasBlock(None):
-            try:
-                for e in G.blockhandler.blocks[klass.getName(None)].oredictnames:
-                    G.notationhandler.notate("oredict", e, klass)
-            except:
-                log.printMSG("some trouble during loading Item class "+str(klass))
-        for e in klass.oredictnames:
-            G.notationhandler.notate("oredict", e, klass)
 
     def getByName(self, name, exc=True):
         """returns an item class by name"""

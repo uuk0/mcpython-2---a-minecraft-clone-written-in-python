@@ -3,7 +3,7 @@ import mathhelper
 import modsystem.ModLoader
 
 
-class ShulkerBox(G.blockclass):
+class ShulkerBox(G.iblockclass):
     def getName(self):
         return "minecraft:shulker_box"
 
@@ -14,7 +14,7 @@ class ShulkerBox(G.blockclass):
         return False
 
 
-class BlackShulkerBox(G.blockclass):
+class BlackShulkerBox(G.iblockclass):
     """class for brick"""
     def getName(self):
         return "minecraft:black_shulker_box"
@@ -29,7 +29,7 @@ class BlackShulkerBox(G.blockclass):
         return "black_shulker_box"
 
 
-class blueShulkerBox(G.blockclass):
+class blueShulkerBox(G.iblockclass):
     """class for brick"""
 
     def getName(self):
@@ -45,7 +45,7 @@ class blueShulkerBox(G.blockclass):
         return "blue_shulker_box"
 
 
-class brownShulkerBox(G.blockclass):
+class brownShulkerBox(G.iblockclass):
     """class for brick"""
 
     def getName(self):
@@ -61,7 +61,7 @@ class brownShulkerBox(G.blockclass):
         return "brown_shulker_box"
 
 
-class cyanShulkerBox(G.blockclass):
+class cyanShulkerBox(G.iblockclass):
     """class for brick"""
 
     def getName(self):
@@ -77,7 +77,7 @@ class cyanShulkerBox(G.blockclass):
         return "cyan_shulker_box"
 
 
-class grayShulkerBox(G.blockclass):
+class grayShulkerBox(G.iblockclass):
     """class for brick"""
 
     def getName(self):
@@ -93,7 +93,7 @@ class grayShulkerBox(G.blockclass):
         return "gray_shulker_box"
 
 
-class greenShulkerBox(G.blockclass):
+class greenShulkerBox(G.iblockclass):
     """class for brick"""
 
     def getName(self):
@@ -109,7 +109,7 @@ class greenShulkerBox(G.blockclass):
         return "green_shulker_box"
 
 
-class light_blueShulkerBox(G.blockclass):
+class light_blueShulkerBox(G.iblockclass):
     """class for brick"""
 
     def getName(self):
@@ -125,7 +125,7 @@ class light_blueShulkerBox(G.blockclass):
         return "light_blue_shulker_box"
 
 
-class light_grayShulkerBox(G.blockclass):
+class light_grayShulkerBox(G.iblockclass):
     """class for brick"""
 
     def getName(self):
@@ -141,7 +141,7 @@ class light_grayShulkerBox(G.blockclass):
         return "light_gray_shulker_box"
 
 
-class limeShulkerBox(G.blockclass):
+class limeShulkerBox(G.iblockclass):
     """class for brick"""
 
     def getName(self):
@@ -157,7 +157,7 @@ class limeShulkerBox(G.blockclass):
         return "lime_shulker_box"
 
 
-class magentaShulkerBox(G.blockclass):
+class magentaShulkerBox(G.iblockclass):
     """class for brick"""
 
     def getName(self):
@@ -173,7 +173,7 @@ class magentaShulkerBox(G.blockclass):
         return "magenta_shulker_box"
 
 
-class orangeShulkerBox(G.blockclass):
+class orangeShulkerBox(G.iblockclass):
     """class for brick"""
 
     def getName(self):
@@ -189,7 +189,7 @@ class orangeShulkerBox(G.blockclass):
         return "orange_shulker_box"
 
 
-class pinkShulkerBox(G.blockclass):
+class pinkShulkerBox(G.iblockclass):
     """class for brick"""
 
     def getName(self):
@@ -205,7 +205,7 @@ class pinkShulkerBox(G.blockclass):
         return "pink_shulker_box"
 
 
-class purpleShulkerBox(G.blockclass):
+class purpleShulkerBox(G.iblockclass):
     """class for brick"""
 
     def getName(self):
@@ -221,7 +221,7 @@ class purpleShulkerBox(G.blockclass):
         return "purple_shulker_box"
 
 
-class redShulkerBox(G.blockclass):
+class redShulkerBox(G.iblockclass):
     """class for brick"""
 
     def getName(self):
@@ -237,7 +237,7 @@ class redShulkerBox(G.blockclass):
         return "red_shulker_box"
 
 
-class whiteShulkerBox(G.blockclass):
+class whiteShulkerBox(G.iblockclass):
     """class for brick"""
 
     def getName(self):
@@ -253,7 +253,7 @@ class whiteShulkerBox(G.blockclass):
         return "white_shulker_box"
 
 
-class yellowShulkerBox(G.blockclass):
+class yellowShulkerBox(G.iblockclass):
     """class for brick"""
 
     def getName(self):
@@ -279,7 +279,7 @@ def register(*args):
 
     for e in local.values():
         try:
-            if issubclass(e, G.blockclass):
+            if issubclass(e, G.iblockclass):
                 G.blockhandler.register(e)
         except TypeError:
             pass

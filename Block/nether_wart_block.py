@@ -3,7 +3,7 @@ import mathhelper
 import modsystem.ModLoader
 
 
-class NetherWartBlock(G.blockclass):
+class NetherWartBlock(G.iblockclass):
     def getName(self):
         return "minecraft:nether_wart_block"
 

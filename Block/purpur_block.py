@@ -3,7 +3,7 @@ import mathhelper
 import modsystem.ModLoader
 
 
-class PurpurBlock(G.blockclass):
+class PurpurBlock(G.iblockclass):
     def getName(self):
         return "minecraft:purpur_block"
 
@@ -14,7 +14,7 @@ class PurpurBlock(G.blockclass):
         return "minecraft:purpur_block"
 
 
-class PurpurPillar(G.blockclass):
+class PurpurPillar(G.iblockclass):
     def getName(self):
         return "minecraft:purpur_pillar"
 

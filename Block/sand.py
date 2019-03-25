@@ -3,7 +3,7 @@ import mathhelper
 import modsystem.ModLoader
 
 
-class Sand(G.blockclass):
+class Sand(G.iblockclass):
     """class for sand"""
     def getName(self):
         return "minecraft:sand"
@@ -14,7 +14,7 @@ class Sand(G.blockclass):
     def getStateName(self, inst):
         return "sand"
 
-    def isBrakeAble(self, inst):
+    def isBrakeAbleInGamemode0(self, inst):
         return True
 
     """makes the block falling"""

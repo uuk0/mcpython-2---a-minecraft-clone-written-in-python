@@ -3,7 +3,7 @@ import mathhelper
 import modsystem.ModLoader
 
 
-class Melon(G.blockclass):
+class Melon(G.iblockclass):
     def getName(self):
         return "minecraft:melon"
 

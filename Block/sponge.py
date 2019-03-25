@@ -3,7 +3,7 @@ import mathhelper
 import modsystem.ModLoader
 
 
-class Sponge(G.blockclass):
+class Sponge(G.iblockclass):
     def getName(self):
         return "minecraft:sponge"
 
@@ -14,7 +14,7 @@ class Sponge(G.blockclass):
         return "sponge"
 
 
-class WetSponge(G.blockclass):
+class WetSponge(G.iblockclass):
     def getName(self):
         return "minecraft:wet_sponge"
 

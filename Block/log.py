@@ -4,11 +4,11 @@ import notations
 import modsystem.ModLoader
 
 
-class Log(G.blockclass):
+class Log(G.iblockclass):
     """the base class for Logs"""
     oredictnames = [notations.OreDictItems.WOOD_LOG]
 
-    def _getDefaultData(self, inst):
+    def getDefaultData(self, inst):
         return {"rotation":"UD"}
 
 
@@ -98,6 +98,10 @@ class StrippedJungleLog(McLog):
 
 class OakLog(McLog):
     """oak Log class"""
+    
+    def __init__(self, *args, **kwargs):
+        McLog.__init__(self, *args, **kwargs)
+
     def getStateName(self, inst):
         return "oak_log"
 

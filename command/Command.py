@@ -2,19 +2,21 @@ import globals as G
 from . import selector
 import modsystem.ModLoader
 
-"""command parser"""
+
 class CommandHandler:
+    """command parser"""
     def __init__(self):
         self.commands = []
 
-    """execute an command"""
     def executeCommand(self, line, entity, position):
+        """execute an command"""
         for command in self.commands:
             if command.isCommand(line):
                 command.executeCommand(line, entity, position)
-                return
+                return True
         G.chat.printLine("can't execute command. command is not found")
-        G.chat.printLine(self.commands)
+        # G.chat.printLine(self.commands)
+        return False
 
     def register(self, command):
         self.commands.append(command)
@@ -44,5 +46,6 @@ G.commandclass = CommandClass
 @modsystem.ModLoader.ModEventEntry("game:registry:on_command_registrate_periode", "minecraft",
                                    info="registrating commands")
 def register():
-    from . import give, setblock, time, generate, gamemode, reload, save, load, setharts, function_command
+    from . import give, setblock, time, generate, gamemode, reload, save, load, setharts, function_command, \
+        execute
 

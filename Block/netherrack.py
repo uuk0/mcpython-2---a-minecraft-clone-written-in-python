@@ -3,7 +3,7 @@ import mathhelper
 import modsystem.ModLoader
 
 
-class NetherRack(G.blockclass):
+class NetherRack(G.iblockclass):
     """class for obsidian"""
     def getName(self):
         return "minecraft:netherrack"

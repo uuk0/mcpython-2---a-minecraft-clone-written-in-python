@@ -3,7 +3,7 @@ import mathhelper
 import modsystem.ModLoader
 
 
-class ISandStone(G.blockclass):
+class ISandStone(G.iblockclass):
     def getModelFile(self, inst):
         return "minecraft:sandstone"
 

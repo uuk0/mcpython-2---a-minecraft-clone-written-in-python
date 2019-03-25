@@ -4,18 +4,12 @@ import notations
 import modsystem.ModLoader
 
 
-class Grass(G.blockclass):
+class Grass(G.iblockclass):
     """class for grass"""
     oredictnames = [notations.OreDictItems.DIRT]
 
     def getName(self):
         return "minecraft:grass"
-
-    def getModelFile(self, inst):
-        return "minecraft:dirt"
-
-    def getStateName(self, inst):
-        return "grass"
 
     """returns dirt as drop"""
     def getDrop(self, inst):

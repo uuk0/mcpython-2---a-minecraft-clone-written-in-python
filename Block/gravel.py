@@ -4,7 +4,7 @@ import modsystem.ModLoader
 import mathhelper
 
 
-class Gravel(G.blockclass):
+class Gravel(G.iblockclass):
     """class for Gravel"""
     def getName(self):
         return "minecraft:gravel"
@@ -15,7 +15,7 @@ class Gravel(G.blockclass):
     def getStateName(self, inst):
         return "default"
 
-    def isBrakeAble(self, inst):
+    def isBrakeAbleInGamemode0(self, inst):
         return True
 
     """makes the block falling"""

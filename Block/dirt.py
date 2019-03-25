@@ -4,18 +4,12 @@ import notations
 import modsystem.ModLoader
 
 
-class Dirt(G.blockclass):
+class Dirt(G.iblockclass):
     """class for dirt"""
     oredictnames = [notations.OreDictItems.DIRT]
 
     def getName(self):
         return "minecraft:dirt"
-
-    def getModelFile(self, inst):
-        return "minecraft:dirt"
-
-    def getStateName(self, inst):
-        return "dirt"
 
     def getBrakeSoundFile(self, inst):
         return [G.local + "/assets/minecraft/sounds/brake/grass1.wma",

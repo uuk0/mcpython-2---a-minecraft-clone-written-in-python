@@ -1,12 +1,29 @@
 {
-  "blockaddress": "minecraft:crafting_table",
-  "crafting_table": {
-    "name": "cube:full",
-    "side_texture_files": ["assets/minecraft/textures/block/crafting_table_front.png",
-                           "assets/minecraft/textures/block/crafting_table_side.png",
-                           "assets/minecraft/textures/block/crafting_table_top.png",
-                           "assets/minecraft/textures/block/oak_planks.png"],
-    "blockname": "minecraft/crafting_table",
-    "side_indexes": [1, 0, 2, 3, 3, 3]
-  }
+  "name": "minecraft:crafting_table",
+  "files": ["assets/minecraft/textures/block/crafting_table_front.png",
+   "assets/minecraft/textures/block/crafting_table_side.png",
+   "assets/minecraft/textures/block/crafting_table_top.png",
+   "assets/minecraft/textures/block/oak_planks.png"],
+  "entrys": [
+    {
+      "type name": "cube:full",
+      "state name": "default",
+      "sides": [2, 3, 1, 1, 1, 0]
+    },
+    {
+      "type name": "cube:full",
+      "state name": "rotated A",
+      "sides": [2, 3, 1, 1, 0, 1]
+    },
+    {
+      "type name": "cube:full",
+      "state name": "rotated B",
+      "sides": [2, 3, 1, 0, 1, 1]
+    },
+    {
+      "type name": "cube:full",
+      "state name": "rotated C",
+      "sides": [2, 3, 0, 1, 1, 1]
+    }
+  ]
 }

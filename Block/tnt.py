@@ -8,7 +8,7 @@ import modsystem.ModLoader
 SURROUNDING = [(0, 0, -1, "N"), (0, 0, 1, "S"), (0, -1, 0, "U"), (0, 1, 0, "D"), (-1, 0, 0, "W"), (1, 0, 0, "O")]
 
 
-class Tnt(G.blockclass):
+class Tnt(G.iblockclass):
     """class for tnt"""
     def getName(self):
         return "minecraft:tnt"

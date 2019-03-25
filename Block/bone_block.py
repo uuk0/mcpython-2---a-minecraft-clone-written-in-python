@@ -1,10 +1,10 @@
 import globals as G
-import mathhelper
 import modsystem.ModLoader
 
 
-class BoneBlock(G.blockclass):
+class BoneBlock(G.iblockclass):
     """class for bone block"""
+
     def getName(self):
         return "minecraft:bone_block"
 

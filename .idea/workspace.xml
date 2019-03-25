@@ -2,472 +2,414 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bbb6bf89-10c9-4276-9003-d27725105e9c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Block/bone_block.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Block/bookshelve.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Block/clay.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Block/concret.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Block/coral_block.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Block/glass.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Block/magma_block.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Block/melon.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Block/nether_bricks.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Block/nether_wart_block.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Block/netherrack.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Block/note_block.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Block/prismarin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Block/pumpkin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Block/purpur_block.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Block/red_nether_bricks.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Block/shulker_boxes.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Block/slime_block.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Block/sponge.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Block/terracotta.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/minecraft/models/blocks/bone_block.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/minecraft/models/blocks/bookshelve.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/minecraft/models/blocks/clay.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/minecraft/models/blocks/concret.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/minecraft/models/blocks/concret_powder.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/minecraft/models/blocks/coral_block.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/minecraft/models/blocks/glass.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/minecraft/models/blocks/glazed_terracotta.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/minecraft/models/blocks/magma_block.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/minecraft/models/blocks/melon.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/minecraft/models/blocks/nether_bricks.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/minecraft/models/blocks/nether_wart_block.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/minecraft/models/blocks/netherrack.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/minecraft/models/blocks/note_block.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/minecraft/models/blocks/prismarin.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/minecraft/models/blocks/pumpkin.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/minecraft/models/blocks/purpur_block.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/minecraft/models/blocks/red_nether_bricks.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/minecraft/models/blocks/shulker_boxes.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/minecraft/models/blocks/slime_block.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/minecraft/models/blocks/sponge.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/minecraft/models/blocks/terracotta.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/command/Function.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/command/function_command.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scoreboard/IScoreBoardType.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scoreboard/ObjectiveScoreboard.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scoreboard/ScoreboardHandler.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Block/none.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/minecraft/models/blocks/grass.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/minecraft/models/blocks/old/dirt.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/minecraft/models/blocks/old/stone.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/command/execute.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/command/util.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/textures/TextureAtlas.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/textures/util.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Block/barrel.py" beforeDir="false" afterPath="$PROJECT_DIR$/Block/barrel.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Block/bedrock.py" beforeDir="false" afterPath="$PROJECT_DIR$/Block/bedrock.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Block/block.py" beforeDir="false" afterPath="$PROJECT_DIR$/Block/block.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Block/bone_block.py" beforeDir="false" afterPath="$PROJECT_DIR$/Block/bone_block.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Block/bookshelve.py" beforeDir="false" afterPath="$PROJECT_DIR$/Block/bookshelve.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Block/brick.py" beforeDir="false" afterPath="$PROJECT_DIR$/Block/brick.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Block/cactus.py" beforeDir="false" afterPath="$PROJECT_DIR$/Block/cactus.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Block/clay.py" beforeDir="false" afterPath="$PROJECT_DIR$/Block/clay.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Block/concret.py" beforeDir="false" afterPath="$PROJECT_DIR$/Block/concret.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Block/coral_block.py" beforeDir="false" afterPath="$PROJECT_DIR$/Block/coral_block.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Block/crafting_table.py" beforeDir="false" afterPath="$PROJECT_DIR$/Block/crafting_table.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Block/dirt.py" beforeDir="false" afterPath="$PROJECT_DIR$/Block/dirt.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Block/endstone.py" beforeDir="false" afterPath="$PROJECT_DIR$/Block/endstone.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Block/glass.py" beforeDir="false" afterPath="$PROJECT_DIR$/Block/glass.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Block/glowstone.py" beforeDir="false" afterPath="$PROJECT_DIR$/Block/glowstone.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Block/grass.py" beforeDir="false" afterPath="$PROJECT_DIR$/Block/grass.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Block/gravel.py" beforeDir="false" afterPath="$PROJECT_DIR$/Block/gravel.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Block/ice.py" beforeDir="false" afterPath="$PROJECT_DIR$/Block/ice.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Block/leaves.py" beforeDir="false" afterPath="$PROJECT_DIR$/Block/leaves.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Block/log.py" beforeDir="false" afterPath="$PROJECT_DIR$/Block/log.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Block/magma_block.py" beforeDir="false" afterPath="$PROJECT_DIR$/Block/magma_block.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Block/melon.py" beforeDir="false" afterPath="$PROJECT_DIR$/Block/melon.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Block/nether_bricks.py" beforeDir="false" afterPath="$PROJECT_DIR$/Block/nether_bricks.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Block/nether_wart_block.py" beforeDir="false" afterPath="$PROJECT_DIR$/Block/nether_wart_block.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Block/netherrack.py" beforeDir="false" afterPath="$PROJECT_DIR$/Block/netherrack.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Block/note_block.py" beforeDir="false" afterPath="$PROJECT_DIR$/Block/note_block.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Block/obsidian.py" beforeDir="false" afterPath="$PROJECT_DIR$/Block/obsidian.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Block/ore_blocks.py" beforeDir="false" afterPath="$PROJECT_DIR$/Block/ore_blocks.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Block/ores.py" beforeDir="false" afterPath="$PROJECT_DIR$/Block/ores.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Block/plank.py" beforeDir="false" afterPath="$PROJECT_DIR$/Block/plank.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Block/prismarin.py" beforeDir="false" afterPath="$PROJECT_DIR$/Block/prismarin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Block/pumpkin.py" beforeDir="false" afterPath="$PROJECT_DIR$/Block/pumpkin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Block/purpur_block.py" beforeDir="false" afterPath="$PROJECT_DIR$/Block/purpur_block.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Block/red_nether_bricks.py" beforeDir="false" afterPath="$PROJECT_DIR$/Block/red_nether_bricks.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Block/redstone_lamp.py" beforeDir="false" afterPath="$PROJECT_DIR$/Block/redstone_lamp.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Block/sand.py" beforeDir="false" afterPath="$PROJECT_DIR$/Block/sand.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Block/sandstone.py" beforeDir="false" afterPath="$PROJECT_DIR$/Block/sandstone.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Block/shulker_boxes.py" beforeDir="false" afterPath="$PROJECT_DIR$/Block/shulker_boxes.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Block/slime_block.py" beforeDir="false" afterPath="$PROJECT_DIR$/Block/slime_block.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Block/sponge.py" beforeDir="false" afterPath="$PROJECT_DIR$/Block/sponge.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Block/stone.py" beforeDir="false" afterPath="$PROJECT_DIR$/Block/stone.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Block/terracotta.py" beforeDir="false" afterPath="$PROJECT_DIR$/Block/terracotta.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Block/tnt.py" beforeDir="false" afterPath="$PROJECT_DIR$/Block/tnt.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Block/wool.py" beforeDir="false" afterPath="$PROJECT_DIR$/Block/wool.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IItemStack.py" beforeDir="false" afterPath="$PROJECT_DIR$/IItemStack.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Item/item.py" beforeDir="false" afterPath="$PROJECT_DIR$/Item/item.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/minecraft/models/blocks/barrel.json" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/models/blocks/barrel.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/models/blocks/blast_furnes.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/models/blocks/bedrock.json" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/models/blocks/bedrock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/models/blocks/bone_block.json" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/models/blocks/old/bone_block.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/models/blocks/bookshelve.json" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/models/blocks/bookshelve.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/models/blocks/brick.json" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/models/blocks/brick.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/models/blocks/clay.json" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/models/blocks/clay.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/models/blocks/concret.json" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/models/blocks/concret.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/models/blocks/concret_powder.json" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/models/blocks/concret_powder.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/models/blocks/coral_block.json" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/models/blocks/old/coral_block.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/models/blocks/crafting_table.json" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/models/blocks/crafting_table.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/minecraft/models/blocks/dirt.json" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/models/blocks/dirt.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/models/blocks/furnes.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/19w07a.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/barrel_top_open.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/barrel_top_open.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/black_concrete.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/black_concrete.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/black_concrete_powder.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/black_concrete_powder.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/models/blocks/endstone.json" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/models/blocks/old/endstone.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/models/blocks/glass.json" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/models/blocks/old/glass.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/models/blocks/glazed_terracotta.json" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/models/blocks/old/glazed_terracotta.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/models/blocks/glowstone.json" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/models/blocks/old/glowstone.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/models/blocks/gravel.json" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/models/blocks/old/gravel.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/models/blocks/ice.json" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/models/blocks/old/ice.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/models/blocks/leaves.json" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/models/blocks/old/leaves.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/models/blocks/log.json" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/models/blocks/old/log.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/models/blocks/magma_block.json" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/models/blocks/old/magma_block.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/models/blocks/melon.json" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/models/blocks/old/melon.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/models/blocks/nether_bricks.json" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/models/blocks/old/nether_bricks.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/models/blocks/nether_wart_block.json" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/models/blocks/old/nether_wart_block.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/models/blocks/netherrack.json" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/models/blocks/old/netherrack.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/models/blocks/notdefinited.json" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/models/blocks/old/notdefinited.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/models/blocks/note_block.json" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/models/blocks/old/note_block.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/models/blocks/obsidian.json" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/models/blocks/old/obsidian.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/models/blocks/ore_blocks.json" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/models/blocks/old/ore_blocks.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/models/blocks/ores.json" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/models/blocks/old/ores.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/models/blocks/planks.json" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/models/blocks/old/planks.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/models/blocks/prismarin.json" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/models/blocks/old/prismarin.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/models/blocks/pumpkin.json" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/models/blocks/old/pumpkin.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/models/blocks/purpur_block.json" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/models/blocks/old/purpur_block.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/models/blocks/red_nether_bricks.json" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/models/blocks/old/red_nether_bricks.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/models/blocks/redstone_lamp.json" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/models/blocks/old/redstone_lamp.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/models/blocks/sand.json" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/models/blocks/old/sand.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/models/blocks/sandstone.json" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/models/blocks/old/sandstone.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/models/blocks/shulker_boxes.json" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/models/blocks/old/shulker_boxes.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/models/blocks/slime_block.json" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/models/blocks/old/slime_block.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/models/blocks/sponge.json" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/models/blocks/old/sponge.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/models/blocks/stone.json" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/models/blocks/stone.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/models/blocks/terracotta.json" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/models/blocks/old/terracotta.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/models/blocks/tnt.json" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/models/blocks/old/tnt.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/models/blocks/wool.json" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/models/blocks/old/wool.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/19w09a.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/acacia_leaves.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/acacia_leaves.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/acacia_log.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/acacia_log.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/acacia_log_top.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/acacia_log_top.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/acacia_planks.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/acacia_planks.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/andesite.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/andesite.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/birch_leaves.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/birch_leaves.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/birch_log.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/birch_log.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/birch_log_top.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/birch_log_top.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/birch_planks.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/birch_planks.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/black_glazed_terracotta.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/black_glazed_terracotta.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/black_shulker_box.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/black_shulker_box.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/black_stained_glass.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/black_stained_glass.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/black_terracotta.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/black_terracotta.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/blue_concrete.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/blue_concrete.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/blue_concrete_powder.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/blue_concrete_powder.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/black_wool.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/black_wool.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/blast_furnace_front.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/blast_furnace_front.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/blast_furnace_side.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/blast_furnace_side.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/blast_furnace_top.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/blast_furnace_top.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/blue_glazed_terracotta.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/blue_glazed_terracotta.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/blue_ice.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/blue_ice.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/blue_shulker_box.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/blue_shulker_box.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/blue_stained_glass.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/blue_stained_glass.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/blue_terracotta.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/blue_terracotta.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/blue_wool.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/blue_wool.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/bone_block_side.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/bone_block_side.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/bone_block_top.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/bone_block_top.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/bookshelf.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/bookshelf.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/brain_coral_block.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/brain_coral_block.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/brown_concrete.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/brown_concrete.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/brown_concrete_powder.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/brown_concrete_powder.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/brown_glazed_terracotta.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/brown_glazed_terracotta.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/brown_shulker_box.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/brown_shulker_box.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/brown_stained_glass.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/brown_stained_glass.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/brown_terracotta.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/brown_terracotta.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/brown_wool.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/brown_wool.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/bubble_coral_block.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/bubble_coral_block.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/carved_pumpkin.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/carved_pumpkin.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/clay.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/clay.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/cyan_concrete.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/cyan_concrete.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/cyan_concrete_powder.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/cyan_concrete_powder.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/chiseled_quartz_block.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/chiseled_quartz_block.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/chiseled_quartz_block_top.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/chiseled_quartz_block_top.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/chiseled_red_sandstone.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/chiseled_red_sandstone.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/chiseled_sandstone.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/chiseled_sandstone.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/chiseled_stone_bricks.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/chiseled_stone_bricks.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/coal_block.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/coal_block.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/coal_ore.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/coal_ore.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/coarse_dirt.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/coarse_dirt.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/cobblestone.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/cobblestone.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/cracked_stone_bricks.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/cracked_stone_bricks.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/cut_red_sandstone.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/cut_red_sandstone.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/cut_sandstone.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/cut_sandstone.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/cyan_glazed_terracotta.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/cyan_glazed_terracotta.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/cyan_shulker_box.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/cyan_shulker_box.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/cyan_stained_glass.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/cyan_stained_glass.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/cyan_terracotta.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/cyan_terracotta.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/cyan_wool.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/cyan_wool.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/dark_oak_leaves.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/dark_oak_leaves.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/dark_oak_log.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/dark_oak_log.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/dark_oak_log_top.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/dark_oak_log_top.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/dark_oak_planks.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/dark_oak_planks.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/dark_prismarine.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/dark_prismarine.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/dead_brain_coral_block.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/dead_brain_coral_block.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/dead_bubble_coral_block.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/dead_bubble_coral_block.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/dead_fire_coral_block.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/dead_fire_coral_block.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/dead_horn_coral_block.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/dead_horn_coral_block.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/dead_tube_coral_block.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/dead_tube_coral_block.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/diamond_block.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/diamond_block.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/diamond_ore.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/diamond_ore.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/diorite.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/diorite.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/emerald_block.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/emerald_block.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/emerald_ore.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/emerald_ore.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/end_stone.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/end_stone.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/end_stone_bricks.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/end_stone_bricks.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/fire_coral_block.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/fire_coral_block.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/furnace_front.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/furnace_front.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/furnace_front_on.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/furnace_front_on.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/furnace_side.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/furnace_side.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/furnace_top.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/furnace_top.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/glass.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/glass.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/grass_block_side_overlay.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/grass_block_side_overlay.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/grass_block_snow.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/grass_block_snow.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/gray_concrete.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/gray_concrete.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/gray_concrete_powder.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/gray_concrete_powder.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/glowstone.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/glowstone.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/gold_block.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/gold_block.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/gold_ore.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/gold_ore.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/granite.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/granite.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/gravel.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/gravel.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/gray_glazed_terracotta.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/gray_glazed_terracotta.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/gray_shulker_box.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/gray_shulker_box.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/gray_stained_glass.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/gray_stained_glass.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/gray_terracotta.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/gray_terracotta.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/green_concrete.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/green_concrete.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/green_concrete_powder.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/green_concrete_powder.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/gray_wool.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/gray_wool.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/green_glazed_terracotta.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/green_glazed_terracotta.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/green_shulker_box.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/green_shulker_box.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/green_stained_glass.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/green_stained_glass.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/green_terracotta.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/green_terracotta.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/green_wool.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/green_wool.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/horn_coral_block.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/horn_coral_block.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/light_blue_concrete.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/light_blue_concrete.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/light_blue_concrete_powder.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/light_blue_concrete_powder.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/ice.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/ice.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/iron_block.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/iron_block.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/iron_ore.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/iron_ore.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/jungle_leaves.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/jungle_leaves.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/jungle_log.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/jungle_log.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/jungle_log_top.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/jungle_log_top.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/jungle_planks.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/jungle_planks.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/lapis_block.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/lapis_block.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/lapis_ore.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/lapis_ore.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/light_blue_glazed_terracotta.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/light_blue_glazed_terracotta.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/light_blue_shulker_box.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/light_blue_shulker_box.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/light_blue_stained_glass.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/light_blue_stained_glass.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/light_blue_terracotta.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/light_blue_terracotta.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/light_gray_concrete.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/light_gray_concrete.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/light_gray_concrete_powder.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/light_gray_concrete_powder.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/light_blue_wool.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/light_blue_wool.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/light_gray_glazed_terracotta.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/light_gray_glazed_terracotta.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/light_gray_shulker_box.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/light_gray_shulker_box.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/light_gray_stained_glass.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/light_gray_stained_glass.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/light_gray_terracotta.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/light_gray_terracotta.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/lime_concrete.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/lime_concrete.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/lime_concrete_powder.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/lime_concrete_powder.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/light_gray_wool.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/light_gray_wool.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/lime_glazed_terracotta.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/lime_glazed_terracotta.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/lime_shulker_box.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/lime_shulker_box.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/lime_stained_glass.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/lime_stained_glass.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/lime_terracotta.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/lime_terracotta.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/magenta_concrete.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/magenta_concrete.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/magenta_concrete_powder.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/magenta_concrete_powder.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/lime_wool.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/lime_wool.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/magenta_glazed_terracotta.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/magenta_glazed_terracotta.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/magenta_shulker_box.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/magenta_shulker_box.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/magenta_stained_glass.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/magenta_stained_glass.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/magenta_terracotta.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/magenta_terracotta.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/magenta_wool.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/magenta_wool.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/melon_side.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/melon_side.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/melon_top.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/melon_top.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/mossy_cobblestone.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/mossy_cobblestone.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/mossy_stone_bricks.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/mossy_stone_bricks.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/mycelium_side.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/mycelium_side.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/mycelium_top.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/mycelium_top.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/nether_bricks.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/nether_bricks.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/nether_quartz_ore.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/nether_quartz_ore.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/nether_wart_block.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/nether_wart_block.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/netherrack.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/netherrack.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/note_block.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/note_block.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/oak_door_bottom.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/oak_door_bottom.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/oak_door_top.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/oak_door_top.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/orange_concrete.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/orange_concrete.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/orange_concrete_powder.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/orange_concrete_powder.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/oak_leaves.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/oak_leaves.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/oak_log.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/oak_log.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/oak_log_top.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/oak_log_top.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/obsidian.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/obsidian.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/orange_glazed_terracotta.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/orange_glazed_terracotta.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/orange_shulker_box.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/orange_shulker_box.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/orange_stained_glass.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/orange_stained_glass.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/orange_terracotta.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/orange_terracotta.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/pink_concrete.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/pink_concrete.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/pink_concrete_powder.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/pink_concrete_powder.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/orange_wool.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/orange_wool.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/packed_ice.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/packed_ice.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/pink_glazed_terracotta.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/pink_glazed_terracotta.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/pink_shulker_box.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/pink_shulker_box.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/pink_stained_glass.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/pink_stained_glass.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/pink_terracotta.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/pink_terracotta.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/pink_wool.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/pink_wool.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/podzol_side.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/podzol_side.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/podzol_top.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/podzol_top.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/polished_andesite.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/polished_andesite.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/polished_diorite.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/polished_diorite.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/polished_granite.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/polished_granite.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/prismarine_bricks.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/prismarine_bricks.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/pumpkin_side.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/pumpkin_side.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/pumpkin_top.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/pumpkin_top.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/purple_concrete.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/purple_concrete.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/purple_concrete_powder.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/purple_concrete_powder.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/purple_glazed_terracotta.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/purple_glazed_terracotta.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/purple_shulker_box.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/purple_shulker_box.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/purple_stained_glass.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/purple_stained_glass.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/purple_terracotta.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/purple_terracotta.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/purple_wool.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/purple_wool.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/purpur_block.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/purpur_block.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/purpur_pillar.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/purpur_pillar.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/purpur_pillar_top.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/purpur_pillar_top.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/red_concrete.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/red_concrete.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/red_concrete_powder.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/red_concrete_powder.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/quartz_block_bottom.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/quartz_block_bottom.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/quartz_block_side.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/quartz_block_side.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/quartz_block_top.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/quartz_block_top.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/quartz_pillar.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/quartz_pillar.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/quartz_pillar_top.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/quartz_pillar_top.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/red_glazed_terracotta.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/red_glazed_terracotta.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/red_nether_bricks.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/red_nether_bricks.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/red_sand.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/red_sand.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/red_sandstone.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/red_sandstone.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/red_sandstone_bottom.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/red_sandstone_bottom.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/red_sandstone_top.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/red_sandstone_top.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/red_shulker_box.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/red_shulker_box.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/red_stained_glass.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/red_stained_glass.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/red_terracotta.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/red_terracotta.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/red_wool.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/red_wool.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/redstone_block.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/redstone_block.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/redstone_lamp.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/redstone_lamp.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/redstone_lamp_on.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/redstone_lamp_on.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/redstone_ore.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/redstone_ore.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/sand.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/sand.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/sandstone.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/sandstone.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/sandstone_bottom.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/sandstone_bottom.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/sandstone_top.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/sandstone_top.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/scaffolding_side.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/scaffolding_side.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/shulker_box.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/shulker_box.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/slime_block.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/slime_block.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/sponge.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/sponge.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/spruce_leaves.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/spruce_leaves.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/spruce_log.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/spruce_log.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/spruce_log_top.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/spruce_log_top.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/spruce_planks.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/spruce_planks.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/stone_bricks.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/stone_bricks.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/stripped_acacia_log.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/stripped_acacia_log.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/stripped_acacia_log_top.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/stripped_acacia_log_top.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/stripped_birch_log.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/stripped_birch_log.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/stripped_birch_log_top.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/stripped_birch_log_top.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/stripped_dark_oak_log.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/stripped_dark_oak_log.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/stripped_dark_oak_log_top.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/stripped_dark_oak_log_top.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/stripped_jungle_log.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/stripped_jungle_log.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/stripped_jungle_log_top.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/stripped_jungle_log_top.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/stripped_oak_log.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/stripped_oak_log.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/stripped_oak_log_top.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/stripped_oak_log_top.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/stripped_spruce_log.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/stripped_spruce_log.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/stripped_spruce_log_top.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/stripped_spruce_log_top.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/terracotta.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/terracotta.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/tnt_bottom.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/tnt_bottom.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/tnt_side.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/tnt_side.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/tnt_top.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/tnt_top.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/tube_coral_block.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/tube_coral_block.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/wet_sponge.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/wet_sponge.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/white_concrete.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/white_concrete.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/white_concrete_powder.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/white_concrete_powder.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/white_glazed_terracotta.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/white_glazed_terracotta.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/white_shulker_box.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/white_shulker_box.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/white_stained_glass.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/white_stained_glass.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/white_terracotta.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/white_terracotta.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/yellow_concrete.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/yellow_concrete.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/yellow_concrete_powder.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/yellow_concrete_powder.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/white_wool.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/white_wool.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/yellow_glazed_terracotta.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/yellow_glazed_terracotta.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/yellow_shulker_box.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/yellow_shulker_box.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/yellow_stained_glass.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/yellow_stained_glass.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/yellow_terracotta.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/yellow_terracotta.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/entity/horse/horse_skeleton.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/entity/horse/horse_skeleton.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/entity/horse/horse_zombie.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/entity/horse/horse_zombie.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/entity/iron_golem.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/entity/iron_golem.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/gui/container/inventory.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/gui/container/inventory.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/item/BLOCK.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/item/cake.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/item/cake.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/item/diamond_horse_armor.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/item/diamond_horse_armor.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/item/emerald.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/item/emerald.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/item/golden_boots.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/item/golden_boots.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/item/golden_chestplate.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/item/golden_chestplate.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/item/golden_helmet.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/item/golden_helmet.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/item/golden_horse_armor.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/item/golden_horse_armor.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/item/golden_leggings.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/item/golden_leggings.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/item/iron_horse_armor.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/item/iron_horse_armor.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/item/phantom_membrane.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/item/phantom_membrane.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/item/snowball.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/item/snowball.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/particle/angry.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/particle/big_smoke_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/particle/big_smoke_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/particle/big_smoke_10.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/particle/big_smoke_11.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/particle/big_smoke_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/particle/big_smoke_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/particle/big_smoke_4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/particle/big_smoke_5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/particle/big_smoke_6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/particle/big_smoke_7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/particle/big_smoke_8.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/particle/big_smoke_9.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/particle/bubble.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/particle/bubble_pop_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/particle/bubble_pop_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/particle/bubble_pop_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/particle/bubble_pop_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/particle/bubble_pop_4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/particle/critical_hit.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/particle/damage.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/particle/drip_fall.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/particle/drip_hang.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/particle/drip_land.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/particle/effect_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/particle/effect_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/particle/effect_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/particle/effect_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/particle/effect_4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/particle/effect_5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/particle/effect_6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/particle/effect_7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/particle/enchanted_hit.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/particle/explosion_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/particle/explosion_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/particle/explosion_10.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/particle/explosion_11.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/particle/explosion_12.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/particle/explosion_13.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/particle/explosion_14.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/particle/explosion_15.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/particle/explosion_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/particle/explosion_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/particle/explosion_4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/particle/explosion_5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/particle/explosion_6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/particle/explosion_7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/particle/explosion_8.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/particle/explosion_9.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/particle/flame.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/particle/flash.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/particle/footprint.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/particle/generic_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/particle/generic_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/particle/generic_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/particle/generic_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/particle/generic_4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/particle/generic_5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/particle/generic_6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/particle/generic_7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/particle/glint.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/particle/glitter_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/particle/glitter_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/particle/glitter_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/particle/glitter_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/particle/glitter_4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/particle/glitter_5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/particle/glitter_6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/particle/glitter_7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/particle/heart.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/particle/lava.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/particle/nautilus.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/particle/note.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/particle/sga_a.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/particle/sga_b.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/particle/sga_c.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/particle/sga_d.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/particle/sga_e.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/particle/sga_f.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/particle/sga_g.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/particle/sga_h.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/particle/sga_i.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/particle/sga_j.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/particle/sga_k.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/particle/sga_l.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/particle/sga_m.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/particle/sga_n.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/particle/sga_o.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/particle/sga_p.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/particle/sga_q.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/particle/sga_r.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/particle/sga_s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/particle/sga_t.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/particle/sga_u.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/particle/sga_v.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/particle/sga_w.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/particle/sga_x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/particle/sga_y.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/particle/sga_z.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/particle/spark_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/particle/spark_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/particle/spark_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/particle/spark_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/particle/spark_4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/particle/spark_5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/particle/spark_6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/particle/spark_7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/particle/spell_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/particle/spell_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/particle/spell_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/particle/spell_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/particle/spell_4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/particle/spell_5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/particle/spell_6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/particle/spell_7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/particle/splash_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/particle/splash_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/particle/splash_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/particle/splash_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/particle/sweep_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/particle/sweep_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/particle/sweep_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/particle/sweep_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/particle/sweep_4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/particle/sweep_5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/particle/sweep_6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/particle/sweep_7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/block/yellow_wool.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/block/yellow_wool.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/gui/container/villager.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/gui/container/villager.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/item/Andesite.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/item/Andesite.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/item/BLUE_ICE.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/item/BLUE_ICE.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/item/Birch_Planks.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/item/Birch_Planks.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/item/CACTUS.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/item/CACTUS.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/item/COAL#0.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/item/COAL#0.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/item/COAL#1.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/item/COAL#1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/item/COAL_ORE.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/item/COAL_ORE.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/item/CRAFTING_TABLE.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/item/CRAFTING_TABLE.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/item/DIAMOND_ORE.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/item/DIAMOND_ORE.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/item/DIRT#0.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/item/DIRT#0.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/item/DIRT#1.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/item/DIRT#1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/item/Diorite.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/item/Diorite.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/item/EMERALD_BLOCK.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/item/EMERALD_BLOCK.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/item/EMERALD_ORE.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/item/EMERALD_ORE.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/item/END_BRICKS.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/item/END_BRICKS.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/item/END_STONE.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/item/END_STONE.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/item/GLOWSTONE.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/item/GLOWSTONE.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/item/GOLD_ORE.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/item/GOLD_ORE.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/item/Granite.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/item/Granite.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/item/ICE.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/item/ICE.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/item/IRON_ORE.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/item/IRON_ORE.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/item/LAPIS_BLOCK.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/item/LAPIS_BLOCK.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/item/LAPIS_ORE.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/item/LAPIS_ORE.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/item/LEAVES.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/item/LEAVES.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/item/LOG#2.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/item/LOG#2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/item/LOG2#0.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/item/LOG2#0.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/item/MOSSY_COBBLESTONE.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/item/MOSSY_COBBLESTONE.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/item/Nether_Quartz.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/item/Nether_Quartz.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/item/OBSIDIAN.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/item/OBSIDIAN.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/item/Polished_Andesite.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/item/Polished_Andesite.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/item/Polished_Diorite.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/item/Polished_Diorite.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/item/Polished_Granite.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/item/Polished_Granite.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/item/QUARTZ_BLOCK#0.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/item/QUARTZ_BLOCK#0.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/item/QUARTZ_BLOCK#1.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/item/QUARTZ_BLOCK#1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/item/QUARTZ_BLOCK#2.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/item/QUARTZ_BLOCK#2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/item/QUARTZ_ORE.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/item/QUARTZ_ORE.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/item/REDSTONE_BLOCK.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/item/REDSTONE_BLOCK.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/item/REDSTONE_LAMP.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/item/REDSTONE_LAMP.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/item/REDSTONE_ORE.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/item/REDSTONE_ORE.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/item/SAND#0.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/item/SAND#0.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/item/SANDSTONE#1.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/item/SANDSTONE#1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/item/SANDSTONE#2.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/item/SANDSTONE#2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/item/STONE.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/item/STONE.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/item/STONEBRICK#0.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/item/STONEBRICK#0.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/item/STONEBRICK#2.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/item/STONEBRICK#2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/item/STONEBRICK#3.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/item/STONEBRICK#3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/item/STONEBRICK.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/item/STONEBRICK.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/item/WOOL#0.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/item/WOOL#0.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/item/WOOL#1.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/item/WOOL#1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/item/WOOL#10.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/item/WOOL#10.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/item/WOOL#11.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/item/WOOL#11.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/item/WOOL#12.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/item/WOOL#12.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/item/WOOL#13.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/item/WOOL#13.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/item/WOOL#14.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/item/WOOL#14.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/item/WOOL#15.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/item/WOOL#15.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/item/WOOL#2.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/item/WOOL#2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/item/WOOL#3.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/item/WOOL#3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/item/WOOL#4.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/item/WOOL#4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/item/WOOL#5.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/item/WOOL#5.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/item/WOOL#6.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/item/WOOL#6.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/item/WOOL#7.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/item/WOOL#7.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/item/WOOL#8.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/item/WOOL#8.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/item/WOOL#9.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/item/WOOL#9.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/minecraft/textures/item/acacia_plank.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/minecraft/textures/item/acacia_plank.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat.py" beforeDir="false" afterPath="$PROJECT_DIR$/chat.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/command/Command.py" beforeDir="false" afterPath="$PROJECT_DIR$/command/Command.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/command/Function.py" beforeDir="false" afterPath="$PROJECT_DIR$/command/Function.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/command/reload.py" beforeDir="false" afterPath="$PROJECT_DIR$/command/reload.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/command/selector.py" beforeDir="false" afterPath="$PROJECT_DIR$/command/selector.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/exception.txt" beforeDir="false" afterPath="$PROJECT_DIR$/exception.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gen/noise.py" beforeDir="false" afterPath="$PROJECT_DIR$/gen/noise.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gameinfo.dat" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/globals.py" beforeDir="false" afterPath="$PROJECT_DIR$/globals.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log.py" beforeDir="false" afterPath="$PROJECT_DIR$/log.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mathhelper.py" beforeDir="false" afterPath="$PROJECT_DIR$/mathhelper.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modelloader.py" beforeDir="false" afterPath="$PROJECT_DIR$/textures/modelloader.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/modsystem/ModLoader.py" beforeDir="false" afterPath="$PROJECT_DIR$/modsystem/ModLoader.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modsystem/ModSorter.py" beforeDir="false" afterPath="$PROJECT_DIR$/modsystem/ModSorter.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modsystem/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/modsystem/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/saves/test1/DIM0/c.0.0.chunk" beforeDir="false" afterPath="$PROJECT_DIR$/saves/test1/DIM0/c.0.0.chunk" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/saves/test1/inventorys.info" beforeDir="false" afterPath="$PROJECT_DIR$/saves/test1/inventorys.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/saves/test1/world.info" beforeDir="false" afterPath="$PROJECT_DIR$/saves/test1/world.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modsystem/modding.info" beforeDir="false" afterPath="$PROJECT_DIR$/modsystem/modding.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/player.py" beforeDir="false" afterPath="$PROJECT_DIR$/player.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/state/game.py" beforeDir="false" afterPath="$PROJECT_DIR$/state/game.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/texturslitcher.py" beforeDir="false" afterPath="$PROJECT_DIR$/texturslitcher.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/0.png" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/0.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/ae2/guis/cell_workbench/main.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/ae2/guis/icons/icon_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/ae2/guis/icons/icon_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/ae2/guis/icons/icon_10.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/ae2/guis/icons/icon_11.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/ae2/guis/icons/icon_112.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/ae2/guis/icons/icon_113.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/ae2/guis/icons/icon_114.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/ae2/guis/icons/icon_115.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/ae2/guis/icons/icon_12.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/ae2/guis/icons/icon_128.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/ae2/guis/icons/icon_13.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/ae2/guis/icons/icon_130.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/ae2/guis/icons/icon_14.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/ae2/guis/icons/icon_146.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/ae2/guis/icons/icon_15.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/ae2/guis/icons/icon_16.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/ae2/guis/icons/icon_162.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/ae2/guis/icons/icon_17.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/ae2/guis/icons/icon_18.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/ae2/guis/icons/icon_19.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/ae2/guis/icons/icon_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/ae2/guis/icons/icon_20.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/ae2/guis/icons/icon_21.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/ae2/guis/icons/icon_22.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/ae2/guis/icons/icon_226.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/ae2/guis/icons/icon_227.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/ae2/guis/icons/icon_228.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/ae2/guis/icons/icon_23.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/ae2/guis/icons/icon_24.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/ae2/guis/icons/icon_240.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/ae2/guis/icons/icon_241.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/ae2/guis/icons/icon_242.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/ae2/guis/icons/icon_243.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/ae2/guis/icons/icon_244.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/ae2/guis/icons/icon_245.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/ae2/guis/icons/icon_246.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/ae2/guis/icons/icon_247.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/ae2/guis/icons/icon_248.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/ae2/guis/icons/icon_249.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/ae2/guis/icons/icon_25.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/ae2/guis/icons/icon_250.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/ae2/guis/icons/icon_251.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/ae2/guis/icons/icon_252.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/ae2/guis/icons/icon_253.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/ae2/guis/icons/icon_254.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/ae2/guis/icons/icon_255.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/ae2/guis/icons/icon_26.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/ae2/guis/icons/icon_27.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/ae2/guis/icons/icon_28.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/ae2/guis/icons/icon_29.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/ae2/guis/icons/icon_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/ae2/guis/icons/icon_30.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/ae2/guis/icons/icon_31.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/ae2/guis/icons/icon_32.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/ae2/guis/icons/icon_33.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/ae2/guis/icons/icon_34.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/ae2/guis/icons/icon_35.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/ae2/guis/icons/icon_36.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/ae2/guis/icons/icon_37.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/ae2/guis/icons/icon_38.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/ae2/guis/icons/icon_39.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/ae2/guis/icons/icon_4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/ae2/guis/icons/icon_40.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/ae2/guis/icons/icon_41.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/ae2/guis/icons/icon_42.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/ae2/guis/icons/icon_43.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/ae2/guis/icons/icon_44.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/ae2/guis/icons/icon_45.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/ae2/guis/icons/icon_47.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/ae2/guis/icons/icon_48.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/ae2/guis/icons/icon_49.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/ae2/guis/icons/icon_5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/ae2/guis/icons/icon_50.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/ae2/guis/icons/icon_51.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/ae2/guis/icons/icon_52.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/ae2/guis/icons/icon_53.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/ae2/guis/icons/icon_54.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/ae2/guis/icons/icon_56.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/ae2/guis/icons/icon_58.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/ae2/guis/icons/icon_59.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/ae2/guis/icons/icon_6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/ae2/guis/icons/icon_60.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/ae2/guis/icons/icon_64.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/ae2/guis/icons/icon_65.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/ae2/guis/icons/icon_66.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/ae2/guis/icons/icon_67.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/ae2/guis/icons/icon_68.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/ae2/guis/icons/icon_69.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/ae2/guis/icons/icon_7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/ae2/guis/icons/icon_70.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/ae2/guis/icons/icon_74.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/ae2/guis/icons/icon_75.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/ae2/guis/icons/icon_76.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/ae2/guis/icons/icon_8.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/ae2/guis/icons/icon_80.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/ae2/guis/icons/icon_81.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/ae2/guis/icons/icon_82.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/ae2/guis/icons/icon_83.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/ae2/guis/icons/icon_84.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/ae2/guis/icons/icon_85.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/ae2/guis/icons/icon_9.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/ae2/guis/icons/icon_90.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/ae2/guis/icons/icon_91.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/ae2/guis/icons/icon_92.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/ae2/guis/icons/icon_96.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/ae2/guis/icons/icon_97.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/ae2/guis/icons/icon_98.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/ae2/guis/icons/icon_99.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/imageatlas_data/0_imageatlas_split.png" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/imageatlas_data/0_imageatlas_split.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/imageatlas_data/1_imageatlas_split.png" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/imageatlas_data/1_imageatlas_split.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/texturslitcher.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/imageatlas_data/0_imageatlas_split.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/imageatlas_data/1_imageatlas_split.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/imageatlas_data/2_imageatlas_split.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/imageatlas_data/3_imageatlas_split.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/imageatlas_data/4_imageatlas_split.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/imageatlas_data/5_imageatlas_split.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/imageatlas_data/6_imageatlas_split.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/todo.txt" beforeDir="false" afterPath="$PROJECT_DIR$/todo.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/version.info" beforeDir="false" afterPath="$PROJECT_DIR$/version.info" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/world/model.py" beforeDir="false" afterPath="$PROJECT_DIR$/world/model.py" afterDir="false" />
@@ -483,26 +425,43 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/version.info">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="164">
-              <caret line="484" selection-start-line="484" selection-end-line="484" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/assets/minecraft/models/blocks/shulker_boxes.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="28" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="28" />
+            <state relative-caret-position="501">
+              <caret line="532" column="91" selection-start-line="532" selection-start-column="91" selection-end-line="532" selection-end-column="91" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/todo.txt">
+        <entry file="file://$PROJECT_DIR$/textures/TextureAtlas.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="86" column="17" selection-start-line="86" selection-start-column="17" selection-end-line="86" selection-end-column="17" />
+            <state relative-caret-position="86">
+              <caret line="85" column="57" selection-start-line="85" selection-start-column="57" selection-end-line="85" selection-end-column="57" />
+              <folding>
+                <element signature="e#0#19#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/textures/util.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2">
+              <caret line="12" column="39" selection-start-line="12" selection-start-column="39" selection-end-line="12" selection-end-column="39" />
+              <folding>
+                <element signature="e#0#16#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/texturegenerator.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-561">
+              <folding>
+                <element signature="e#0#19#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -518,12 +477,8 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>print(</find>
-      <find>[mods.BiomesOPlenty.gen.decoration.trees.acacia_tree]</find>
-      <find>import mods.BiomesOPlenty.gen.decoration.trees</find>
       <find>ye</find>
       <find>(ConcretPowder)</find>
-      <find>concrete</find>
       <find>concret</find>
       <find>concret_powder</find>
       <find>concrete_powder.png</find>
@@ -535,12 +490,25 @@
       <find>class for brick</find>
       <find>glass</find>
       <find>stained_</find>
+      <find>oak_log</find>
+      <find>log</find>
+      <find>G.blockclass</find>
+      <find>_getDefaultData(</find>
+      <find>textureatlashandler</find>
+      <find>imageatlashandler</find>
+      <find>minecraft:stone</find>
+      <find>sto</find>
+      <find>stone</find>
+      <find>batch</find>
+      <find>isBrakeAbleInGamemode0</find>
+      <find>isBrakeAble(</find>
+      <find>print</find>
+      <find>concrete</find>
+      <find>(0, 0, 0)</find>
+      <find>plate</find>
+      <find>enable_ore=False</find>
     </findStrings>
     <replaceStrings>
-      <replace>[]</replace>
-      <replace />
-      <replace>(GlazedTerracotta)</replace>
-      <replace>terracotta</replace>
       <replace>glazed_terracotta</replace>
       <replace>glazed_terracotta.png</replace>
       <replace>Glazed</replace>
@@ -565,7 +533,16 @@
       <replace>tube</replace>
       <replace>:shulker_box</replace>
       <replace>shulker_box</replace>
+      <replace>G.iblockclass</replace>
+      <replace>getDefaultData(</replace>
+      <replace>textureatlashandler</replace>
+      <replace>def getName(self):</replace>
+      <replace>isBrakeAbleInGamemode0(</replace>
+      <replace>concrete_powder</replace>
     </replaceStrings>
+    <dirStrings>
+      <dir>C:\Python\mcpython\mcpython_7\Block</dir>
+    </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -573,57 +550,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/modelloader.py" />
+        <option value="$PROJECT_DIR$/main.py" />
+        <option value="$PROJECT_DIR$/exception.txt" />
+        <option value="$PROJECT_DIR$/Block/redstone_lamp.py" />
+        <option value="$PROJECT_DIR$/Block/stone.py" />
+        <option value="$PROJECT_DIR$/assets/minecraft/models/blocks/test.json" />
+        <option value="$PROJECT_DIR$/assets/minecraft/models/blocks/stone.json" />
+        <option value="$PROJECT_DIR$/gen/OverWorld.py" />
+        <option value="$PROJECT_DIR$/assets/minecraft/models/blocks/old/stone.json" />
+        <option value="$PROJECT_DIR$/Block/grass.py" />
+        <option value="$PROJECT_DIR$/assets/minecraft/models/blocks/grass.json" />
+        <option value="$PROJECT_DIR$/Block/bedrock.py" />
+        <option value="$PROJECT_DIR$/assets/minecraft/models/blocks/bedrock.json" />
         <option value="$PROJECT_DIR$/state/game.py" />
-        <option value="$PROJECT_DIR$/assets/minecraft/models/blocks/concret_powder.json" />
-        <option value="$PROJECT_DIR$/assets/minecraft/models/blocks/concret.json" />
-        <option value="$PROJECT_DIR$/Block/concret.py" />
-        <option value="$PROJECT_DIR$/assets/minecraft/models/blocks/glazed_terracotta.json" />
-        <option value="$PROJECT_DIR$/Block/block.py" />
         <option value="$PROJECT_DIR$/world/model.py" />
-        <option value="$PROJECT_DIR$/Block/leaves.py" />
-        <option value="$PROJECT_DIR$/assets/minecraft/models/blocks/glass.json" />
-        <option value="$PROJECT_DIR$/Block/glass.py" />
-        <option value="$PROJECT_DIR$/assets/minecraft/models/blocks/coral_block.json" />
-        <option value="$PROJECT_DIR$/Block/coral_block.py" />
-        <option value="$PROJECT_DIR$/assets/minecraft/models/blocks/clay.json" />
-        <option value="$PROJECT_DIR$/Block/clay.py" />
-        <option value="$PROJECT_DIR$/assets/minecraft/models/blocks/prismarin.json" />
-        <option value="$PROJECT_DIR$/Block/shulker_boxes.py" />
-        <option value="$PROJECT_DIR$/Block/prismarin.py" />
-        <option value="$PROJECT_DIR$/assets/minecraft/models/blocks/note_block.json" />
-        <option value="$PROJECT_DIR$/Block/note_block.py" />
-        <option value="$PROJECT_DIR$/assets/minecraft/models/blocks/netherrack.json" />
-        <option value="$PROJECT_DIR$/Block/netherrack.py" />
-        <option value="$PROJECT_DIR$/assets/minecraft/models/blocks/nether_bricks.json" />
-        <option value="$PROJECT_DIR$/Block/nether_bricks.py" />
-        <option value="$PROJECT_DIR$/assets/minecraft/models/blocks/nether_wart_block.json" />
-        <option value="$PROJECT_DIR$/Block/nether_wart_block.py" />
         <option value="$PROJECT_DIR$/assets/minecraft/models/blocks/dirt.json" />
+        <option value="$PROJECT_DIR$/assets/minecraft/models/blocks/old/dirt.json" />
         <option value="$PROJECT_DIR$/Block/dirt.py" />
-        <option value="$PROJECT_DIR$/assets/minecraft/models/blocks/red_nether_bricks.json" />
-        <option value="$PROJECT_DIR$/Block/red_nether_bricks.py" />
-        <option value="$PROJECT_DIR$/Block/magma_block.py" />
-        <option value="$PROJECT_DIR$/assets/minecraft/models/blocks/magma_block.json" />
-        <option value="$PROJECT_DIR$/assets/minecraft/models/blocks/melon.json" />
-        <option value="$PROJECT_DIR$/Block/melon.py" />
-        <option value="$PROJECT_DIR$/assets/minecraft/models/blocks/purpur_block.json" />
-        <option value="$PROJECT_DIR$/Block/purpur_block.py" />
-        <option value="$PROJECT_DIR$/assets/minecraft/models/blocks/slime_block.json" />
-        <option value="$PROJECT_DIR$/Block/slime_block.py" />
+        <option value="$PROJECT_DIR$/mathhelper.py" />
+        <option value="$PROJECT_DIR$/assets/minecraft/models/blocks/barrel.json" />
+        <option value="$PROJECT_DIR$/Block/barrel.py" />
         <option value="$PROJECT_DIR$/Block/bookshelve.py" />
         <option value="$PROJECT_DIR$/assets/minecraft/models/blocks/bookshelve.json" />
-        <option value="$PROJECT_DIR$/texturslitcher.py" />
-        <option value="$PROJECT_DIR$/assets/minecraft/models/blocks/bone_block.json" />
-        <option value="$PROJECT_DIR$/Block/bone_block.py" />
-        <option value="$PROJECT_DIR$/assets/minecraft/models/blocks/terracotta.json" />
-        <option value="$PROJECT_DIR$/Block/terracotta.py" />
-        <option value="$PROJECT_DIR$/assets/minecraft/models/blocks/sponge.json" />
-        <option value="$PROJECT_DIR$/Block/sponge.py" />
+        <option value="$PROJECT_DIR$/Item/item.py" />
+        <option value="$PROJECT_DIR$/IItemStack.py" />
+        <option value="$PROJECT_DIR$/log.py" />
+        <option value="$PROJECT_DIR$/assets/minecraft/models/blocks/brick.json" />
+        <option value="$PROJECT_DIR$/Block/brick.py" />
+        <option value="$PROJECT_DIR$/assets/minecraft/models/blocks/clay.json" />
+        <option value="$PROJECT_DIR$/Block/clay.py" />
+        <option value="$PROJECT_DIR$/assets/minecraft/models/blocks/black_concret.json" />
+        <option value="$PROJECT_DIR$/Block/block.py" />
+        <option value="$PROJECT_DIR$/assets/minecraft/models/blocks/old/concret.json" />
         <option value="$PROJECT_DIR$/todo.txt" />
-        <option value="$PROJECT_DIR$/assets/minecraft/models/blocks/pumpkin.json" />
-        <option value="$PROJECT_DIR$/Block/pumpkin.py" />
+        <option value="$PROJECT_DIR$/assets/minecraft/models/blocks/concret.json" />
+        <option value="$PROJECT_DIR$/assets/minecraft/models/blocks/concret_powder.json" />
+        <option value="$PROJECT_DIR$/Block/concret.py" />
+        <option value="$PROJECT_DIR$/assets/minecraft/models/blocks/crafting_table.json" />
+        <option value="$PROJECT_DIR$/Block/crafting_table.py" />
+        <option value="$PROJECT_DIR$/../mcpython_7_mods/mods/BiomesOPlenty/assets/biomesoplenty/models/block/amber_block.json" />
+        <option value="$PROJECT_DIR$/../mcpython_7_mods/mods/BiomesOPlenty/main.py" />
+        <option value="$PROJECT_DIR$/../mcpython_7_mods/mods/BiomesOPlenty/textures/models.py" />
+        <option value="$PROJECT_DIR$/../mcpython_7_mods/mods/BiomesOPlenty/assets/biomesoplenty/models/block/cherry.json" />
+        <option value="$PROJECT_DIR$/../mcpython_7_mods/mods/BiomesOPlenty/assets/biomesoplenty/models/block/cherry_log.json" />
+        <option value="$PROJECT_DIR$/modsystem/ModLoader.py" />
         <option value="$PROJECT_DIR$/version.info" />
-        <option value="$PROJECT_DIR$/assets/minecraft/models/blocks/shulker_boxes.json" />
+        <option value="$PROJECT_DIR$/../mcpython_7_mods/mods/Metals/main.py" />
+        <option value="$PROJECT_DIR$/textures/modelloader.py" />
+        <option value="$PROJECT_DIR$/textures/util.py" />
+        <option value="$PROJECT_DIR$/textures/TextureAtlas.py" />
+        <option value="$PROJECT_DIR$/../mcpython_7_mods/mods/Metals/Factorys.py" />
       </list>
     </option>
   </component>
@@ -638,6 +615,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -654,53 +632,49 @@
               <item name="mcpython_7" type="b2602c69:ProjectViewProjectNode" />
               <item name="mcpython_7" type="47feb1d3:ProjectViewModuleNode" />
               <item name="mcpython_7" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="modsystem" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="mcpython_7" type="b2602c69:ProjectViewProjectNode" />
               <item name="mcpython_7" type="47feb1d3:ProjectViewModuleNode" />
               <item name="mcpython_7" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="minecraft" type="462c0819:PsiDirectoryNode" />
+              <item name="textures" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="mcpython_7" type="b2602c69:ProjectViewProjectNode" />
               <item name="mcpython_7" type="47feb1d3:ProjectViewModuleNode" />
-              <item name="mcpython_7" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="minecraft" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
+              <item name="mcpython_7_mods" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="mcpython_7" type="b2602c69:ProjectViewProjectNode" />
               <item name="mcpython_7" type="47feb1d3:ProjectViewModuleNode" />
-              <item name="mcpython_7" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="minecraft" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
-              <item name="blocks" type="462c0819:PsiDirectoryNode" />
+              <item name="mcpython_7_mods" type="462c0819:PsiDirectoryNode" />
+              <item name="mods" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="mcpython_7" type="b2602c69:ProjectViewProjectNode" />
               <item name="mcpython_7" type="47feb1d3:ProjectViewModuleNode" />
-              <item name="mcpython_7" type="462c0819:PsiDirectoryNode" />
-              <item name="Block" type="462c0819:PsiDirectoryNode" />
+              <item name="mcpython_7_mods" type="462c0819:PsiDirectoryNode" />
+              <item name="mods" type="462c0819:PsiDirectoryNode" />
+              <item name="BiomesOPlenty" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/main.py" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../translate/godot-master" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Python\mcpython\mcpython_7_mods\mods\todo" />
       <recent name="C:\Python\mcpython\mcpython_7_mods\mods" />
+      <recent name="C:\Python\mcpython\mcpython_7\assets\minecraft\models\blocks" />
+      <recent name="C:\Python\mcpython\mcpython_7\assets\minecraft\models\blocks\old" />
+      <recent name="C:\Python\mcpython\mcpython_7\textures" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -753,14 +727,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23883928" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22916667" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3289689" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3289689" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3289689" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39934534" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -773,107 +746,85 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23363096" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3289689" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3289689" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39934534" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Python Console" order="10" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout-to-restore>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/assets/minecraft/models/blocks/obsidian.json">
+    <entry file="file://$PROJECT_DIR$/state/game.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="8" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Block/clay.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="58" selection-end-line="19" />
+        <state relative-caret-position="128">
+          <caret line="232" column="98" selection-start-line="232" selection-start-column="98" selection-end-line="232" selection-end-column="98" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Block/shulker_boxes.py">
+    <entry file="file://$PROJECT_DIR$/world/model.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="16" column="4" selection-start-line="16" selection-start-column="4" selection-end-line="17" selection-end-column="34" />
+        <state relative-caret-position="230">
+          <caret line="188" column="31" selection-start-line="188" selection-start-column="31" selection-end-line="188" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Block/grass.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-46">
+          <caret line="11" column="32" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Block/obsidian.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="19" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/minecraft/models/blocks/note_block.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="40" selection-start-line="1" selection-start-column="18" selection-end-line="1" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/minecraft/models/blocks/bedrock.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="8" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Block/note_block.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="37" selection-end-line="19" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/minecraft/models/blocks/netherrack.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="40" lean-forward="true" selection-end-line="8" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Block/netherrack.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="36" selection-end-line="19" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Block/nether_bricks.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" selection-end-line="18" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/minecraft/models/blocks/nether_wart_block.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="45" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="45" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Block/dirt.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="57" column="34" selection-start-line="57" selection-start-column="34" selection-end-line="57" selection-end-column="34" />
+        <state relative-caret-position="187">
+          <caret line="11" column="31" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mathhelper.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="107">
+          <caret line="35" column="7" lean-forward="true" selection-start-line="35" selection-start-column="7" selection-end-line="35" selection-end-column="7" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/minecraft/models/blocks/grass.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="2" selection-start-line="1" selection-start-column="2" selection-end-line="11" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Block/bookshelve.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="36" selection-start-line="8" selection-start-column="36" selection-end-line="8" selection-end-column="36" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>
@@ -882,320 +833,333 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/minecraft/models/blocks/dirt.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="124">
-          <caret line="34" column="9" selection-start-line="34" selection-start-column="3" selection-end-line="34" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/minecraft/models/blocks/nether_bricks.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="25" selection-end-line="8" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Block/nether_wart_block.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="43" selection-end-line="18" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/minecraft/models/blocks/red_nether_bricks.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="46" lean-forward="true" selection-end-line="8" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Block/red_nether_bricks.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="42" selection-end-line="18" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/minecraft/models/blocks/magma_block.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="1" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/minecraft/models/blocks/melon.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="33" selection-start-line="6" selection-start-column="33" selection-end-line="6" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Block/magma_block.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-12">
-          <caret line="2" selection-end-line="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/minecraft/models/blocks/prismarin.json">
-      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
-          <caret line="2" column="18" selection-start-line="2" selection-start-column="2" selection-end-line="2" selection-end-column="18" />
+          <caret line="2" column="49" selection-start-line="2" selection-start-column="49" selection-end-line="2" selection-end-column="49" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Block/melon.py">
+    <entry file="file://$PROJECT_DIR$/Item/glowstone.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
-          <caret line="10" column="31" selection-end-line="18" />
+          <caret line="10" column="21" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Item/item.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="19" column="71" selection-start-line="19" selection-start-column="71" selection-end-line="19" selection-end-column="71" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/minecraft/models/blocks/purpur_block.json">
+    <entry file="file://$PROJECT_DIR$/log.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="26" lean-forward="true" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
+        <state relative-caret-position="260">
+          <caret line="32" selection-start-line="32" selection-end-line="32" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Block/block.py">
+    <entry file="file://$PROJECT_DIR$/IItemStack.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="116" selection-start-line="116" selection-end-line="116" />
+        <state relative-caret-position="107">
+          <caret line="34" column="72" selection-start-line="34" selection-start-column="72" selection-end-line="34" selection-end-column="72" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Block/stone.py">
+    <entry file="file://$PROJECT_DIR$/Block/brick.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="23" column="4" selection-start-line="23" selection-start-column="4" selection-end-line="24" selection-end-column="22" />
+        <state relative-caret-position="136">
+          <caret line="8" column="32" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="32" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Block/purpur_block.py">
+    <entry file="file://$PROJECT_DIR$/assets/minecraft/models/blocks/brick.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="13" column="39" selection-start-line="13" selection-start-column="39" selection-end-line="13" selection-end-column="39" />
+        <state relative-caret-position="153">
+          <caret line="9" column="3" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Block/clay.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="37" selection-start-line="9" selection-start-column="37" selection-end-line="9" selection-end-column="37" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/minecraft/models/blocks/barrel.json">
+    <entry file="file://$PROJECT_DIR$/assets/minecraft/models/blocks/clay.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="36" selection-end-line="18" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Block/barrel.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="14" selection-end-line="19" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/state/game.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-510">
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Block/slime_block.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="31" selection-end-line="19" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/imagealphacreator.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/texturslitcher.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="33" column="64" selection-start-line="33" selection-start-column="64" selection-end-line="33" selection-end-column="64" />
+        <state relative-caret-position="153">
+          <caret line="9" column="3" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/minecraft/models/blocks/bookshelve.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="38" selection-end-line="9" selection-end-column="1" />
+        <state relative-caret-position="170">
+          <caret line="10" column="3" selection-start-line="1" selection-start-column="2" selection-end-line="10" selection-end-column="3" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/minecraft/models/blocks/log.json">
+    <entry file="file://$PROJECT_DIR$/Block/coral_block.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="9" selection-end-column="4" />
+        <state relative-caret-position="113">
+          <caret line="16" column="33" lean-forward="true" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="33" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Block/bookshelve.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="37" selection-start-line="17" selection-start-column="37" selection-end-line="17" selection-end-column="37" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Block/bedrock.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="22" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/minecraft/models/blocks/bone_block.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="39" selection-start-line="1" selection-start-column="29" selection-end-line="1" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Block/bone_block.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="37" selection-start-line="17" selection-start-column="37" selection-end-line="17" selection-end-column="37" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/minecraft/models/blocks/terracotta.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="38" selection-start-line="6" selection-start-column="38" selection-end-line="6" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/minecraft/models/blocks/slime_block.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="39" selection-end-line="8" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Block/terracotta.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5">
-          <caret line="238" column="41" selection-start-line="238" selection-start-column="41" selection-end-line="238" selection-end-column="41" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Block/prismarin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="2" selection-end-column="26" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/minecraft/models/blocks/sponge.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="2" selection-start-line="2" selection-start-column="2" selection-end-line="2" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Block/sponge.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="31" column="37" selection-start-line="31" selection-start-column="37" selection-end-line="31" selection-end-column="37" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/minecraft/models/blocks/black_concret.json" />
     <entry file="file://$PROJECT_DIR$/todo.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="86" column="17" selection-start-line="86" selection-start-column="17" selection-end-line="86" selection-end-column="17" />
+        <state relative-caret-position="215">
+          <caret line="46" column="86" selection-start-line="46" selection-start-column="86" selection-end-line="46" selection-end-column="86" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/minecraft/models/blocks/ore_blocks.json">
+    <entry file="file://$PROJECT_DIR$/assets/minecraft/models/blocks/old/concret.json" />
+    <entry file="file://$PROJECT_DIR$/assets/minecraft/models/blocks/concret.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-777">
-          <caret line="6" column="38" lean-forward="true" selection-start-line="2" selection-start-column="17" selection-end-line="6" selection-end-column="38" />
+        <state relative-caret-position="311">
+          <caret line="90" column="38" selection-start-line="90" selection-start-column="38" selection-end-line="90" selection-end-column="38" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/minecraft/models/blocks/pumpkin.json">
+    <entry file="file://$PROJECT_DIR$/Block/concret.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="13" lean-forward="true" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Block/grass.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="17" column="22" lean-forward="true" selection-start-line="16" selection-start-column="4" selection-end-line="17" selection-end-column="22" />
+        <state relative-caret-position="204">
+          <caret line="30" column="41" selection-start-line="30" selection-start-column="41" selection-end-line="30" selection-end-column="41" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Block/pumpkin.py">
+    <entry file="file://$PROJECT_DIR$/assets/minecraft/models/blocks/concret_powder.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="36" selection-start-line="1" selection-start-column="10" selection-end-line="1" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Block/crafting_table.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="12" column="41" selection-start-line="12" selection-start-column="41" selection-end-line="12" selection-end-column="41" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/minecraft/models/blocks/crafting_table.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" column="30" selection-start-line="24" selection-start-column="30" selection-end-line="24" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Block/block.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1632">
+          <caret line="100" column="39" selection-start-line="100" selection-start-column="39" selection-end-line="100" selection-end-column="39" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/minecraft/models/blocks/bedrock.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="1" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../mcpython_7_mods/mods/GameObjectCreator/Plant.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../mcpython_7_mods/mods/todo/ae2/AE2_LICENCE" />
+    <entry file="file://$PROJECT_DIR$/assets/minecraft/models/blocks/barrel.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="5" lean-forward="true" selection-end-line="18" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../mcpython_7_mods/mods/BiomesOPlenty/assets/biomesoplenty/models/block/amber_block.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="32" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="232">
-          <caret line="21" column="22" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="22" />
+          <caret line="116" selection-start-line="116" selection-end-line="116" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modsystem/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="26" lean-forward="true" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../mcpython_7_mods/mods/BiomesOPlenty/textures/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="45" selection-start-line="6" selection-start-column="45" selection-end-line="6" selection-end-column="45" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../mcpython_7_mods/mods/BiomesOPlenty/assets/biomesoplenty/models/block/cherry.json" />
+    <entry file="file://$PROJECT_DIR$/../mcpython_7_mods/mods/BiomesOPlenty/assets/biomesoplenty/models/block/cherry_log.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" column="37" selection-start-line="24" selection-start-column="37" selection-end-line="24" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/minecraft/models/blocks/old/dirt.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="35" selection-start-line="1" selection-start-column="35" selection-end-line="1" selection-end-column="35" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/version.info">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="164">
-          <caret line="484" selection-start-line="484" selection-end-line="484" />
+        <state relative-caret-position="501">
+          <caret line="532" column="91" selection-start-line="532" selection-start-column="91" selection-end-line="532" selection-end-column="91" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/minecraft/models/blocks/shulker_boxes.json">
+    <entry file="file://$PROJECT_DIR$/../mcpython_7_mods/mods/GameObjectCreator/Block.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="28" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="28" />
+        <state relative-caret-position="-153">
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../mcpython_7_mods/mods/GameObjectCreator/Model.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="393">
+          <caret line="50" column="72" lean-forward="true" selection-start-line="50" selection-start-column="72" selection-end-line="50" selection-end-column="72" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../mcpython_7_mods/mods/BiomesOPlenty/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="30" lean-forward="true" selection-start-line="9" selection-start-column="15" selection-end-line="9" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/texturegenerator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-561">
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../mcpython_7_mods/mods/Metals/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="3" column="3" selection-start-line="3" selection-start-column="3" selection-end-line="3" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modsystem/ModLoader.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-63">
+          <caret line="343" column="57" selection-start-line="343" selection-start-column="57" selection-end-line="343" selection-end-column="57" />
+          <folding>
+            <element signature="e#0#16#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Block/barrel.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="12" column="78" selection-start-line="12" selection-start-column="35" selection-end-line="12" selection-end-column="78" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/textures/TextureAtlas.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="86">
+          <caret line="85" column="57" selection-start-line="85" selection-start-column="57" selection-end-line="85" selection-end-column="57" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Item/barrel.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="8" lean-forward="true" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/textures/modelloader.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1547">
+          <caret line="103" selection-start-line="103" selection-end-line="103" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../mcpython_7_mods/mods/Metals/Factorys.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="198" column="65" lean-forward="true" selection-start-line="198" selection-start-column="65" selection-end-line="198" selection-end-column="65" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/textures/util.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2">
+          <caret line="12" column="39" selection-start-line="12" selection-start-column="39" selection-end-line="12" selection-end-column="39" />
+          <folding>
+            <element signature="e#0#16#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

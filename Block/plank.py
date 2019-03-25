@@ -4,7 +4,7 @@ import notations
 import modsystem.ModLoader
 
 
-class IPlank(G.blockclass):
+class IPlank(G.iblockclass):
     oredictnames = [notations.OreDictItems.WOOD_PLANK]
 
     def getModelFile(self, inst):
@@ -18,7 +18,6 @@ class AcaciaPlank(IPlank):
     """class for acacia plank"""
     def getName(self):
         return "minecraft:acacia_plank"
-
 
 
 class BirchPlank(IPlank):

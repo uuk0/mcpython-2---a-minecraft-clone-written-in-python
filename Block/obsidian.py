@@ -3,7 +3,7 @@ import mathhelper
 import modsystem.ModLoader
 
 
-class Obsidian(G.blockclass):
+class Obsidian(G.iblockclass):
     """class for obsidian"""
     def getName(self):
         return "minecraft:obsidian"

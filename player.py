@@ -68,6 +68,8 @@ class player:
     def addToInventory(self, item, amount=1):
         if type(item) != str:
             item = item.getName()
+        else:
+            item = G.itemhandler.getByName(item).getName(None)
         slots = []
         for e in self.inventory.inventorys:
             slots += e.slots

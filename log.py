@@ -17,10 +17,9 @@ def getStamp():
     return s
 
 
-
 def printMSG(*msg, end="\n"):
     """
-    print an message with a timestamp into the chat
+    print an message with a timestamp into the chat, also add it to log
     :param msg: the message which should be printed out
     """
     stamp = getStamp()

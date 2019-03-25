@@ -4,19 +4,13 @@ from Inventory.crafting import Crafting as CraftingInventory
 import modsystem.ModLoader
 
 
-class CraftingTable(G.blockclass):
+class CraftingTable(G.iblockclass):
     """class for crafting table"""
-    def _getDefaultData(self, inst):
+    def getDefaultData(self, inst):
         return {"inventory":CraftingInventory()}
 
     def getName(self):
         return "minecraft:crafting_table"
-
-    def getModelFile(self, inst):
-        return "minecraft:crafting_table"
-
-    def getStateName(self, inst):
-        return "crafting_table"
 
     def hasInventory(self, inst):
         return True

@@ -31,7 +31,7 @@ mc.run(world) DONE. use pyglet.app.run()
 The API could contain functionality for the following:
 
     Easily configurable parameters like gravity, jump velocity, walking speed, etc. DONE
-    Hooks for terrain generation.
+    Hooks for terrain generation. YOU CAN USE YOUR OWN WORLD GENERATOR, PLUGIN INTO BIOMES ETC.
 """
 
 water
@@ -40,8 +40,11 @@ update list:
   before re-starting after every update, clean up every file
 
 
-  reimplement colliding system!!!!
+  reimplement colliding system!!!! (the old has not worked god) -> !!!!!!
+	-> real bounding boxes? -> rewrite draw_focused_block system
   change the way how state events are handled (like by mods)
+  make textureatlas sort atlases after size before pushing them together
+  seperate alpha rendering from normal rendering by using two diffrent texture atlases
 
   BUG FIXES
 	  fix bug: cactus is not shown -> add BoxModel
@@ -50,6 +53,8 @@ update list:
 	  fix bug: can't close crafting inventory
 	  fix bug: when braking / adding blocks, surround blocks are not updated corectly
 	  fix bug: all alpha-using blocks are rendered weired when placed next to each other (enable side-only drawing!!!)
+	  fix bug: alpha blocks infront of others occure weired
+	  fix bug: complexmodel do NOT work
 
   ITEM AND BLOCK UPDATE
 	  add inventory updates for blocks
@@ -60,7 +65,7 @@ update list:
 	    on_inventory_update
 	  add tools
 	  add Blastresistence
-	  add chest, enderchests, shulkerboxes
+	  add chest, enderchests, shulkerboxes functionality
 	  add redstone, redstonerepeater, redstonecomperator, redstone torch
 	  add torches
 	  add hoppers, droppers and dispensers
@@ -74,7 +79,7 @@ update list:
 	  add ability to load real Models from file
 	  add enchantment table, anvil
 	  add enchanted books
-	  add logs surrounded on all sides by the same texture
+	  add logs surrounded on all sides by the same texture (own model / split all logs into diffrent models / add autoconstructor for logs)
 	  finish log orientation system
 	  add spawneggs
 	  add model for cactus
@@ -94,8 +99,7 @@ update list:
       re-add full crafting
 	  fix crafting table inventory
 	  add furnes
-	  add furnes recipis
-	  add recipis for oredrops
+	  bind furnes recipis to furnes (add recipis for oredrops)
 	  add oredict notation posibility to recipis
 	  add shortcuts (1-9, SHIFT, MOUSE_MIDDLE) to item-inventory movement system
 	  add recipi book (and also for mod-crafting systems?)
@@ -107,14 +111,15 @@ update list:
   FUN UPDATE
 	  add tnt explosion
 
-	  SOME MORE TIMING UPDATE
+  SOME MORE TIMING UPDATE
 	  add random updates
 
   SOME MORE WOLRDS UPDATE
-	  saves -> mc-worlds?
+	  implement better world gen from biomesoplenty self-made
+	  saves -> mc-worlds? -> nbt? ->> check all block & item names
 	  add the end and nether
-	  add dungeons    -> ORESGENERATOR?
-	  add ship wracks -> ORESGENERATOR?
+	  add dungeons
+	  add ship wracks
 	  finish tree gen and cactus gen
 
   STATE UPDATE
@@ -126,9 +131,10 @@ update list:
 	  add scoreboards
 
   ENTITY UPDATE
-	  add mobspawning-system
+	  add mobspawning-system -> biome selectable
 	  add loot and xp to player when he kills to and mob
 	  add AI to mobs
+	  add (also drawn) hitboxes
 
   INVENTORY UPDATE
 	  add xp, hunger over hotbar
@@ -164,3 +170,4 @@ update list:
 
   TEXTURE UPDATE
 	  add ability to add something via another .json file to exisiting Model definitions
+

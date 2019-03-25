@@ -1,21 +1,16 @@
 import globals as G
-import mathhelper
-import entity.boxmodel as boxmodel
 import modsystem.ModLoader
 
 
-class Cactus(G.blockclass):
-    """class for cactus"""
+class Cactus(G.iblockclass):
+    """class for cactus
+    todo: add boxmodel for these"""
+
     def getName(self):
         return "minecraft:cactus"
 
     def isFullSide(self, inst, side):
         return False
-
-    def _getDefaultData(self, inst):
-        return {"shown":False,
-                "shownid":-1,
-                "boxmodels":None}
 
 
 @modsystem.ModLoader.ModEventEntry("game:registry:on_block_registrate_periode", "minecraft",

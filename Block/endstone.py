@@ -3,7 +3,7 @@ import mathhelper
 import modsystem.ModLoader
 
 
-class Endstone(G.blockclass):
+class Endstone(G.iblockclass):
     """class for endstone"""
     def getName(self):
         return "minecraft:endstone"
@@ -15,7 +15,7 @@ class Endstone(G.blockclass):
         return "endstone"
 
 
-class EndstoneBrick(G.blockclass):
+class EndstoneBrick(G.iblockclass):
     """class for endstonebrick"""
     def getName(self):
         return "minecraft:endstone_brick"

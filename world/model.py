@@ -121,7 +121,8 @@ class Model(object):
         if texture in ["air", "minecraft:air"]:
             return
         if not type(texture) == G.blockinst:
-            block = G.blockhandler.getInst(texture, position, blocksettedto=blocksettedto)
+            #todo: re-add blocksettedto
+            block = G.blockhandler.getInst(texture, position)  # , blocksettedto=blocksettedto)
         else:
             block = texture
             block.position = position
@@ -149,7 +150,7 @@ class Model(object):
         cx, _, cz = mathhelper.sectorize(position)
         chunkprovider = G.player.dimension.worldprovider.getChunkProviderFor((cx, cz))
         if position not in chunkprovider.world: return
-        chunkprovider.world[position].onDelet()
+        chunkprovider.world[position].delete()
         if immediate:
             if position in chunkprovider.shown:
                 self.hide_block(position, chunkprovider.world[position])
@@ -185,7 +186,7 @@ class Model(object):
                         chunkprovider = G.player.dimension.worldprovider.getChunkProviderFor((cx, cz))
                         if key not in chunkprovider.world:
                             continue
-                        if chunkprovider.world[key].isVisableInWorld():
+                        if not self.exposed(key):
                             self.show_block(position)
                         else:
                             self.hide_block(key, chunkprovider.world[key])

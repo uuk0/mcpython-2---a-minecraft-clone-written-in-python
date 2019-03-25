@@ -3,13 +3,11 @@ import mathhelper
 import modsystem.ModLoader
 
 
-class Clay(G.blockclass):
+class Clay(G.iblockclass):
     """class for clay"""
-    def getName(self):
-        return "minecraft:clay"
 
-    def getModelFile(self, inst):
-        return "minecraft:clay"
+    def getName(self):
+        return "minecraft:clay_block"
 
 
 @modsystem.ModLoader.ModEventEntry("game:registry:on_block_registrate_periode", "minecraft",

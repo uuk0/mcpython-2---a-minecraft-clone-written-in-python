@@ -106,10 +106,13 @@ version 18w43a:
   added event for /reload-command
 
 version 18w43b:
-  added the new minecraft textures (from the minecraft snapshot 18w43a). If you want to have the old textures, copy the old assets/textures/block folder from 1.13.2 into the assets/textures/block folder of these game
+  added the new minecraft textures (from the minecraft snapshot 18w43a).
+        If you want to have the old textures, copy the old assets/textures/block folder from 1.13.2
+        into the assets/textures/block folder of these game
   added tmp-dir
   added rotated log side to textures for acacia log
-  textures will be on every startup re-compressed (so you can change single textures in the assets/textures/block/... folder)
+  textures will be on every startup re-compressed
+        (so you can change single textures in the assets/textures/block/... folder)
   added crafting table block
   updated some item textures
   added acacia planks
@@ -119,7 +122,8 @@ version 18w43b:
   added stone brick, mossy stone brick, cracked stone brick, chiseled stone brick, mossy cobbel stone
   added /setblock-command
   added gravel, coal, charcoal, diamond, emerald, gold ingot, iron ingot, lapis, nether quartz
-  added coal block, diamond block, ermerald block, gold block, iron block, lapis block, quartz block, chiseled quartz block
+  added coal block, diamond block, ermerald block, gold block, iron block, lapis block, quartz block
+  added chiseled quartz block
   added quartz pillar, redstone block
   added redstone-functions to block-class
 
@@ -129,7 +133,8 @@ version 18w43c:
   added endstone, endstone brick, birch wood log
   added events for registration (they will be callen on game startup step by step)
   added mods folder
-  added modloader which is loading single .py files in mod folder or folders with main.py file (zipfiles are at the moment not suported)
+  added modloader which is loading single .py files in mod folder or folders with main.py file
+        (zipfiles are at the moment not suported)
   added option to G.BlockGenerateTasks for calling an function
   speeded up sector showning / hiding by using G.BlockGenerateTasks
   fixed bug: when pressing right mouse without showning at an block, an exception is printed out
@@ -176,10 +181,12 @@ version 18w46a:
   added isDisablyingGame() and shouldInteractWithPlayerInventoryMoving() to Inventory & InventoryCollection
   fixed bug: CraftingInventory is not child of InventoryClass
   fixed bug: CraftingInventory image is not correct drawn
-  added events game:registry:on_language_registered, game:registry:on_mod_registrated, game:registry:on_multiblockstructurs_registrated,
-               game:registry:on_sound_registrated, game:registry:on_state_registrated, game:registry:on_structur_registrated,
-               game:registry:on_biome_registrated, game:registry:on_block_registrated, game:registry:on_command_registrated,
-               game:registry:on_entity_registrated, game:registry:on_item_registrated
+  added events game:registry:on_language_registered, game:registry:on_mod_registrated,
+               game:registry:on_multiblockstructurs_registrated, game:registry:on_sound_registrated,
+               game:registry:on_state_registrated, game:registry:on_structur_registrated,
+               game:registry:on_biome_registrated, game:registry:on_block_registrated,
+               game:registry:on_command_registrated, game:registry:on_entity_registrated,
+               game:registry:on_item_registrated
   updated the textures to 18w45a
   added redstone lamp
   added function on_redstone_update and can_be_redstone_powered to block
@@ -211,7 +218,8 @@ version 18w46b fix:
 version 18w46c:
   added function convertPositionToRenderable() to Blockclass
   added attribute to texturedatahandler for leaving the G.local+"assets/textures/block/..." ahead
-  fixed bug: add_block(position, IBlockInstance) is not updating it's position-attribute. This is the reason why sand is not falling correct
+  fixed bug: add_block(position, IBlockInstance) is not updating it's position-attribute. This is the reason why sand
+             is not falling correct
   added super-class for all wood logs in this clone
   added oak log, stripped oak log
   added version-info-tag for Mod's
@@ -456,7 +464,7 @@ version 19w09a:
   added BiomeHandler.registerOverwrite(orginal, biome) for better biome overwrite
   added registration event: "game:registry:on_dimension_registrate_periode"
   changed the way how dimensions are handled
-  fixed some printing stuff of ImageAtlasHandler
+  fixed some printing stuff of textureatlashandler
   blocks at chunk edges bordering to ungenerated chunks will NOT be shown if the block is in an generated chunk
 
 version 19w10a:
@@ -482,3 +490,44 @@ version 19w10a:
   added shulker boxes, clay block, prismarin, mycelium, note blocks, netherrack, nether bricks, nether wart block
   added podzol, red nether bricks, pumpkin, magma block, melon, slime block, bookshelf, bone block
   added sponge, purpur block, purpur pillar
+
+version 19w11a:
+  added Command/util.py for some usefull util around commands
+  /reload will now delete all loaded functions instead of reloading all chunks
+  fixed bug around player.addToFreeInventorySlot(...)
+  added /execute command
+  fixed bug: when in an .mcfunction an line failed to be executed, the rest will be executed
+  added command history
+  added security system for ImageAtlas.resize(...)
+  REMOVED some redstone-related functions for the moment
+  added complexmodel-IModelDefiniton
+  added mathhelper.tex_coords_better for more better texture coords
+  rewritten parts BlockHandler
+  Block.getBrakeSoundFile(), Block.getDefaultData() are now static
+  "game:registry:on_block_registrated"-callback gets now also an namelist representing all names the block is
+       registrated for
+  added block: minecraft:none
+  renamed block.isBrakeAble to isBrakeAbleInGamemode0, _getDefaultData to getDefaultData, BlockClass to IBlock,
+          IBlockInstants to BlockReference (we are using now an class-constructor)
+  REMOVED block.getItemName() because block.getDrop() exists
+  cleaned up and renamed globals
+  moved modelloader to textures/modelloader
+  rewritten texture & model system from ground:
+    REMOVED textureslither
+    added textures/TextureAtlas, textures/util
+    imageatlas will now have at empty position an missingtexture with the position-id (only for debugging)
+    optimized textureatlas a lot by using an image multiple times
+    REMOVED function of model files out of block becasue models will have now their own address
+    -> USE FOR EVERY BLOCK AN SINGLE MODEL
+    getStateName is still used for detecting the state that should be used
+    added security system for blocks without models
+    translated all models into the new format
+    ModelHandler.load_from_file has now an optional argument extend_in_case that will extend the states of the object
+        if the model exists. these give modders opinion to add an API for an ground block and many (optional) states of
+        it
+    models can now contain data about how to modify images in these file
+
+  REMOVED auto-oredict notations of blocks because they were long time outdated and should be overwritten by
+    direct notations
+  updated textures to 19w12b
+  you can now access registration events via @mod.subsrcibe_event(eventname, [info, [add]])

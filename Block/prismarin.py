@@ -3,7 +3,7 @@ import mathhelper
 import modsystem.ModLoader
 
 
-class DarkPrismarin(G.blockclass):
+class DarkPrismarin(G.iblockclass):
     """class for clay"""
     def getName(self):
         return "minecraft:dark_prismarin"
@@ -15,7 +15,7 @@ class DarkPrismarin(G.blockclass):
         return "dark_prismarine"
 
 
-class Prismarin(G.blockclass):
+class Prismarin(G.iblockclass):
     """class for clay"""
     def getName(self):
         return "minecraft:prismarin"
@@ -27,7 +27,7 @@ class Prismarin(G.blockclass):
         return "prismarine"
 
 
-class PrismarinBrick(G.blockclass):
+class PrismarinBrick(G.iblockclass):
     """class for clay"""
     def getName(self):
         return "minecraft:prismarin_brick"

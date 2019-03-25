@@ -3,7 +3,7 @@ import mathhelper
 import modsystem.ModLoader
 
 
-class CoralBlock(G.blockclass):
+class CoralBlock(G.iblockclass):
     @staticmethod
     def getType():
         return ""
@@ -93,9 +93,6 @@ local = locals()
                                    info="registrating corals")
 def register():
     for e in local.values():
-        try:
-            if issubclass(e, G.blockclass):
-                G.blockhandler.register(e)
-        except TypeError:
-            pass
+        if issubclass(type(e), CoralBlock) and e not in [CoralBlock, DeadCoralBlock]:
+            G.blockhandler.register(e)
 

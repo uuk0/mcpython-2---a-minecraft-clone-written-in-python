@@ -4,7 +4,7 @@ import notations
 import modsystem.ModLoader
 
 
-class Stone(G.blockclass):
+class Stone(G.iblockclass):
     """class for stone"""
     oredictnames = [notations.OreDictItems.STONE]
     destroygroupnames = [notations.DestroyGroupItems.PICKAXE]
@@ -12,20 +12,11 @@ class Stone(G.blockclass):
     def getName(self):
         return "minecraft:stone"
 
-    def isBrakeAble(self, inst):
-        return True
-
     def getDrop(self, inst):
         return {"minecraft:cobbelstone":1}
 
-    def getModelFile(self, inst):
-        return "minecraft:stone"
 
-    def getStateName(self, inst):
-        return "stone"
-
-
-class CobbelStone(G.blockclass):
+class CobbelStone(G.iblockclass):
     """class for cobbelstone"""
     oredictnames = [notations.OreDictItems.STONE, notations.OreDictItems.COBBELSTONE]
     destroygroupnames = [notations.DestroyGroupItems.PICKAXE]
@@ -33,7 +24,7 @@ class CobbelStone(G.blockclass):
     def getName(self):
         return "minecraft:cobbelstone"
 
-    def isBrakeAble(self, inst):
+    def isBrakeAbleInGamemode0(self, inst):
         return True
 
     def getModelFile(self, inst):
@@ -43,7 +34,7 @@ class CobbelStone(G.blockclass):
         return "cobbelstone"
 
 
-class StoneBrick(G.blockclass):
+class StoneBrick(G.iblockclass):
     """class for stonebrick"""
     oredictnames = [notations.OreDictItems.STONE, notations.OreDictItems.STONEBRICK]
     destroygroupnames = [notations.DestroyGroupItems.PICKAXE]
@@ -57,11 +48,11 @@ class StoneBrick(G.blockclass):
     def getStateName(self, inst):
         return "stone_brick"
 
-    def isBrakeAble(self, inst):
+    def isBrakeAbleInGamemode0(self, inst):
         return True
 
 
-class MossyStoneBrick(G.blockclass):
+class MossyStoneBrick(G.iblockclass):
     """class for mossy stone brick"""
     oredictnames = [notations.OreDictItems.STONE, notations.OreDictItems.STONEBRICK]
     destroygroupnames = [notations.DestroyGroupItems.PICKAXE]
@@ -75,11 +66,11 @@ class MossyStoneBrick(G.blockclass):
     def getStateName(self, inst):
         return "mossy_stone_brick"
 
-    def isBrakeAble(self, inst):
+    def isBrakeAbleInGamemode0(self, inst):
         return True
 
 
-class CrackedStoneBrick(G.blockclass):
+class CrackedStoneBrick(G.iblockclass):
     """class for cracked stone brick"""
     oredictnames = [notations.OreDictItems.STONE, notations.OreDictItems.STONEBRICK]
     destroygroupnames = [notations.DestroyGroupItems.PICKAXE]
@@ -93,11 +84,11 @@ class CrackedStoneBrick(G.blockclass):
     def getStateName(self, inst):
         return "cracked_stone_brick"
 
-    def isBrakeAble(self, inst):
+    def isBrakeAbleInGamemode0(self, inst):
         return True
 
 
-class ChiseledStoneBrick(G.blockclass):
+class ChiseledStoneBrick(G.iblockclass):
     """class for chiseled stone brick"""
     oredictnames = [notations.OreDictItems.STONE]
     destroygroupnames = [notations.DestroyGroupItems.PICKAXE]
@@ -111,11 +102,11 @@ class ChiseledStoneBrick(G.blockclass):
     def getStateName(self, inst):
         return "chiseled_stone_brick"
 
-    def isBrakeAble(self, inst):
+    def isBrakeAbleInGamemode0(self, inst):
         return True
 
 
-class MossyCobbelStone(G.blockclass):
+class MossyCobbelStone(G.iblockclass):
     """class for mossy cobbelstone"""
     oredictnames = [notations.OreDictItems.STONE, notations.OreDictItems.COBBELSTONE]
     destroygroupnames = [notations.DestroyGroupItems.PICKAXE]
@@ -129,11 +120,11 @@ class MossyCobbelStone(G.blockclass):
     def getStateName(self, inst):
         return "mossy_cobbelstone"
 
-    def isBrakeAble(self, inst):
+    def isBrakeAbleInGamemode0(self, inst):
         return True
 
 
-class Andesite(G.blockclass):
+class Andesite(G.iblockclass):
     """class for andesite"""
     oredictnames = [notations.OreDictItems.STONE]
     destroygroupnames = [notations.DestroyGroupItems.PICKAXE]
@@ -147,11 +138,11 @@ class Andesite(G.blockclass):
     def getStateName(self, inst):
         return "andesite"
 
-    def isBrakeAble(self, inst):
+    def isBrakeAbleInGamemode0(self, inst):
         return True
 
 
-class PolishedAndesite(G.blockclass):
+class PolishedAndesite(G.iblockclass):
     """class for polished andesite"""
     oredictnames = [notations.OreDictItems.STONE, notations.OreDictItems.POLISHED_STONE]
     destroygroupnames = [notations.DestroyGroupItems.PICKAXE]
@@ -165,11 +156,11 @@ class PolishedAndesite(G.blockclass):
     def getStateName(self, inst):
         return "polished_andesite"
 
-    def isBrakeAble(self, inst):
+    def isBrakeAbleInGamemode0(self, inst):
         return True
 
 
-class Granite(G.blockclass):
+class Granite(G.iblockclass):
     """class for granite"""
     oredictnames = [notations.OreDictItems.STONE]
     destroygroupnames = [notations.DestroyGroupItems.PICKAXE]
@@ -183,11 +174,11 @@ class Granite(G.blockclass):
     def getStateName(self, inst):
         return "granite"
 
-    def isBrakeAble(self, inst):
+    def isBrakeAbleInGamemode0(self, inst):
         return True
 
 
-class PolishedGranite(G.blockclass):
+class PolishedGranite(G.iblockclass):
     """class for polished granite"""
     oredictnames = [notations.OreDictItems.STONE, notations.OreDictItems.POLISHED_STONE]
     destroygroupnames = [notations.DestroyGroupItems.PICKAXE]
@@ -201,11 +192,11 @@ class PolishedGranite(G.blockclass):
     def getStateName(self, inst):
         return "polished_granite"
 
-    def isBrakeAble(self, inst):
+    def isBrakeAbleInGamemode0(self, inst):
         return True
 
 
-class Diorite(G.blockclass):
+class Diorite(G.iblockclass):
     """class for diorite"""
     oredictnames = [notations.OreDictItems.STONE]
     destroygroupnames = [notations.DestroyGroupItems.PICKAXE]
@@ -219,11 +210,11 @@ class Diorite(G.blockclass):
     def getStateName(self, inst):
         return "diorite"
 
-    def isBrakeAble(self, inst):
+    def isBrakeAbleInGamemode0(self, inst):
         return True
 
 
-class PolishedDiorite(G.blockclass):
+class PolishedDiorite(G.iblockclass):
     """class for polished diorite"""
     oredictnames = [notations.OreDictItems.STONE, notations.OreDictItems.POLISHED_STONE]
     destroygroupnames = [notations.DestroyGroupItems.PICKAXE]
@@ -237,7 +228,7 @@ class PolishedDiorite(G.blockclass):
     def getStateName(self, inst):
         return "polished_diorite"
 
-    def isBrakeAble(self, inst):
+    def isBrakeAbleInGamemode0(self, inst):
         return True
 
 

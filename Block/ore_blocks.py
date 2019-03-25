@@ -4,7 +4,7 @@ import Block.log
 import modsystem.ModLoader
 
 
-class IOreBlock(G.blockclass):
+class IOreBlock(G.iblockclass):
     def getModelFile(self, inst):
         return "minecraft:ore_blocks"
 

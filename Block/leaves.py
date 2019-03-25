@@ -3,7 +3,7 @@ import mathhelper
 import modsystem.ModLoader
 
 
-class AcaciaLeave(G.blockclass):
+class AcaciaLeave(G.iblockclass):
     """class for acacia leave"""
     def getName(self):
         return "minecraft:acacia_leaves"
@@ -21,7 +21,7 @@ class AcaciaLeave(G.blockclass):
         return False
 
 
-class BirchLeave(G.blockclass):
+class BirchLeave(G.iblockclass):
     """class for birch leave"""
     def getName(self):
         return "minecraft:birch_leaves"
@@ -39,7 +39,7 @@ class BirchLeave(G.blockclass):
         return False
 
 
-class DarkOakLeave(G.blockclass):
+class DarkOakLeave(G.iblockclass):
     """class for dark oak leave"""
     def getName(self):
         return "minecraft:dark_oak_leaves"
@@ -57,7 +57,7 @@ class DarkOakLeave(G.blockclass):
         return False
 
 
-class JungleLeave(G.blockclass):
+class JungleLeave(G.iblockclass):
     """class for jungle leave"""
     def getName(self):
         return "minecraft:jungle_leaves"
@@ -75,7 +75,7 @@ class JungleLeave(G.blockclass):
         return False
 
 
-class OakLeave(G.blockclass):
+class OakLeave(G.iblockclass):
     """class for oak leave"""
     def getName(self):
         return "minecraft:oak_leaves"
@@ -93,7 +93,7 @@ class OakLeave(G.blockclass):
         return False
 
 
-class SpruceLeave(G.blockclass):
+class SpruceLeave(G.iblockclass):
     """class for spruce leave"""
     def getName(self):
         return "minecraft:spruce_leaves"

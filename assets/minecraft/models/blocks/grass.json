@@ -1,0 +1,13 @@
+{
+  "name": "minecraft:grass",
+  "files": ["assets/minecraft/textures/block/grass_block_side.png",
+            "assets/minecraft/textures/block/dirt.png",
+            "tmp/minecraft/block/grass/item_0.png"],
+  "entrys": [
+    {
+      "type name": "cube:full",
+      "state name": "default",
+      "sides": [2, 1, 0, 0, 0, 0]
+    }
+  ]
+}

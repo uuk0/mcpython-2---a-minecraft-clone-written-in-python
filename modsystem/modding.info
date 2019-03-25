@@ -17,5 +17,5 @@ adding an Block:
   1.: creat an File
   2.: creat the texture files
   3.: creat another (an model file)
-  2.: write: import globals as G\nclass <myblockname>(G.blockclass): [stuff around your block, see block/Block.py]\n
+  2.: write: import globals as G\nclass <myblockname>(G.iblockclass): [stuff around your block, see block/Block.py]\n
              G.blockhandler.register(<myblockname>)

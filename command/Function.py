@@ -28,7 +28,8 @@ class _Function:
             if not line.startswith("#") and any([x not in [" ", "   "] for x in line]):
                 if not line.startswith("/"):
                     line = "/" + line
-                G.commandhandler.executeCommand(line, entity, position)
+                if not G.commandhandler.executeCommand(line, entity, position):
+                    return
 
 
 FUNCTIONS = []

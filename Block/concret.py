@@ -4,26 +4,30 @@ import modsystem.ModLoader
 import mathhelper
 
 
-class Concret(G.blockclass):
+class Concret(G.iblockclass):
+    """
+    main class for concret
+    """
+
     def getName(self):
         return "minecraft:"+str(self.getColor())+"_concret"
-
-    def getModelFile(self, inst):
-        return "minecraft:concret"
-
-    def getStateName(self, inst):
-        return self.getColor()
 
     @staticmethod
     def getColor():
         return ""
+
+    def getStateName(self, inst):
+        return self.getColor()
+
+    def get_model_address(self, inst):
+        return "minecraft:concret"
 
 
 class ConcretPowder(Concret):
     def getName(self):
         return "minecraft:" + str(self.getColor()) + "_concret_powder"
 
-    def getModelFile(self, inst):
+    def get_model_address(self, inst):
         return "minecraft:concret_powder"
 
     def on_block_update(self, inst):
