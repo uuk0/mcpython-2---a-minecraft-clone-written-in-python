@@ -1,6 +1,8 @@
 import globals as G
 
 """class for glowstone"""
+
+
 class Glowstone(G.itemclass):
     def getName(self):
         return "minecraft:glowstone"
@@ -9,11 +11,14 @@ class Glowstone(G.itemclass):
         return True
 
     def getTexturFile(self):
-        return G.local+"/assets/minecraft/textures/item/GLOWSTONE.png"
+        return G.local + "/assets/minecraft/textures/item/GLOWSTONE.png"
+
 
 G.itemhandler.register(Glowstone)
 
 """class for glowstone"""
+
+
 class GlowstoneDust(G.itemclass):
     def getName(self):
         return "minecraft:glowstone_dust"
@@ -22,9 +27,10 @@ class GlowstoneDust(G.itemclass):
         return True
 
     def getTexturFile(self):
-        return G.local+"/assets/minecraft/textures/item/glowstone_dust.png"
+        return G.local + "/assets/minecraft/textures/item/glowstone_dust.png"
 
     def hasBlock(self):
         return False
+
 
 G.itemhandler.register(GlowstoneDust)

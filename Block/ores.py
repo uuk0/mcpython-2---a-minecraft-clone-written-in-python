@@ -13,6 +13,7 @@ class IOre(G.iblockclass):
 
 class CoalOre(IOre):
     """class for coalore"""
+
     def getName(self):
         return "minecraft:coal_ore"
 
@@ -20,11 +21,12 @@ class CoalOre(IOre):
         return True
 
     def getDrop(self, inst):
-        return {"minecraft:coal":1}
+        return {"minecraft:coal": 1}
 
 
 class DiamondOre(IOre):
     """class for diamondore"""
+
     def getName(self):
         return "minecraft:diamond_ore"
 
@@ -32,11 +34,12 @@ class DiamondOre(IOre):
         return True
 
     def getDrop(self, inst):
-        return {"minecraft:diamond":1}
+        return {"minecraft:diamond": 1}
 
 
 class EmeraldOre(IOre):
     """class for emeraldore"""
+
     def getName(self):
         return "minecraft:emerald_ore"
 
@@ -44,11 +47,12 @@ class EmeraldOre(IOre):
         return True
 
     def getDrop(self, inst):
-        return {"minecraft:emerald":1}
+        return {"minecraft:emerald": 1}
 
 
 class GoldOre(IOre):
     """class for goldore"""
+
     def getName(self):
         return "minecraft:gold_ore"
 
@@ -61,6 +65,7 @@ class GoldOre(IOre):
 
 class IronOre(IOre):
     """class for ironore"""
+
     def getName(self):
         return "minecraft:iron_ore"
 
@@ -73,6 +78,7 @@ class IronOre(IOre):
 
 class LapisOre(IOre):
     """class for lapisore"""
+
     def getName(self):
         return "minecraft:lapis_ore"
 
@@ -80,11 +86,12 @@ class LapisOre(IOre):
         return True
 
     def getDrop(self, inst):
-        return {"minecraft:lapis_lazuli":5}
+        return {"minecraft:lapis_lazuli": 5}
 
 
 class NetherQuartz(IOre):
     """class for netherquartz"""
+
     def getName(self):
         return "minecraft:nether_quartz_ore"
 
@@ -97,6 +104,7 @@ class NetherQuartz(IOre):
 
 class RedstoneOre(IOre):
     """class for redstoneore"""
+
     def getName(self):
         return "minecraft:redstone_ore"
 
@@ -107,8 +115,9 @@ class RedstoneOre(IOre):
         return {self.getItemName(inst): 1}
 
 
-@modsystem.ModLoader.ModEventEntry("game:registry:on_block_registrate_periode", "minecraft",
-                                   info="registrating ores")
+@modsystem.ModLoader.ModEventEntry(
+    "game:registry:on_block_registrate_periode", "minecraft", info="registrating ores"
+)
 def register():
     G.blockhandler.register(RedstoneOre)
     G.blockhandler.register(NetherQuartz)
@@ -118,4 +127,3 @@ def register():
     G.blockhandler.register(EmeraldOre)
     G.blockhandler.register(DiamondOre)
     G.blockhandler.register(CoalOre)
-

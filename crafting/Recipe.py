@@ -12,4 +12,3 @@ class Recipe:
         self.mod = mod
         self.args = args
         self.kwargs = kwargs
-

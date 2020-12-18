@@ -4,10 +4,12 @@ import scoreboard.IScoreBoardType
 
 class ObjectiveScoreboard(scoreboard.IScoreBoardType.ScoreBoard):
     @staticmethod
-    def getName(): return "minecraft:scoreboard:objective"
+    def getName():
+        return "minecraft:scoreboard:objective"
 
     @staticmethod
-    def getCommandName(): return "objective"
+    def getCommandName():
+        return "objective"
 
     @staticmethod
     def execute_from_command(line):  # /scoreboard access to scoreboard

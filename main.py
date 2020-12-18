@@ -4,11 +4,21 @@ import log
 import globals as G
 import shutil
 
-log.printMSG("--------------------------------------------------------------------------------")
-log.printMSG("- MCPYTHON VERSION "+G.VERSION_NAME.upper()+" "*(60-len(G.VERSION_NAME))+"-")
-log.printMSG("--------------------------------------------------------------------------------\n\n")
+log.printMSG(
+    "--------------------------------------------------------------------------------"
+)
+log.printMSG(
+    "- MCPYTHON VERSION "
+    + G.VERSION_NAME.upper()
+    + " " * (60 - len(G.VERSION_NAME))
+    + "-"
+)
+log.printMSG(
+    "--------------------------------------------------------------------------------\n\n"
+)
 
 import exceptionhandler
+
 exceptionhandler.add_header()
 
 if sys.version_info[0] == 2:
@@ -17,28 +27,33 @@ if sys.version_info[0] == 2:
 
 log.printMSG("[MAINTHREAD][INFO] clearing tmp-dir")
 
-if not os.path.exists(G.local+"/tmp"): os.makedirs(G.local+"/tmp")
-for e in os.listdir(G.local+"/tmp"):
+if not os.path.exists(G.local + "/tmp"):
+    os.makedirs(G.local + "/tmp")
+for e in os.listdir(G.local + "/tmp"):
     if e not in ["file.info"]:
-        if os.path.isfile(G.local+"/tmp/"+e):
-            os.remove(G.local+"/tmp/"+e)
+        if os.path.isfile(G.local + "/tmp/" + e):
+            os.remove(G.local + "/tmp/" + e)
         else:
             try:
-                shutil.rmtree(G.local+"/tmp/"+e)
-            except PermissionError: pass
+                shutil.rmtree(G.local + "/tmp/" + e)
+            except PermissionError:
+                pass
 
 log.printMSG("[MAINTHREAD][INFO] finished! Now looking after the packages we need")
-os.makedirs(G.local+"/tmp/gui")
-os.makedirs(G.local+"/tmp/entity")
+os.makedirs(G.local + "/tmp/gui")
+os.makedirs(G.local + "/tmp/entity")
 
 try:
     import pyglet
 except ImportError:
-    log.printMSG("can't load pyglet. PLEASE INSTALL IT. IT IS USED FOR RENDERING EVERYTHING")
+    log.printMSG(
+        "can't load pyglet. PLEASE INSTALL IT. IT IS USED FOR RENDERING EVERYTHING"
+    )
 
 try:
     import PIL
     from PIL import ImageFile
+
     ImageFile.LOAD_TRUNCATED_IMAGES = True
 except ImportError:
     log.printMSG("can't load pillow. PLEASE INSTALL IT. IT IS USED FOR IMAGE HANDLING")
@@ -56,10 +71,14 @@ except ImportError:
 try:
     import json
 except ImportError:
-    log.printMSG("can't load json. This is a strange thing because your python setup should have it installed"+\
-                 " by installing it")
+    log.printMSG(
+        "can't load json. This is a strange thing because your python setup should have it installed"
+        + " by installing it"
+    )
 
-log.printMSG("[MAINTHREAD][INFO] everything fine (or not?). Starting loading submoduls step by step")
+log.printMSG(
+    "[MAINTHREAD][INFO] everything fine (or not?). Starting loading submoduls step by step"
+)
 
 import gen.biomes.Biome
 import eventhandler
@@ -82,7 +101,7 @@ import texturegenerator
 
 log.printMSG("[MAINTHREAD][INFO] we are ready to start, only a few things to do")
 
-pyglet.options['audio'] = ('openal', 'pulse', 'directsound', 'silent')
+pyglet.options["audio"] = ("openal", "pulse", "directsound", "silent")
 
 import globals as G
 
@@ -92,20 +111,34 @@ import soundhandler
 
 from pyglet.gl import *
 
+
 def main():
     """main function"""
     log.printMSG("[MAINTHREAD][INFO] creating window")
     import Inventory.inventory
     import window
-    #window = window.Window(width=800, height=600, caption='mcp#ython 2', resizable=True)
+
+    # window = window.Window(width=800, height=600, caption='mcp#ython 2', resizable=True)
     try:
         # Try and create a window with multisampling (antialiasing)
-        config = Config(sample_buffers=1, samples=4,
-                        depth_size=16, double_buffer=True, )
-        window = window.Window(resizable=True, config=config, width=1200, height=620, caption='mcpython '+str(G.VERSION_NAME))
+        config = Config(
+            sample_buffers=1,
+            samples=4,
+            depth_size=16,
+            double_buffer=True,
+        )
+        window = window.Window(
+            resizable=True,
+            config=config,
+            width=1200,
+            height=620,
+            caption="mcpython " + str(G.VERSION_NAME),
+        )
     except pyglet.window.NoSuchConfigException:
         # Fall back to no multisampling for old hardware
-        window = pyglet.window.Window(resizable=True, width=1200, height=620, caption='mcpython 2')
+        window = pyglet.window.Window(
+            resizable=True, width=1200, height=620, caption="mcpython 2"
+        )
     # Hide the mouse cursor and prevent the mouse from leaving the window.
     log.printMSG("[MAINTHREAD][INFO] setting up OpenGL")
     window.set_exclusive_mouse(True)
@@ -113,12 +146,14 @@ def main():
     log.printMSG("[MAINTHREAD][INFO] nothing to do here, starting pyglet")
     pyglet.app.run()
 
+
 import modsystem.ModLoader
+
 G.modloader.searchForMods()
 
 G.statehandler.setState("minecraft:titlescreen")
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     try:
         main()
     except:

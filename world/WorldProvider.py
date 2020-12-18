@@ -1,5 +1,4 @@
-
-#import globals as G
+# import globals as G
 
 import world.ChunkProvider
 
@@ -16,9 +15,9 @@ class WorldProvider:
         self.batch = pyglet.graphics.Batch()
 
     def getChunkProviderFor(self, chunk) -> world.ChunkProvider.ChunkProvider:
-        if chunk not in self.chunkproviders: self.chunkproviders[chunk] = world.ChunkProvider.ChunkProvider(self, chunk)
+        if chunk not in self.chunkproviders:
+            self.chunkproviders[chunk] = world.ChunkProvider.ChunkProvider(self, chunk)
         return self.chunkproviders[chunk]
 
     def generateChunkFor(self, chunk):
         self.getChunkProviderFor(chunk).generate()
-

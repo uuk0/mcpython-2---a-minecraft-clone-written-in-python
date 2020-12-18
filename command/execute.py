@@ -33,16 +33,20 @@ class ExecuteCommand(G.commandclass):
                 entitys = G.selectorhandler.parse(splitted[index], position, entity)
                 index += 1
                 for e in entitys:
-                    ExecuteCommand.executeCommand("/execute "+" ".join(splitted[index:]), e, position)
+                    ExecuteCommand.executeCommand(
+                        "/execute " + " ".join(splitted[index:]), e, position
+                    )
                 return
             elif c == "at":
                 entitys = G.selectorhandler.parse(splitted[index], position, entity)
                 index += 1
                 for e in entitys:
-                    ExecuteCommand.executeCommand("execute "+" ".join(splitted[index:]), entity, e.position)
+                    ExecuteCommand.executeCommand(
+                        "execute " + " ".join(splitted[index:]), entity, e.position
+                    )
                 return
             elif c == "positioned":
-                x, y, z = tuple(splitted[index:index+3])
+                x, y, z = tuple(splitted[index : index + 3])
                 x, y, z = float(x), float(y), float(z)
                 position = commandutil.parseStringPosition(x, y, z, position)
                 index += 3
@@ -51,54 +55,74 @@ class ExecuteCommand(G.commandclass):
                 index += 1
                 if sc == "entity":
                     entitys = G.selectorhandler.parse(splitted[index], entity, position)
-                    if len(entitys) == 0: return
+                    if len(entitys) == 0:
+                        return
                     index += 1
                 elif sc == "block":
-                    pos = tuple(splitted[index:index+3])
+                    pos = tuple(splitted[index : index + 3])
                     index += 3
-                    pos = mathhelper.normalize(commandutil.parseStringPosition(pos[0], pos[1], pos[2], position))
+                    pos = mathhelper.normalize(
+                        commandutil.parseStringPosition(
+                            pos[0], pos[1], pos[2], position
+                        )
+                    )
                     cx, _, cz = mathhelper.sectorize(pos)
-                    chunkprovider = G.player.dimension.worldprovider.getChunkProviderFor((cx, cz))
-                    if (pos not in chunkprovider.world and splitted[index] not in ["", "0", "air", "minecraft:air"]
+                    chunkprovider = (
+                        G.player.dimension.worldprovider.getChunkProviderFor((cx, cz))
+                    )
+                    if (
+                        pos not in chunkprovider.world
+                        and splitted[index] not in ["", "0", "air", "minecraft:air"]
                     ) or chunkprovider.world[pos].getName() != splitted[index]:
                         return
                     index += 1
                 elif sc in ExecuteCommand.CONDITIONS:
                     function = ExecuteCommand.CONDITIONS[sc]
                     flag, index = function(splitted, index, entity, position)
-                    if not flag: return
+                    if not flag:
+                        return
                 else:
-                    log.printMSG("[EXECUTE][ERROR] no condition found named "+str(sc))
+                    log.printMSG("[EXECUTE][ERROR] no condition found named " + str(sc))
                     return
             elif c == "unless":
                 sc = splitted[index]
                 index += 1
                 if sc == "entity":
                     entitys = G.selectorhandler.parse(splitted[index])
-                    if len(entitys) != 0: return
+                    if len(entitys) != 0:
+                        return
                     index += 1
                 elif sc == "block":
-                    pos = tuple(splitted[index:index + 3])
+                    pos = tuple(splitted[index : index + 3])
                     index += 3
-                    pos = mathhelper.normalize(commandutil.parseStringPosition(pos[0], pos[1], pos[2], position))
+                    pos = mathhelper.normalize(
+                        commandutil.parseStringPosition(
+                            pos[0], pos[1], pos[2], position
+                        )
+                    )
                     cx, _, cz = mathhelper.sectorize(pos)
-                    chunkprovider = G.player.dimension.worldprovider.getChunkProviderFor((cx, cz))
-                    flag1 = (pos in chunkprovider.world
-                             and chunkprovider.world[pos].getName() == splitted[index]
-                             ) or splitted[index] in ["", "0", "air", "minecraft:air"]
+                    chunkprovider = (
+                        G.player.dimension.worldprovider.getChunkProviderFor((cx, cz))
+                    )
+                    flag1 = (
+                        pos in chunkprovider.world
+                        and chunkprovider.world[pos].getName() == splitted[index]
+                    ) or splitted[index] in ["", "0", "air", "minecraft:air"]
                     if flag1:
                         return
                     index += 1
                 elif sc in ExecuteCommand.CONDITIONS:
                     function = ExecuteCommand.CONDITIONS[sc]
                     flag, index = function(splitted, index, entity, position)
-                    if flag: return
+                    if flag:
+                        return
                 else:
                     log.printMSG("[EXECUTE][ERROR] no condition found named " + str(sc))
                     return
             elif c == "run":
                 command = " ".join(splitted[index:])
-                if not command.startswith("/"): command = "/" + command
+                if not command.startswith("/"):
+                    command = "/" + command
                 G.commandhandler.executeCommand(command, entity, position)
                 return
 
@@ -116,4 +140,3 @@ run [command]: run another command if all on the left it excecuted right. the li
 
 
 G.commandhandler.register(ExecuteCommand)
-

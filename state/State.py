@@ -16,13 +16,14 @@ class StateHandler:
         self.active_state = None
 
     def register(self, state):
-        if type(state) != State: state = state()
+        if type(state) != State:
+            state = state()
         self.states[state.getName()] = state
         G.eventhandler.call("game:registry:on_state_registrated", state)
 
     def setState(self, name):
         if not name in self.states:
-            log.printMSG("[STATEHANDLER][ERROR] can't access state named "+str(name))
+            log.printMSG("[STATEHANDLER][ERROR] can't access state named " + str(name))
             return
         if self.active_state:
             self.active_state.deactivate()
@@ -33,11 +34,22 @@ class StateHandler:
 G.statehandler = StateHandler()
 
 
-EVENTNAMES = ["core:window:on_exclusive_mouse_change", "core:update", "core:window:on_mouse_press",
-              "core:window:on_mouse_release", "core:window:on_mouse_motion", "core:window:on_key_press",
-              "core:window:on_key_release", "core:window:on_resize", "core:window:on_close",
-              "core:window:on_mouse_scroll", "opengl:draw2d", "opengl:draw3d", "game:on_block_add_by_player",
-              "game:on_block_remove_by_player"]
+EVENTNAMES = [
+    "core:window:on_exclusive_mouse_change",
+    "core:update",
+    "core:window:on_mouse_press",
+    "core:window:on_mouse_release",
+    "core:window:on_mouse_motion",
+    "core:window:on_key_press",
+    "core:window:on_key_release",
+    "core:window:on_resize",
+    "core:window:on_close",
+    "core:window:on_mouse_scroll",
+    "opengl:draw2d",
+    "opengl:draw3d",
+    "game:on_block_add_by_player",
+    "game:on_block_remove_by_player",
+]
 
 
 class State:
@@ -63,8 +75,8 @@ class State:
 G.State = State
 
 
-@modsystem.ModLoader.ModEventEntry("game:registry:on_state_registrate_periode", "minecraft",
-                                   info="registrating states")
+@modsystem.ModLoader.ModEventEntry(
+    "game:registry:on_state_registrate_periode", "minecraft", info="registrating states"
+)
 def register():
     import state.game, state.escapemenu, state.titlescreen
-

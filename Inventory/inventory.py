@@ -8,6 +8,7 @@ class InventoryHandler:
     """inventory handler class
     register functions are only used in background
     """
+
     def __init__(self):
         self.inventorys = {}
         self.nextinvid = 0
@@ -39,11 +40,12 @@ class InventoryHandler:
 
     def show_inventory(self, id):
         """shows the inventory"""
-        if type(id) != int: id = id.id
+        if type(id) != int:
+            id = id.id
         self.inventorys[id].active = True
         self.inventorys[id].on_show()
         self.activeinventorys.append(id)
-        #log.printMSG(self.activeinventorys)
+        # log.printMSG(self.activeinventorys)
         if issubclass(type(self.inventorys[id]), InventoryCollection):
             for e in self.inventorys[id].getActiveInventorys():
                 self.show_inventory(e)
@@ -51,7 +53,8 @@ class InventoryHandler:
 
     def hide_inventory(self, id):
         """hides the inventory"""
-        if type(id) != int: id = id.id
+        if type(id) != int:
+            id = id.id
         self.inventorys[id].active = False
         self.inventorys[id].on_hide()
         if id not in self.activeinventorys:
@@ -65,7 +68,7 @@ class InventoryHandler:
 
     def draw(self):
         """only callen by eventhandler
-            draws all shown entitys"""
+        draws all shown entitys"""
         data = []
         # function to remove double-inventorys. may be recoded by list(tuple(...))
         for e in self.activeinventorys:
@@ -81,6 +84,7 @@ G.inventoryhandler = InventoryHandler()
 
 class Inventory:
     """Inventory class"""
+
     """you can 'tag' an inventory class for detecting it in runtime"""
     tag = []
 
@@ -134,6 +138,7 @@ G.inventoryclass = Inventory
 
 class InventoryCollection:
     """inventorycollection class"""
+
     """you can 'tag' an inventorycollection class for detecting it in runtime"""
     tag = []
 
@@ -183,8 +188,15 @@ G.inventorycollection = InventoryCollection
 
 class Slot:
     """Slot class"""
-    def __init__(self, position, stack=IItemStack.IItemStack(None),
-                 canplayersetitems=True, update_func=None, controll_function=None):
+
+    def __init__(
+        self,
+        position,
+        stack=IItemStack.IItemStack(None),
+        canplayersetitems=True,
+        update_func=None,
+        controll_function=None,
+    ):
         self.position = position
         self.stack = stack
         self.stack.slot = self
@@ -195,14 +207,16 @@ class Slot:
 
     def draw(self, position):
         """draw the slot"""
-        self.stack.drawImage((self.position[0]+position[0],
-                              self.position[1]+position[1]))
+        self.stack.drawImage(
+            (self.position[0] + position[0], self.position[1] + position[1])
+        )
 
     def setStack(self, stack):
         """set the stack which the slot is holding"""
         self.stack = stack
         self.stack.slot = self
-        if self.update_func: self.update_func(self)
+        if self.update_func:
+            self.update_func(self)
         self.stack.update_func = self.update_func
 
     def setItem(self, name, amount=1):
@@ -217,8 +231,10 @@ class Slot:
 G.inventoryslot = Slot
 
 
-@modsystem.ModLoader.ModEventEntry("game:registry:on_inventory:registrate_periode", "minecraft",
-                                   info="registrating inventorys")
+@modsystem.ModLoader.ModEventEntry(
+    "game:registry:on_inventory:registrate_periode",
+    "minecraft",
+    info="registrating inventorys",
+)
 def register():
     from . import player, crafting
-

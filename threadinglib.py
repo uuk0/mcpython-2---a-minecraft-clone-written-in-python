@@ -5,11 +5,13 @@ libary for "threading" without realy threading
 it's using an real Thread to switch between diffrent "threads"
 """
 
+
 def dictToAttrList(d):
     al = ""
     for e in d.keys():
         al += str(e) + "=" + str(d[e]) + ", "
     return al if al == "" else al[:-2]
+
 
 class Function:
     def __init__(self, args, kwargs):
@@ -40,12 +42,13 @@ class Function:
 
     def addFunctionCall(self, function, args, kwargs):
         """function to add an call to another function
-set command_list attribute to a function to make this possible
-otherwise it will be stored to memory
-"""
+        set command_list attribute to a function to make this possible
+        otherwise it will be stored to memory"""
         if not hasattr(function, "command_list"):
             self.functionspace[function.__name__] = function
-            self.addPythonLine(function.__name__+"("+str(args)[1:-1]+dictToAttrList(kwargs))
+            self.addPythonLine(
+                function.__name__ + "(" + str(args)[1:-1] + dictToAttrList(kwargs)
+            )
             return
         f = function.command_list
         fc = []
@@ -55,17 +58,18 @@ otherwise it will be stored to memory
             fc.append(e)
         id = len(self.command_list)
         self.command_list += fc
-        return  id
+        return id
 
     def executeOneLine(self, g):
-        if self.nextcommand >= len(self.command_list): return False
+        if self.nextcommand >= len(self.command_list):
+            return False
         line = self.command_list[self.nextcommand]
         if line[0] == 0:
             self.nextcommand += 1
             exec(line[1], g, self.space)
         elif line[0] == 1:
             space = {}
-            exec("a="+line[1], space)
+            exec("a=" + line[1], space)
             if space["a"]:
                 self.nextcommand = line[2]
             else:
@@ -85,8 +89,10 @@ otherwise it will be stored to memory
         for i, e in enumerate(args):
             self.space[self.args[i]] = e
         for k in self.kwargs.keys():
-            if k in kwargs: self.space[k] = kwargs[k]
-            else: self.space[k] = self.kwargs[k]
+            if k in kwargs:
+                self.space[k] = kwargs[k]
+            else:
+                self.space[k] = self.kwargs[k]
 
     def __call__(self, *args, **kwargs):
         self.setAttr(*args, **kwargs)
@@ -101,11 +107,13 @@ otherwise it will be stored to memory
         f.command_list = self.command_list
         f.thread = self.thread
         return f
-        
+
+
 THREADS = []
 IDTOTHREAD = {}
 NEXTTHREADID = 0
 local = locals()
+
 
 class Thread:
     def __init__(self, function, args, kwargs):
@@ -120,11 +128,12 @@ class Thread:
         NEXTTHREADID += 1
         self.IDTOTHREAD[self.id] = self
 
+
 def start():
     g = local
     tid = 0
     while len(THREADS) > 0:
-        if tid > len(THREADS)-1:
+        if tid > len(THREADS) - 1:
             tid = 0
         thread = THREADS[tid]
         try:

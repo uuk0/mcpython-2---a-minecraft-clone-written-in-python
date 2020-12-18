@@ -6,6 +6,7 @@ import modsystem.ModLoader
 
 class Stone(G.iblockclass):
     """class for stone"""
+
     oredictnames = [notations.OreDictItems.STONE]
     destroygroupnames = [notations.DestroyGroupItems.PICKAXE]
 
@@ -13,11 +14,12 @@ class Stone(G.iblockclass):
         return "minecraft:stone"
 
     def getDrop(self, inst):
-        return {"minecraft:cobbelstone":1}
+        return {"minecraft:cobbelstone": 1}
 
 
 class CobbelStone(G.iblockclass):
     """class for cobbelstone"""
+
     oredictnames = [notations.OreDictItems.STONE, notations.OreDictItems.COBBELSTONE]
     destroygroupnames = [notations.DestroyGroupItems.PICKAXE]
 
@@ -36,6 +38,7 @@ class CobbelStone(G.iblockclass):
 
 class StoneBrick(G.iblockclass):
     """class for stonebrick"""
+
     oredictnames = [notations.OreDictItems.STONE, notations.OreDictItems.STONEBRICK]
     destroygroupnames = [notations.DestroyGroupItems.PICKAXE]
 
@@ -54,6 +57,7 @@ class StoneBrick(G.iblockclass):
 
 class MossyStoneBrick(G.iblockclass):
     """class for mossy stone brick"""
+
     oredictnames = [notations.OreDictItems.STONE, notations.OreDictItems.STONEBRICK]
     destroygroupnames = [notations.DestroyGroupItems.PICKAXE]
 
@@ -72,6 +76,7 @@ class MossyStoneBrick(G.iblockclass):
 
 class CrackedStoneBrick(G.iblockclass):
     """class for cracked stone brick"""
+
     oredictnames = [notations.OreDictItems.STONE, notations.OreDictItems.STONEBRICK]
     destroygroupnames = [notations.DestroyGroupItems.PICKAXE]
 
@@ -90,6 +95,7 @@ class CrackedStoneBrick(G.iblockclass):
 
 class ChiseledStoneBrick(G.iblockclass):
     """class for chiseled stone brick"""
+
     oredictnames = [notations.OreDictItems.STONE]
     destroygroupnames = [notations.DestroyGroupItems.PICKAXE]
 
@@ -108,6 +114,7 @@ class ChiseledStoneBrick(G.iblockclass):
 
 class MossyCobbelStone(G.iblockclass):
     """class for mossy cobbelstone"""
+
     oredictnames = [notations.OreDictItems.STONE, notations.OreDictItems.COBBELSTONE]
     destroygroupnames = [notations.DestroyGroupItems.PICKAXE]
 
@@ -126,6 +133,7 @@ class MossyCobbelStone(G.iblockclass):
 
 class Andesite(G.iblockclass):
     """class for andesite"""
+
     oredictnames = [notations.OreDictItems.STONE]
     destroygroupnames = [notations.DestroyGroupItems.PICKAXE]
 
@@ -144,6 +152,7 @@ class Andesite(G.iblockclass):
 
 class PolishedAndesite(G.iblockclass):
     """class for polished andesite"""
+
     oredictnames = [notations.OreDictItems.STONE, notations.OreDictItems.POLISHED_STONE]
     destroygroupnames = [notations.DestroyGroupItems.PICKAXE]
 
@@ -162,6 +171,7 @@ class PolishedAndesite(G.iblockclass):
 
 class Granite(G.iblockclass):
     """class for granite"""
+
     oredictnames = [notations.OreDictItems.STONE]
     destroygroupnames = [notations.DestroyGroupItems.PICKAXE]
 
@@ -180,6 +190,7 @@ class Granite(G.iblockclass):
 
 class PolishedGranite(G.iblockclass):
     """class for polished granite"""
+
     oredictnames = [notations.OreDictItems.STONE, notations.OreDictItems.POLISHED_STONE]
     destroygroupnames = [notations.DestroyGroupItems.PICKAXE]
 
@@ -198,6 +209,7 @@ class PolishedGranite(G.iblockclass):
 
 class Diorite(G.iblockclass):
     """class for diorite"""
+
     oredictnames = [notations.OreDictItems.STONE]
     destroygroupnames = [notations.DestroyGroupItems.PICKAXE]
 
@@ -216,6 +228,7 @@ class Diorite(G.iblockclass):
 
 class PolishedDiorite(G.iblockclass):
     """class for polished diorite"""
+
     oredictnames = [notations.OreDictItems.STONE, notations.OreDictItems.POLISHED_STONE]
     destroygroupnames = [notations.DestroyGroupItems.PICKAXE]
 
@@ -232,8 +245,9 @@ class PolishedDiorite(G.iblockclass):
         return True
 
 
-@modsystem.ModLoader.ModEventEntry("game:registry:on_block_registrate_periode", "minecraft",
-                                   info="registrating stones")
+@modsystem.ModLoader.ModEventEntry(
+    "game:registry:on_block_registrate_periode", "minecraft", info="registrating stones"
+)
 def register():
     G.blockhandler.register(PolishedDiorite)
     G.blockhandler.register(Diorite)
@@ -248,4 +262,3 @@ def register():
     G.blockhandler.register(StoneBrick)
     G.blockhandler.register(CobbelStone)
     G.blockhandler.register(Stone)
-

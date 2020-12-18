@@ -11,8 +11,10 @@ class NetherBricks(G.iblockclass):
         return "minecraft:nether_bricks"
 
 
-@modsystem.ModLoader.ModEventEntry("game:registry:on_block_registrate_periode", "minecraft",
-                                   info="registrating nether bricks")
+@modsystem.ModLoader.ModEventEntry(
+    "game:registry:on_block_registrate_periode",
+    "minecraft",
+    info="registrating nether bricks",
+)
 def register():
     G.blockhandler.register(NetherBricks)
-

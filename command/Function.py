@@ -11,11 +11,12 @@ class _Function:
 
     @staticmethod
     def from_file(file):
-        if file.startswith(G.local+"/datapacks/"):
-            index = file[len(G.local+"/datapacks/")+1:len(".mcfunction")]
+        if file.startswith(G.local + "/datapacks/"):
+            index = file[len(G.local + "/datapacks/") + 1 : len(".mcfunction")]
         else:
             index = None
-        if index in FUNCTIONTABLE: return FUNCTIONTABLE[index]
+        if index in FUNCTIONTABLE:
+            return FUNCTIONTABLE[index]
         with open(file) as f:
             return _Function(f.read(), index=index)
 
@@ -36,10 +37,10 @@ FUNCTIONS = []
 FUNCTIONTABLE = {}
 
 
-def get_function_for(file): return _Function.from_file(file)
+def get_function_for(file):
+    return _Function.from_file(file)
 
 
 def execute_function(file, entity=None, position=None):
     function = get_function_for(file)
     function.execute(entity=entity, position=position)
-

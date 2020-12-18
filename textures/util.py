@@ -11,12 +11,17 @@ def construct():
         if path:
             if os.path.isdir(os.path.join(path, "assets")):
                 PATHS.append(os.path.join(path, "assets"))
-                PATHS += [os.path.join(path, "assets", x) for x in os.listdir(os.path.join(path, "assets"))]
+                PATHS += [
+                    os.path.join(path, "assets", x)
+                    for x in os.listdir(os.path.join(path, "assets"))
+                ]
 
 
 def join_file(file):
-    if type(file) != str: return file
-    if os.path.exists(file): return file
+    if type(file) != str:
+        return file
+    if os.path.exists(file):
+        return file
     for path in PATHS:
         f = os.path.join(path, file)
         if os.path.exists(f):
@@ -25,15 +30,15 @@ def join_file(file):
 
 
 def resize(image: PIL.Image.Image, size: tuple) -> PIL.Image.Image:
-    return image.resize(size)
+    return image.resize(size, PIL.Image.NEAREST)
 
 
 def resize_file(file: str, size: tuple, store=None):
     file = join_file(file)
-    if not store: store = file
+    if not store:
+        store = file
     resize(PIL.Image.open(file), size).save(store)
 
 
 def load_image(file: str) -> PIL.Image.Image:
     return PIL.Image.open(join_file(file))
-

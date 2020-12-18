@@ -5,6 +5,7 @@ import modsystem.ModLoader
 
 class DarkPrismarin(G.iblockclass):
     """class for clay"""
+
     def getName(self):
         return "minecraft:dark_prismarin"
 
@@ -17,6 +18,7 @@ class DarkPrismarin(G.iblockclass):
 
 class Prismarin(G.iblockclass):
     """class for clay"""
+
     def getName(self):
         return "minecraft:prismarin"
 
@@ -29,6 +31,7 @@ class Prismarin(G.iblockclass):
 
 class PrismarinBrick(G.iblockclass):
     """class for clay"""
+
     def getName(self):
         return "minecraft:prismarin_brick"
 
@@ -39,10 +42,12 @@ class PrismarinBrick(G.iblockclass):
         return "prismarine_brick"
 
 
-@modsystem.ModLoader.ModEventEntry("game:registry:on_block_registrate_periode", "minecraft",
-                                   info="registrating prismarin")
+@modsystem.ModLoader.ModEventEntry(
+    "game:registry:on_block_registrate_periode",
+    "minecraft",
+    info="registrating prismarin",
+)
 def register():
     G.blockhandler.register(DarkPrismarin)
     G.blockhandler.register(Prismarin)
     G.blockhandler.register(PrismarinBrick)
-

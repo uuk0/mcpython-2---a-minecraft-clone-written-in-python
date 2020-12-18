@@ -1,6 +1,7 @@
 import globals as G
 import log
 
+
 class Setharts:
     @staticmethod
     def isCommand(command):
@@ -16,5 +17,6 @@ class Setharts:
     @staticmethod
     def getHelp():
         return "/setharts <amount>: set the amount of harts of player"
+
 
 G.commandhandler.register(Setharts)

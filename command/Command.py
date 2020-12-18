@@ -5,6 +5,7 @@ import modsystem.ModLoader
 
 class CommandHandler:
     """command parser"""
+
     def __init__(self):
         self.commands = []
 
@@ -43,9 +44,22 @@ class CommandClass:
 G.commandclass = CommandClass
 
 
-@modsystem.ModLoader.ModEventEntry("game:registry:on_command_registrate_periode", "minecraft",
-                                   info="registrating commands")
+@modsystem.ModLoader.ModEventEntry(
+    "game:registry:on_command_registrate_periode",
+    "minecraft",
+    info="registrating commands",
+)
 def register():
-    from . import give, setblock, time, generate, gamemode, reload, save, load, setharts, function_command, \
-        execute
-
+    from . import (
+        give,
+        setblock,
+        time,
+        generate,
+        gamemode,
+        reload,
+        save,
+        load,
+        setharts,
+        function_command,
+        execute,
+    )

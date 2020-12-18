@@ -1,6 +1,8 @@
 import globals as G
 
 """class for coal"""
+
+
 class Coal(G.itemclass):
     def getName(self):
         return "minecraft:coal"
@@ -9,11 +11,14 @@ class Coal(G.itemclass):
         return False
 
     def getTexturFile(self):
-        return G.local+"/assets/minecraft/textures/item/COAL#0.png"
+        return G.local + "/assets/minecraft/textures/item/COAL#0.png"
+
 
 G.itemhandler.register(Coal)
 
 """class for charcoal"""
+
+
 class CharCoal(G.itemclass):
     def getName(self):
         return "minecraft:charcoal"
@@ -22,11 +27,14 @@ class CharCoal(G.itemclass):
         return False
 
     def getTexturFile(self):
-        return G.local+"/assets/minecraft/textures/item/COAL#1.png"
+        return G.local + "/assets/minecraft/textures/item/COAL#1.png"
+
 
 G.itemhandler.register(CharCoal)
 
 """class for diamond"""
+
+
 class Diamond(G.itemclass):
     def getName(self):
         return "minecraft:diamond"
@@ -35,11 +43,14 @@ class Diamond(G.itemclass):
         return False
 
     def getTexturFile(self):
-        return G.local+"/assets/minecraft/textures/item/Diamond.png"
+        return G.local + "/assets/minecraft/textures/item/Diamond.png"
+
 
 G.itemhandler.register(Diamond)
 
 """class for emerald"""
+
+
 class Emerald(G.itemclass):
     def getName(self):
         return "minecraft:emerald"
@@ -48,11 +59,14 @@ class Emerald(G.itemclass):
         return False
 
     def getTexturFile(self):
-        return G.local+"/assets/minecraft/textures/item/Emerald.png"
+        return G.local + "/assets/minecraft/textures/item/Emerald.png"
+
 
 G.itemhandler.register(Emerald)
 
 """class for gold ingot"""
+
+
 class Gold(G.itemclass):
     def getName(self):
         return "minecraft:gold_ingot"
@@ -61,11 +75,14 @@ class Gold(G.itemclass):
         return False
 
     def getTexturFile(self):
-        return G.local+"/assets/minecraft/textures/item/Gold_Ingot.png"
+        return G.local + "/assets/minecraft/textures/item/Gold_Ingot.png"
+
 
 G.itemhandler.register(Gold)
 
 """class for iron ingot"""
+
+
 class Iron(G.itemclass):
     def getName(self):
         return "minecraft:iron_ingot"
@@ -74,11 +91,14 @@ class Iron(G.itemclass):
         return False
 
     def getTexturFile(self):
-        return G.local+"/assets/minecraft/textures/item/Iron_Ingot.png"
+        return G.local + "/assets/minecraft/textures/item/Iron_Ingot.png"
+
 
 G.itemhandler.register(Iron)
 
 """class for lapis"""
+
+
 class Lapis(G.itemclass):
     def getName(self):
         return "minecraft:lapis_lazuli"
@@ -87,11 +107,14 @@ class Lapis(G.itemclass):
         return False
 
     def getTexturFile(self):
-        return G.local+"/assets/minecraft/textures/item/Lapis_Lazuli.png"
+        return G.local + "/assets/minecraft/textures/item/Lapis_Lazuli.png"
+
 
 G.itemhandler.register(Lapis)
 
 """class for nether quartz"""
+
+
 class NetherQuartz(G.itemclass):
     def getName(self):
         return "minecraft:nether_quartz"
@@ -100,11 +123,14 @@ class NetherQuartz(G.itemclass):
         return False
 
     def getTexturFile(self):
-        return G.local+"/assets/minecraft/textures/item/Nether_Quartz.png"
+        return G.local + "/assets/minecraft/textures/item/Nether_Quartz.png"
+
 
 G.itemhandler.register(NetherQuartz)
 
 """class for redstone"""
+
+
 class Redstone(G.itemclass):
     def getName(self):
         return "minecraft:redstone"
@@ -113,6 +139,7 @@ class Redstone(G.itemclass):
         return False
 
     def getTexturFile(self):
-        return G.local+"/assets/minecraft/textures/item/Redstone_Dust.png"
+        return G.local + "/assets/minecraft/textures/item/Redstone_Dust.png"
+
 
 G.itemhandler.register(Redstone)

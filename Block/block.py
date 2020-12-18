@@ -81,26 +81,30 @@ class IBlock:
     @staticmethod
     def getBrakeSoundFile(inst):
         """returns the sound which is played when block is broken. may be a list if more than 1 is possible"""
-        return [G.local + "/assets/minecraft/sounds/brake/stone1.wma",
-                G.local + "/assets/minecraft/sounds/brake/stone2.wma",
-                G.local + "/assets/minecraft/sounds/brake/stone3.wma",
-                G.local + "/assets/minecraft/sounds/brake/stone4.wma"]
+        return [
+            G.local + "/assets/minecraft/sounds/brake/stone1.wma",
+            G.local + "/assets/minecraft/sounds/brake/stone2.wma",
+            G.local + "/assets/minecraft/sounds/brake/stone3.wma",
+            G.local + "/assets/minecraft/sounds/brake/stone4.wma",
+        ]
 
     def show(self, inst):
         """
         only for historical. here in the past the show function was located
         """
         if self.get_model_address(inst) in G.modelhandler.models:
-            G.modelhandler.models[self.get_model_address(inst)].entrys[inst.getStateName()].show(
-                G.player.dimension.worldprovider.batch, inst)
+            G.modelhandler.models[self.get_model_address(inst)].entrys[
+                inst.getStateName()
+            ].show(G.player.dimension.worldprovider.batch, inst)
 
     def hide(self, inst):
         """
         only for historical. here in the past the hide function was located
         """
         if self.get_model_address(inst) in G.modelhandler.models:
-            G.modelhandler.models[self.get_model_address(inst)].entrys[inst.getStateName()].hide(
-                G.player.dimension.worldprovider.batch, inst)
+            G.modelhandler.models[self.get_model_address(inst)].entrys[
+                inst.getStateName()
+            ].hide(G.player.dimension.worldprovider.batch, inst)
 
     def isFullSide(self, inst, side):
         """returns if a side is a full side. These Meanes you can't look through it
@@ -153,8 +157,11 @@ class IBlock:
         """returns the data that should be stored. should be storeable by pickle"""
         cx, _, cz = mathhelper.sectorize(inst.position)
         chunkprovider = G.player.dimension.worldprovider.getChunkProviderFor((cx, cz))
-        return {"name": self.getName(), "data": inst.data,
-                "shown": inst.position in chunkprovider.shown}
+        return {
+            "name": self.getName(),
+            "data": inst.data,
+            "shown": inst.position in chunkprovider.shown,
+        }
 
     def setStorageData(self, data, inst):
         """set stored data to these block. data comes from Block.getStorageData(...)"""
@@ -189,8 +196,11 @@ class BlockReference:
         elif issubclass(type(blockname_or_object_or_to_copy), str):
             self.blockclass = G.blockhandler.getByName(blockname_or_object_or_to_copy)
         if not self.blockclass:
-            log.printMSG("[BLOCK][ERROR] can't construct block from "+str(blockname_or_object_or_to_copy)+
-                         ". using minecraft:none instead")
+            log.printMSG(
+                "[BLOCK][ERROR] can't construct block from "
+                + str(blockname_or_object_or_to_copy)
+                + ". using minecraft:none instead"
+            )
             self.blockclass = G.blockhandler.getByName("minecraft:none")
         self.position = position
         self.settedto = None
@@ -273,9 +283,9 @@ G.blockreferenceclass = BlockReference
 
 def loadBlocks(*args):
     import importlib, os
+
     for e in os.listdir(G.local + "/Block"):
         importlib.import_module("Block." + e.split(".")[0])
 
 
 loadBlocks()
-

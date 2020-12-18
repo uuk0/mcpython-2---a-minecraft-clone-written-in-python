@@ -1,5 +1,3 @@
-
-
 class ICraftingInventory:
     """
     system for implementing an crafting-inventory
@@ -64,4 +62,3 @@ class ICraftingInventory:
         callen when one slot of the input slots is changed. IS NOT AUTOMATICLY REGISTERED
         -> need an own binding to Slot-object
         """
-

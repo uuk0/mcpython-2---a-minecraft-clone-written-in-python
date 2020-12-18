@@ -17,12 +17,26 @@ class Game(G.State):
     def __init__(self):
         G.State.__init__(self)
         # The label that is displayed in the top left of the canvas.
-        self.label1 = pyglet.text.Label('', font_name='Arial', font_size=9,
-                                       x=10, y=100, anchor_x='left', anchor_y='top',
-                                       color=(0, 0, 0, 255))
-        self.label2 = pyglet.text.Label('', font_name='Arial', font_size=9,
-                                       x=10, y=75, anchor_x='left', anchor_y='top',
-                                       color=(0, 0, 0, 255))
+        self.label1 = pyglet.text.Label(
+            "",
+            font_name="Arial",
+            font_size=9,
+            x=10,
+            y=100,
+            anchor_x="left",
+            anchor_y="top",
+            color=(0, 0, 0, 255),
+        )
+        self.label2 = pyglet.text.Label(
+            "",
+            font_name="Arial",
+            font_size=9,
+            x=10,
+            y=75,
+            anchor_x="left",
+            anchor_y="top",
+            color=(0, 0, 0, 255),
+        )
         self.reticle = None
 
     def getName(self):
@@ -32,11 +46,13 @@ class Game(G.State):
         if name == "opengl:draw3d":
             t = G.window.time + 12000 if G.window.time < 12000 else G.window.time
             w = (24000 - G.window.time) / 24000
-            pyglet.gl.glClearColor(0.5*w, 0.69*w, 1.0*w, 1*w)
+            pyglet.gl.glClearColor(0.5 * w, 0.69 * w, 1.0 * w, 1 * w)
             pyglet.gl.glColor3d(w, w, w)
             # draw with alpha - alpha setup
             pyglet.gl.glEnable(pyglet.gl.GL_BLEND)
-            pyglet.gl.glBlendFunc(pyglet.gl.GL_SRC_ALPHA, pyglet.gl.GL_ONE_MINUS_SRC_ALPHA)
+            pyglet.gl.glBlendFunc(
+                pyglet.gl.GL_SRC_ALPHA, pyglet.gl.GL_ONE_MINUS_SRC_ALPHA
+            )
             # end alpha setup
             G.player.dimension.worldprovider.batch.draw()
             self.draw_focused_block()
@@ -54,9 +70,9 @@ class Game(G.State):
                 self.reticle.delete()
             x, y = G.window.width // 2, G.window.height // 2
             n = 10
-            self.reticle = pyglet.graphics.vertex_list(4,
-                                                       ('v2i', (x - n, y, x + n, y, x, y - n, x, y + n))
-                                                       )
+            self.reticle = pyglet.graphics.vertex_list(
+                4, ("v2i", (x - n, y, x + n, y, x, y - n, x, y + n))
+            )
         elif name == "core:window:on_key_release":
             symbol, modifiers = args
 
@@ -79,11 +95,21 @@ class Game(G.State):
                 G.chat.on_key_press(symbol, modifiers)
                 return
 
-            if any([G.inventoryhandler.inventorys[inventory].isDisablyingGame() for inventory in \
-                    G.inventoryhandler.activeinventorys]):
-                log.printMSG([(G.inventoryhandler.inventorys[inventory],
-                               G.inventoryhandler.inventorys[inventory].isDisablyingGame())
-                              for inventory in G.inventoryhandler.activeinventorys])
+            if any(
+                [
+                    G.inventoryhandler.inventorys[inventory].isDisablyingGame()
+                    for inventory in G.inventoryhandler.activeinventorys
+                ]
+            ):
+                log.printMSG(
+                    [
+                        (
+                            G.inventoryhandler.inventorys[inventory],
+                            G.inventoryhandler.inventorys[inventory].isDisablyingGame(),
+                        )
+                        for inventory in G.inventoryhandler.activeinventorys
+                    ]
+                )
                 if symbol == key.ESCAPE:
                     for e in G.inventoryhandler.activeated:
                         inv = G.inventoryhandler.inventorys[e]
@@ -146,7 +172,9 @@ class Game(G.State):
                     G.window.set_exclusive_mouse(False)
                     G.inventoryhandler.hide_inventory(G.window.player.inventory.id)
                     G.inventoryhandler.show_inventory(G.window.player.inventory.id)
-                    G.player.checkinventorysforslots += G.player.inventory.inventorys[1:]
+                    G.player.checkinventorysforslots += G.player.inventory.inventorys[
+                        1:
+                    ]
 
             elif symbol == config.Keyboard.OPEN_CHAT:
                 G.inventoryhandler.show_inventory(G.chat.id)
@@ -155,7 +183,12 @@ class Game(G.State):
             if G.player.inventory.inventorys[0].type == 1:
                 G.player.on_mouse_motion(x, y, dx, dy)
                 return
-            if any([G.inventoryhandler.inventorys[inventory].isDisablyingGame() for inventory in G.inventoryhandler.activeinventorys]):
+            if any(
+                [
+                    G.inventoryhandler.inventorys[inventory].isDisablyingGame()
+                    for inventory in G.inventoryhandler.activeinventorys
+                ]
+            ):
                 G.player.on_mouse_motion(*args)
                 return
             if G.window.exclusive:
@@ -169,53 +202,106 @@ class Game(G.State):
             if G.player.inventory.inventorys[0].type == 1:
                 G.player.on_mouse_press(x, y, button, modifiers)
                 return
-            if any([G.inventoryhandler.inventorys[inventory].shouldInteractWithPlayerInventoryMoving() for inventory in G.inventoryhandler.activeinventorys]):
+            if any(
+                [
+                    G.inventoryhandler.inventorys[
+                        inventory
+                    ].shouldInteractWithPlayerInventoryMoving()
+                    for inventory in G.inventoryhandler.activeinventorys
+                ]
+            ):
                 G.player.on_mouse_press(*args)
                 return
             if G.window.exclusive:
                 vector = G.window.get_sight_vector()
                 block, previous = G.model.hit_test(G.window.position, vector)
-                if (button == mouse.RIGHT) or \
-                        ((button == mouse.LEFT) and (modifiers & key.MOD_CTRL)):
+                if (button == mouse.RIGHT) or (
+                    (button == mouse.LEFT) and (modifiers & key.MOD_CTRL)
+                ):
                     chunkprovider = chunkprovider2 = None
                     if previous:
                         cx, _, cz = mathhelper.sectorize(previous)
-                        chunkprovider = G.player.dimension.worldprovider.getChunkProviderFor((cx, cz))
+                        chunkprovider = (
+                            G.player.dimension.worldprovider.getChunkProviderFor(
+                                (cx, cz)
+                            )
+                        )
                     if block:
                         cx, _, cz = mathhelper.sectorize(block)
-                        chunkprovider2 = G.player.dimension.worldprovider.getChunkProviderFor((cx, cz))
+                        chunkprovider2 = (
+                            G.player.dimension.worldprovider.getChunkProviderFor(
+                                (cx, cz)
+                            )
+                        )
                     # ON OSX, control + left click = right click.
-                    if previous and G.player.inventory.inventorys[0].slots[G.player.selectedinventoryslot].stack and \
-                            G.player.inventory.inventorys[0].slots[G.player.selectedinventoryslot].stack.item and \
-                            G.player.inventory.inventorys[0].slots[
-                                G.player.selectedinventoryslot].stack.item.hasBlock() and \
-                            not chunkprovider2.world[block].isOpeningInventory(
-                                G.player.inventory.inventorys[0].slots[G.player.selectedinventoryslot].stack):
-                        G.model.add_block(previous, G.player.inventory.inventorys[0].slots[
-                            G.player.selectedinventoryslot].stack.item.getBlockName(), blocksettedto=block)
+                    if (
+                        previous
+                        and G.player.inventory.inventorys[0]
+                        .slots[G.player.selectedinventoryslot]
+                        .stack
+                        and G.player.inventory.inventorys[0]
+                        .slots[G.player.selectedinventoryslot]
+                        .stack.item
+                        and G.player.inventory.inventorys[0]
+                        .slots[G.player.selectedinventoryslot]
+                        .stack.item.hasBlock()
+                        and not chunkprovider2.world[block].isOpeningInventory(
+                            G.player.inventory.inventorys[0]
+                            .slots[G.player.selectedinventoryslot]
+                            .stack
+                        )
+                    ):
+                        G.model.add_block(
+                            previous,
+                            G.player.inventory.inventorys[0]
+                            .slots[G.player.selectedinventoryslot]
+                            .stack.item.getBlockName(),
+                            blocksettedto=block,
+                        )
                         G.model.check_neighbors(previous)
                         if not G.model.exposed(previous):
                             G.model.show_block(previous)
-                        G.eventhandler.call("game:on_block_add_by_player", vector, block, previous,
-                                            G.player.inventory.inventorys[0].slots[
-                                                G.player.selectedinventoryslot].stack.item.getBlockName())
+                        G.eventhandler.call(
+                            "game:on_block_add_by_player",
+                            vector,
+                            block,
+                            previous,
+                            G.player.inventory.inventorys[0]
+                            .slots[G.player.selectedinventoryslot]
+                            .stack.item.getBlockName(),
+                        )
                         chunkprovider.world[previous].blocksettedto = block
                         if G.player.gamemode != 1:
-                            G.player.inventory.inventorys[0].slots[G.player.selectedinventoryslot].stack.amount -= 1
+                            G.player.inventory.inventorys[0].slots[
+                                G.player.selectedinventoryslot
+                            ].stack.amount -= 1
                         block = chunkprovider.world[previous]
                         G.soundhandler.playSound(previous, block.getBrakeSoundFile())
-                    elif block and chunkprovider and chunkprovider.world[block].isOpeningInventory(
-                            G.player.inventory.inventorys[0].slots[G.player.selectedinventoryslot].stack):
-                        #log.printMSG(chunkprovider.world[block], chunkprovider.world[block].blockclass, chunkprovider.world[block].getInventorys())
+                    elif (
+                        block
+                        and chunkprovider
+                        and chunkprovider.world[block].isOpeningInventory(
+                            G.player.inventory.inventorys[0]
+                            .slots[G.player.selectedinventoryslot]
+                            .stack
+                        )
+                    ):
+                        # log.printMSG(chunkprovider.world[block], chunkprovider.world[block].blockclass, chunkprovider.world[block].getInventorys())
                         for e in chunkprovider.world[block].getInventorys():
-                            G.inventoryhandler.show_inventory(e if type(e) == int else e.id)
-                            #log.printMSG(e if type(e) == int else e.id)
+                            G.inventoryhandler.show_inventory(
+                                e if type(e) == int else e.id
+                            )
+                            # log.printMSG(e if type(e) == int else e.id)
                 elif button == pyglet.window.mouse.LEFT and block:
                     cx, _, cz = mathhelper.sectorize(block)
-                    chunkprovider = G.player.dimension.worldprovider.getChunkProviderFor((cx, cz))
+                    chunkprovider = (
+                        G.player.dimension.worldprovider.getChunkProviderFor((cx, cz))
+                    )
                     block = chunkprovider.world[block]
                     if block.isBrakeAbleInGamemode0() or G.player.gamemode == 1:
-                        G.soundhandler.playSound(block.position, block.getBrakeSoundFile())
+                        G.soundhandler.playSound(
+                            block.position, block.getBrakeSoundFile()
+                        )
                         if G.player.gamemode != 1:
                             drops = block.getDrop()
                             for e in drops.keys():
@@ -224,28 +310,47 @@ class Game(G.State):
                             drops = {}
                         G.model.remove_block(block.position)
                         G.model.hide_block(block.position, block)
-                        #G.model.check_neighbors(block.position)
-                        G.eventhandler.call("game:on_block_remove_by_player", vector, block, previous, drops)
+                        # G.model.check_neighbors(block.position)
+                        G.eventhandler.call(
+                            "game:on_block_remove_by_player",
+                            vector,
+                            block,
+                            previous,
+                            drops,
+                        )
                 elif button == pyglet.window.mouse.MIDDLE and G.player.gamemode == 1:
                     vector = G.window.get_sight_vector()
                     block, previous = G.model.hit_test(G.window.position, vector)
                     cx, _, cz = mathhelper.sectorize(block)
-                    chunkprovider = G.player.dimension.worldprovider.getChunkProviderFor((cx, cz))
+                    chunkprovider = (
+                        G.player.dimension.worldprovider.getChunkProviderFor((cx, cz))
+                    )
                     binst = chunkprovider.world[block]
-                    G.player.inventory.inventorys[0].slots[G.player.selectedinventoryslot].stack = \
-                        IItemStack.IItemStack(binst.getName())
-                    if G.player.inventory.inventorys[0].slots[G.player.selectedinventoryslot].stack.item:
-                        G.player.inventory.inventorys[0].slots[G.player.selectedinventoryslot].stack.amount = \
-                        G.player.inventory.inventorys[0].slots[G.player.selectedinventoryslot].stack.item.getMaxStackSize()
+                    G.player.inventory.inventorys[0].slots[
+                        G.player.selectedinventoryslot
+                    ].stack = IItemStack.IItemStack(binst.getName())
+                    if (
+                        G.player.inventory.inventorys[0]
+                        .slots[G.player.selectedinventoryslot]
+                        .stack.item
+                    ):
+                        G.player.inventory.inventorys[0].slots[
+                            G.player.selectedinventoryslot
+                        ].stack.amount = (
+                            G.player.inventory.inventorys[0]
+                            .slots[G.player.selectedinventoryslot]
+                            .stack.item.getMaxStackSize()
+                        )
             else:
                 G.window.set_exclusive_mouse(True)
 
     def draw_focused_block(self):
-        """ Draw black edges around the block that is currently under the
+        """Draw black edges around the block that is currently under the
         crosshairs.
 
         """
-        if G.player.gamemode == 3: return
+        if G.player.gamemode == 3:
+            return
         vector = G.window.get_sight_vector()
         block = G.model.hit_test(G.window.position, vector)[0]
         if block:
@@ -253,40 +358,50 @@ class Game(G.State):
             vertex_data = mathhelper.cube_vertices(x, y, z, 0.50)
             pyglet.gl.glColor3d(0, 0, 0)
             pyglet.gl.glPolygonMode(pyglet.gl.GL_FRONT_AND_BACK, pyglet.gl.GL_LINE)
-            pyglet.graphics.draw(24, pyglet.gl.GL_QUADS, ('v3f/static', vertex_data))
+            pyglet.graphics.draw(24, pyglet.gl.GL_QUADS, ("v3f/static", vertex_data))
             pyglet.gl.glPolygonMode(pyglet.gl.GL_FRONT_AND_BACK, pyglet.gl.GL_FILL)
 
     def draw_label(self):
-        """ Draw the label in the top left of the screen.
-
-        """
+        """Draw the label in the top left of the screen."""
         x, y, z = G.window.position
-        self.label1.text = '%02d (%.2f, %.2f, %.2f) %d' % (
-            pyglet.clock.get_fps(), x, y, z,
-            len(G.player.dimension.worldprovider.chunkproviders))
+        self.label1.text = "%02d (%.2f, %.2f, %.2f) %d" % (
+            pyglet.clock.get_fps(),
+            x,
+            y,
+            z,
+            len(G.player.dimension.worldprovider.chunkproviders),
+        )
 
         vector = G.window.get_sight_vector()
         block, _ = G.model.hit_test(G.window.position, vector)
         if block:
             cx, _, cz = mathhelper.sectorize(block)
-            chunkprovider = G.player.dimension.worldprovider.getChunkProviderFor((cx, cz))
+            chunkprovider = G.player.dimension.worldprovider.getChunkProviderFor(
+                (cx, cz)
+            )
         else:
             chunkprovider = None
-        self.label1.text += "; looking at: "+str(block) + \
-                            ("" if not block or block not in chunkprovider.world else
-                             " - " + str(chunkprovider.world[block].getName()))
+        self.label1.text += (
+            "; looking at: "
+            + str(block)
+            + (
+                ""
+                if not block or block not in chunkprovider.world
+                else " - " + str(chunkprovider.world[block].getName())
+            )
+        )
 
         nx, ny, nz = mathhelper.normalize(G.window.position)
         self.label1.y = G.window.height - 10
         self.label1.draw()
         self.label2.y = G.window.height - 25
-        self.label2.text = "daytime: "+str(round(G.window.time))+"; day: "+str(G.window.day)
+        self.label2.text = (
+            "daytime: " + str(round(G.window.time)) + "; day: " + str(G.window.day)
+        )
         self.label2.draw()
 
     def draw_reticle(self):
-        """ Draw the crosshairs in the center of the screen.
-
-        """
+        """Draw the crosshairs in the center of the screen."""
         pyglet.gl.glColor3d(0, 0, 0)
         if self.reticle:
             self.reticle.draw(pyglet.gl.GL_LINES)
@@ -295,6 +410,8 @@ class Game(G.State):
 
     def activate(self):
         G.State.activate(self)
-        if G.window: G.window.set_exclusive_mouse(True)
+        if G.window:
+            G.window.set_exclusive_mouse(True)
+
 
 G.statehandler.register(Game)

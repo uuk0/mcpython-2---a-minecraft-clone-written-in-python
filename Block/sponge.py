@@ -25,9 +25,9 @@ class WetSponge(G.iblockclass):
         return "wet_sponge"
 
 
-@modsystem.ModLoader.ModEventEntry("game:registry:on_block_registrate_periode", "minecraft",
-                                   info="registrating sponge")
+@modsystem.ModLoader.ModEventEntry(
+    "game:registry:on_block_registrate_periode", "minecraft", info="registrating sponge"
+)
 def register():
     G.blockhandler.register(Sponge)
     G.blockhandler.register(WetSponge)
-

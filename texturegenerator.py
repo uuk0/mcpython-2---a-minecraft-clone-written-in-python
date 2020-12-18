@@ -12,12 +12,24 @@ def on_start(*args, **kwargs):
 
     # GUI AREA
 
-    imagecutter.cut_image(G.local + "/assets/minecraft/textures/gui/widgets.png", (0, 0), (182, 22),
-                          G.local + "/tmp/gui/hotbar.png")
-    imagecutter.cut_image(G.local + "/assets/minecraft/textures/gui/container/inventory.png", (0, 0), (176, 166),
-                          G.local + "/tmp/gui/playerinventory.png")
-    imagecutter.cut_image(G.local + "/assets/minecraft/textures/gui/widgets.png", (0, 22), (24, 46),
-                          G.local + "/tmp/gui/hotbar_select.png")
+    imagecutter.cut_image(
+        G.local + "/assets/minecraft/textures/gui/widgets.png",
+        (0, 0),
+        (182, 22),
+        G.local + "/tmp/gui/hotbar.png",
+    )
+    imagecutter.cut_image(
+        G.local + "/assets/minecraft/textures/gui/container/inventory.png",
+        (0, 0),
+        (176, 166),
+        G.local + "/tmp/gui/playerinventory.png",
+    )
+    imagecutter.cut_image(
+        G.local + "/assets/minecraft/textures/gui/widgets.png",
+        (0, 22),
+        (24, 46),
+        G.local + "/tmp/gui/hotbar_select.png",
+    )
     imagecutter.resize_mutli(G.local + "/tmp/gui/hotbar.png", (2, 2))
     imagecutter.resize(G.local + "/tmp/gui/playerinventory.png", (375, 353))
     imagecutter.resize_mutli(G.local + "/tmp/gui/hotbar_select.png", (2, 2))
@@ -28,7 +40,7 @@ def on_start(*args, **kwargs):
 
     os.makedirs(G.local + "/tmp/minecraft/block/grass")
 
-    image = PIL.Image.open(G.local+"/assets/minecraft/textures/block/grass_top.png")
+    image = PIL.Image.open(G.local + "/assets/minecraft/textures/block/grass_top.png")
     image.save(G.local + "/tmp/minecraft/block/grass/item_0.png")
 
     """
@@ -47,10 +59,3 @@ def convert_image(image, groundimagecolor):
     ground = PIL.Image.new("RGB", image.size, groundimagecolor)
     ground.putalpha(image)
     return ground
-
-
-
-
-
-
-

@@ -5,6 +5,7 @@ import modsystem.ModLoader
 
 class Obsidian(G.iblockclass):
     """class for obsidian"""
+
     def getName(self):
         return "minecraft:obsidian"
 
@@ -12,8 +13,10 @@ class Obsidian(G.iblockclass):
         return "minecraft:obsidian"
 
 
-@modsystem.ModLoader.ModEventEntry("game:registry:on_block_registrate_periode", "minecraft",
-                                   info="registrating obsidian")
+@modsystem.ModLoader.ModEventEntry(
+    "game:registry:on_block_registrate_periode",
+    "minecraft",
+    info="registrating obsidian",
+)
 def register():
     G.blockhandler.register(Obsidian)
-

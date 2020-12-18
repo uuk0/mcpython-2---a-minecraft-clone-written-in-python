@@ -10,7 +10,7 @@ class Concret(G.iblockclass):
     """
 
     def getName(self):
-        return "minecraft:"+str(self.getColor())+"_concret"
+        return "minecraft:" + str(self.getColor()) + "_concret"
 
     @staticmethod
     def getColor():
@@ -35,7 +35,11 @@ class ConcretPowder(Concret):
         (x, y, z) = inst.position
         cx, _, cz = mathhelper.sectorize(inst.position)
         chunkprovider = G.player.dimension.worldprovider.getChunkProviderFor((cx, cz))
-        if not (x, y - 1, z) in chunkprovider.world and y > 0 and not (hasattr(inst, "blocked") and not inst.blocked):
+        if (
+            not (x, y - 1, z) in chunkprovider.world
+            and y > 0
+            and not (hasattr(inst, "blocked") and not inst.blocked)
+        ):
             inst.blocked = True
             G.tickhandler.tick(self.on_tick_update, args=[inst], tick=4)
 
@@ -242,8 +246,11 @@ class YellowConcretPowder(ConcretPowder):
         return "yellow"
 
 
-@modsystem.ModLoader.ModEventEntry("game:registry:on_block_registrate_periode", "minecraft",
-                                   info="registrating concret & concretpowder")
+@modsystem.ModLoader.ModEventEntry(
+    "game:registry:on_block_registrate_periode",
+    "minecraft",
+    info="registrating concret & concretpowder",
+)
 def register_concret(*args):
     G.blockhandler.register(BlackConcret)
     G.blockhandler.register(BlackConcretPowder)
@@ -277,4 +284,3 @@ def register_concret(*args):
     G.blockhandler.register(WhiteConcretPowder)
     G.blockhandler.register(YellowConcret)
     G.blockhandler.register(YellowConcretPowder)
-

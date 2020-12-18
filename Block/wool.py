@@ -5,6 +5,7 @@ import modsystem.ModLoader
 
 class WhiteWool(G.iblockclass):
     """class for white wool"""
+
     def getName(self):
         return "minecraft:white_wool"
 
@@ -12,11 +13,12 @@ class WhiteWool(G.iblockclass):
         return "minecraft:wool"
 
     def getStateName(self, inst):
-        return "wool_"+str(self.getName().split(":")[1].split("_")[0])
+        return "wool_" + str(self.getName().split(":")[1].split("_")[0])
 
 
 class OrangeWool(G.iblockclass):
     """class for orange wool"""
+
     def getName(self):
         return "minecraft:orange_wool"
 
@@ -24,11 +26,12 @@ class OrangeWool(G.iblockclass):
         return "minecraft:wool"
 
     def getStateName(self, inst):
-        return "wool_"+str(self.getName().split(":")[1].split("_")[0])
+        return "wool_" + str(self.getName().split(":")[1].split("_")[0])
 
 
 class magentaWool(G.iblockclass):
     """class for magenta wool"""
+
     def getName(self):
         return "minecraft:magenta_wool"
 
@@ -36,11 +39,12 @@ class magentaWool(G.iblockclass):
         return "minecraft:wool"
 
     def getStateName(self, inst):
-        return "wool_"+str(self.getName().split(":")[1].split("_")[0])
+        return "wool_" + str(self.getName().split(":")[1].split("_")[0])
 
 
 class light_blueWool(G.iblockclass):
     """class for light blue wool"""
+
     def getName(self):
         return "minecraft:light_blue_wool"
 
@@ -53,6 +57,7 @@ class light_blueWool(G.iblockclass):
 
 class yellowWool(G.iblockclass):
     """class for yellow wool"""
+
     def getName(self):
         return "minecraft:yellow_wool"
 
@@ -60,11 +65,12 @@ class yellowWool(G.iblockclass):
         return "minecraft:wool"
 
     def getStateName(self, inst):
-        return "wool_"+str(self.getName().split(":")[1].split("_")[0])
+        return "wool_" + str(self.getName().split(":")[1].split("_")[0])
 
 
 class limeWool(G.iblockclass):
     """class for lime wool"""
+
     def getName(self):
         return "minecraft:lime_wool"
 
@@ -72,11 +78,12 @@ class limeWool(G.iblockclass):
         return "minecraft:wool"
 
     def getStateName(self, inst):
-        return "wool_"+str(self.getName().split(":")[1].split("_")[0])
+        return "wool_" + str(self.getName().split(":")[1].split("_")[0])
 
 
 class pinkWool(G.iblockclass):
     """class for pink wool"""
+
     def getName(self):
         return "minecraft:pink_wool"
 
@@ -84,11 +91,12 @@ class pinkWool(G.iblockclass):
         return "minecraft:wool"
 
     def getStateName(self, inst):
-        return "wool_"+str(self.getName().split(":")[1].split("_")[0])
+        return "wool_" + str(self.getName().split(":")[1].split("_")[0])
 
 
 class grayWool(G.iblockclass):
     """class for gray wool"""
+
     def getName(self):
         return "minecraft:gray_wool"
 
@@ -96,11 +104,12 @@ class grayWool(G.iblockclass):
         return "minecraft:wool"
 
     def getStateName(self, inst):
-        return "wool_"+str(self.getName().split(":")[1].split("_")[0])
+        return "wool_" + str(self.getName().split(":")[1].split("_")[0])
 
 
 class light_grayWool(G.iblockclass):
     """class for light gray wool"""
+
     def getName(self):
         return "minecraft:light_gray_wool"
 
@@ -113,6 +122,7 @@ class light_grayWool(G.iblockclass):
 
 class cyanWool(G.iblockclass):
     """class for cyan wool"""
+
     def getName(self):
         return "minecraft:cyan_wool"
 
@@ -120,11 +130,12 @@ class cyanWool(G.iblockclass):
         return "minecraft:wool"
 
     def getStateName(self, inst):
-        return "wool_"+str(self.getName().split(":")[1].split("_")[0])
+        return "wool_" + str(self.getName().split(":")[1].split("_")[0])
 
 
 class purpleWool(G.iblockclass):
     """class for purple wool"""
+
     def getName(self):
         return "minecraft:purple_wool"
 
@@ -132,11 +143,12 @@ class purpleWool(G.iblockclass):
         return "minecraft:wool"
 
     def getStateName(self, inst):
-        return "wool_"+str(self.getName().split(":")[1].split("_")[0])
+        return "wool_" + str(self.getName().split(":")[1].split("_")[0])
 
 
 class blueWool(G.iblockclass):
     """class for blue wool"""
+
     def getName(self):
         return "minecraft:blue_wool"
 
@@ -144,11 +156,12 @@ class blueWool(G.iblockclass):
         return "minecraft:wool"
 
     def getStateName(self, inst):
-        return "wool_"+str(self.getName().split(":")[1].split("_")[0])
+        return "wool_" + str(self.getName().split(":")[1].split("_")[0])
 
 
 class brownWool(G.iblockclass):
     """class for brown wool"""
+
     def getName(self):
         return "minecraft:brown_wool"
 
@@ -156,11 +169,12 @@ class brownWool(G.iblockclass):
         return "minecraft:wool"
 
     def getStateName(self, inst):
-        return "wool_"+str(self.getName().split(":")[1].split("_")[0])
+        return "wool_" + str(self.getName().split(":")[1].split("_")[0])
 
 
 class greenWool(G.iblockclass):
     """class for green wool"""
+
     def getName(self):
         return "minecraft:green_wool"
 
@@ -168,11 +182,12 @@ class greenWool(G.iblockclass):
         return "minecraft:wool"
 
     def getStateName(self, inst):
-        return "wool_"+str(self.getName().split(":")[1].split("_")[0])
+        return "wool_" + str(self.getName().split(":")[1].split("_")[0])
 
 
 class redWool(G.iblockclass):
     """class for red wool"""
+
     def getName(self):
         return "minecraft:red_wool"
 
@@ -180,11 +195,12 @@ class redWool(G.iblockclass):
         return "minecraft:wool"
 
     def getStateName(self, inst):
-        return "wool_"+str(self.getName().split(":")[1].split("_")[0])
+        return "wool_" + str(self.getName().split(":")[1].split("_")[0])
 
 
 class blackWool(G.iblockclass):
     """class for black wool"""
+
     def getName(self):
         return "minecraft:black_wool"
 
@@ -192,11 +208,12 @@ class blackWool(G.iblockclass):
         return "minecraft:wool"
 
     def getStateName(self, inst):
-        return "wool_"+str(self.getName().split(":")[1].split("_")[0])
+        return "wool_" + str(self.getName().split(":")[1].split("_")[0])
 
 
-@modsystem.ModLoader.ModEventEntry("game:registry:on_block_registrate_periode", "minecraft",
-                                   info="registrating wool")
+@modsystem.ModLoader.ModEventEntry(
+    "game:registry:on_block_registrate_periode", "minecraft", info="registrating wool"
+)
 def register():
     G.blockhandler.register(blackWool)
     G.blockhandler.register(redWool)
@@ -214,4 +231,3 @@ def register():
     G.blockhandler.register(magentaWool)
     G.blockhandler.register(OrangeWool)
     G.blockhandler.register(WhiteWool)
-

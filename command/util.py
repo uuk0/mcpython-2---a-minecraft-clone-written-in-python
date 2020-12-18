@@ -1,5 +1,3 @@
-
-
 def parseStringPosition(x, y, z, executeposition):
     if "~" in x:
         if len(x) == 1:
@@ -17,4 +15,3 @@ def parseStringPosition(x, y, z, executeposition):
         else:
             z = executeposition[2] + float(z[1:])
     return x, y, z
-

@@ -2,7 +2,7 @@ import globals as G
 import mathhelper
 import command.Function as Function
 
-GAMEMODE_CONVERT = {"survival":0, "creative":1, "adventure":2, "spectator":3}
+GAMEMODE_CONVERT = {"survival": 0, "creative": 1, "adventure": 2, "spectator": 3}
 
 
 class Reload:
@@ -19,5 +19,5 @@ class Reload:
     def getHelp():
         return "/reload: reload all datapacks"
 
-G.commandhandler.register(Reload)
 
+G.commandhandler.register(Reload)

@@ -1,6 +1,8 @@
 import globals as G
 
 """class for gravel"""
+
+
 class Gravel(G.itemclass):
     def getName(self):
         return "minecraft:gravel"
@@ -9,6 +11,7 @@ class Gravel(G.itemclass):
         return True
 
     def getTexturFile(self):
-        return G.local+"/assets/minecraft/textures/item/GRAVEL.png"
+        return G.local + "/assets/minecraft/textures/item/GRAVEL.png"
+
 
 G.itemhandler.register(Gravel)

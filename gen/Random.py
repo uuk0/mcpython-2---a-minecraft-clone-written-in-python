@@ -13,7 +13,8 @@ class Random:
 
     def generateValueForPosition(self, pos, MIN, MAX):
         x, y, z = pos
-        if not (x, y, z) in self.pmap: self.pmap[(x, y, z)] = self.seed * x * y * z
+        if not (x, y, z) in self.pmap:
+            self.pmap[(x, y, z)] = self.seed * x * y * z
         random.seed(self.pmap[(x, y, z)])
         try:
             v = random.randint(round(MIN), round(MAX))
@@ -22,7 +23,3 @@ class Random:
             raise
         self.pmap[(x, y, z)] = v
         return v
-
-
-
-

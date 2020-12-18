@@ -17,4 +17,3 @@ class McPython(G.mod):
 
 
 G.modloader.register(McPython)
-

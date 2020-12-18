@@ -13,10 +13,12 @@ class FunctionCommand:
     def executeCommand(command, entity, position):
         splitted = command.split(" ")
         index = splitted[1]
-        if index not in Function.FUNCTIONTABLE and not index.startswith(G.local+"/datapacks"):
-            if os.path.isfile(G.local+"/datapacks/"+index+".mcfunction"):
-                index = G.local+"/datapacks/"+index+".mcfunction"
-            elif os.path.isfile(G.local+"/datapacks/"+index):
+        if index not in Function.FUNCTIONTABLE and not index.startswith(
+            G.local + "/datapacks"
+        ):
+            if os.path.isfile(G.local + "/datapacks/" + index + ".mcfunction"):
+                index = G.local + "/datapacks/" + index + ".mcfunction"
+            elif os.path.isfile(G.local + "/datapacks/" + index):
                 index = G.local + "/datapacks/" + index
         Function.execute_function(index, entity, position)
 
@@ -26,4 +28,3 @@ class FunctionCommand:
 
 
 G.commandhandler.register(FunctionCommand)
-

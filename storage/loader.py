@@ -19,4 +19,3 @@ class Loader:
 
     def isFile(self, file):
         return False
-

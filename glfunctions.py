@@ -1,14 +1,15 @@
 import pyglet.gl
 
-def setup_fog():
-    """ Configure the OpenGL fog properties.
 
-    """
+def setup_fog():
+    """Configure the OpenGL fog properties."""
     # Enable fog. Fog "blends a fog color with each rasterized pixel fragment's
     # post-texturing color."
     pyglet.gl.glEnable(pyglet.gl.GL_FOG)
     # Set the fog color.
-    pyglet.gl.glFogfv(pyglet.gl.GL_FOG_COLOR, (pyglet.gl.GLfloat * 4)(0.5, 0.69, 1.0, 1))
+    pyglet.gl.glFogfv(
+        pyglet.gl.GL_FOG_COLOR, (pyglet.gl.GLfloat * 4)(0.5, 0.69, 1.0, 1)
+    )
     # Say we have no preference between rendering speed and quality.
     pyglet.gl.glHint(pyglet.gl.GL_FOG_HINT, pyglet.gl.GL_DONT_CARE)
     # Specify the equation used to compute the blending factor.
@@ -20,9 +21,7 @@ def setup_fog():
 
 
 def setup():
-    """ Basic OpenGL configuration.
-
-    """
+    """Basic OpenGL configuration."""
     # Set the color of "clear", i.e. the sky, in rgba.
     pyglet.gl.glClearColor(0.5, 0.69, 1.0, 1)
     # Enable culling (not rendering) of back-facing facets -- facets that aren't
@@ -33,7 +32,11 @@ def setup():
     # "is generally faster than GL_LINEAR, but it can produce textured images
     # with sharper edges because the transition between texture elements is not
     # as smooth."
-    pyglet.gl.glTexParameteri(pyglet.gl.GL_TEXTURE_2D, pyglet.gl.GL_TEXTURE_MIN_FILTER, pyglet.gl.GL_NEAREST)
-    pyglet.gl.glTexParameteri(pyglet.gl.GL_TEXTURE_2D, pyglet.gl.GL_TEXTURE_MAG_FILTER, pyglet.gl.GL_NEAREST)
+    pyglet.gl.glTexParameteri(
+        pyglet.gl.GL_TEXTURE_2D, pyglet.gl.GL_TEXTURE_MIN_FILTER, pyglet.gl.GL_NEAREST
+    )
+    pyglet.gl.glTexParameteri(
+        pyglet.gl.GL_TEXTURE_2D, pyglet.gl.GL_TEXTURE_MAG_FILTER, pyglet.gl.GL_NEAREST
+    )
 
     setup_fog()

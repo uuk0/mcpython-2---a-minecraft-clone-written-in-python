@@ -12,11 +12,13 @@ class Bedrock(G.iblockclass):
         return False
 
 
-@modsystem.ModLoader.ModEventEntry("game:registry:on_block_registrate_periode", "minecraft",
-                                   info="registrating bedrock")
+@modsystem.ModLoader.ModEventEntry(
+    "game:registry:on_block_registrate_periode",
+    "minecraft",
+    info="registrating bedrock",
+)
 def register():
     """
     register the block/bedrock-class
     """
     G.blockhandler.register(Bedrock)
-

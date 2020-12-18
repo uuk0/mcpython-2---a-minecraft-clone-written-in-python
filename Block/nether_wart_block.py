@@ -11,8 +11,10 @@ class NetherWartBlock(G.iblockclass):
         return "minecraft:nether_wart_block"
 
 
-@modsystem.ModLoader.ModEventEntry("game:registry:on_block_registrate_periode", "minecraft",
-                                   info="registrating nether wart block")
+@modsystem.ModLoader.ModEventEntry(
+    "game:registry:on_block_registrate_periode",
+    "minecraft",
+    info="registrating nether wart block",
+)
 def register():
     G.blockhandler.register(NetherWartBlock)
-

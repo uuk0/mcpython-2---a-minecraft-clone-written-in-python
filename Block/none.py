@@ -9,11 +9,13 @@ class Bedrock(G.iblockclass):
         return "minecraft:none"
 
 
-@modsystem.ModLoader.ModEventEntry("game:registry:on_block_registrate_periode", "minecraft",
-                                   info="registrating none-block")
+@modsystem.ModLoader.ModEventEntry(
+    "game:registry:on_block_registrate_periode",
+    "minecraft",
+    info="registrating none-block",
+)
 def register():
     """
     register the block/none-class
     """
     G.blockhandler.register(Bedrock)
-

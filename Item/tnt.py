@@ -1,6 +1,8 @@
 import globals as G
 
 """class for tnt"""
+
+
 class Tnt(G.itemclass):
     def getName(self):
         return "minecraft:tnt"
@@ -9,6 +11,7 @@ class Tnt(G.itemclass):
         return True
 
     def getTexturFile(self):
-        return G.local+"/assets/minecraft/textures/item/TNT.png"
+        return G.local + "/assets/minecraft/textures/item/TNT.png"
+
 
 G.itemhandler.register(Tnt)

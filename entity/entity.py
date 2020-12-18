@@ -30,12 +30,14 @@ G.entityhandler = EntityHandler()
 class Entity:
     """class for entitys
     is not used at the moment"""
+
     tags = []
 
     def __init__(self, position=(0, 0, 0)):
         self.position = position
 
     """returns the name of the entity"""
+
     def getName(self):
         return "minecraft:none"
 
@@ -44,18 +46,22 @@ class Entity:
         pass
 
     """returns the drop of the entity"""
+
     def getDrop(self):
         return {}
 
     """returns the drop-xp of the entity"""
+
     def getXP(self):
         return 0
 
     """returns the nbt-data of the entity"""
+
     def getNBT(self):
         return {}
 
     """sets the nbt-data"""
+
     def setNBT(self, nbt):
         pass
 
@@ -68,7 +74,10 @@ G.entityclass = Entity
 from . import boxmodel
 
 
-@modsystem.ModLoader.ModEventEntry("game:registry:on_entity_registrate_periode", "minecraft",
-                                   info="registrating entitys")
+@modsystem.ModLoader.ModEventEntry(
+    "game:registry:on_entity_registrate_periode",
+    "minecraft",
+    info="registrating entitys",
+)
 def register():
     from . import player

@@ -25,9 +25,11 @@ class PurpurPillar(G.iblockclass):
         return "minecraft:purpur_pillar"
 
 
-@modsystem.ModLoader.ModEventEntry("game:registry:on_block_registrate_periode", "minecraft",
-                                   info="registrating purpur block")
+@modsystem.ModLoader.ModEventEntry(
+    "game:registry:on_block_registrate_periode",
+    "minecraft",
+    info="registrating purpur block",
+)
 def register():
     G.blockhandler.register(PurpurBlock)
     G.blockhandler.register(PurpurPillar)
-

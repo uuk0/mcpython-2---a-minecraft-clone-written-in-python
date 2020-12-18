@@ -8,15 +8,23 @@ import mathhelper
 class TitleScreen(G.State):
     def __init__(self):
         G.State.__init__(self)
-        self.image1 = pyglet.sprite.Sprite(pyglet.image.load(G.local+"/assets/minecraft/textures/startmenupic1.png"))
+        self.image1 = pyglet.sprite.Sprite(
+            pyglet.image.load(G.local + "/assets/minecraft/textures/startmenupic1.png")
+        )
         self.lable1 = pyglet.text.Label(color=(255, 255, 255, 255), text=G.VERSION_NAME)
-        self.lable2 = pyglet.text.Label(color=(255, 255, 255, 255), text=G.LANG.active.data["menu.singleplayer"])
-        self.lable3 = pyglet.text.Label(color=(255, 255, 255, 255), text=G.LANG.active.data["menu.multiplayer"])
-        self.lable4 = pyglet.text.Label(color=(255, 255, 255, 255), text=G.LANG.active.data["menu.quit"])
+        self.lable2 = pyglet.text.Label(
+            color=(255, 255, 255, 255), text=G.LANG.active.data["menu.singleplayer"]
+        )
+        self.lable3 = pyglet.text.Label(
+            color=(255, 255, 255, 255), text=G.LANG.active.data["menu.multiplayer"]
+        )
+        self.lable4 = pyglet.text.Label(
+            color=(255, 255, 255, 255), text=G.LANG.active.data["menu.quit"]
+        )
 
     def on_event(self, name, *args):
         if name == "opengl:draw2d":
-            #G.window.set_size(1200, 620)
+            # G.window.set_size(1200, 620)
             G.window.set_exclusive_mouse(False)
             self.image1.draw()
             self.lable1.x = 90
@@ -69,5 +77,6 @@ class TitleScreen(G.State):
 
     def deactivate(self):
         G.State.deactivate(self)
+
 
 G.statehandler.register(TitleScreen)

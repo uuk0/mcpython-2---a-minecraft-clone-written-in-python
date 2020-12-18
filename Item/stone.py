@@ -1,6 +1,8 @@
 import globals as G
 
 """class for stone"""
+
+
 class Stone(G.itemclass):
     def getName(self):
         return "minecraft:stone"
@@ -9,11 +11,14 @@ class Stone(G.itemclass):
         return True
 
     def getTexturFile(self):
-        return G.local+"/assets/minecraft/textures/item/STONE.png"
+        return G.local + "/assets/minecraft/textures/item/STONE.png"
+
 
 G.itemhandler.register(Stone)
 
 """class for cobbelstone"""
+
+
 class CobbelStone(G.itemclass):
     def getName(self):
         return "minecraft:cobbelstone"
@@ -22,11 +27,14 @@ class CobbelStone(G.itemclass):
         return True
 
     def getTexturFile(self):
-        return G.local+"/assets/minecraft/textures/item/COBBLESTONE.png"
+        return G.local + "/assets/minecraft/textures/item/COBBLESTONE.png"
+
 
 G.itemhandler.register(CobbelStone)
 
 """class for stonebrick"""
+
+
 class StoneBrick(G.itemclass):
     def getName(self):
         return "minecraft:stone_brick"
@@ -35,11 +43,14 @@ class StoneBrick(G.itemclass):
         return True
 
     def getTexturFile(self):
-        return G.local+"/assets/minecraft/textures/item/STONEBRICK#0.png"
+        return G.local + "/assets/minecraft/textures/item/STONEBRICK#0.png"
+
 
 G.itemhandler.register(StoneBrick)
 
 """class for mossy stonebrick"""
+
+
 class MossyStoneBrick(G.itemclass):
     def getName(self):
         return "minecraft:mossy_stone_brick"
@@ -48,11 +59,14 @@ class MossyStoneBrick(G.itemclass):
         return True
 
     def getTexturFile(self):
-        return G.local+"/assets/minecraft/textures/item/STONEBRICK.png"
+        return G.local + "/assets/minecraft/textures/item/STONEBRICK.png"
+
 
 G.itemhandler.register(MossyStoneBrick)
 
 """class for mossy stonebrick"""
+
+
 class CrackedStoneBrick(G.itemclass):
     def getName(self):
         return "minecraft:cracked_stone_brick"
@@ -61,11 +75,14 @@ class CrackedStoneBrick(G.itemclass):
         return True
 
     def getTexturFile(self):
-        return G.local+"/assets/minecraft/textures/item/STONEBRICK#2.png"
+        return G.local + "/assets/minecraft/textures/item/STONEBRICK#2.png"
+
 
 G.itemhandler.register(CrackedStoneBrick)
 
 """class for chiseled stonebrick"""
+
+
 class ChiseledStoneBrick(G.itemclass):
     def getName(self):
         return "minecraft:chiseled_stone_brick"
@@ -74,11 +91,14 @@ class ChiseledStoneBrick(G.itemclass):
         return True
 
     def getTexturFile(self):
-        return G.local+"/assets/minecraft/textures/item/STONEBRICK#3.png"
+        return G.local + "/assets/minecraft/textures/item/STONEBRICK#3.png"
+
 
 G.itemhandler.register(ChiseledStoneBrick)
 
 """class for mossy cobbelstone"""
+
+
 class MossyCobbelStone(G.itemclass):
     def getName(self):
         return "minecraft:mossy_cobbelstone"
@@ -87,11 +107,14 @@ class MossyCobbelStone(G.itemclass):
         return True
 
     def getTexturFile(self):
-        return G.local+"/assets/minecraft/textures/item/MOSSY_COBBLESTONE.png"
+        return G.local + "/assets/minecraft/textures/item/MOSSY_COBBLESTONE.png"
+
 
 G.itemhandler.register(MossyCobbelStone)
 
 """class for andesite"""
+
+
 class Andesite(G.itemclass):
     def getName(self):
         return "minecraft:andesite"
@@ -100,11 +123,14 @@ class Andesite(G.itemclass):
         return True
 
     def getTexturFile(self):
-        return G.local+"/assets/minecraft/textures/item/Andesite.png"
+        return G.local + "/assets/minecraft/textures/item/Andesite.png"
+
 
 G.itemhandler.register(Andesite)
 
 """class for polished andesite"""
+
+
 class PolishedAndesite(G.itemclass):
     def getName(self):
         return "minecraft:polished_andesite"
@@ -113,12 +139,15 @@ class PolishedAndesite(G.itemclass):
         return True
 
     def getTexturFile(self):
-        return G.local+"/assets/minecraft/textures/item/Polished_Andesite.png"
+        return G.local + "/assets/minecraft/textures/item/Polished_Andesite.png"
+
 
 G.itemhandler.register(PolishedAndesite)
 
 
 """class for granite"""
+
+
 class Granite(G.itemclass):
     def getName(self):
         return "minecraft:granite"
@@ -127,11 +156,14 @@ class Granite(G.itemclass):
         return True
 
     def getTexturFile(self):
-        return G.local+"/assets/minecraft/textures/item/Granite.png"
+        return G.local + "/assets/minecraft/textures/item/Granite.png"
+
 
 G.itemhandler.register(Granite)
 
 """class for polished granite"""
+
+
 class PolishedGranite(G.itemclass):
     def getName(self):
         return "minecraft:polished_granite"
@@ -140,12 +172,15 @@ class PolishedGranite(G.itemclass):
         return True
 
     def getTexturFile(self):
-        return G.local+"/assets/minecraft/textures/item/Polished_Granite.png"
+        return G.local + "/assets/minecraft/textures/item/Polished_Granite.png"
+
 
 G.itemhandler.register(PolishedGranite)
 
 
 """class for diorite"""
+
+
 class Diorite(G.itemclass):
     def getName(self):
         return "minecraft:diorite"
@@ -154,11 +189,14 @@ class Diorite(G.itemclass):
         return True
 
     def getTexturFile(self):
-        return G.local+"/assets/minecraft/textures/item/Diorite.png"
+        return G.local + "/assets/minecraft/textures/item/Diorite.png"
+
 
 G.itemhandler.register(Diorite)
 
 """class for polished diorite"""
+
+
 class PolishedDiorite(G.itemclass):
     def getName(self):
         return "minecraft:polished_diorite"
@@ -167,6 +205,7 @@ class PolishedDiorite(G.itemclass):
         return True
 
     def getTexturFile(self):
-        return G.local+"/assets/minecraft/textures/item/Polished_Diorite.png"
+        return G.local + "/assets/minecraft/textures/item/Polished_Diorite.png"
+
 
 G.itemhandler.register(PolishedDiorite)

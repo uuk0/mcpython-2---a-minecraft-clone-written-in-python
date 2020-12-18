@@ -5,6 +5,7 @@ import modsystem.ModLoader
 
 class AcaciaLeave(G.iblockclass):
     """class for acacia leave"""
+
     def getName(self):
         return "minecraft:acacia_leaves"
 
@@ -23,6 +24,7 @@ class AcaciaLeave(G.iblockclass):
 
 class BirchLeave(G.iblockclass):
     """class for birch leave"""
+
     def getName(self):
         return "minecraft:birch_leaves"
 
@@ -41,6 +43,7 @@ class BirchLeave(G.iblockclass):
 
 class DarkOakLeave(G.iblockclass):
     """class for dark oak leave"""
+
     def getName(self):
         return "minecraft:dark_oak_leaves"
 
@@ -59,6 +62,7 @@ class DarkOakLeave(G.iblockclass):
 
 class JungleLeave(G.iblockclass):
     """class for jungle leave"""
+
     def getName(self):
         return "minecraft:jungle_leaves"
 
@@ -77,6 +81,7 @@ class JungleLeave(G.iblockclass):
 
 class OakLeave(G.iblockclass):
     """class for oak leave"""
+
     def getName(self):
         return "minecraft:oak_leaves"
 
@@ -95,6 +100,7 @@ class OakLeave(G.iblockclass):
 
 class SpruceLeave(G.iblockclass):
     """class for spruce leave"""
+
     def getName(self):
         return "minecraft:spruce_leaves"
 
@@ -111,8 +117,9 @@ class SpruceLeave(G.iblockclass):
         return False
 
 
-@modsystem.ModLoader.ModEventEntry("game:registry:on_block_registrate_periode", "minecraft",
-                                   info="registrating leaves")
+@modsystem.ModLoader.ModEventEntry(
+    "game:registry:on_block_registrate_periode", "minecraft", info="registrating leaves"
+)
 def register():
     G.blockhandler.register(SpruceLeave)
     G.blockhandler.register(OakLeave)

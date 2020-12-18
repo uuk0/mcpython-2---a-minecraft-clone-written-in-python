@@ -10,8 +10,8 @@ class Clay(G.iblockclass):
         return "minecraft:clay_block"
 
 
-@modsystem.ModLoader.ModEventEntry("game:registry:on_block_registrate_periode", "minecraft",
-                                   info="registrating clay")
+@modsystem.ModLoader.ModEventEntry(
+    "game:registry:on_block_registrate_periode", "minecraft", info="registrating clay"
+)
 def register():
     G.blockhandler.register(Clay)
-

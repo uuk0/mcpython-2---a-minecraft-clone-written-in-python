@@ -1,6 +1,7 @@
 import globals as G
 import log
 
+
 class Time:
     @staticmethod
     def isCommand(command):
@@ -33,7 +34,10 @@ class Time:
 
     @staticmethod
     def getHelp():
-        return ["/time set {<time>, 'day', 'night', 'midnight', 'noon'}",
-                "/time add <time>"]
+        return [
+            "/time set {<time>, 'day', 'night', 'midnight', 'noon'}",
+            "/time add <time>",
+        ]
+
 
 G.commandhandler.register(Time)

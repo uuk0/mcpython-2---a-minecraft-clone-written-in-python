@@ -17,6 +17,7 @@ import time
 
 class Model(object):
     """class for model"""
+
     def __init__(self):
 
         G.model = self
@@ -28,11 +29,10 @@ class Model(object):
         G.eventhandler.on_event("worldgen:newworld", self._initialize)
 
     def _initialize(self, *args):
-        """ Initialize the world by placing all the blocks.
-
-        """
+        """Initialize the world by placing all the blocks."""
         log.printMSG("[MAINTHREAD][WINDOW][MODEL][INFO] generating world...")
         import world.OverWorld
+
         G.dimensionhandler.register(world.OverWorld.OverWorld)
 
         G.dimensionhandler.dimensions[0].join()
@@ -45,7 +45,7 @@ class Model(object):
         self.change_sectors(None, G.window.get_motion_vector())
 
     def hit_test(self, position, vector, max_distance=8):
-        """ Line of sight search from current position. If a block is
+        """Line of sight search from current position. If a block is
         intersected it is returned, along with the block previously in the line
         of sight. If no block is found, return None, None.
 
@@ -66,19 +66,25 @@ class Model(object):
         for _ in range(max_distance * m):
             key = mathhelper.normalize((x, y, z))
             cx, _, cz = mathhelper.sectorize(key)
-            if key != previous and key in G.player.dimension.worldprovider.getChunkProviderFor((cx, cz)).world:
+            if (
+                key != previous
+                and key
+                in G.player.dimension.worldprovider.getChunkProviderFor((cx, cz)).world
+            ):
                 return key, previous
             previous = key
             x, y, z = x + dx / m, y + dy / m, z + dz / m
         return None, None
 
     def exposed(self, position):
-        """ Returns False is given `position` is surrounded on all 6 sides by solid
+        """Returns False is given `position` is surrounded on all 6 sides by solid
         blocks, True otherwise.
 
         """
         bcx, _, bcz = mathhelper.sectorize(position)
-        basechunkprovider = G.player.dimension.worldprovider.getChunkProviderFor((bcx, bcz))
+        basechunkprovider = G.player.dimension.worldprovider.getChunkProviderFor(
+            (bcx, bcz)
+        )
         flag1 = basechunkprovider.generated
         x, y, z = position
         for dx in range(-1, 2):
@@ -87,10 +93,19 @@ class Model(object):
                     if [dx, dy, dz].count(0) > 1 and not dx == dy == dz == 0:
                         nx, ny, nz = x + dx, y + dy, z + dz
                         cx, _, cz = mathhelper.sectorize((nx, ny, nz))
-                        chunkprovider = G.player.dimension.worldprovider.getChunkProviderFor((cx, cz))
-                        if (((nx, ny, nz) not in chunkprovider.world or G.GAMESTAGE != 3 or
-                             not chunkprovider.world[(nx, ny, nz)].isFullBlock()) and
-                            (nx, ny, nz) not in G.BlockGenerateTasks) and not (flag1 and not chunkprovider.generated):
+                        chunkprovider = (
+                            G.player.dimension.worldprovider.getChunkProviderFor(
+                                (cx, cz)
+                            )
+                        )
+                        if (
+                            (
+                                (nx, ny, nz) not in chunkprovider.world
+                                or G.GAMESTAGE != 3
+                                or not chunkprovider.world[(nx, ny, nz)].isFullBlock()
+                            )
+                            and (nx, ny, nz) not in G.BlockGenerateTasks
+                        ) and not (flag1 and not chunkprovider.generated):
                             return True
                         else:
                             pass
@@ -100,7 +115,7 @@ class Model(object):
         return False
 
     def add_block(self, position, texture, immediate=True, blocksettedto=None):
-        """ Add a block with the given `texture` and `position` to the world.
+        """Add a block with the given `texture` and `position` to the world.
 
         Parameters
         ----------
@@ -113,7 +128,8 @@ class Model(object):
             Whether or not to draw the block immediately.
 
         """
-        if position[1] < 0 or position[1] > 255: return
+        if position[1] < 0 or position[1] > 255:
+            return
         cx, _, cz = mathhelper.sectorize(position)
         chunkprovider = G.player.dimension.worldprovider.getChunkProviderFor((cx, cz))
         if position in chunkprovider.world:
@@ -121,8 +137,10 @@ class Model(object):
         if texture in ["air", "minecraft:air"]:
             return
         if not type(texture) == G.blockinst:
-            #todo: re-add blocksettedto
-            block = G.blockhandler.getInst(texture, position)  # , blocksettedto=blocksettedto)
+            # todo: re-add blocksettedto
+            block = G.blockhandler.getInst(
+                texture, position
+            )  # , blocksettedto=blocksettedto)
         else:
             block = texture
             block.position = position
@@ -137,7 +155,7 @@ class Model(object):
             self.block_update(position)
 
     def remove_block(self, position, immediate=True):
-        """ Remove the block at the given `position`.
+        """Remove the block at the given `position`.
 
         Parameters
         ----------
@@ -149,7 +167,8 @@ class Model(object):
         """
         cx, _, cz = mathhelper.sectorize(position)
         chunkprovider = G.player.dimension.worldprovider.getChunkProviderFor((cx, cz))
-        if position not in chunkprovider.world: return
+        if position not in chunkprovider.world:
+            return
         chunkprovider.world[position].delete()
         if immediate:
             if position in chunkprovider.shown:
@@ -170,7 +189,7 @@ class Model(object):
             chunkprovider.world[position].on_block_update()
 
     def check_neighbors(self, position):
-        """ Check all blocks surrounding `position` and ensure their visual
+        """Check all blocks surrounding `position` and ensure their visual
         state is current. This means hiding blocks that are not exposed and
         ensuring that all exposed blocks are shown. Usually used after a block
         is added or removed.
@@ -183,7 +202,11 @@ class Model(object):
                     if [dx, dy, dz].count(0) == 1:
                         key = (x + dx, y + dy, z + dz)
                         cx, _, cz = mathhelper.sectorize(key)
-                        chunkprovider = G.player.dimension.worldprovider.getChunkProviderFor((cx, cz))
+                        chunkprovider = (
+                            G.player.dimension.worldprovider.getChunkProviderFor(
+                                (cx, cz)
+                            )
+                        )
                         if key not in chunkprovider.world:
                             continue
                         if not self.exposed(key):
@@ -192,7 +215,7 @@ class Model(object):
                             self.hide_block(key, chunkprovider.world[key])
 
     def show_block(self, position, immediate=True, test=True):
-        """ Show the block at the given `position`. This method assumes the
+        """Show the block at the given `position`. This method assumes the
         block has already been added with add_block()
 
         Parameters
@@ -205,18 +228,19 @@ class Model(object):
         """
         cx, _, cz = mathhelper.sectorize(position)
         chunkprovider = G.player.dimension.worldprovider.getChunkProviderFor((cx, cz))
-        if not position in chunkprovider.world: return
+        if not position in chunkprovider.world:
+            return
         block = chunkprovider.world[position]
         chunkprovider.shown[position] = block
         if immediate and not (test and not self.exposed(position)):
             self._show_block(position, block)
         elif not immediate and not (test and not self.exposed(position)):
             self._enqueue(self._show_block, position, block)
-        #else:
-            #log.printMSG(position, self.exposed(position))
+        # else:
+        # log.printMSG(position, self.exposed(position))
 
     def _show_block(self, position, block):
-        """ Private implementation of the `show_block()` method.
+        """Private implementation of the `show_block()` method.
 
         Parameters
         ----------
@@ -228,7 +252,7 @@ class Model(object):
         block.show()
 
     def hide_block(self, position, block, immediate=True):
-        """ Hide the block at the given `position`. Hiding does not remove the
+        """Hide the block at the given `position`. Hiding does not remove the
         block from the world.
 
         Parameters
@@ -241,7 +265,8 @@ class Model(object):
         """
         cx, _, cz = mathhelper.sectorize(position)
         chunkprovider = G.player.dimension.worldprovider.getChunkProviderFor((cx, cz))
-        if not position in chunkprovider.shown: return
+        if not position in chunkprovider.shown:
+            return
         chunkprovider.shown.pop(position)
         if immediate:
             self._hide_block(position, block)
@@ -249,36 +274,35 @@ class Model(object):
             self._enqueue(self._hide_block, position, block)
 
     def _hide_block(self, position, block):
-        """ Private implementation of the 'hide_block()` method.
-
-        """
+        """Private implementation of the 'hide_block()` method."""
         block.hide()
 
     def show_sector(self, sector):
-        """ Ensure all blocks in the given sector that should be shown are
+        """Ensure all blocks in the given sector that should be shown are
         drawn to the canvas.
 
         """
         if G.player.dimension:
-            chunkprovider = G.player.dimension.worldprovider.getChunkProviderFor((sector[0],
-                                                        sector[2] if len(sector) > 2 else sector[1]))
+            chunkprovider = G.player.dimension.worldprovider.getChunkProviderFor(
+                (sector[0], sector[2] if len(sector) > 2 else sector[1])
+            )
             for position in chunkprovider.world.keys():
                 chunkprovider.world[position].show()
 
     def hide_sector(self, sector):
-        """ Ensure all blocks in the given sector that should be hidden are
+        """Ensure all blocks in the given sector that should be hidden are
         removed from the canvas.
 
         """
         if G.player.dimension:
-            chunkprovider = G.player.dimension.worldprovider.getChunkProviderFor((sector[0],
-                                                                                  sector[2] if len(sector) > 2 else sector[
-                                                                                      1]))
+            chunkprovider = G.player.dimension.worldprovider.getChunkProviderFor(
+                (sector[0], sector[2] if len(sector) > 2 else sector[1])
+            )
             for position in chunkprovider.world.keys():
                 chunkprovider.world[position].hide()
 
     def change_sectors(self, before, after):
-        """ Move from sector `before` to sector `after`. A sector is a
+        """Move from sector `before` to sector `after`. A sector is a
         contiguous x, y sub-region of world. Sectors are used to speed up
         world rendering.
 
@@ -303,37 +327,32 @@ class Model(object):
             self.show_sector(sector)
         for sector in hide:
             self.hide_sector(sector)
-        if not after: after = mathhelper.sectorize(G.window.position)
+        if not after:
+            after = mathhelper.sectorize(G.window.position)
         sector = after
 
     def _enqueue(self, func, *args):
-        """ Add `func` to the internal queue.
-
-        """
+        """Add `func` to the internal queue."""
         self.queue.append((func, args))
 
     def _dequeue(self):
-        """ Pop the top function from the internal queue and call it.
-
-        """
+        """Pop the top function from the internal queue and call it."""
         func, args = self.queue.popleft()
         func(*args)
 
     def process_queue(self):
-        """ Process the entire queue while taking periodic breaks. This allows
+        """Process the entire queue while taking periodic breaks. This allows
         the game loop to run smoothly. The queue contains calls to
         _show_block() and _hide_block() so this method should be called if
         add_block() or remove_block() was called with immediate=False
 
         """
-        start = time.clock()
-        while self.queue and time.clock() - start < 1.0 / config.Physiks.TICKS_PER_SEC:
+        start = time.time()
+        while self.queue and time.time() - start < 1.0 / config.Physiks.TICKS_PER_SEC:
             self._dequeue()
 
     def process_entire_queue(self):
-        """ Process the entire queue with no breaks.
-
-        """
+        """Process the entire queue with no breaks."""
         while self.queue:
             self._dequeue()
 
@@ -345,4 +364,3 @@ class Model(object):
         G.entityhandler.entitys = []
         G.scoreboardhandler.clear()
         G.eventhandler.call("core:model:cleanup")
-

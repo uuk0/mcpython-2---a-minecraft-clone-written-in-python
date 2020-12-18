@@ -10,9 +10,8 @@ import crafting.IGridInventory
 
 class PlayerInventory(G.inventorycollection):
     """class for playerinventory"""
-    tag = ["player:hotbar",
-           "player:inventory",
-           "system:nothideable"]
+
+    tag = ["player:hotbar", "player:inventory", "system:nothideable"]
 
     def __init__(self):
         G.inventorycollection.__init__(self)
@@ -67,6 +66,7 @@ class PlayerInventory(G.inventorycollection):
 
 class Crafting(G.inventoryclass, crafting.IGridInventory.IGridInventory):
     """class of player inventory crafting part"""
+
     tag = ["player:inventory", "inventorys:crafting", "system:nothideable"]
 
     def get_grid_size(self):
@@ -87,60 +87,87 @@ class Crafting(G.inventoryclass, crafting.IGridInventory.IGridInventory):
         self.used_slots = []
 
     def creatSlots(self):
-        return [self.add_input((210, 282)),
-                self.add_input((248, 282)),
-                self.add_input((210, 244)),
-                self.add_input((248, 244)),
-                self.add_output((328, (282+244)/2-2))]
+        return [
+            self.add_input((210, 282)),
+            self.add_input((248, 282)),
+            self.add_input((210, 244)),
+            self.add_input((248, 244)),
+            self.add_output((328, (282 + 244) / 2 - 2)),
+        ]
 
     def getBasePosition(self):
         if not hasattr(G.window, "player"):
             return (0, 0)
         if G.window.player.inventory.inventorys[0].type == 1:
-            return (G.window.size[0] / 2 - G.window.player.inventory.inventorys[0].image2.width / 2,
-                    G.window.size[1] / 2 - G.window.player.inventory.inventorys[0].image2.height / 2)
+            return (
+                G.window.size[0] / 2
+                - G.window.player.inventory.inventorys[0].image2.width / 2,
+                G.window.size[1] / 2
+                - G.window.player.inventory.inventorys[0].image2.height / 2,
+            )
         elif G.window.player.inventory.inventorys[0].type == 0:
-            return (G.window.size[0] / 2 - G.window.player.inventory.inventorys[0].image1.width / 2,
-                    G.window.size[1] / 2 - G.window.player.inventory.inventorys[0].image1.height / 2 - 270)
+            return (
+                G.window.size[0] / 2
+                - G.window.player.inventory.inventorys[0].image1.width / 2,
+                G.window.size[1] / 2
+                - G.window.player.inventory.inventorys[0].image1.height / 2
+                - 270,
+            )
 
     """updates the recipi stored"""
+
     def update_input(self, slot):
         pass
 
 
 class Rows(G.inventoryclass):
     """class of player inventory 'row' part"""
-    tag = ["player:inventory",
-           "system:nothideable"]
+
+    tag = ["player:inventory", "system:nothideable"]
+
     def creatSlots(self):
         slots = []
         for y in [64, 102, 140]:
             for x in [18, 56, 94, 132, 170, 209, 247, 286, 324]:
                 slots.append(G.inventoryslot((x, y)))
-        slots += [G.inventoryslot((18, 190), controll_function=self.headcheck),
-                  G.inventoryslot((18, 228), controll_function=self.bodycheck),
-                  G.inventoryslot((18, 266), controll_function=self.leggincheck),
-                  G.inventoryslot((18, 304), controll_function=self.bootcheck)]
+        slots += [
+            G.inventoryslot((18, 190), controll_function=self.headcheck),
+            G.inventoryslot((18, 228), controll_function=self.bodycheck),
+            G.inventoryslot((18, 266), controll_function=self.leggincheck),
+            G.inventoryslot((18, 304), controll_function=self.bootcheck),
+        ]
         slots.append(G.inventoryslot((165, 190)))
         return slots
 
     def headcheck(self, stack):
-        if type(stack.item) in G.notationhandler.notations["oredict"].items["armor:heads"]:
+        if (
+            type(stack.item)
+            in G.notationhandler.notations["oredict"].items["armor:heads"]
+        ):
             return True
         return False
 
     def bodycheck(self, stack):
-        if type(stack.item) in G.notationhandler.notations["oredict"].items["armor:bodys"]:
+        if (
+            type(stack.item)
+            in G.notationhandler.notations["oredict"].items["armor:bodys"]
+        ):
             return True
         return False
 
     def leggincheck(self, stack):
-        if type(stack.item) in G.notationhandler.notations["oredict"].items["armor:leggins"]:
+        if (
+            type(stack.item)
+            in G.notationhandler.notations["oredict"].items["armor:leggins"]
+        ):
             return True
         return False
 
     def bootcheck(self, stack):
-        if type(stack.item) in G.notationhandler.notations["oredict"].items["armor:foots"]:
+        if (
+            type(stack.item)
+            in G.notationhandler.notations["oredict"].items["armor:foots"]
+        ):
             return True
         return False
 
@@ -148,21 +175,37 @@ class Rows(G.inventoryclass):
         if not hasattr(G.window, "player"):
             return (0, 0)
         if G.window.player.inventory.inventorys[0].type == 1:
-            return (G.window.size[0] / 2 - G.window.player.inventory.inventorys[0].image2.width / 2, G.window.size[1] / 2 - G.window.player.inventory.inventorys[0].image2.height / 2)
+            return (
+                G.window.size[0] / 2
+                - G.window.player.inventory.inventorys[0].image2.width / 2,
+                G.window.size[1] / 2
+                - G.window.player.inventory.inventorys[0].image2.height / 2,
+            )
         elif G.window.player.inventory.inventorys[0].type == 0:
-            return (G.window.size[0] / 2 - G.window.player.inventory.inventorys[0].image1.width / 2, G.window.size[1] / 2 - G.window.player.inventory.inventorys[0].image1.height / 2 - 270)
+            return (
+                G.window.size[0] / 2
+                - G.window.player.inventory.inventorys[0].image1.width / 2,
+                G.window.size[1] / 2
+                - G.window.player.inventory.inventorys[0].image1.height / 2
+                - 270,
+            )
 
 
 class Hotbar(G.inventoryclass):
     """class of player inventory hotbar part"""
-    tag = ["player:hotbar",
-           "player:inventory",
-           "system:nothideable"]
+
+    tag = ["player:hotbar", "player:inventory", "system:nothideable"]
 
     def __init__(self):
-        self.image1 = pyglet.sprite.Sprite(pyglet.image.load(G.local + "/tmp/gui/hotbar.png"))
-        self.image2 = pyglet.sprite.Sprite(pyglet.image.load(G.local + "/tmp/gui/playerinventory.png"))
-        self.image3 = pyglet.sprite.Sprite(pyglet.image.load(G.local + "/tmp/gui/hotbar_select.png"))
+        self.image1 = pyglet.sprite.Sprite(
+            pyglet.image.load(G.local + "/tmp/gui/hotbar.png")
+        )
+        self.image2 = pyglet.sprite.Sprite(
+            pyglet.image.load(G.local + "/tmp/gui/playerinventory.png")
+        )
+        self.image3 = pyglet.sprite.Sprite(
+            pyglet.image.load(G.local + "/tmp/gui/hotbar_select.png")
+        )
         self.type = 0
         self.lasttype = 0
         G.inventoryclass.__init__(self)
@@ -170,17 +213,18 @@ class Hotbar(G.inventoryclass):
         self.image2.position = self.position
         self.image3.position = self.position
 
-
     def creatSlots(self):
-        return [G.inventoryslot((8, 6)),
-                G.inventoryslot((47, 6)),
-                G.inventoryslot((47+39, 6)),
-                G.inventoryslot((47+39*2, 6)),
-                G.inventoryslot((47+39*3+1, 6)),
-                G.inventoryslot((47+39*4+1, 6)),
-                G.inventoryslot((47+39*5+2, 6)),
-                G.inventoryslot((47+39*6+2, 6)),
-                G.inventoryslot((47+39*7+3, 6))]
+        return [
+            G.inventoryslot((8, 6)),
+            G.inventoryslot((47, 6)),
+            G.inventoryslot((47 + 39, 6)),
+            G.inventoryslot((47 + 39 * 2, 6)),
+            G.inventoryslot((47 + 39 * 3 + 1, 6)),
+            G.inventoryslot((47 + 39 * 4 + 1, 6)),
+            G.inventoryslot((47 + 39 * 5 + 2, 6)),
+            G.inventoryslot((47 + 39 * 6 + 2, 6)),
+            G.inventoryslot((47 + 39 * 7 + 3, 6)),
+        ]
 
     def draw(self):
         self.position = self.getBasePosition()
@@ -188,24 +232,24 @@ class Hotbar(G.inventoryclass):
             if self.lasttype == 1:
                 self.slots[0].position = (8, 6)
                 self.slots[1].position = (47, 6)
-                self.slots[2].position = (47+39, 6)
-                self.slots[3].position = (47+39*2, 6)
-                self.slots[4].position = (47+39*3+1, 6)
-                self.slots[5].position = (47+39*4+1, 6)
-                self.slots[6].position = (47+39*5+2, 6)
-                self.slots[7].position = (47+39*6+2, 6)
-                self.slots[8].position = (47+39*7+3, 6)
+                self.slots[2].position = (47 + 39, 6)
+                self.slots[3].position = (47 + 39 * 2, 6)
+                self.slots[4].position = (47 + 39 * 3 + 1, 6)
+                self.slots[5].position = (47 + 39 * 4 + 1, 6)
+                self.slots[6].position = (47 + 39 * 5 + 2, 6)
+                self.slots[7].position = (47 + 39 * 6 + 2, 6)
+                self.slots[8].position = (47 + 39 * 7 + 3, 6)
 
             elif self.lasttype == 0:
                 self.slots[0].position = (18, 18)
                 self.slots[1].position = (56, 18)
-                self.slots[2].position = (56+38, 18)
-                self.slots[3].position = (56+38*2, 18)
-                self.slots[4].position = (56+38*3, 18)
-                self.slots[5].position = (56+38*4+1, 18)
-                self.slots[6].position = (56+38*5+1, 18)
-                self.slots[7].position = (56+38*6+1, 18)
-                self.slots[8].position = (56+38*7+1, 18)
+                self.slots[2].position = (56 + 38, 18)
+                self.slots[3].position = (56 + 38 * 2, 18)
+                self.slots[4].position = (56 + 38 * 3, 18)
+                self.slots[5].position = (56 + 38 * 4 + 1, 18)
+                self.slots[6].position = (56 + 38 * 5 + 1, 18)
+                self.slots[7].position = (56 + 38 * 6 + 1, 18)
+                self.slots[8].position = (56 + 38 * 7 + 1, 18)
 
             self.lasttype = self.type
         self.image1.position = self.position
@@ -222,9 +266,15 @@ class Hotbar(G.inventoryclass):
 
     def getBasePosition(self):
         if self.type == 1:
-            return (G.window.size[0] / 2 - self.image2.width / 2, G.window.size[1] / 2 - self.image2.height / 2)
+            return (
+                G.window.size[0] / 2 - self.image2.width / 2,
+                G.window.size[1] / 2 - self.image2.height / 2,
+            )
         elif self.type == 0:
-            return (G.window.size[0] / 2 - self.image1.width / 2, G.window.size[1] / 2 - self.image1.height / 2 - 270)
+            return (
+                G.window.size[0] / 2 - self.image1.width / 2,
+                G.window.size[1] / 2 - self.image1.height / 2 - 270,
+            )
 
     def shouldInteractWithPlayerInventoryMoving(self):
         return False

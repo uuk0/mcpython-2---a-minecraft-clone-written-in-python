@@ -32,8 +32,10 @@ class NotationHandler:
         self.notations[notation].notate(obj, string)
 
     def getnotatedobjectsfor(self, notation, string):
-        if not notation in self.notations: return []
-        if not string in self.notations[notation].items: return []
+        if not notation in self.notations:
+            return []
+        if not string in self.notations[notation].items:
+            return []
         return self.notations[notation].items[string]
 
 
@@ -59,5 +61,3 @@ class OreDictItems:
 
 class DestroyGroupItems:
     PICKAXE = "minecraft:destroygroup:pickaxe"
-
-

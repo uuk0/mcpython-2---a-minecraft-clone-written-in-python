@@ -10,7 +10,7 @@ import PIL.Image
 
 
 def tex_coord(x, y, n1=4, n2=4):
-    """ Return the bounding vertices of the texture square.
+    """Return the bounding vertices of the texture square.
     moved for the config of TextureAtlas.
     for removing, delete delta here and set TextureAtlas constants to 64
     """
@@ -59,6 +59,7 @@ class IModelEntry:
     todo: add stairs, slabs, custom data, cross textures, doors, (logs?), alpha-attribute to all (-> rendersystem)
     todo: "super" models that can be included for custom data
     """
+
     TYPES = []
 
     @staticmethod
@@ -88,26 +89,47 @@ class CubeEntry(IModelEntry):
         position = blockinst.position
         cx, _, cz = mathhelper.sectorize(position)
         chunkprovider = G.player.dimension.worldprovider.getChunkProviderFor((cx, cz))
-        if len(blockinst.showndata) > 0: self.hide(batch, blockinst)
+        if len(blockinst.showndata) > 0:
+            self.hide(batch, blockinst)
         if not G.model.exposed(blockinst.position):
             return
         if not blockinst.position in chunkprovider.world:
             return
         x, y, z = blockinst.position
         vertex_data = chunkprovider.world[blockinst.position].getCubeVerticens(
-            *list(chunkprovider.world[blockinst.position].convertPositionToRenderable(blockinst.position)) + [0.5])
-        textureatlas = G.textureatlashandler.atlases[self.model.indexes[0][0] if hasattr(self.model.indexes[0],
-                                                     "__getitem__") else
-                                                     G.textureatlashandler.indexarray[self.model.indexes[0]][0]]
-        texture_data = text_coords_complex(*[self.model.indexes[i][1][1] if hasattr(self.model.indexes[i][1][1],
-                                                                                    "__getitem__") else
-                                             self.model.indexes[i][1] for i in self.entry["sides"]],
-                                             n1=16, n2=16)
+            *list(
+                chunkprovider.world[blockinst.position].convertPositionToRenderable(
+                    blockinst.position
+                )
+            )
+            + [0.5]
+        )
+        textureatlas = G.textureatlashandler.atlases[
+            self.model.indexes[0][0]
+            if hasattr(self.model.indexes[0], "__getitem__")
+            else G.textureatlashandler.indexarray[self.model.indexes[0]][0]
+        ]
+        texture_data = text_coords_complex(
+            *[
+                self.model.indexes[i][1][1]
+                if hasattr(self.model.indexes[i][1][1], "__getitem__")
+                else self.model.indexes[i][1]
+                for i in self.entry["sides"]
+            ],
+            n1=16,
+            n2=16
+        )
         # create vertex list
         # FIXME Maybe `add_indexed()` should be used insteads
-        blockinst.showndata.append(batch.add(24, pyglet.gl.GL_QUADS, textureatlas.pyglet_atlas,
-                                             ('v3f/static', vertex_data),
-                                             ('t2f/static', texture_data)))
+        blockinst.showndata.append(
+            batch.add(
+                24,
+                pyglet.gl.GL_QUADS,
+                textureatlas.pyglet_atlas,
+                ("v3f/static", vertex_data),
+                ("t2f/static", texture_data),
+            )
+        )
 
     def hide(self, batch, blockinst):
         for e in blockinst.showndata:
@@ -122,6 +144,7 @@ class ITextureGeneratorEntry:
     """
     todo: add overlay & color map
     """
+
     ENTRYS = {}
 
     @staticmethod
@@ -159,10 +182,16 @@ class Split(ITextureGeneratorEntry):
         size = data["size"]
         for x in range(size[0]):
             for y in range(size[1]):
-                images.append(image.grap((image.size[0] / size[0] * x,
-                                          image.size[1] / size[1] * y,
-                                          image.size[0] / size[0] * (x + 1) - 1,
-                                          image.size[1] / size[1] * (y + 1) - 1)))
+                images.append(
+                    image.grap(
+                        (
+                            image.size[0] / size[0] * x,
+                            image.size[1] / size[1] * y,
+                            image.size[0] / size[0] * (x + 1) - 1,
+                            image.size[1] / size[1] * (y + 1) - 1,
+                        )
+                    )
+                )
         return images
 
 
@@ -171,7 +200,8 @@ ITextureGeneratorEntry.ENTRYS[Split.getName()] = Split
 
 class Model:
     def __init__(self, data, prepare=True):
-        if not "texture generator" in data: data["texture generator"] = []
+        if not "texture generator" in data:
+            data["texture generator"] = []
         self.data = data
         self.name = data["name"]  # name is the name of the block to bind to
         self.files = data["files"]  # a list of files to load with these block
@@ -183,7 +213,9 @@ class Model:
                     self.entrys[entry["state name"]] = imodelentry(entry, self)
         for extiondata in data["texture generator"]:
             if extiondata["type"] in ITextureGeneratorEntry.ENTRYS:
-                self.files += ITextureGeneratorEntry.ENTRYS[extiondata["type"]].get_images_for(extiondata, self)
+                self.files += ITextureGeneratorEntry.ENTRYS[
+                    extiondata["type"]
+                ].get_images_for(extiondata, self)
         G.modelhandler.models[self.name] = self
         self.indexes = None
         if prepare:
@@ -194,7 +226,8 @@ class Model:
 
     @staticmethod
     def extend_model(model, data: dict):
-        if not "texture generator" in data: data["texture generator"] = []
+        if not "texture generator" in data:
+            data["texture generator"] = []
         model.entrydata.append(data["entrys"])
         for entry in data["entrys"]:
             for imodelentry in IModelEntry.TYPES:
@@ -202,18 +235,28 @@ class Model:
                     model.entrys[entry["state name"]] = imodelentry(entry, model)
         for extiondata in data["texture generator"]:
             if extiondata["type"] in ITextureGeneratorEntry.ENTRYS:
-                model.files += ITextureGeneratorEntry.ENTRYS[extiondata["type"]].get_images_for(extiondata, model)
+                model.files += ITextureGeneratorEntry.ENTRYS[
+                    extiondata["type"]
+                ].get_images_for(extiondata, model)
 
     def construct(self):
-        self.indexes = [G.textureatlashandler.indexarray[x] if x in G.textureatlashandler.indexarray else 0
-                        for x in self.indexes]
+        self.indexes = [
+            G.textureatlashandler.indexarray[x]
+            if x in G.textureatlashandler.indexarray
+            else 0
+            for x in self.indexes
+        ]
 
 
-for file in os.listdir(G.local+"/assets/minecraft/models/blocks"):
-    file = G.local+"/assets/minecraft/models/blocks/"+file
+for file in os.listdir(G.local + "/assets/minecraft/models/blocks"):
+    file = G.local + "/assets/minecraft/models/blocks/" + file
     if os.path.isfile(file):
-        @modsystem.ModLoader.ModEventEntry("game:registry:on_texture_registrate_periode", "minecraft",
-                                           info="registrating model "+file, add=[file])
+
+        @modsystem.ModLoader.ModEventEntry(
+            "game:registry:on_texture_registrate_periode",
+            "minecraft",
+            info="registrating model " + file,
+            add=[file],
+        )
         def register(f):
             G.modelhandler.load_from_file(f)
-

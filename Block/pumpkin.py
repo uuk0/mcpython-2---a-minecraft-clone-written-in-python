@@ -22,9 +22,11 @@ class CarvedPumpkin(G.iblockclass):
         return "carved"
 
 
-@modsystem.ModLoader.ModEventEntry("game:registry:on_block_registrate_periode", "minecraft",
-                                   info="registrating pumpkin")
+@modsystem.ModLoader.ModEventEntry(
+    "game:registry:on_block_registrate_periode",
+    "minecraft",
+    info="registrating pumpkin",
+)
 def register():
     G.blockhandler.register(Pumpkin)
     G.blockhandler.register(CarvedPumpkin)
-

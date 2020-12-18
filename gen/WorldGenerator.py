@@ -1,4 +1,3 @@
-
 """
 main system for world generation
 """
@@ -22,7 +21,8 @@ class WorldGenerator:
         self.random = gen.Random.Random(-100)
 
     @staticmethod
-    def getName(): return "worldgenerator:none"
+    def getName():
+        return "worldgenerator:none"
 
     def generateHighMapToChunkProvider(self, chunk):
         pass
@@ -62,10 +62,8 @@ class WorldGenerator:
         self.generateHighMapToChunkProvider(chunk)
         self.generateSurfaceToChunkProvider(chunk)
         self.generatePerlinToChunkProvider(chunk)
-        #self.generateOres(chunk)
+        # self.generateOres(chunk)
         self.generateUnderGroundStructursToChunkProvider(chunk)
         self.generateSurfaceStructursToChunkProvider(chunk)
         self.generateSurfaceLook(chunk)
         self.generateBlocksFromChunkProvider(chunk)
-
-

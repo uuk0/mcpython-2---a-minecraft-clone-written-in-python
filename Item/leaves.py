@@ -1,6 +1,8 @@
 import globals as G
 
 """class for AcaciaLeave"""
+
+
 class AcaciaLeave(G.itemclass):
     def getName(self):
         return "minecraft:acacia_leaves"
@@ -9,6 +11,7 @@ class AcaciaLeave(G.itemclass):
         return True
 
     def getTexturFile(self):
-        return G.local+"/assets/minecraft/textures/item/LEAVES.png"
+        return G.local + "/assets/minecraft/textures/item/LEAVES.png"
+
 
 G.itemhandler.register(AcaciaLeave)

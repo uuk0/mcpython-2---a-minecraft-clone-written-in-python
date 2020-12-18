@@ -7,7 +7,8 @@ __table = {}
 
 
 def addEntry(name, *args, **kwargs):
-    if isEntry(name): return
+    if isEntry(name):
+        return
     __table[name] = [args, kwargs]
 
 

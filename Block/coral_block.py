@@ -9,7 +9,7 @@ class CoralBlock(G.iblockclass):
         return ""
 
     def getName(self):
-        return "minecraft:"+self.getType()+"_coral_block"
+        return "minecraft:" + self.getType() + "_coral_block"
 
     def getModelFile(self, inst):
         return "minecraft:coral_block"
@@ -20,10 +20,10 @@ class CoralBlock(G.iblockclass):
 
 class DeadCoralBlock(CoralBlock):
     def getStateName(self, inst):
-        return "dead_"+self.getType()
+        return "dead_" + self.getType()
 
     def getName(self):
-        return "minecraft:dead_"+self.getType()+"_coral_block"
+        return "minecraft:dead_" + self.getType() + "_coral_block"
 
 
 class BrainCoral(CoralBlock):
@@ -89,10 +89,10 @@ class DeadtubeCoral(DeadCoralBlock):
 local = locals()
 
 
-@modsystem.ModLoader.ModEventEntry("game:registry:on_block_registrate_periode", "minecraft",
-                                   info="registrating corals")
+@modsystem.ModLoader.ModEventEntry(
+    "game:registry:on_block_registrate_periode", "minecraft", info="registrating corals"
+)
 def register():
     for e in local.values():
         if issubclass(type(e), CoralBlock) and e not in [CoralBlock, DeadCoralBlock]:
             G.blockhandler.register(e)
-

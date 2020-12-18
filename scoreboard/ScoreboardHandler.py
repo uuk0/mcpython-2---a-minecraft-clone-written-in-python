@@ -10,14 +10,22 @@ class ScoreBoardHandler:
 
     def add_scoreboard(self, name, scoreboardtype, *args, **kwargs):
         if scoreboardtype not in self.scoreboardtypes:
-            log.printMSG("[SCOREBOARDHANDLER][ERROR] type "+str(scoreboardtype)+" is unknown")
+            log.printMSG(
+                "[SCOREBOARDHANDLER][ERROR] type " + str(scoreboardtype) + " is unknown"
+            )
             return
-        self.scoreboards[name] = self.scoreboardtypes[scoreboardtype](name, *args, **kwargs)
+        self.scoreboards[name] = self.scoreboardtypes[scoreboardtype](
+            name, *args, **kwargs
+        )
 
     def remove_scoreboard(self, name):
         if name not in self.scoreboards:
-            log.printMSG("[SCOREBOARDHANDLER][ERROR] can't remove scoreboard named "+str(name)+". These scoreboard"+
-                         " is not created.")
+            log.printMSG(
+                "[SCOREBOARDHANDLER][ERROR] can't remove scoreboard named "
+                + str(name)
+                + ". These scoreboard"
+                + " is not created."
+            )
             return
         self.scoreboards[name].delete()
         del self.scoreboards[name]
@@ -32,8 +40,11 @@ class ScoreBoardHandler:
 
 G.scoreboardhandler = ScoreBoardHandler()
 
-@modsystem.ModLoader.ModEventEntry("game:registry:on_command_registrate_periode", "minecraft",
-                                   info="registrating scoreboard stuff")
+
+@modsystem.ModLoader.ModEventEntry(
+    "game:registry:on_command_registrate_periode",
+    "minecraft",
+    info="registrating scoreboard stuff",
+)
 def register_scoreboard_stuff(*args):
     import scoreboard.ObjectiveScoreboard
-

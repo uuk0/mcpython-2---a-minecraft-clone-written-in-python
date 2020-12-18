@@ -1,6 +1,8 @@
 import globals as G
 
 """class for obsidian"""
+
+
 class Obsidian(G.itemclass):
     def getName(self):
         return "minecraft:obsidian"
@@ -9,6 +11,7 @@ class Obsidian(G.itemclass):
         return True
 
     def getTexturFile(self):
-        return G.local+"/assets/minecraft/textures/item/OBSIDIAN.png"
+        return G.local + "/assets/minecraft/textures/item/OBSIDIAN.png"
+
 
 G.itemhandler.register(Obsidian)

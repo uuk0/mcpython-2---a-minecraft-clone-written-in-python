@@ -17,10 +17,13 @@ class BiomeHandler:
         self.biomemap.append(biome)
 
     def registerOverwrite(self, orginal, biome):
-        if orginal in self.biomemap: self.biomemap.remove(orginal)
+        if orginal in self.biomemap:
+            self.biomemap.remove(orginal)
         self.register(biome)
 
-    def getBiomeEntry(self, r: gen.Random.Random, x: int, z: int, worldprovider, table: list) -> list:
+    def getBiomeEntry(
+        self, r: gen.Random.Random, x: int, z: int, worldprovider, table: list
+    ) -> list:
         v = gen.noise.noise(x, -100, z)
         v *= len(self.biomes) / 2
         v += len(self.biomes) / 2
@@ -62,6 +65,7 @@ class BiomeHandler:
 
 G.biomehandler = BiomeHandler()
 
+
 class Biome:
     def __init__(self):
         pass
@@ -71,26 +75,27 @@ class Biome:
         return "biome:empty"
 
     @staticmethod
-    def getBiomeTemperature(): return 0
+    def getBiomeTemperature():
+        return 0
 
     @staticmethod
-    def getMinHigh(): return 30
+    def getMinHigh():
+        return 30
 
     @staticmethod
-    def getMaxHigh(): return 80
+    def getMaxHigh():
+        return 80
 
     @staticmethod
-    def getOreVeins(): return []
+    def getOreVeins():
+        return []
 
 
 G.biomeclass = Biome
 
 
-@modsystem.ModLoader.ModEventEntry("game:registry:on_biome_registrate_periode", "minecraft",
-                                   info="registrating biomes")
+@modsystem.ModLoader.ModEventEntry(
+    "game:registry:on_biome_registrate_periode", "minecraft", info="registrating biomes"
+)
 def register():
-    from gen.biomes import (BirchForest, Plains)
-
-
-
-
+    from gen.biomes import BirchForest, Plains

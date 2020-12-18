@@ -45,16 +45,20 @@ class ModSorter:
             next_emitted = []
             for entry in pending:
                 name, deps = entry
-                deps.difference_update(set((name,)), emitted)  # <-- pop self from dep, req Py2.6
+                deps.difference_update(
+                    set((name,)), emitted
+                )  # <-- pop self from dep, req Py2.6
                 if deps:
                     next_pending.append(entry)
                 else:
                     yield name
-                    emitted.append(name)  # <-- not required, but preserves original order
+                    emitted.append(
+                        name
+                    )  # <-- not required, but preserves original order
                     next_emitted.append(name)
             if not next_emitted:
-                raise ValueError("cyclic dependancy detected: %s %r" % (name, (next_pending,)))
+                raise ValueError(
+                    "cyclic dependancy detected: %s %r" % (name, (next_pending,))
+                )
             pending = next_pending
             emitted = next_emitted
-
-

@@ -7,7 +7,9 @@ import log
 class ToolTip:
     def __init__(self, stack=None):
         self.__stack = stack
-        self.image = pyglet.sprite.Sprite(pyglet.image.load(G.local+"/assets/minecraft/textures/tooltip.png"))
+        self.image = pyglet.sprite.Sprite(
+            pyglet.image.load(G.local + "/assets/minecraft/textures/tooltip.png")
+        )
         self.labels = []
 
     def setStack(self, stack):
@@ -26,8 +28,8 @@ class ToolTip:
         self.image.x, self.image.y = position
         self.image.draw()
         text = self.__stack.item.getToolTipText()
-        if text.count("\n")+1 > len(self.labels):
-            for i in range(len(self.labels), text.count("\n") - len(self.labels)+1):
+        if text.count("\n") + 1 > len(self.labels):
+            for i in range(len(self.labels), text.count("\n") - len(self.labels) + 1):
                 self.labels.append(pyglet.text.Label(color=(0, 0, 0, 255)))
                 # log.printMSG(self.labels[-1].x, position[0])
         for i, e in enumerate(self.labels):
@@ -38,4 +40,3 @@ class ToolTip:
             self.labels[i].draw()
 
     stack = property(getStack, setStack)
-

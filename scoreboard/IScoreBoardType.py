@@ -4,10 +4,12 @@ import log
 
 class ScoreBoard:
     @staticmethod
-    def getName(): return "minecraft:scoreboard:none"
+    def getName():
+        return "minecraft:scoreboard:none"
 
     @staticmethod
-    def getCommandName(): return None
+    def getCommandName():
+        return None
 
     @staticmethod
     def execute_from_command(line):  # /scoreboard access to scoreboard
@@ -18,8 +20,11 @@ class ScoreBoard:
         if hasattr(self, "create"):
             self.create(*args, **kwargs)
         elif len(args) + len(kwargs) > 0:
-            log.printMSG("[SCOREBOARD][ERROR] getted arguments for scoreboard typed as "+str(type(self))+
-                         " but it has no create-function for analysing it")
+            log.printMSG(
+                "[SCOREBOARD][ERROR] getted arguments for scoreboard typed as "
+                + str(type(self))
+                + " but it has no create-function for analysing it"
+            )
             return
 
     def set_value(self, index, value):
@@ -30,4 +35,3 @@ class ScoreBoard:
 
     def get_value_names(self):
         raise NotImplementedError()
-

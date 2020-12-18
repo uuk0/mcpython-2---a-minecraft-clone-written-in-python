@@ -20,13 +20,15 @@ EVENTLIST = {}  # modname -> ModEventEntry
 EVENTENTRYLIST = {}  # eventname -> entry
 
 
-def _null_function(*args, **kwargs): pass
+def _null_function(*args, **kwargs):
+    pass
 
 
 class ModEventEntry:
     """
     binding for mods to events. use @ModEventEntry(<eventname>, <modname>)\ndef <your_function_name>(name, <...>):
     """
+
     def __init__(self, name, modname, info=None, add=[]):
         self.__name = name
         self.modname = modname
@@ -34,11 +36,14 @@ class ModEventEntry:
         self.add = add
 
     def __call__(self, *args, **kwargs):
-        if not self.modname in EVENTLIST: EVENTLIST[self.modname] = {}
-        if not self.__name in EVENTLIST[self.modname]: EVENTLIST[self.modname][self.__name] = []
+        if not self.modname in EVENTLIST:
+            EVENTLIST[self.modname] = {}
+        if not self.__name in EVENTLIST[self.modname]:
+            EVENTLIST[self.modname][self.__name] = []
         EVENTLIST[self.modname][self.__name].append([self, args[0]])
         entry = EVENTENTRYLIST[self.__name]
-        if entry.on_event_binding: entry.on_event_binding(self.__name, self.modname, args[0])
+        if entry.on_event_binding:
+            entry.on_event_binding(self.__name, self.modname, args[0])
         return args[0]
 
 
@@ -46,10 +51,20 @@ class ModEventCallEntry:
     """
     entry for modloader for loading stages of mods
     """
-    def __init__(self, name, start_function=_null_function, end_function=_null_function,
-                 on_event_binding=_null_function, on_event_call=_null_function, register=True):
+
+    def __init__(
+        self,
+        name,
+        start_function=_null_function,
+        end_function=_null_function,
+        on_event_binding=_null_function,
+        on_event_call=_null_function,
+        register=True,
+    ):
         self.name = name
-        self.start_function = start_function  # will be called before every other binding to these entry
+        self.start_function = (
+            start_function  # will be called before every other binding to these entry
+        )
         self.end_function = end_function
         self.on_event_binding = on_event_binding
         self.on_event_call = on_event_call
@@ -71,15 +86,16 @@ class ModEventCallEntry:
         elif name == "on_event_call":
             self.on_event_call = args[0]
         else:
-            raise ValueError("can't bind function named "+str(name))
+            raise ValueError("can't bind function named " + str(name))
         return args[0]
 
 
 class ModLoader:
     """main class for modloading"""
+
     def __init__(self):
         self.mods = {}
-        d = [G.local+"/mods"]
+        d = [G.local + "/mods"]
         for e in sys.argv[1:]:
             if os.path.isdir(e):
                 sys.argv.remove(e)
@@ -100,7 +116,8 @@ class ModLoader:
 
     def register(self, mod):
         """registrates a new mod to registry"""
-        if not type(mod) == Mod: mod = mod()
+        if not type(mod) == Mod:
+            mod = mod()
         mod.path = self.activemodpath
         self.mods[mod.getName()] = mod
 
@@ -112,6 +129,8 @@ class ModLoader:
             if os.path.isdir(e):
                 ed += [e + "/" + x for x in os.listdir(e)]
         self.mdirs = ed
+        if not os.path.exists(G.local + "/mods"):
+            os.makedirs(G.local + "/mods")
         for e in os.listdir(G.local + "/mods") + ed:
             if zipfile.is_zipfile(e) and config.DEBUG.PRINT_MODLOADING_FORMAT_STUFF:
                 log.printMSG("[MODLOADER][ERROR] can't load mods from zipfile")
@@ -123,6 +142,7 @@ class ModLoader:
 
     def loadMods(self, mods):
         import modsystem.main
+
         G.MODS.append(modsystem.main)
         for e in mods:
             # log.printMSG("[MODLOADER][INFO] found mod in " + str(e[1]))
@@ -131,7 +151,9 @@ class ModLoader:
                 G.MODS.append(importlib.import_module("mods." + e[2].split(".")[0]))
             elif e[0] == 1:
                 try:
-                    G.MODS.append(importlib.import_module("mods." + e[2].split(".")[0] + ".main"))
+                    G.MODS.append(
+                        importlib.import_module("mods." + e[2].split(".")[0] + ".main")
+                    )
                 except ModuleNotFoundError:
                     # log.printMSG("[MODLOADER][INFO] can't load mod from dir " + e[2])
                     pass
@@ -145,18 +167,37 @@ class ModLoader:
             versions = mod.getMcPythonVersions()
             if versions != None:
                 if type(versions) == str:
-                    if versions != G.VERSION_NAME and not "--deactivateversionicompatibles" in sys.argv:
-                        log.printMSG("[MODLOADER][ERROR] mod " + str(mod) + " is requiring mc version " + str(versions))
+                    if (
+                        versions != G.VERSION_NAME
+                        and not "--deactivateversionicompatibles" in sys.argv
+                    ):
+                        log.printMSG(
+                            "[MODLOADER][ERROR] mod "
+                            + str(mod)
+                            + " is requiring mc version "
+                            + str(versions)
+                        )
                         flag = False
                 else:
-                    if not any([x == G.VERSION_NAME for x in
-                                versions]) and not "--deactivateversionicompatibles" in sys.argv:
+                    if (
+                        not any([x == G.VERSION_NAME for x in versions])
+                        and not "--deactivateversionicompatibles" in sys.argv
+                    ):
                         log.printMSG(
-                            "[MODLOADER][ERROR] mod " + str(mod) + " is requiring one of mc versions " + str(versions))
+                            "[MODLOADER][ERROR] mod "
+                            + str(mod)
+                            + " is requiring one of mc versions "
+                            + str(versions)
+                        )
                         flag = False
             for e in mod.getDependencies():
                 if not e[0] in self.mods:
-                    log.printMSG("[MODLOADER][ERROR] dependencie error: mod " + str(mod) + " needs mod " + str(e[0]))
+                    log.printMSG(
+                        "[MODLOADER][ERROR] dependencie error: mod "
+                        + str(mod)
+                        + " needs mod "
+                        + str(e[0])
+                    )
                     flag = False
                 elif len(e) > 1:
                     if callable(e[1]):
@@ -166,27 +207,42 @@ class ModLoader:
                     else:
                         modd = self.mods[e[0]]
                         depend_min = e[1][0] if len(e) > 1 else (-1, -1, -1)
-                        depend_max = e[1][1] if len(e) > 1 and len(e[1]) > 1 else modd.getVersion()
+                        depend_max = (
+                            e[1][1]
+                            if len(e) > 1 and len(e[1]) > 1
+                            else modd.getVersion()
+                        )
                         depend_func = e[2] if len(e) > 2 else None
                         version_modd = modd.getVersion()
-                        if not (depend_min[0] <= version_modd[0] <= depend_max[0] and depend_min[1] <= version_modd[
-                            1] <=
-                                depend_max[1] and depend_min[2] <= version_modd[2] <= depend_max[2]) and \
-                                ((depend_func and depend_func()) or not depend_func):
-                            log.printMSG("[MODLOADER][ERROR] depenencie error: mod " + str(mod) + " needs mod " + str(
-                                e[0]) + " in version range " + str([depend_min, depend_max]) + ", but " + str(
-                                version_modd) + " is loaded")
+                        if not (
+                            depend_min[0] <= version_modd[0] <= depend_max[0]
+                            and depend_min[1] <= version_modd[1] <= depend_max[1]
+                            and depend_min[2] <= version_modd[2] <= depend_max[2]
+                        ) and ((depend_func and depend_func()) or not depend_func):
+                            log.printMSG(
+                                "[MODLOADER][ERROR] depenencie error: mod "
+                                + str(mod)
+                                + " needs mod "
+                                + str(e[0])
+                                + " in version range "
+                                + str([depend_min, depend_max])
+                                + ", but "
+                                + str(version_modd)
+                                + " is loaded"
+                            )
                             flag = False
                         if len(e) > 2:
                             f = e[2]()
-                            if not f: flag = False
+                            if not f:
+                                flag = False
         if not flag:
             log.printMSG(
-                "[MODLOADER][ERROR] there were errors in mod initialisation phase. NOT beginning loading phase")
+                "[MODLOADER][ERROR] there were errors in mod initialisation phase. NOT beginning loading phase"
+            )
             sys.exit(-1)
 
     def searchForMods(self):
-        #print(EVENTLIST, EVENTENTRYLIST)
+        # print(EVENTLIST, EVENTENTRYLIST)
         mods = self.getModDirs()
         self.loadMods(mods)
         self.checkDependecies()
@@ -194,7 +250,7 @@ class ModLoader:
         sorter.sort()
         log.printMSG("[MODLOADER] we will load mods in the following order:")
         for mod in sorter.modlistsorted:
-            log.printMSG("  :"+str(mod.getUserFriendlyName()))
+            log.printMSG("  :" + str(mod.getUserFriendlyName()))
         self.bind_events(sorter)
         self.call_events(sorter)
 
@@ -207,16 +263,21 @@ class ModLoader:
 
         for i, entry in enumerate(self.events):
             entry.start_function(entry)
-            log.printMSG("[MODLOADER][INFO] loading "+str(entry.name))
+            log.printMSG("[MODLOADER][INFO] loading " + str(entry.name))
             for mod in self.mods.values():
                 name = mod.getName()
                 dt = time.time()
                 if name in EVENTLIST and entry.name in EVENTLIST[name]:
                     for info in EVENTLIST[name][entry.name]:
-                        #print("\x1b[2K\r", end="")
-                        log.printMSG("[MODLOADER]["+entry.name+"][INFO] mod "+\
-                                     str(self.mods[info[0].modname].getUserFriendlyName())+" is "+\
-                                     str(info[0].info))
+                        # print("\x1b[2K\r", end="")
+                        log.printMSG(
+                            "[MODLOADER]["
+                            + entry.name
+                            + "][INFO] mod "
+                            + str(self.mods[info[0].modname].getUserFriendlyName())
+                            + " is "
+                            + str(info[0].info)
+                        )
                         info[1](*info[0].add)
                         entry.on_event_call(entry, info, name)
             entry.end_function(entry)
@@ -244,6 +305,7 @@ def on_start(entry):
 def on_end(entry):
     G.textureatlashandler.generate()
 
+
 ModEventCallEntry("game:registry:on_sound_registrate_periode")
 ModEventCallEntry("game:registry:on_block_registrate_periode")
 
@@ -254,9 +316,12 @@ def on_end(entry):
     we know that this is stuff around blocks, but we need it to make shour we have all items registrated
     """
     import textures.util
-    textures.util.resize_file(G.local + "/assets/minecraft/textures/missingtexture.png",
-                              (32, 32),
-                              G.local + "/assets/minecraft/textures/missingtexture.png")
+
+    textures.util.resize_file(
+        G.local + "/assets/minecraft/textures/missingtexture.png",
+        (32, 32),
+        G.local + "/assets/minecraft/textures/missingtexture.png",
+    )
     for b in tuple(G.blockhandler.blocktable.values()):
         b = b.getName()
         if not G.blockhandler.blocktable[b].getName() in G.itemhandler.itemclasses:
@@ -265,9 +330,12 @@ def on_end(entry):
                 block = b
 
                 class MissingItem(G.itemclass):
-                    def getName(self): return block
+                    def getName(self):
+                        return block
 
-                    def getTexturFile(self): return file
+                    def getTexturFile(self):
+                        return file
+
                 G.itemhandler.register(MissingItem)
             else:
                 log.printMSG("[CHECK][ERROR] block " + str(b) + " has no ITEM!!!")
@@ -276,7 +344,8 @@ def on_end(entry):
 
 def register_l_block(blockname):
     class MissingItem(G.itemclass):
-        def getName(self): return blockname
+        def getName(self):
+            return blockname
 
     G.itemhandler.register(MissingItem)
 
@@ -296,6 +365,7 @@ ModEventCallEntry("game:startup")
 
 class Mod:
     """base class for Mod"""
+
     def __init__(self):
         G.eventhandler.call("game:registry:on_mod_registrated", self)
         self.path = None
@@ -321,8 +391,8 @@ class Mod:
 
     def getMcPythonVersions(self):
         """returns the version snapshot for which is it written (may be list. ends with None if upper is supported.
-         may be None if all)
-           use N[VERSION_NAME] for deacte an given version"""
+        may be None if all)
+          use N[VERSION_NAME] for deacte an given version"""
         return None
 
     def getUserFriendlyName(self):
@@ -360,6 +430,6 @@ class SubscribtionHolder:
         self.add = add
 
     def __call__(self, *args, **kwargs):
-        ModEventEntry(self.eventname, self.mod.getName(),
-                      info=self.eventtext, add=self.add)(*args, **kwargs)
-
+        ModEventEntry(
+            self.eventname, self.mod.getName(), info=self.eventtext, add=self.add
+        )(*args, **kwargs)

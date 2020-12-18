@@ -7,8 +7,11 @@ import modsystem.ModLoader
 import globals as G
 
 
-OVERWORLD_GENERATOR = gen.OverWorld.OverWorldGenerator if not config.WorldGenerator.USED_DEBUG_GEN else \
-    gen.DebugWorldGenerator.DebugWorldGenerator
+OVERWORLD_GENERATOR = (
+    gen.OverWorld.OverWorldGenerator
+    if not config.WorldGenerator.USED_DEBUG_GEN
+    else gen.DebugWorldGenerator.DebugWorldGenerator
+)
 
 
 class OverWorld(world.Dimensions.Dimension):
@@ -33,7 +36,12 @@ class OverWorld(world.Dimensions.Dimension):
         if not config.WorldGenerator.USED_DEBUG_GEN:
             for cx in range(*self.WORLDSIZE[0]):
                 for cz in range(*self.WORLDSIZE[1]):
-                    log.printMSG("[OVERWORLD][GENERATOR][INFO] generating chunk "+str(cx)+"|"+str(cz))
+                    log.printMSG(
+                        "[OVERWORLD][GENERATOR][INFO] generating chunk "
+                        + str(cx)
+                        + "|"
+                        + str(cz)
+                    )
                     self.worldprovider.generateChunkFor((cx, cz))
         else:
             self.worldprovider.generateChunkFor((0, 0))
@@ -45,8 +53,10 @@ class OverWorld(world.Dimensions.Dimension):
         return True
 
 
-@modsystem.ModLoader.ModEventEntry("game:registry:on_dimension_registrate_periode", "minecraft",
-                                   info="registrating dimension OverWorld")
+@modsystem.ModLoader.ModEventEntry(
+    "game:registry:on_dimension_registrate_periode",
+    "minecraft",
+    info="registrating dimension OverWorld",
+)
 def register():
     G.dimensionhandler.register(OverWorld)
-

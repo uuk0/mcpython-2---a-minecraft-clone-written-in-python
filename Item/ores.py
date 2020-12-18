@@ -2,6 +2,8 @@ import globals as G
 
 
 """class for coalore"""
+
+
 class CoalOre(G.itemclass):
     def getName(self):
         return "minecraft:coal_ore"
@@ -10,11 +12,14 @@ class CoalOre(G.itemclass):
         return True
 
     def getTexturFile(self):
-        return G.local+"/assets/minecraft/textures/item/COAL_ORE.png"
+        return G.local + "/assets/minecraft/textures/item/COAL_ORE.png"
+
 
 G.itemhandler.register(CoalOre)
 
 """class for diamondore"""
+
+
 class DiamondOre(G.itemclass):
     def getName(self):
         return "minecraft:diamond_ore"
@@ -23,11 +28,14 @@ class DiamondOre(G.itemclass):
         return True
 
     def getTexturFile(self):
-        return G.local+"/assets/minecraft/textures/item/DIAMOND_ORE.png"
+        return G.local + "/assets/minecraft/textures/item/DIAMOND_ORE.png"
+
 
 G.itemhandler.register(DiamondOre)
 
 """class for emeraldore"""
+
+
 class EmeraldOre(G.itemclass):
     def getName(self):
         return "minecraft:emerald_ore"
@@ -36,11 +44,14 @@ class EmeraldOre(G.itemclass):
         return True
 
     def getTexturFile(self):
-        return G.local+"/assets/minecraft/textures/item/EMERALD_ORE.png"
+        return G.local + "/assets/minecraft/textures/item/EMERALD_ORE.png"
+
 
 G.itemhandler.register(EmeraldOre)
 
 """class for goldore"""
+
+
 class GoldOre(G.itemclass):
     def getName(self):
         return "minecraft:gold_ore"
@@ -49,11 +60,14 @@ class GoldOre(G.itemclass):
         return True
 
     def getTexturFile(self):
-        return G.local+"/assets/minecraft/textures/item/GOLD_ORE.png"
+        return G.local + "/assets/minecraft/textures/item/GOLD_ORE.png"
+
 
 G.itemhandler.register(GoldOre)
 
 """class for ironore"""
+
+
 class IronOre(G.itemclass):
     def getName(self):
         return "minecraft:iron_ore"
@@ -62,11 +76,14 @@ class IronOre(G.itemclass):
         return True
 
     def getTexturFile(self):
-        return G.local+"/assets/minecraft/textures/item/IRON_ORE.png"
+        return G.local + "/assets/minecraft/textures/item/IRON_ORE.png"
+
 
 G.itemhandler.register(IronOre)
 
 """class for lapisore"""
+
+
 class LapisOre(G.itemclass):
     def getName(self):
         return "minecraft:lapis_ore"
@@ -75,11 +92,14 @@ class LapisOre(G.itemclass):
         return True
 
     def getTexturFile(self):
-        return G.local+"/assets/minecraft/textures/item/LAPIS_ORE.png"
+        return G.local + "/assets/minecraft/textures/item/LAPIS_ORE.png"
+
 
 G.itemhandler.register(LapisOre)
 
 """class for netherquartz"""
+
+
 class NetherQuartz(G.itemclass):
     def getName(self):
         return "minecraft:nether_quartz_ore"
@@ -88,11 +108,14 @@ class NetherQuartz(G.itemclass):
         return True
 
     def getTexturFile(self):
-        return G.local+"/assets/minecraft/textures/item/QUARTZ_ORE.png"
+        return G.local + "/assets/minecraft/textures/item/QUARTZ_ORE.png"
+
 
 G.itemhandler.register(NetherQuartz)
 
 """class for redstoneore"""
+
+
 class RedstoneOre(G.itemclass):
     def getName(self):
         return "minecraft:redstone_ore"
@@ -101,7 +124,7 @@ class RedstoneOre(G.itemclass):
         return True
 
     def getTexturFile(self):
-        return G.local+"/assets/minecraft/textures/item/REDSTONE_ORE.png"
+        return G.local + "/assets/minecraft/textures/item/REDSTONE_ORE.png"
+
 
 G.itemhandler.register(RedstoneOre)
-

@@ -50,7 +50,7 @@ class Dimension:
     def shouldBeOnGenerationInitialisated(self):
         return False
 
-    def getWorldSize(self): #in chunks
+    def getWorldSize(self):  # in chunks
         return [(-3, -3), (3, 3)]
 
     def prepare(self):
@@ -63,6 +63,3 @@ class Dimension:
 
     def leave(self):
         G.storagehandler.cleanUpModel()
-
-
-

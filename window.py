@@ -12,7 +12,6 @@ import player
 
 
 class Window(pyglet.window.Window):
-
     def __init__(self, *args, **kwargs):
         super(Window, self).__init__(*args, **kwargs)
 
@@ -54,15 +53,17 @@ class Window(pyglet.window.Window):
         self.dy = 0
 
         # Convenience list of num keys.
-        self.num_keys = [config.Keyboard.INVENTORY_1,
-                         config.Keyboard.INVENTORY_2,
-                         config.Keyboard.INVENTORY_3,
-                         config.Keyboard.INVENTORY_4,
-                         config.Keyboard.INVENTORY_5,
-                         config.Keyboard.INVENTORY_6,
-                         config.Keyboard.INVENTORY_7,
-                         config.Keyboard.INVENTORY_8,
-                         config.Keyboard.INVENTORY_9]
+        self.num_keys = [
+            config.Keyboard.INVENTORY_1,
+            config.Keyboard.INVENTORY_2,
+            config.Keyboard.INVENTORY_3,
+            config.Keyboard.INVENTORY_4,
+            config.Keyboard.INVENTORY_5,
+            config.Keyboard.INVENTORY_6,
+            config.Keyboard.INVENTORY_7,
+            config.Keyboard.INVENTORY_8,
+            config.Keyboard.INVENTORY_9,
+        ]
 
         log.printMSG("[MAINTHREAD][WINDOW][INFO] creating model...")
 
@@ -76,9 +77,9 @@ class Window(pyglet.window.Window):
         # Instance of the model that handles the world.
         self.__model = model.Model()
 
-        #minecraft time. value between 0 and 24000
+        # minecraft time. value between 0 and 24000
         self.time = 0
-        self.day  = 1
+        self.day = 1
 
         # This call schedules the `update()` method to be called
         # TICKS_PER_SEC. This is the main game event loop.
@@ -92,7 +93,7 @@ class Window(pyglet.window.Window):
         G.eventhandler.call("core:tick", *args, **kwargs)
 
     def set_exclusive_mouse(self, exclusive):
-        """ If `exclusive` is True, the game will capture the mouse, if False
+        """If `exclusive` is True, the game will capture the mouse, if False
         the game will ignore the mouse.
 
         """
@@ -101,7 +102,7 @@ class Window(pyglet.window.Window):
         G.eventhandler.call("core:window:on_exclusive_mouse_change", exclusive)
 
     def get_sight_vector(self):
-        """ Returns the current line of sight vector indicating the direction
+        """Returns the current line of sight vector indicating the direction
         the player is looking.
 
         """
@@ -118,7 +119,7 @@ class Window(pyglet.window.Window):
         return (dx, dy, dz)
 
     def get_motion_vector(self):
-        """ Returns the current motion vector indicating the velocity of the
+        """Returns the current motion vector indicating the velocity of the
         player.
 
         Returns
@@ -157,7 +158,7 @@ class Window(pyglet.window.Window):
         return (dx, dy, dz)
 
     def update(self, dt):
-        """ This method is scheduled to be called repeatedly by the pyglet
+        """This method is scheduled to be called repeatedly by the pyglet
         clock.
 
         Parameters
@@ -168,7 +169,10 @@ class Window(pyglet.window.Window):
         """
         G.model.process_queue()
         sector = mathhelper.sectorize(self.position)
-        if sector != self.sector and G.statehandler.active_state.getName() == "minecraft:game":
+        if (
+            sector != self.sector
+            and G.statehandler.active_state.getName() == "minecraft:game"
+        ):
             G.model.change_sectors(self.sector, sector)
             if self.sector is None:
                 G.model.process_entire_queue()
@@ -184,31 +188,35 @@ class Window(pyglet.window.Window):
             self.time += dt * 20
             self.day += round(self.time // 24000)
             self.time = round(self.time % 24000)
-        if G.GAMESTAGE != 3: return
+        if G.GAMESTAGE != 3:
+            return
         i = 0
         max = len(G.BlockGenerateTasks)
         l = list(G.BlockGenerateTasks.keys())
         t = time.time()
         for position in l:
-            G.model.add_block(position, G.BlockGenerateTasks[position][0],
-                              immediate=True)
+            G.model.add_block(
+                position, G.BlockGenerateTasks[position][0], immediate=True
+            )
             task = G.BlockGenerateTasks[position]
             if len(task) > 1:
                 task = task[1:]
                 while len(task) > 0:
                     st = task.pop(0)
                     cx, _, cz = mathhelper.sectorize(position)
-                    chunkprovider = G.player.dimension.worldprovider.getChunkProviderFor((cx, cz))
+                    chunkprovider = (
+                        G.player.dimension.worldprovider.getChunkProviderFor((cx, cz))
+                    )
                     if st == "sdata":
                         chunkprovider.world[position].setStorageData(task.pop(0))
                     else:
-                        log.printMSG("[TASKS][ERROR] unknown subtask "+str(st))
+                        log.printMSG("[TASKS][ERROR] unknown subtask " + str(st))
             del G.BlockGenerateTasks[position]
             if time.time() - t > 0.1:
                 return
 
     def _update(self, dt):
-        """ Private implementation of the `update()` method. This is where most
+        """Private implementation of the `update()` method. This is where most
         of the motion logic lives, along with gravity and collision detection.
 
         Parameters
@@ -218,13 +226,18 @@ class Window(pyglet.window.Window):
 
         """
         # walking
-        speed = config.Physiks.FLYING_SPEED if self.flying else config.Physiks.WALKING_SPEED
-        d = dt * speed # distance covered this tick.
+        speed = (
+            config.Physiks.FLYING_SPEED if self.flying else config.Physiks.WALKING_SPEED
+        )
+        d = dt * speed  # distance covered this tick.
         dx, dy, dz = self.get_motion_vector()
         # New position in space, before accounting for gravity.
         dx, dy, dz = dx * d, dy * d, dz * d
         # gravity
-        if not self.flying and G.statehandler.active_state == G.statehandler.states["minecraft:game"]:
+        if (
+            not self.flying
+            and G.statehandler.active_state == G.statehandler.states["minecraft:game"]
+        ):
             # Update your vertical speed: if you are falling, speed up until you
             # hit terminal velocity; if you are jumping, slow down until you
             # start falling.
@@ -240,7 +253,7 @@ class Window(pyglet.window.Window):
         self.position = (x, y, z)
 
     def collide(self, position, height):
-        """ Checks to see if the player at the given `position` and `height`
+        """Checks to see if the player at the given `position` and `height`
         is colliding with any blocks in the world.
 
         Parameters
@@ -259,7 +272,7 @@ class Window(pyglet.window.Window):
         return position
 
     def on_mouse_press(self, x, y, button, modifiers):
-        """ Called when a mouse button is pressed. See pyglet docs for button
+        """Called when a mouse button is pressed. See pyglet docs for button
         amd modifier mappings.
 
         Parameters
@@ -281,7 +294,7 @@ class Window(pyglet.window.Window):
         G.eventhandler.call("core:window:on_mouse_release", x, y, button, modifiers)
 
     def on_mouse_motion(self, x, y, dx, dy):
-        """ Called when the player moves the mouse.
+        """Called when the player moves the mouse.
 
         Parameters
         ----------
@@ -295,7 +308,7 @@ class Window(pyglet.window.Window):
         G.eventhandler.call("core:window:on_mouse_motion", x, y, dx, dy)
 
     def on_key_press(self, symbol, modifiers):
-        """ Called when the player presses a key. See pyglet docs for key
+        """Called when the player presses a key. See pyglet docs for key
         mappings.
 
         Parameters
@@ -309,7 +322,7 @@ class Window(pyglet.window.Window):
         G.eventhandler.call("core:window:on_key_press", symbol, modifiers)
 
     def on_key_release(self, symbol, modifiers):
-        """ Called when the player releases a key. See pyglet docs for key
+        """Called when the player releases a key. See pyglet docs for key
         mappings.
 
         Parameters
@@ -323,9 +336,7 @@ class Window(pyglet.window.Window):
         G.eventhandler.call("core:window:on_key_release", symbol, modifiers)
 
     def on_resize(self, width, height):
-        """ Called when the window is resized to a new `width` and `height`.
-
-        """
+        """Called when the window is resized to a new `width` and `height`."""
         G.eventhandler.call("core:window:on_resize", width, height)
         self.size = (width, height)
 
@@ -337,8 +348,7 @@ class Window(pyglet.window.Window):
         G.eventhandler.call("core:window:on_mouse_scroll", x, y, scroll_x, scroll_y)
 
     def set_2d(self):
-        """ Configure OpenGL to draw in 2d.
-        """
+        """Configure OpenGL to draw in 2d."""
         width, height = self.get_size()
         pyglet.gl.glDisable(pyglet.gl.GL_DEPTH_TEST)
         pyglet.gl.glViewport(0, 0, width, height)
@@ -349,8 +359,7 @@ class Window(pyglet.window.Window):
         pyglet.gl.glLoadIdentity()
 
     def set_3d(self):
-        """ Configure OpenGL to draw in 3d.
-        """
+        """Configure OpenGL to draw in 3d."""
         width, height = self.get_size()
         pyglet.gl.glEnable(pyglet.gl.GL_DEPTH_TEST)
         pyglet.gl.glViewport(0, 0, width, height)
@@ -366,12 +375,9 @@ class Window(pyglet.window.Window):
         pyglet.gl.glTranslatef(-x, -y, -z)
 
     def on_draw(self):
-        """ Called by pyglet to draw the canvas.
-        """
+        """Called by pyglet to draw the canvas."""
         self.clear()
         self.set_3d()
         G.eventhandler.call("opengl:draw3d")
         self.set_2d()
         G.eventhandler.call("opengl:draw2d")
-
-

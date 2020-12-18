@@ -5,6 +5,7 @@ import modsystem.ModLoader
 
 class Glass(G.iblockclass):
     """class for brick"""
+
     def getName(self):
         return "minecraft:glass"
 
@@ -17,6 +18,7 @@ class Glass(G.iblockclass):
 
 class BlackStained(G.iblockclass):
     """class for brick"""
+
     def getName(self):
         return "minecraft:black_stained_glass"
 
@@ -273,8 +275,9 @@ class yellowStained(G.iblockclass):
 local = locals()
 
 
-@modsystem.ModLoader.ModEventEntry("game:registry:on_block_registrate_periode", "minecraft",
-                                   info="registrating glass")
+@modsystem.ModLoader.ModEventEntry(
+    "game:registry:on_block_registrate_periode", "minecraft", info="registrating glass"
+)
 def register(*args):
     # G.blockhandler.register(Glass)
 
@@ -284,4 +287,3 @@ def register(*args):
                 G.blockhandler.register(e)
         except TypeError:
             pass
-

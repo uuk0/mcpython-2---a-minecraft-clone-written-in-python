@@ -7,6 +7,7 @@ import textures.util
 
 class IItemStack:
     """class for ItemStack"""
+
     def __init__(self, name, amount=1):
         self.update_func = None
         self.slot = None
@@ -17,7 +18,9 @@ class IItemStack:
                 self.item = item()
                 self.amount = amount
             else:
-                log.printMSG("[IItemStack][ERROR] item unknown (named " + str(name) + ")")
+                log.printMSG(
+                    "[IItemStack][ERROR] item unknown (named " + str(name) + ")"
+                )
                 self.item = None
                 self.amount = 0
         elif type(name) == G.itemclass:
@@ -27,13 +30,15 @@ class IItemStack:
             self.name = None
             self.item = None
         else:
-            log.printMSG("[IItemStack][ERROR] can't set item "+str(name))
+            log.printMSG("[IItemStack][ERROR] can't set item " + str(name))
             self.name = None
             self.item = None
         self.__amount = amount
         if self.item:
             textures.util.resize_file(self.item.getTexturFile(), (32, 32))
-            self.image = pyglet.sprite.Sprite(pyglet.image.load(self.item.getTexturFile()))
+            self.image = pyglet.sprite.Sprite(
+                pyglet.image.load(self.item.getTexturFile())
+            )
             """texturslitcher.ImageAtlas.save_image(
                 texturslitcher.ImageAtlas.resize(
                     texturslitcher.ImageAtlas.load_image(self.item.getTexturFile()),
@@ -48,26 +53,37 @@ class IItemStack:
         else:
             self.image = None
         self.texturfile = self.item.getTexturFile() if self.item else None
-        self.lable = pyglet.text.Label('', font_name='Arial', font_size=10, anchor_x='left', anchor_y='top',
-            color=(255, 255, 255, 255))
+        self.lable = pyglet.text.Label(
+            "",
+            font_name="Arial",
+            font_size=10,
+            anchor_x="left",
+            anchor_y="top",
+            color=(255, 255, 255, 255),
+        )
 
     def __getamount(self):
         return self.__amount
 
     def __setamount(self, amount):
         self.__amount = amount
-        if self.update_func: self.update_func(self.slot)
+        if self.update_func:
+            self.update_func(self.slot)
 
     amount = property(__getamount, __setamount)
 
     """draws the image of the item"""
+
     def drawImage(self, position):
         if self.amount == 0 and self.item:
             self.slot.setItem(None)
-        if not self.item: return
+        if not self.item:
+            return
         if self.item.getTexturFile() != self.texturfile:
             textures.util.resize_file(self.item.getTexturFile(), (32, 32))
-            self.image = pyglet.sprite.Sprite(pyglet.image.load(self.item.getTexturFile()))
+            self.image = pyglet.sprite.Sprite(
+                pyglet.image.load(self.item.getTexturFile())
+            )
             self.texturfile = self.item.getTexturFile()
         self.image.position = position
         self.image.draw()
@@ -76,4 +92,3 @@ class IItemStack:
         if self.amount != 1:
             self.lable.text = str(self.amount)
             self.lable.draw()
-

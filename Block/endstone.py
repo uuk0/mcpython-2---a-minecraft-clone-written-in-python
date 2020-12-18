@@ -5,6 +5,7 @@ import modsystem.ModLoader
 
 class Endstone(G.iblockclass):
     """class for endstone"""
+
     def getName(self):
         return "minecraft:endstone"
 
@@ -17,6 +18,7 @@ class Endstone(G.iblockclass):
 
 class EndstoneBrick(G.iblockclass):
     """class for endstonebrick"""
+
     def getName(self):
         return "minecraft:endstone_brick"
 
@@ -27,9 +29,11 @@ class EndstoneBrick(G.iblockclass):
         return "endstonebrick"
 
 
-@modsystem.ModLoader.ModEventEntry("game:registry:on_block_registrate_periode", "minecraft",
-                                   info="registrating endstone & endstonebrick")
+@modsystem.ModLoader.ModEventEntry(
+    "game:registry:on_block_registrate_periode",
+    "minecraft",
+    info="registrating endstone & endstonebrick",
+)
 def register():
     G.blockhandler.register(EndstoneBrick)
     G.blockhandler.register(Endstone)
-

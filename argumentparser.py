@@ -1,7 +1,10 @@
 import sys
 import globals as G
 
-class ArgumentError(Exception): pass
+
+class ArgumentError(Exception):
+    pass
+
 
 class ArgumentHandler:
     def __init__(self):
@@ -12,7 +15,7 @@ class ArgumentHandler:
 
     def parseArguments(self):
         argumentpointer = 1
-        while len(sys.argv)-1 >= argumentpointer:
+        while len(sys.argv) - 1 >= argumentpointer:
             flag = True
             for e in self.argumenttypes:
                 if flag and e.isArgument(argumentpointer):
@@ -20,7 +23,12 @@ class ArgumentHandler:
                     argumentpointer += e.getCommandLenght(argumentpointer)
                     flag = False
             if flag:
-                raise ArgumentError("unknown argument for system at "+str(argumentpointer)+" in "+str(sys.argv))
+                raise ArgumentError(
+                    "unknown argument for system at "
+                    + str(argumentpointer)
+                    + " in "
+                    + str(sys.argv)
+                )
 
 
 G.argumenthandler = ArgumentHandler()

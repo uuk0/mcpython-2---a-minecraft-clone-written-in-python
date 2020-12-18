@@ -6,12 +6,12 @@ import traceback
 
 class EventHandler:
     """class for eventhandler"""
+
     def __init__(self):
         self.eventnames = {}
         self.functions = {}
         self.nextid = 0
-        self.blockupdatebinds = {} #position -> function list
-
+        self.blockupdatebinds = {}  # position -> function list
 
     def addEventName(self, name, msg=True):
         """
@@ -19,7 +19,12 @@ class EventHandler:
         :param name: the name of the event
         """
         if name in self.eventnames:
-            if msg: log.printMSG("[EVENTHANDLER][ERROR] try to add event named "+str(name)+", but it is known")
+            if msg:
+                log.printMSG(
+                    "[EVENTHANDLER][ERROR] try to add event named "
+                    + str(name)
+                    + ", but it is known"
+                )
             return
         self.eventnames[name] = []
 
@@ -29,7 +34,9 @@ class EventHandler:
         :param name: the name of the event to clear
         """
         if not name in self.eventnames:
-            log.printMSG("[EVENTHANDLER][ERROR] try to clear an unknown event: "+str(name))
+            log.printMSG(
+                "[EVENTHANDLER][ERROR] try to clear an unknown event: " + str(name)
+            )
             return
         for e in self.eventnames[name]:
             del self.functions[e]
@@ -41,7 +48,9 @@ class EventHandler:
         :param name: the name of the event to remove
         """
         if not name in self.eventnames:
-            log.printMSG("[EVENTHANDLER][ERROR] try to remove an unknown event: "+str(name))
+            log.printMSG(
+                "[EVENTHANDLER][ERROR] try to remove an unknown event: " + str(name)
+            )
             return
         self.clearEvent(name)
         del self.eventnames[name]
@@ -55,7 +64,12 @@ class EventHandler:
         :return: the id of the eventbinding
         """
         if not name in self.eventnames:
-            log.printMSG("[EVENTHANDLER][ERROR] try to add an function ("+str(func)+") to an unknown event named "+str(name))
+            log.printMSG(
+                "[EVENTHANDLER][ERROR] try to add an function ("
+                + str(func)
+                + ") to an unknown event named "
+                + str(name)
+            )
             raise RuntimeError()
             return
         id = self.nextid
@@ -71,7 +85,8 @@ class EventHandler:
         """
         if not id in self.functions:
             log.printMSG(
-                "[EVENTHANDLER][ERROR] try to remove an unknown function "+str(id))
+                "[EVENTHANDLER][ERROR] try to remove an unknown function " + str(id)
+            )
             return
         self.eventnames[self.functions[id][1]].remove(id)
         del self.functions[id]
@@ -84,11 +99,15 @@ class EventHandler:
         :param kwargs: extra positional arguments
         """
         if not name in self.eventnames:
-            log.printMSG("[EVENTHANDLER][ERROR] try to call an unknown event named "+str(name))
+            log.printMSG(
+                "[EVENTHANDLER][ERROR] try to call an unknown event named " + str(name)
+            )
             return
         for e in self.eventnames[name]:
             try:
-                self.functions[e][0](name, *list(self.functions[e][2])+list(args), **kwargs)
+                self.functions[e][0](
+                    name, *list(self.functions[e][2]) + list(args), **kwargs
+                )
             except:
                 exceptionhandler.add_traceback()
                 traceback.print_exc()
@@ -99,7 +118,8 @@ class EventHandler:
         :param position: position of the block
         :param function: the function to bind
         """
-        if not position in self.blockupdatebinds: self.blockupdatebinds[position] = []
+        if not position in self.blockupdatebinds:
+            self.blockupdatebinds[position] = []
         self.blockupdatebinds[position].append(function)
 
     def _blockupdate(self, position):
@@ -107,7 +127,8 @@ class EventHandler:
         call an blockupdate
         :param position: the position of the block
         """
-        if not position in self.blockupdatebinds: return
+        if not position in self.blockupdatebinds:
+            return
         for e in self.blockupdatebinds[position]:
             e(position)
 
@@ -116,7 +137,8 @@ class EventHandler:
         call an blockupdate for deletion
         :param position: the position of the block
         """
-        if not position in self.blockupdatebinds: return
+        if not position in self.blockupdatebinds:
+            return
         for e in self.blockupdatebinds[position]:
             e(position, delet=True)
 
@@ -151,7 +173,7 @@ G.eventhandler.addEventName("game:on_block_add_by_player")
 G.eventhandler.addEventName("game:on_block_remove_by_player")
 G.eventhandler.addEventName("core:model:cleanup")
 
-#REGISTRATE PERIODES EVENTS
+# REGISTRATE PERIODES EVENTS
 """
 G.eventhandler.addEventName("game:registry:on_prepare_plugin_registrate_periode")
 G.eventhandler.addEventName("game:registry:on_biome_registrate_periode")
@@ -171,10 +193,10 @@ G.eventhandler.addEventName("game:registry:on_argument_parser_type_registrate_pe
 G.eventhandler.addEventName("game:registry:on_registryperiode_registrate_periode")
 G.eventhandler.addEventName("game:startup")"""
 
-#RUNTIME EVENTS FROM MCPYTHON
+# RUNTIME EVENTS FROM MCPYTHON
 G.eventhandler.addEventName("worldgen:newworld")
 
-#REGISTRATE EVENTS
+# REGISTRATE EVENTS
 G.eventhandler.addEventName("game:registry:on_language_registered")
 G.eventhandler.addEventName("game:registry:on_mod_registrated")
 G.eventhandler.addEventName("game:registry:on_multiblockstructurs_registrated")

@@ -5,6 +5,7 @@ import modsystem.ModLoader
 
 class Ice(G.iblockclass):
     """class for ice"""
+
     def getName(self):
         return "minecraft:ice"
 
@@ -17,6 +18,7 @@ class Ice(G.iblockclass):
 
 class PackedIce(G.iblockclass):
     """class for packed ice"""
+
     def getName(self):
         return "minecraft:packed_ice"
 
@@ -29,6 +31,7 @@ class PackedIce(G.iblockclass):
 
 class BlueIce(G.iblockclass):
     """class for blue ice"""
+
     def getName(self):
         return "minecraft:blue_ice"
 
@@ -39,10 +42,10 @@ class BlueIce(G.iblockclass):
         return "blue_ice"
 
 
-@modsystem.ModLoader.ModEventEntry("game:registry:on_block_registrate_periode", "minecraft",
-                                   info="registrating ice")
+@modsystem.ModLoader.ModEventEntry(
+    "game:registry:on_block_registrate_periode", "minecraft", info="registrating ice"
+)
 def register():
     G.blockhandler.register(BlueIce)
     G.blockhandler.register(PackedIce)
     G.blockhandler.register(Ice)
-

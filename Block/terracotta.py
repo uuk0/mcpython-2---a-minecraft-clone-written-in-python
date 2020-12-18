@@ -9,7 +9,7 @@ class Terracotta(G.iblockclass):
         return ""
 
     def getName(self):
-        return "minecraft:"+self.getColor()+"_terracotta"
+        return "minecraft:" + self.getColor() + "_terracotta"
 
     def getModelFile(self, inst):
         return "minecraft:terracotta"
@@ -24,7 +24,7 @@ class GlazedTerracotta(G.iblockclass):
         return ""
 
     def getName(self):
-        return "minecraft:"+self.getColor()+"_glazed_terracotta"
+        return "minecraft:" + self.getColor() + "_glazed_terracotta"
 
     def getModelFile(self, inst):
         return "minecraft:glazed_terracotta"
@@ -233,8 +233,11 @@ class YellowTerracottaGlazed(GlazedTerracotta):
         return "yellow"
 
 
-@modsystem.ModLoader.ModEventEntry("game:registry:on_block_registrate_periode", "minecraft",
-                                   info="registrating terracotta & glazed terracotta")
+@modsystem.ModLoader.ModEventEntry(
+    "game:registry:on_block_registrate_periode",
+    "minecraft",
+    info="registrating terracotta & glazed terracotta",
+)
 def register_concret(*args):
     G.blockhandler.register(RawTerracotta)
     G.blockhandler.register(BlackTerracotta)
@@ -269,4 +272,3 @@ def register_concret(*args):
     G.blockhandler.register(WhiteTerracottaGlazed)
     G.blockhandler.register(YellowTerracotta)
     G.blockhandler.register(YellowTerracottaGlazed)
-

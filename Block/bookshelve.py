@@ -9,8 +9,10 @@ class BookShelf(G.iblockclass):
         return "minecraft:bookshelf"
 
 
-@modsystem.ModLoader.ModEventEntry("game:registry:on_block_registrate_periode", "minecraft",
-                                   info="registrating book shelf")
+@modsystem.ModLoader.ModEventEntry(
+    "game:registry:on_block_registrate_periode",
+    "minecraft",
+    info="registrating book shelf",
+)
 def register():
     G.blockhandler.register(BookShelf)
-

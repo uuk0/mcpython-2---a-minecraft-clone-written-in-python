@@ -1,7 +1,8 @@
 import globals as G
 import mathhelper
 
-GAMEMODE_CONVERT = {"survival":0, "creative":1, "adventure":2, "spectator":3}
+GAMEMODE_CONVERT = {"survival": 0, "creative": 1, "adventure": 2, "spectator": 3}
+
 
 class Gamemode:
     @staticmethod

@@ -12,8 +12,10 @@ class BoneBlock(G.iblockclass):
         return "minecraft:bone_block"
 
 
-@modsystem.ModLoader.ModEventEntry("game:registry:on_block_registrate_periode", "minecraft",
-                                   info="registrating bone block")
+@modsystem.ModLoader.ModEventEntry(
+    "game:registry:on_block_registrate_periode",
+    "minecraft",
+    info="registrating bone block",
+)
 def register():
     G.blockhandler.register(BoneBlock)
-

@@ -18,4 +18,5 @@ class Generate:
     def getHelp():
         return "/generate: generate the chunk in which you are in"
 
+
 G.commandhandler.register(Generate)

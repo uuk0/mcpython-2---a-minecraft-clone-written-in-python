@@ -6,8 +6,9 @@ import modsystem.ModLoader
 
 class CraftingTable(G.iblockclass):
     """class for crafting table"""
+
     def getDefaultData(self, inst):
-        return {"inventory":CraftingInventory()}
+        return {"inventory": CraftingInventory()}
 
     def getName(self):
         return "minecraft:crafting_table"
@@ -28,8 +29,10 @@ class CraftingTable(G.iblockclass):
         pass
 
 
-@modsystem.ModLoader.ModEventEntry("game:registry:on_block_registrate_periode", "minecraft",
-                                   info="registrating crafting table")
+@modsystem.ModLoader.ModEventEntry(
+    "game:registry:on_block_registrate_periode",
+    "minecraft",
+    info="registrating crafting table",
+)
 def register():
     G.blockhandler.register(CraftingTable)
-

@@ -1,6 +1,8 @@
 import globals as G
 
 """class for brick"""
+
+
 class Brick(G.itemclass):
     def getName(self):
         return "minecraft:brick"
@@ -9,6 +11,7 @@ class Brick(G.itemclass):
         return True
 
     def getTexturFile(self):
-        return G.local+"/assets/minecraft/textures/item/BRICK_BLOCK.png"
+        return G.local + "/assets/minecraft/textures/item/BRICK_BLOCK.png"
+
 
 G.itemhandler.register(Brick)

@@ -1,6 +1,7 @@
 import globals as G
 import log
 
+
 class Load:
     @staticmethod
     def isCommand(command):
@@ -11,7 +12,7 @@ class Load:
         splitted = command.split(" ")
         if len(splitted) > 1:
             print(1)
-            d = G.local+"/saves/"+splitted[1]
+            d = G.local + "/saves/" + splitted[1]
         elif G.window.worldname:
             print(2)
             d = G.window.worldname
@@ -24,5 +25,6 @@ class Load:
     @staticmethod
     def getHelp():
         return "/load [<worldname>]: load the world"
+
 
 G.commandhandler.register(Load)

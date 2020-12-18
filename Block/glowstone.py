@@ -5,6 +5,7 @@ import modsystem.ModLoader
 
 class Glowstone(G.iblockclass):
     """class for glowstone"""
+
     def getName(self):
         return "minecraft:glowstone"
 
@@ -15,8 +16,10 @@ class Glowstone(G.iblockclass):
         return True
 
 
-@modsystem.ModLoader.ModEventEntry("game:registry:on_block_registrate_periode", "minecraft",
-                                   info="registrating glowstone")
+@modsystem.ModLoader.ModEventEntry(
+    "game:registry:on_block_registrate_periode",
+    "minecraft",
+    info="registrating glowstone",
+)
 def register():
     G.blockhandler.register(Glowstone)
-

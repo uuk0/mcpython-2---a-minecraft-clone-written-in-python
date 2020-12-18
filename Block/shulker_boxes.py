@@ -16,6 +16,7 @@ class ShulkerBox(G.iblockclass):
 
 class BlackShulkerBox(G.iblockclass):
     """class for brick"""
+
     def getName(self):
         return "minecraft:black_shulker_box"
 
@@ -272,8 +273,11 @@ class yellowShulkerBox(G.iblockclass):
 local = locals()
 
 
-@modsystem.ModLoader.ModEventEntry("game:registry:on_block_registrate_periode", "minecraft",
-                                   info="registrating shulker boxes")
+@modsystem.ModLoader.ModEventEntry(
+    "game:registry:on_block_registrate_periode",
+    "minecraft",
+    info="registrating shulker boxes",
+)
 def register(*args):
     # G.blockhandler.register(Glass)
 
@@ -283,4 +287,3 @@ def register(*args):
                 G.blockhandler.register(e)
         except TypeError:
             pass
-

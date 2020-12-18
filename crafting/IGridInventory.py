@@ -56,9 +56,9 @@ class IGridInventory(crafting.ICraftingInventory.ICraftingInventory):
     def get_grid_names(self):
         sx, sy = self.get_grid_size()
         array = []
-        for x in range(1, sx+1):
-            for y in range(1, sy+1):
-                array.append(self.get_spezial_prefix()+"|"+str(x)+"x"+str(y))
+        for x in range(1, sx + 1):
+            for y in range(1, sy + 1):
+                array.append(self.get_spezial_prefix() + "|" + str(x) + "x" + str(y))
         return array
 
     def get_slot_arrays(self, gridname):
@@ -67,12 +67,12 @@ class IGridInventory(crafting.ICraftingInventory.ICraftingInventory):
         x, y = int(x), int(y)
         slots = self.get_input_slots()
         sx, sy = len(slots), len(slots[0])
-        for mx in range(sx-x):
-            for my in range(sy-y):
+        for mx in range(sx - x):
+            for my in range(sy - y):
                 subarray = []
                 for ix in range(x):
                     for iy in range(y):
-                        subarray.append(slots[mx+ix][my+iy])
+                        subarray.append(slots[mx + ix][my + iy])
                 array.append(subarray)
         return array
 
@@ -87,9 +87,21 @@ class IGridInventory(crafting.ICraftingInventory.ICraftingInventory):
         arrayneed = _sum_slotarray(recipe.inputs)
         for i, slot in enumerate(arrayslot):
             need = arrayneed[i]
-            itemname = slot.stack.item.getName() if slot.stack and slot.stack.item else None
-            if not ((not (itemname and need)) or (itemname == need or any([
-                     x.getName(None) == itemname for x in G.notationhandler.getnotatedobjectsfor(need)]))):
+            itemname = (
+                slot.stack.item.getName() if slot.stack and slot.stack.item else None
+            )
+            if not (
+                (not (itemname and need))
+                or (
+                    itemname == need
+                    or any(
+                        [
+                            x.getName(None) == itemname
+                            for x in G.notationhandler.getnotatedobjectsfor(need)
+                        ]
+                    )
+                )
+            ):
                 return False
         self.active_recipe = (recipe, arrayslot)
         return True
@@ -119,7 +131,9 @@ class IGridInventory(crafting.ICraftingInventory.ICraftingInventory):
         adds an new Slot to the inventorysystem. returns the slot
         :param position: the position to set to
         """
-        return G.inventoryslot(position, update_func=self.on_output_remove, canplayersetitems=False)
+        return G.inventoryslot(
+            position, update_func=self.on_output_remove, canplayersetitems=False
+        )
 
     def on_output_remove(self, output_slot):
         if not self.active_recipe:
@@ -146,5 +160,3 @@ class IGridInventory(crafting.ICraftingInventory.ICraftingInventory):
 
     def on_input_remove(self, slot):
         G.craftinghandler.check_inventory(self)
-
-

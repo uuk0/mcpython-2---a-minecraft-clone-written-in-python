@@ -6,20 +6,24 @@ import modsystem.ModLoader
 
 class Dirt(G.iblockclass):
     """class for dirt"""
+
     oredictnames = [notations.OreDictItems.DIRT]
 
     def getName(self):
         return "minecraft:dirt"
 
     def getBrakeSoundFile(self, inst):
-        return [G.local + "/assets/minecraft/sounds/brake/grass1.wma",
-                G.local + "/assets/minecraft/sounds/brake/grass2.wma",
-                G.local + "/assets/minecraft/sounds/brake/grass3.wma",
-                G.local + "/assets/minecraft/sounds/brake/grass4.wma"]
+        return [
+            G.local + "/assets/minecraft/sounds/brake/grass1.wma",
+            G.local + "/assets/minecraft/sounds/brake/grass2.wma",
+            G.local + "/assets/minecraft/sounds/brake/grass3.wma",
+            G.local + "/assets/minecraft/sounds/brake/grass4.wma",
+        ]
 
 
 class CoarseDirt(Dirt):
     """class for coarse dirt"""
+
     def getName(self):
         return "minecraft:coarse_dirt"
 
@@ -43,11 +47,13 @@ class Podzol(Dirt):
         return "podzol"
 
 
-@modsystem.ModLoader.ModEventEntry("game:registry:on_block_registrate_periode", "minecraft",
-                                   info="registrating dirt & coarse dirt")
+@modsystem.ModLoader.ModEventEntry(
+    "game:registry:on_block_registrate_periode",
+    "minecraft",
+    info="registrating dirt & coarse dirt",
+)
 def register():
     G.blockhandler.register(CoarseDirt)
     G.blockhandler.register(Dirt)
     G.blockhandler.register(Mycelium)
     G.blockhandler.register(Podzol)
-

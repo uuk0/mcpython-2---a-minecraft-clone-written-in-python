@@ -1,6 +1,8 @@
 import globals as G
 
 """class for bedrock"""
+
+
 class Bedrock(G.itemclass):
     def getName(self):
         return "minecraft:bedrock"
@@ -9,6 +11,7 @@ class Bedrock(G.itemclass):
         return True
 
     def getTexturFile(self):
-        return G.local+"/assets/minecraft/textures/item/BEDROCK.png"
+        return G.local + "/assets/minecraft/textures/item/BEDROCK.png"
+
 
 G.itemhandler.register(Bedrock)

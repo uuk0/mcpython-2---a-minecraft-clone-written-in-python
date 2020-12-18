@@ -1,6 +1,8 @@
 import globals as G
 
 """class for acacia log"""
+
+
 class AcaciaLog(G.itemclass):
     def getName(self):
         return "minecraft:acacia_plank"
@@ -9,11 +11,14 @@ class AcaciaLog(G.itemclass):
         return True
 
     def getTexturFile(self):
-        return G.local+"/assets/minecraft/textures/item/acacia_plank.png"
+        return G.local + "/assets/minecraft/textures/item/acacia_plank.png"
+
 
 G.itemhandler.register(AcaciaLog)
 
 """class for birch log"""
+
+
 class AcaciaLog(G.itemclass):
     def getName(self):
         return "minecraft:birch_plank"
@@ -22,7 +27,7 @@ class AcaciaLog(G.itemclass):
         return True
 
     def getTexturFile(self):
-        return G.local+"/assets/minecraft/textures/item/Birch_Planks.png"
+        return G.local + "/assets/minecraft/textures/item/Birch_Planks.png"
+
 
 G.itemhandler.register(AcaciaLog)
-

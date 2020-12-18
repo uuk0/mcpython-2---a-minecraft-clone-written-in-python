@@ -1,6 +1,8 @@
 import globals as G
 
 """class for endstone"""
+
+
 class Endstone(G.itemclass):
     def getName(self):
         return "minecraft:endstone"
@@ -9,11 +11,14 @@ class Endstone(G.itemclass):
         return True
 
     def getTexturFile(self):
-        return G.local+"/assets/minecraft/textures/item/END_STONE.png"
+        return G.local + "/assets/minecraft/textures/item/END_STONE.png"
+
 
 G.itemhandler.register(Endstone)
 
 """class for endstone brick"""
+
+
 class Endstone(G.itemclass):
     def getName(self):
         return "minecraft:endstone_brick"
@@ -22,6 +27,7 @@ class Endstone(G.itemclass):
         return True
 
     def getTexturFile(self):
-        return G.local+"/assets/minecraft/textures/item/END_BRICKS.png"
+        return G.local + "/assets/minecraft/textures/item/END_BRICKS.png"
+
 
 G.itemhandler.register(Endstone)
