@@ -1,6 +1,6 @@
+import Block.log
 import globals as G
 import mathhelper
-import Block.log
 import modsystem.ModLoader
 
 

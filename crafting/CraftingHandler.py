@@ -1,7 +1,7 @@
-import globals as G
-import log
 import crafting.ICraftingInventory
 import crafting.Recipe
+import globals as G
+import log
 
 
 class CraftingHandler:

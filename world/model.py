@@ -12,8 +12,6 @@ import log
 import mathhelper
 import world.Dimensions as Dimensions
 
-import time
-
 
 class Model(object):
     """class for model"""

@@ -1,12 +1,14 @@
-import globals as G
-import textures.util
-import textures.TextureAtlas
 import json
-import modsystem.ModLoader
 import os
-import mathhelper
-import pyglet
+
 import PIL.Image
+import pyglet
+
+import globals as G
+import mathhelper
+import modsystem.ModLoader
+import textures.TextureAtlas
+import textures.util
 
 
 def tex_coord(x, y, n1=4, n2=4):

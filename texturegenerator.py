@@ -1,9 +1,11 @@
-import globals as G
-import modsystem.ModLoader
+import os
+
 import PIL.Image
+
+import globals as G
 import imagecutter
 import log
-import os
+import modsystem.ModLoader
 
 
 @modsystem.ModLoader.textureentry

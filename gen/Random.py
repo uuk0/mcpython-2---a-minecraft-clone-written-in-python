@@ -3,7 +3,8 @@ main system for random
 """
 
 import math
-import random, pickle
+import pickle
+import random
 
 
 class Random:

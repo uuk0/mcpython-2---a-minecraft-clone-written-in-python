@@ -1,6 +1,6 @@
+import command.Function as Function
 import globals as G
 import mathhelper
-import command.Function as Function
 
 GAMEMODE_CONVERT = {"survival": 0, "creative": 1, "adventure": 2, "spectator": 3}
 

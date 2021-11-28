@@ -1,4 +1,5 @@
 import pyglet
+
 import globals as G
 import IItemStack
 import log

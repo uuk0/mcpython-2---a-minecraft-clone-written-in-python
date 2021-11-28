@@ -1,7 +1,13 @@
-import storage.loader, storage.saver
+import json
+import os
+import pickle
+import shutil
+import sys
+
 import globals as G
 import log
-import os, sys, shutil, pickle, json
+import storage.loader
+import storage.saver
 
 
 class Loader(storage.loader.Loader):

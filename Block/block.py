@@ -1,8 +1,8 @@
 import config
+import exceptionhandler
 import globals as G
 import log
 import mathhelper
-import exceptionhandler
 
 
 class BlockHandler:
@@ -282,7 +282,8 @@ G.blockreferenceclass = BlockReference
 
 
 def loadBlocks(*args):
-    import importlib, os
+    import importlib
+    import os
 
     for e in os.listdir(G.local + "/Block"):
         importlib.import_module("Block." + e.split(".")[0])

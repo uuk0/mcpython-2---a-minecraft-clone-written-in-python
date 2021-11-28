@@ -1,11 +1,10 @@
-import world.Dimensions
 import config
-import gen.OverWorld, gen.DebugWorldGenerator
-import log
-import config
-import modsystem.ModLoader
+import gen.DebugWorldGenerator
+import gen.OverWorld
 import globals as G
-
+import log
+import modsystem.ModLoader
+import world.Dimensions
 
 OVERWORLD_GENERATOR = (
     gen.OverWorld.OverWorldGenerator

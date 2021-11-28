@@ -1,8 +1,9 @@
-import globals as G
-import textures.util
 import PIL.Image
 import PIL.ImageDraw
 import pyglet
+
+import globals as G
+import textures.util
 
 TEXTURE_ENTRY_SIZE = 64
 TEXTURE_IMAGE_SIZE = 64

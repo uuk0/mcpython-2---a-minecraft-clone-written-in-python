@@ -1,5 +1,7 @@
-import PIL.Image
 import os
+
+import PIL.Image
+
 import globals as G
 
 PATHS = []

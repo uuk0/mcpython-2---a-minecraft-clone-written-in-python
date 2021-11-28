@@ -2,7 +2,9 @@ import log
 
 log.printMSG("[CONSTANTLOADER][INFO] loading constants...")
 
-import math, globals as G
+import math
+
+import globals as G
 
 DEFAULT_GAMEMODE = 1
 

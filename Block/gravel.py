@@ -1,7 +1,6 @@
 import globals as G
 import mathhelper
 import modsystem.ModLoader
-import mathhelper
 
 
 class Gravel(G.iblockclass):

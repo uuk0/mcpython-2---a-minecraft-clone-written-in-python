@@ -1,11 +1,13 @@
-import globals as G
-import pyglet
-import config
 import traceback
+
+import pyglet
 from pyglet.window import key as keys
-import notations
-import imagecutter
+
+import config
 import crafting.IGridInventory
+import globals as G
+import imagecutter
+import notations
 
 
 class PlayerInventory(G.inventorycollection):

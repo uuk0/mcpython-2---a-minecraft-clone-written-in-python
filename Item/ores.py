@@ -1,6 +1,5 @@
 import globals as G
 
-
 """class for coalore"""
 
 

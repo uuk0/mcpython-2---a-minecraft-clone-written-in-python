@@ -4,17 +4,13 @@ import sys
 import time
 import zipfile
 
+import argumentparser
 import config
 import globals as G
 import log
-
 import modsystem.ModSorter as ModSorter
-
-import argumentparser
-
 import textures.TextureAtlas
 import textures.util
-
 
 EVENTLIST = {}  # modname -> ModEventEntry
 EVENTENTRYLIST = {}  # eventname -> entry

@@ -1,5 +1,6 @@
-import globals as G
 import pyglet
+
+import globals as G
 import Inventory.inventory
 import log
 

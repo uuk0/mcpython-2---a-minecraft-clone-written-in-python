@@ -1,8 +1,9 @@
+import math
+
 import gen.WorldGenerator
 import globals as G
-import math
-import mathhelper
 import log
+import mathhelper
 
 BLOCKTABLE = {}  # sector -> blocks
 

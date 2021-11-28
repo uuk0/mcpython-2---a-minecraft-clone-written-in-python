@@ -1,4 +1,5 @@
-import sys, os
+import os
+import sys
 
 # local directory
 local = os.path.dirname(sys.argv[0])

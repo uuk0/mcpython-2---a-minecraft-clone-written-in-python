@@ -1,8 +1,7 @@
-import globals as G
-
 import pyglet
 from pyglet.window import key, mouse
 
+import globals as G
 import log
 
 

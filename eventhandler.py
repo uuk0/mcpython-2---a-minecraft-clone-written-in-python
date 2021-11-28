@@ -1,7 +1,8 @@
+import traceback
+
+import exceptionhandler
 import globals as G
 import log
-import exceptionhandler
-import traceback
 
 
 class EventHandler:

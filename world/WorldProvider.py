@@ -1,10 +1,9 @@
 # import globals as G
 
-import world.ChunkProvider
-
 import pyglet
 
 import gen.ores
+import world.ChunkProvider
 
 
 class WorldProvider:

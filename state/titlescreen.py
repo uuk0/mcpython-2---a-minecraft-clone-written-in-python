@@ -1,7 +1,9 @@
-import globals as G
-import pyglet
-import log
 import random
+
+import pyglet
+
+import globals as G
+import log
 import mathhelper
 
 

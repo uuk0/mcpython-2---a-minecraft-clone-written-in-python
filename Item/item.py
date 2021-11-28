@@ -1,9 +1,10 @@
-import globals as G
-import log
-import language
-import modsystem.ModLoader
 import traceback
+
 import exceptionhandler
+import globals as G
+import language
+import log
+import modsystem.ModLoader
 import textures.util
 
 
@@ -89,7 +90,8 @@ G.itemclass = ItemClass
     "game:registry:on_item_registrate_preiode", "minecraft", info="registrating items"
 )
 def register():
-    import importlib, os
+    import importlib
+    import os
 
     for e in os.listdir(G.local + "/Item"):
         importlib.import_module("Item." + e.split(".")[0])

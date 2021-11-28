@@ -1,6 +1,7 @@
 import globals as G
-from . import selector
 import modsystem.ModLoader
+
+from . import selector
 
 
 class CommandHandler:
@@ -51,15 +52,15 @@ G.commandclass = CommandClass
 )
 def register():
     from . import (
-        give,
-        setblock,
-        time,
-        generate,
+        execute,
+        function_command,
         gamemode,
+        generate,
+        give,
+        load,
         reload,
         save,
-        load,
+        setblock,
         setharts,
-        function_command,
-        execute,
+        time,
     )

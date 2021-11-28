@@ -1,6 +1,6 @@
 import gen.biomes.Biome
-import globals as G
 import gen.ores
+import globals as G
 
 
 class BirchForest(gen.biomes.Biome.Biome):

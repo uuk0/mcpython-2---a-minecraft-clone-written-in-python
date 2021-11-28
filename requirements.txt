@@ -1,0 +1,4 @@
+pyglet
+noise
+Pillow
+clipboard

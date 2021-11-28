@@ -2,14 +2,16 @@
 new version system since 19w08a
 """
 
-import storage.loader, storage.saver
-import globals as G
-import log
 import json
-import pickle
 import os
-import Inventory.inventory
+import pickle
 import traceback
+
+import globals as G
+import Inventory.inventory
+import log
+import storage.loader
+import storage.saver
 
 
 class Saver(storage.saver.Saver):

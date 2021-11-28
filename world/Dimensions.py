@@ -1,8 +1,7 @@
+import config
 import globals as G
 import log
-import config
 import world.WorldProvider
-import log
 
 
 class DimensionHandler:

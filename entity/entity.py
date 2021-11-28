@@ -1,6 +1,7 @@
+import pyglet.gl
+
 import globals as G
 import modsystem.ModLoader
-import pyglet.gl
 
 
 class EntityHandler:

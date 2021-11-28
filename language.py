@@ -1,9 +1,9 @@
-import globals as G
 import json
 import os
+
 import config
+import globals as G
 import log
-import os
 
 
 def _decodeJSON(file):

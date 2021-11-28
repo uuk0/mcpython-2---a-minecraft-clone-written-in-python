@@ -2,7 +2,6 @@ import globals as G
 import mathhelper
 import modsystem.ModLoader
 
-
 SURROUNDING = [
     (0, 0, -1, "N"),
     (0, 0, 1, "S"),

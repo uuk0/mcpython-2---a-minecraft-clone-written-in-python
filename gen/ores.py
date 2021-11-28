@@ -1,6 +1,7 @@
 import math
-import globals as G
+
 import gen.Random
+import globals as G
 import mathhelper
 
 

@@ -1,8 +1,8 @@
+import gen.biomes.Biome
+import gen.noise
 import gen.WorldGenerator
 import globals as G
-import gen.biomes.Biome
 import log
-import gen.noise
 
 
 class OverWorldGenerator(gen.WorldGenerator.WorldGenerator):

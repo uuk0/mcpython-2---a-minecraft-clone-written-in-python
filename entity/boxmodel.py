@@ -1,9 +1,11 @@
 import math
-import mathhelper
-import globals as G
+
 import pyglet
 from pyglet.gl import *
+
+import globals as G
 import log
+import mathhelper
 
 
 class BoxModel(object):

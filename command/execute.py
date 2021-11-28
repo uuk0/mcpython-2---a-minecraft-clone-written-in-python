@@ -4,9 +4,9 @@ it is very unstable
 use it on your own risk
 """
 
-import log
-import globals as G
 import command.util as commandutil
+import globals as G
+import log
 import mathhelper
 
 log.printMSG(__doc__)

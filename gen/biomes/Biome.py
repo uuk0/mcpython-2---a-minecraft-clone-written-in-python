@@ -1,9 +1,10 @@
-import globals as G
-import gen.Random
-import mathhelper
-import log
 import sys
+
 import gen.noise
+import gen.Random
+import globals as G
+import log
+import mathhelper
 import modsystem.ModLoader
 
 

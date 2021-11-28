@@ -237,4 +237,4 @@ G.inventoryslot = Slot
     info="registrating inventorys",
 )
 def register():
-    from . import player, crafting
+    from . import crafting, player

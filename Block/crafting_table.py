@@ -1,7 +1,7 @@
 import globals as G
 import mathhelper
-from Inventory.crafting import Crafting as CraftingInventory
 import modsystem.ModLoader
+from Inventory.crafting import Crafting as CraftingInventory
 
 
 class CraftingTable(G.iblockclass):

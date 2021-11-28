@@ -1,12 +1,12 @@
 import pyglet
 from pyglet.window import key, mouse
 
+import Block.block
 import config
 import globals as G
 import imagealphacreator
 import log
 import mathhelper
-import Block.block
 import modsystem.ModLoader
 
 
@@ -79,4 +79,6 @@ G.State = State
     "game:registry:on_state_registrate_periode", "minecraft", info="registrating states"
 )
 def register():
-    import state.game, state.escapemenu, state.titlescreen
+    import state.escapemenu
+    import state.game
+    import state.titlescreen

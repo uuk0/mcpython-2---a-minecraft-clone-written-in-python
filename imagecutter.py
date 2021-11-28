@@ -1,4 +1,6 @@
-import PIL, PIL.Image
+import PIL
+import PIL.Image
+
 import globals as G
 
 

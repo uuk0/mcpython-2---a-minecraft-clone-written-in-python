@@ -1,16 +1,11 @@
-import globals as G
-
 import pyglet
 from pyglet.window import key, mouse
 
 import config
-
-import mathhelper
-
+import globals as G
 import IItemStack
-
-import config
 import log
+import mathhelper
 
 
 class Game(G.State):

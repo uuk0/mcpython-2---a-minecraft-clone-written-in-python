@@ -1,7 +1,7 @@
 import globals as G
 import mathhelper
-import notations
 import modsystem.ModLoader
+import notations
 
 
 class Stone(G.iblockclass):

@@ -1,7 +1,10 @@
-import traceback, time, datetime
-import globals as G
+import datetime
 import os
 import platform
+import time
+import traceback
+
+import globals as G
 import log
 
 try:

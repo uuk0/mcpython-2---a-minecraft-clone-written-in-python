@@ -1,14 +1,14 @@
 import math
+import time
 
 import pyglet
-import time
 
 import config
 import globals as G
 import log
 import mathhelper
-import world.model as model
 import player
+import world.model as model
 
 
 class Window(pyglet.window.Window):

@@ -1,7 +1,8 @@
+import os
+
+import command.Function as Function
 import globals as G
 import mathhelper
-import command.Function as Function
-import os
 
 
 class FunctionCommand:

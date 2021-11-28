@@ -1,13 +1,14 @@
-import globals as G
-import Inventory.player as playerinventory
-import chat
-import log
-from pyglet.window import key, mouse
-import IItemStack
-import config
-from entity.player import PlayerEntity as PlayerEntity
-import tooltip
 import pyglet
+from pyglet.window import key, mouse
+
+import chat
+import config
+import globals as G
+import IItemStack
+import Inventory.player as playerinventory
+import log
+import tooltip
+from entity.player import PlayerEntity as PlayerEntity
 
 
 class player:

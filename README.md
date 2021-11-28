@@ -2,8 +2,10 @@
 
 Simple Minecraft-inspired demo written in Python and Pyglet.
 
-Orginal Game:
+Original Game:
 http://www.youtube.com/watch?v=kC3lwK631X8
+
+Requires python 3, for best experience 3.10 or above
 
 
 ## Goals and Vision
@@ -15,7 +17,7 @@ The code should become well commented and more easily configurable. It should be
 and see the results quickly.
 
 I think it would be great to turn the project into more of a library / API... a Python package that you import and then
-use / configure to setup a world and run it. Something along these lines...
+use / configure to set up a world and run it. Something along these lines...
 
 
 ```python
@@ -54,13 +56,6 @@ If that doesn't work, set Python to run in 32-bit mode by default:
 defaults write com.apple.versioner.python Prefer-32-Bit -bool yes 
 ```
 
-This assumes you are using the OS X default Python.  Works on Lion 10.7 with the default Python 2.7, and may work on other versions too.  Please raise an issue if not.
-    
-Or try Pyglet 1.2 alpha, which supports 64-bit mode:  
-
-```shell
-pip install https://pyglet.googlecode.com/files/pyglet-1.2alpha1.tar.gz 
-```
 
 ### If you don't have pip or git
 

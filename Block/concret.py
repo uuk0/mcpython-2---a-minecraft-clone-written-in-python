@@ -1,7 +1,7 @@
 import globals as G
 import log
-import modsystem.ModLoader
 import mathhelper
+import modsystem.ModLoader
 
 
 class Concret(G.iblockclass):

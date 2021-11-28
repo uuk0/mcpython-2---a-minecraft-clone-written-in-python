@@ -1,10 +1,10 @@
-import globals as G
-import entity.boxmodel
-import mathhelper
-import config
-import imagecutter
 import math
 
+import config
+import entity.boxmodel
+import globals as G
+import imagecutter
+import mathhelper
 
 BODY_HEIGHT = 2.0 / 3.0
 BODY_LENGTH = BODY_HEIGHT * (2.0 / 3.0)

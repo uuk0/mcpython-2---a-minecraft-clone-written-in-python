@@ -1,6 +1,8 @@
-import pyglet
-import globals as G
 import random
+
+import pyglet
+
+import globals as G
 
 """handler for sounds"""
 
